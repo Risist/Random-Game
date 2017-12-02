@@ -11,7 +11,7 @@ class RandomChance
 {
     public float[] chances = null;
 
-    public int getRandedId()
+    public int GetRandedId()
     {
         float sum = 0;
         foreach (float it in chances)

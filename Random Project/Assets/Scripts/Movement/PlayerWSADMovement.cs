@@ -1,31 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-/*public class PlayerWSADMovement : MonoBehaviour {
 
-    public MoveController move;
+[RequireComponent(typeof(Rigidbody2D))]
+public class PlayerWSADMovement : MonoBehaviour
+{
+    public float movementSpeed = 1.0f;
+    public Rigidbody2D body;
+    
+    // Use this for initialization
+    void Start()
+    {
+        if (body == null)
+            body = GetComponent<Rigidbody2D>();
+    }
 
+    Vector2 lastInput;
 
-	// Use this for initialization
-	void Start () {
-        if (move == null)
-            move = GetComponent<MoveController>();
-
-        //move.minimalDistance = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if (input.x != 0 || input.y != 0)
+            lastInput = input;
+        body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
         
-        {
-            Vector2 forward = Vector2.up;//move.transform.up;
-            Vector2 right = Vector2.right; // move.transform.right;
-            Vector2 offset = forward * Input.GetAxis("Vertical") +
-                right * Input.GetAxis("Horizontal");
-            offset.Normalize(); offset *= move.movementSpeed * Time.deltaTime;
-
-            move.rigidbody.MovePosition(move.rigidbody.position + offset);
-        }
-	}
-}*/
+        body.AddForce(input * movementSpeed * Time.fixedDeltaTime);
+    }
+}

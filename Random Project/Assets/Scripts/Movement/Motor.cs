@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// Moves an object forward
 public class Motor : MonoBehaviour
 {
 
     public new Rigidbody2D rigidbody;
     public float movementSpeed;
-    public float movementSpeedFall;
 
 
     // Use this for initialization
@@ -19,9 +19,6 @@ public class Motor : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        movementSpeed -= movementSpeedFall * Time.fixedDeltaTime;
-        movementSpeed = Mathf.Clamp(movementSpeed, 0, float.MaxValue);
-        
         rigidbody.AddForce(
             new Vector2(transform.up.x, transform.up.y)
             * movementSpeed * Time.fixedDeltaTime
