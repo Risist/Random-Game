@@ -15,6 +15,7 @@ public class HealthController : MonoBehaviour
 
     public float actual = 100;
     public float max = 100;
+	public bool removeOnDeath = true;
     public bool IsAlive()
     {
         return actual > 0;
@@ -36,16 +37,25 @@ public class HealthController : MonoBehaviour
 
         if (IsAlive())
         {
-            SendMessage("OnTakeDamage", data );
+            BroadcastMessage("OnReceiveDamage", data );
         }
         else
         {
-            SendMessage("OnDeath", data);
+			BroadcastMessage("OnDeath", data);
         }
     }
     public void DealDamage(float damage, GameObject causer = null)
     {
         DealDamage(new SimpleDamage(damage), causer);
     }
+	void OnReceiveDamage(DamageData data)
+	{
+
+	}
+	void OnDeath(DamageData data)
+	{
+		if(removeOnDeath)
+			Destroy(gameObject);
+	}
 
 }

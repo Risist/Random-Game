@@ -5,7 +5,12 @@ public class RemoveAfterDelay : MonoBehaviour
 {
     public Timer timer;
 
-    void Update()
+	private void Start()
+	{
+		timer.restart();
+	}
+
+	void Update()
     {
         if (timer.isReady())
             Destroy(gameObject);

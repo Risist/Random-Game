@@ -1,16 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DamageOnTriggerSimple : DamageOnTrigger {
+public class DamageOnTriggerSimple : MonoBehaviour {
 
-    public SimpleDamage damageEnter;
-    public SimpleDamage damageStay;
-    public SimpleDamage damageExit;
+	public SimpleDamage damageEnter;
+	public SimpleDamage damageStay;
+	public SimpleDamage damageExit;
 
-    // Use this for initialization
-    void Start () {
-        _damageEnter = damageEnter;
-        _damageStay = damageStay;
-        _damageExit = damageExit;
-    }
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		HealthController healthController = other.gameObject.GetComponent<HealthController>();
+		if (other.isTrigger == false && healthController != null)
+		{
+			healthController.DealDamage(damageEnter, gameObject);
+		}
+	}
+
+	void OnTriggerStay2D(Collider2D other)
+	{
+		HealthController healthController = other.gameObject.GetComponent<HealthController>();
+		if (other.isTrigger == false && healthController != null)
+		{
+			healthController.DealDamage(damageStay, gameObject);
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other)
+	{
+		HealthController healthController = other.gameObject.GetComponent<HealthController>();
+		if (other.isTrigger == false && healthController != null)
+		{
+			healthController.DealDamage(damageExit, gameObject);
+		}
+	}
 }
