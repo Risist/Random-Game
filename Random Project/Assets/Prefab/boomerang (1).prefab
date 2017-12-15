@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114734305046739574}
   - component: {fileID: 58482331701221232}
   - component: {fileID: 114733059009220220}
+  - component: {fileID: 114743275895148576}
   m_Layer: 0
   m_Name: boomerang (1)
   m_TagString: Untagged
@@ -87,7 +88,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.5
   m_LinearDrag: 3
-  m_AngularDrag: 10
+  m_AngularDrag: 15
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -50
+    damage: -25
   damageStay:
     damage: 0
   damageExit:
@@ -138,8 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50388090863512058}
-  movementSpeed: 3000
-  rotationSpeed: 5000
+  movementSpeed: 2750
+  rotationSpeed: -5000
 --- !u!114 &114734305046739574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,6 +154,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTrigger: 1
   onCollision: 0
+--- !u!114 &114743275895148576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1479784963242058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8596457322601947832916538f3f396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer:
+    actualTime: 0
+    cd: 3
 --- !u!212 &212280701833589362
 SpriteRenderer:
   m_ObjectHideFlags: 1
