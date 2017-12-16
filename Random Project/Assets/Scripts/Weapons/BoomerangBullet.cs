@@ -6,7 +6,7 @@ public class BoomerangBullet : MonoBehaviour {
 
 
 	public new Rigidbody2D rigidbody;
-	public float movementSpeed;
+	public Vector2 movementSpeed;
 	public float rotationSpeed;
 
 
@@ -22,7 +22,11 @@ public class BoomerangBullet : MonoBehaviour {
 	{
 		rigidbody.AddForce(
 			new Vector2(transform.up.x, transform.up.y)
-			* movementSpeed * Time.fixedDeltaTime
+			* movementSpeed.y * Time.fixedDeltaTime
+		);
+		rigidbody.AddForce(
+			new Vector2(transform.right.x, transform.right.y)
+			* movementSpeed.x * Time.fixedDeltaTime
 		);
 		rigidbody.AddTorque(rotationSpeed * Time.fixedDeltaTime);
 	}

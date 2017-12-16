@@ -10,7 +10,7 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
-		if (other.isTrigger == false && healthController != null)
+		if ( healthController != null)
 		{
 			healthController.DealDamage(damageEnter, gameObject);
 		}
@@ -19,7 +19,7 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D other)
 	{
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
-		if (other.isTrigger == false && healthController != null)
+		if (healthController != null)
 		{
 			healthController.DealDamage(damageStay, gameObject);
 		}
@@ -28,7 +28,34 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other)
 	{
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
-		if (other.isTrigger == false && healthController != null)
+		if ( healthController != null)
+		{
+			healthController.DealDamage(damageExit, gameObject);
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		HealthController healthController = other.gameObject.GetComponent<HealthController>();
+		if ( healthController != null)
+		{
+			healthController.DealDamage(damageEnter, gameObject);
+		}
+	}
+
+	void OnCollisionStay2D(Collision2D other)
+	{
+		HealthController healthController = other.gameObject.GetComponent<HealthController>();
+		if ( healthController != null)
+		{
+			healthController.DealDamage(damageStay, gameObject);
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D other)
+	{
+		HealthController healthController = other.gameObject.GetComponent<HealthController>();
+		if ( healthController != null)
 		{
 			healthController.DealDamage(damageExit, gameObject);
 		}

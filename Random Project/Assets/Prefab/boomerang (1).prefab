@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4928480106040508}
   - component: {fileID: 212280701833589362}
+  - component: {fileID: 114134881342430420}
   m_Layer: 0
   m_Name: modelBoomerang
   m_TagString: Untagged
@@ -38,9 +39,9 @@ GameObject:
   - component: {fileID: 50388090863512058}
   - component: {fileID: 114021156207013860}
   - component: {fileID: 114734305046739574}
-  - component: {fileID: 58482331701221232}
   - component: {fileID: 114733059009220220}
   - component: {fileID: 114743275895148576}
+  - component: {fileID: 61711576615490712}
   m_Layer: 0
   m_Name: boomerang (1)
   m_TagString: weapon
@@ -88,15 +89,15 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.5
   m_LinearDrag: 3
-  m_AngularDrag: 15
+  m_AngularDrag: 35
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &58482331701221232
-CircleCollider2D:
+--- !u!61 &61711576615490712
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -108,8 +109,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &114021156207013860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,6 +138,24 @@ MonoBehaviour:
     damage: 0
   damageExit:
     damage: 0
+--- !u!114 &114134881342430420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210991359200680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 6
+  changeRate: 1
+  min: 0
+  max: 0.9
 --- !u!114 &114733059009220220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,8 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50388090863512058}
-  movementSpeed: 2750
-  rotationSpeed: -5000
+  movementSpeed: {x: -500, y: 3000}
+  rotationSpeed: -17000
 --- !u!114 &114734305046739574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 3
+    cd: 7
 --- !u!212 &212280701833589362
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -201,7 +230,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300118, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.15686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

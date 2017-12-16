@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 50204200536628570}
   - component: {fileID: 114853674589074456}
   - component: {fileID: 114781439749501656}
-  - component: {fileID: 58847799282744524}
   - component: {fileID: 114051302541864480}
   - component: {fileID: 114488617568774218}
+  - component: {fileID: 61598082953413536}
   m_Layer: 0
   m_Name: boomerang
   m_TagString: weapon
@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4458403906467172}
   - component: {fileID: 212998091095644486}
+  - component: {fileID: 114998297664827086}
   m_Layer: 0
   m_Name: modelBoomerang
   m_TagString: Untagged
@@ -88,15 +89,15 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.5
   m_LinearDrag: 3
-  m_AngularDrag: 15
+  m_AngularDrag: 35
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &58847799282744524
-CircleCollider2D:
+--- !u!61 &61598082953413536
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -108,8 +109,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Size: {x: 0.5, y: 0.6}
+  m_EdgeRadius: 0
 --- !u!114 &114051302541864480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,8 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50204200536628570}
-  movementSpeed: 2750
-  rotationSpeed: 5000
+  movementSpeed: {x: 500, y: 3000}
+  rotationSpeed: 17000
 --- !u!114 &114488617568774218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 3
+    cd: 7
 --- !u!114 &114781439749501656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,6 +179,24 @@ MonoBehaviour:
     damage: 0
   damageExit:
     damage: 0
+--- !u!114 &114998297664827086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1615540854215716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 6
+  changeRate: 1
+  min: 0
+  max: 0.9
 --- !u!212 &212998091095644486
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -201,7 +230,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300118, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.15686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

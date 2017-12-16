@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4018873266833236}
   - component: {fileID: 212583765712400072}
+  - component: {fileID: 114672409118165274}
   m_Layer: 0
   m_Name: ZnakiSprogowane_64 (3)
   m_TagString: Untagged
@@ -36,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4456537833087742}
   - component: {fileID: 212051051996409390}
+  - component: {fileID: 114469024512392670}
   m_Layer: 0
   m_Name: ZnakiSprogowane_64 (1)
   m_TagString: Untagged
@@ -52,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4054231447854336}
   - component: {fileID: 212521508594173832}
+  - component: {fileID: 114154097896168894}
   m_Layer: 0
   m_Name: ZnakiSprogowane_309 (1)
   m_TagString: Untagged
@@ -68,6 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4744655397314030}
   - component: {fileID: 212092867979188966}
+  - component: {fileID: 114438620126377718}
   m_Layer: 0
   m_Name: ZnakiSprogowane_64
   m_TagString: Untagged
@@ -84,6 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4134216779224284}
   - component: {fileID: 212674414053078630}
+  - component: {fileID: 114417361658487302}
   m_Layer: 0
   m_Name: ZnakiSprogowane_309
   m_TagString: Untagged
@@ -100,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4782641539771358}
   - component: {fileID: 212183388309487740}
+  - component: {fileID: 114535357085020106}
   m_Layer: 0
   m_Name: ZnakiSprogowane_309 (4)
   m_TagString: Untagged
@@ -116,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4303884049669302}
   - component: {fileID: 212107056901726260}
+  - component: {fileID: 114324370787232636}
   m_Layer: 0
   m_Name: ZnakiSprogowane_309 (5)
   m_TagString: Untagged
@@ -132,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4528714921242262}
   - component: {fileID: 212035743174999914}
+  - component: {fileID: 114236199492696256}
   m_Layer: 0
   m_Name: ZnakiSprogowane_64 (2)
   m_TagString: Untagged
@@ -148,6 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4832987549056566}
   - component: {fileID: 212356523342136192}
+  - component: {fileID: 114764379928806280}
   m_Layer: 0
   m_Name: ZnakiSprogowane_309 (2)
   m_TagString: Untagged
@@ -164,6 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4927852849208978}
   - component: {fileID: 212543832033316876}
+  - component: {fileID: 114356409860742268}
   m_Layer: 0
   m_Name: ZnakiSprogowane_309 (3)
   m_TagString: Untagged
@@ -340,6 +350,186 @@ Transform:
   m_Father: {fileID: 4786847954942544}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114154097896168894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423316860182842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
+--- !u!114 &114236199492696256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796063550429564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
+--- !u!114 &114324370787232636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1675561541586130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
+--- !u!114 &114356409860742268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1839924096755744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
+--- !u!114 &114417361658487302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1540966031183798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
+--- !u!114 &114438620126377718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1467468067104254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
+--- !u!114 &114469024512392670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379057841732358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
+--- !u!114 &114535357085020106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1645580680624984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
+--- !u!114 &114672409118165274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079827774640028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
+--- !u!114 &114764379928806280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1827491809894328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reverse: 1
+  reverseTimer:
+    actualTime: 0
+    cd: 5
+  changeRate: 0.5
+  min: 0
+  max: 0.75
 --- !u!114 &114947730461750222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,7 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 10
+    cd: 7.5
 --- !u!212 &212035743174999914
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -387,7 +577,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300128, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -429,7 +619,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300128, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -471,7 +661,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300128, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -513,7 +703,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300618, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -555,7 +745,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300618, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -597,7 +787,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300618, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -639,7 +829,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300618, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -681,7 +871,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300618, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -723,7 +913,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300128, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -765,7 +955,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300618, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

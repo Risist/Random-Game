@@ -42,6 +42,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1197273719259890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4582483614128310}
+  - component: {fileID: 114985293478659792}
+  m_Layer: 0
+  m_Name: bulletSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1305593006870890
 GameObject:
   m_ObjectHideFlags: 1
@@ -66,7 +82,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4694070520035792}
-  - component: {fileID: 114101211195139586}
+  - component: {fileID: 114236730430216520}
   m_Layer: 0
   m_Name: bulletSpawn
   m_TagString: Untagged
@@ -117,9 +133,12 @@ GameObject:
   - component: {fileID: 114687892731009294}
   - component: {fileID: 50204895844437464}
   - component: {fileID: 61800780600898344}
+  - component: {fileID: 114669773493803934}
+  - component: {fileID: 114054285537627552}
+  - component: {fileID: 114233141637618136}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,6 +280,19 @@ Transform:
   m_Father: {fileID: 4682030580088866}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
+--- !u!4 &4582483614128310
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197273719259890}
+  m_LocalRotation: {x: 0, y: 0, z: 0.42261827, w: 0.9063079}
+  m_LocalPosition: {x: -1.5, y: 1, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
 --- !u!4 &4682030580088866
 Transform:
   m_ObjectHideFlags: 1
@@ -283,13 +315,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1307714786804666}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.17, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.42261827, w: 0.9063079}
+  m_LocalPosition: {x: 1.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50}
 --- !u!4 &4757789903809926
 Transform:
   m_ObjectHideFlags: 1
@@ -335,15 +367,16 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658865134507860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4225798, y: 1.415, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.38282675, w: 0.9238202}
+  m_LocalPosition: {x: -1.983882, y: 0.3563546, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4694070520035792}
   - {fileID: 4682030580088866}
+  - {fileID: 4582483614128310}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45.018}
 --- !u!4 &4917762231354740
 Transform:
   m_ObjectHideFlags: 1
@@ -415,7 +448,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114101211195139586
+--- !u!114 &114054285537627552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actual: 100
+  max: 100
+  removeOnDeath: 1
+--- !u!114 &114233141637618136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae3eb0d6f7d5054da9125423759ceb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
+--- !u!114 &114236730430216520
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -423,15 +482,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 1307714786804666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e49a203e9b51cb749b58d71f7cba7db6, type: 3}
+  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnList: {fileID: 0}
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 7
   prefab: {fileID: 1060058989794470, guid: ff1dbe4e5c6c9914d8666c181a162e3b, type: 2}
   buttonCode: Fire1
   timer:
     actualTime: 0
-    cd: 0.25
+    cd: 0.175
+--- !u!114 &114669773493803934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f304d3fb4e2e6954eb58fc6f6c6627b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponType: boomerang
+  ammo: 100
+  maximumAmmo: 300
+  ammoRegeneration: 1
 --- !u!114 &114687892731009294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -445,6 +520,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3000
   body: {fileID: 50204895844437464}
+--- !u!114 &114985293478659792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197273719259890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 7
+  prefab: {fileID: 1479784963242058, guid: 4e13aeafe693a454ca22611fe64a1be9, type: 2}
+  buttonCode: Fire1
+  timer:
+    actualTime: 0
+    cd: 0.175
 --- !u!212 &212025973185190512
 SpriteRenderer:
   m_ObjectHideFlags: 1
