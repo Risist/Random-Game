@@ -15,14 +15,20 @@ public class HealthController : MonoBehaviour
 
     public float actual = 100;
     public float max = 100;
+	public float regeneration = 0;
 	public bool removeOnDeath = true;
     public bool IsAlive()
     {
         return actual > 0;
     }
 
-    /// struct for broadcasting messages
-    public struct DamageData
+	private void Update()
+	{
+		DealDamage(regeneration * Time.deltaTime, gameObject);
+	}
+
+	/// struct for broadcasting messages
+	public struct DamageData
     {
         public DamageData(IDamageType _d, GameObject _o) { damage = _d; causer = _o; }
         public IDamageType damage;

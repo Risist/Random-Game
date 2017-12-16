@@ -11,6 +11,9 @@ public class WeaponThrower : MonoBehaviour
 	public string buttonCode = "Fire1";
 	public Timer timer = new Timer(0.5f);
 
+	public AnimationManager animManager;
+	public PlayerWSADMovement movement;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -21,10 +24,18 @@ public class WeaponThrower : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetButton(buttonCode) && timer.isReady() && weapon.UseAmmo(ammoCost) )
+		if (Input.GetButton(buttonCode) )
 		{
-			Instantiate(prefab, transform.position, transform.rotation);
-			timer.restart();
+			if(movement)
+				movement.applyRotationToMouse();
+			if (timer.isReady() && weapon.UseAmmo(ammoCost))
+			{
+				Instantiate(prefab, transform.position, transform.rotation);
+				timer.restart();
+			}
+
+			if (animManager)
+				animManager.CastAnimation();
 		}
 	}
 }

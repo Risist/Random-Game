@@ -171,17 +171,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4430963148551156, guid: 8c410c2c50281e7469227f120cb8a4c8,
     type: 2}
   m_PrefabInternal: {fileID: 1784572179}
---- !u!114 &123548895 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114669773493803934, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 1229580092}
-  m_Script: {fileID: 11500000, guid: f304d3fb4e2e6954eb58fc6f6c6627b7, type: 3}
---- !u!4 &123548898 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4914286268484342, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 1229580092}
 --- !u!1001 &174300638
 Prefab:
   m_ObjectHideFlags: 0
@@ -1170,38 +1159,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4914286268484342, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4914286268484342, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4914286268484342, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.38282675
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4914286268484342, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9238202
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4914286268484342, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114669773493803934, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: ammoRegeneration
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114669773493803934, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: maximumAmmo
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 114669773493803934, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: ammo
-      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
@@ -1732,19 +1706,19 @@ MonoBehaviour:
     minimalDistance: 0
     maximalDistance: 10
   - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
-    chance: 2
+    chance: 1
     minimalDistance: 0
     maximalDistance: 10
   - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
     chance: 1
     minimalDistance: 0
     maximalDistance: 10
-  - prefab: {fileID: 1034545542006202, guid: 282bd4c5fa446f046b2a32cbfb8d80e8, type: 2}
-    chance: 0
+  - prefab: {fileID: 1249126083102856, guid: f61ca7c8e813de24d99f3d6420e15f05, type: 2}
+    chance: 1
     minimalDistance: 0
     maximalDistance: 10
-  - prefab: {fileID: 1550924305828402, guid: 5ed4f093cb2a0894a9683edd317b3a38, type: 2}
-    chance: 0.75
+  - prefab: {fileID: 1414992316005840, guid: 6035481521e644e489c63f4d049d72c0, type: 2}
+    chance: 0.5
     minimalDistance: 0
     maximalDistance: 10
 --- !u!114 &1797111784
@@ -1760,7 +1734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnList: {fileID: 1797111783}
   cdMin: 0.75
-  cdMax: 2
+  cdMax: 1.5
   timer:
     actualTime: 0
     cd: 1
@@ -1782,53 +1756,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4430963148551156, guid: 8c410c2c50281e7469227f120cb8a4c8,
     type: 2}
   m_PrefabInternal: {fileID: 519283394}
---- !u!1 &1908617756
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1908617757}
-  - component: {fileID: 1908617758}
-  m_Layer: 0
-  m_Name: jumpSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1908617757
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1908617756}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.36, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 123548898}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1908617758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1908617756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 123548895}
-  ammoCost: 100
-  prefab: {fileID: 1550924305828402, guid: 5ed4f093cb2a0894a9683edd317b3a38, type: 2}
-  buttonCode: Fire2
-  timer:
-    actualTime: 0
-    cd: 3
 --- !u!4 &1940878779 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4430963148551156, guid: 8c410c2c50281e7469227f120cb8a4c8,
