@@ -15,13 +15,24 @@ public class HealthController : MonoBehaviour
 
     public float actual = 100;
     public float max = 100;
+	// health regeneration in units/s 
 	public float regeneration = 0;
-	public bool removeOnDeath = true;
+	// perform removing of owner at OnDeath event?
+	public bool removeAfterDeath = true;
+	// object to remove after death
+	// in case you should remove at death something else than owner of the script
+	// if not set up the value is assigned to an owner of the script 
+	public GameObject objectToRemove;
     public bool IsAlive()
     {
         return actual > 0;
     }
 
+	private void Start()
+	{
+		if (removeAfterDeath && !objectToRemove)
+			objectToRemove = gameObject;
+	}
 	private void Update()
 	{
 		DealDamage(regeneration * Time.deltaTime, gameObject);
@@ -60,8 +71,8 @@ public class HealthController : MonoBehaviour
 	}
 	void OnDeath(DamageData data)
 	{
-		if(removeOnDeath)
-			Destroy(gameObject);
+		if(objectToRemove)
+			Destroy(objectToRemove);
 	}
 
 }

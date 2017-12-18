@@ -13,6 +13,7 @@ public class WeaponThrower : MonoBehaviour
 
 	public AnimationManager animManager;
 	public PlayerWSADMovement movement;
+	bool ahouldShoot = false;
 
 	// Use this for initialization
 	void Start()
@@ -24,13 +25,21 @@ public class WeaponThrower : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if(ahouldShoot)
+		{
+			Instantiate(prefab, transform.position, transform.rotation);
+			ahouldShoot = false;
+		}
+
 		if (Input.GetButton(buttonCode) )
 		{
-			if(movement)
+			if (movement)
+			{
 				movement.applyRotationToMouse();
+			}
 			if (timer.isReady() && weapon.UseAmmo(ammoCost))
 			{
-				Instantiate(prefab, transform.position, transform.rotation);
+				ahouldShoot = true;
 				timer.restart();
 			}
 

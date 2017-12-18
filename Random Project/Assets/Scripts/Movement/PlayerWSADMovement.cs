@@ -21,6 +21,7 @@ public class PlayerWSADMovement : MonoBehaviour
 		lastInput = newInput;
 
 		body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
+		transform.rotation = Quaternion.Euler(0, 0, body.rotation);
 	}
 
 	public void applyRotationToMouse()
