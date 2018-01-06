@@ -343,7 +343,8 @@ MonoBehaviour:
   actual: 50
   max: 100
   regeneration: 0
-  removeOnDeath: 1
+  removeAfterDeath: 1
+  objectToRemove: {fileID: 0}
 --- !u!114 &114269902084359506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -386,8 +387,8 @@ MonoBehaviour:
     maximalDistance: 3
   - prefab: {fileID: 1414992316005840, guid: 6035481521e644e489c63f4d049d72c0, type: 2}
     chance: 2
-    minimalDistance: 1
-    maximalDistance: 3
+    minimalDistance: 0
+    maximalDistance: 1
 --- !u!212 &212148330316289624
 SpriteRenderer:
   m_ObjectHideFlags: 1
