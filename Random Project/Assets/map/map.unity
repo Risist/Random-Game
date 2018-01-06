@@ -77,15 +77,17 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -107,7 +109,10 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: e9f0ce2759f879e4eb95337124e62ffb, type: 2}
+<<<<<<< HEAD
 --- !u!1001 &14288506
 Prefab:
   m_ObjectHideFlags: 0
@@ -672,6 +677,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c410c2c50281e7469227f120cb8a4c8, type: 2}
   m_IsPrefabParent: 0
+=======
+>>>>>>> d7bda23c0b976cc7cd3f57d11c379c5b8cc36f50
 --- !u!1 &333453613
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +728,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.1342993, g: 0.16615249, b: 0.7941176, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -747,7 +754,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!4 &333453618
 Transform:
   m_ObjectHideFlags: 0
@@ -755,12 +761,17 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 333453613}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -2.41, y: -2.54, z: -10}
+=======
+  m_LocalPosition: {x: -4.32, y: 0.6, z: -10}
+>>>>>>> d7bda23c0b976cc7cd3f57d11c379c5b8cc36f50
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!4 &382407854 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4284182546340532, guid: d0414571b25e6d149ab429944d2dfc22,
@@ -4194,3 +4205,5 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c410c2c50281e7469227f120cb8a4c8, type: 2}
   m_IsPrefabParent: 0
+=======
+>>>>>>> d7bda23c0b976cc7cd3f57d11c379c5b8cc36f50
