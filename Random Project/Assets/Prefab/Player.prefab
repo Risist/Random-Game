@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 114233141637618136}
   - component: {fileID: 95418995943184012}
   - component: {fileID: 114491037430976288}
+  - component: {fileID: 208215843920675812}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -510,7 +511,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actual: 100
   max: 100
-  removeOnDeath: 1
+  regeneration: 0
+  removeAfterDeath: 1
+  objectToRemove: {fileID: 0}
 --- !u!114 &114166570564966408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -624,6 +627,21 @@ MonoBehaviour:
     cd: 0.175
   animManager: {fileID: 114491037430976288}
   movement: {fileID: 114687892731009294}
+--- !u!208 &208215843920675812
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!212 &212025973185190512
 SpriteRenderer:
   m_ObjectHideFlags: 1
