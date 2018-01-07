@@ -29,6 +29,7 @@ public class CameraController : MonoBehaviour
 		{
 			transform.position = transform.position + (player.transform.position - transform.position) * learpFactor * Time.deltaTime
 				+ initialOffsetPosition + (Vector3)shakePositionInfluence;
+			transform.position = new Vector3(transform.position.x, transform.position.y, initialOffsetPosition.z);
 		}
 
 		transform.rotation = Quaternion.Euler(0, 0, initialOffsetRotation + shakeRotationInfluence);

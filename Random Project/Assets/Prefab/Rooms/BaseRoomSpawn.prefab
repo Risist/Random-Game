@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1834126151135660}
+  m_IsPrefabParent: 1
+--- !u!1 &1834126151135660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4155413409070420}
+  - component: {fileID: 114579300428377976}
+  - component: {fileID: 114645783320326976}
+  - component: {fileID: 114561343421709272}
+  m_Layer: 0
+  m_Name: BaseRoomSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4155413409070420
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1834126151135660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114561343421709272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1834126151135660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 0
+  randomPosition: 0
+  objects:
+  - prefab: {fileID: 1051706523475592, guid: 85905a2008acbd04497a73dc5aeaf076, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+--- !u!114 &114579300428377976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1834126151135660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7f65b68b689404c9e7d45581f17685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114645783320326976}
+  roomList: {fileID: 114561343421709272}
+  roomSize: 20
+  roomX: 10
+  roomY: 10
+--- !u!114 &114645783320326976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1834126151135660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 0
+  randomPosition: 0
+  objects:
+  - prefab: {fileID: 1334087242488686, guid: 515463121c73f12439a38eec869b5243, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1020713184383122, guid: f0a631145393ee940a4d2d312a431146, type: 2}
+    chance: 2
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 90

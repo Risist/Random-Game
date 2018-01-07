@@ -21,14 +21,17 @@ public class RandomSpawnList : SpawnListBase {
         public float minimalDistance;
         public float maximalDistance;
 
-        public float GetDistance()
+		public Vector2 positionOffset;
+		public float rotationOffset;
+
+		public float GetDistance()
         {
             return Random.Range(minimalDistance, maximalDistance);
         }
     }
     public SpawnStruct[] objects;
 
-    public override void Spawn()
+    public override GameObject Spawn()
     {
         float sum = 0;
         foreach (SpawnStruct it in objects)
@@ -61,14 +64,60 @@ public class RandomSpawnList : SpawnListBase {
 
 
 
-                    Instantiate(objects[i].prefab, gameObject.transform.position + offset,
-                        Quaternion.Euler(0, 0, rot));
-                    break;
+                    return Instantiate(objects[i].prefab, gameObject.transform.position + offset + (Vector3)objects[i].positionOffset,
+                        Quaternion.Euler(0, 0, rot + objects[i].rotationOffset));
                 }
                 else
                 {
                     lastSum += objects[i].chance;
                 }
             }
+
+		return null;
     }
+
+	public override GameObject Spawn(Vector2 position, float rotation)
+	{
+		float sum = 0;
+		foreach (SpawnStruct it in objects)
+			if (it.chance > 0)
+				sum += it.chance;
+		float randed = Random.Range(0, sum);
+
+		float lastSum = 0;
+
+		for (int i = 0; i < objects.Length; ++i)
+			if (objects[i].chance > 0)
+			{
+				if (randed > lastSum && randed < lastSum + objects[i].chance)
+				{
+					if (objects[i].prefab == null)
+						break;
+
+					float rot = 0;
+					if (randomRotation)
+						rot = Random.Range(0, 360);
+					else
+						rot = transform.rotation.eulerAngles.z;
+
+					Vector3 offset;
+					if (randomPosition)
+						offset = Quaternion.Euler(0, 0, rot)
+						* new Vector3(objects[i].GetDistance(), 0);
+					else
+						offset = new Vector3();
+
+
+
+					return Instantiate(objects[i].prefab, gameObject.transform.position + offset + (Vector3)objects[i].positionOffset + (Vector3) position,
+						Quaternion.Euler(0, 0, rot + objects[i].rotationOffset + rotation));
+					break;
+				}
+				else
+				{
+					lastSum += objects[i].chance;
+				}
+			}
+		return null;
+	}
 }
