@@ -108,161 +108,11 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &317679346
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1307714786804666, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 317679347}
-  - component: {fileID: 317679348}
-  m_Layer: 0
-  m_Name: bulletSpawn Teleport
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &317679347
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4694070520035792, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 317679346}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000005364418, y: 2, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
-  m_Children: []
-  m_Father: {fileID: 387231026}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &317679348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114236730430216520, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 317679346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 387231022}
-  ammoCost: 30
-  prefab: {fileID: 1388764738251450, guid: 1503a9325bb60244b8c5e0ddb253097a, type: 2}
-  buttonCode: Movement
-  timer:
-    actualTime: 0
-    cd: 1.25
-  animManager: {fileID: 387231018}
-  movement: {fileID: 387231025}
 --- !u!1 &387231016 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1658865134507860, guid: d0414571b25e6d149ab429944d2dfc22,
     type: 2}
   m_PrefabInternal: {fileID: 528993697}
---- !u!114 &387231018 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114491037430976288, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 528993697}
-  m_Script: {fileID: 11500000, guid: 432dbe725fa41e34abeacfbea39e3dc4, type: 3}
---- !u!114 &387231022 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114669773493803934, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 528993697}
-  m_Script: {fileID: 11500000, guid: f304d3fb4e2e6954eb58fc6f6c6627b7, type: 3}
---- !u!114 &387231025 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114687892731009294, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 528993697}
-  m_Script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
---- !u!4 &387231026 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4914286268484342, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 528993697}
---- !u!114 &387231027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 387231016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25be4b7abb891b34180dfbae76d53040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shakePositionBase: 0
-  shakePositionDamage: 0.04
-  shakeRotationBase: 0
-  shakeRotationDamage: 0.5
-  shakeScaleBase: 0
-  shakeScaleDamage: 0
-  shakePositionBaseDeath: 0
-  shakePositionDamageDeath: 0
-  shakeRotationBaseDeath: 0
-  shakeRotationDamageDeath: 0
-  shakeScaleBaseDeath: 0
-  shakeScaleDamageDeath: 0.25
---- !u!1 &480934840
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1307714786804666, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 480934841}
-  - component: {fileID: 480934842}
-  m_Layer: 0
-  m_Name: bulletSpawn Devil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &480934841
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4694070520035792, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480934840}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
-  m_Children: []
-  m_Father: {fileID: 387231026}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &480934842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114236730430216520, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480934840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 387231022}
-  ammoCost: 20
-  prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
-  buttonCode: Fire2
-  timer:
-    actualTime: 0
-    cd: 0.4
-  animManager: {fileID: 387231018}
-  movement: {fileID: 387231025}
 --- !u!1001 &528993697
 Prefab:
   m_ObjectHideFlags: 0
@@ -302,120 +152,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114669773493803934, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: ammoRegeneration
-      value: 3.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 114687892731009294, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: movementSpeed
-      value: 3350
-      objectReference: {fileID: 0}
-    - target: {fileID: 4914286268484342, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 99.855
-      objectReference: {fileID: 0}
-    - target: {fileID: 114054285537627552, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: max
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197273719259890, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1307714786804666, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1307714786804666, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
-      propertyPath: m_Name
-      value: bulletSpawn Tornado
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197273719259890, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
-      propertyPath: m_Name
-      value: bulletSpawn Tornado (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114669773493803934, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: maximumAmmo
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114669773493803934, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: ammo
-      value: 350
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817846371704110, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114985293478659792, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: ammoCost
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114236730430216520, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: ammoCost
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &638799461
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1307714786804666, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 638799462}
-  - component: {fileID: 638799463}
-  m_Layer: 0
-  m_Name: bulletSpawn Wind
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &638799462
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4694070520035792, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 638799461}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
-  m_Children: []
-  m_Father: {fileID: 387231026}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &638799463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114236730430216520, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 638799461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 387231022}
-  ammoCost: 20
-  prefab: {fileID: 1314080635737764, guid: 5cadec6a40b5560459d9b8b8c160413a, type: 2}
-  buttonCode: Fire1
-  timer:
-    actualTime: 0
-    cd: 0.15
-  animManager: {fileID: 387231018}
-  movement: {fileID: 387231025}
 --- !u!1 &1571016937
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,12 +360,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1587608063}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5307636, y: 0.9535415, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.76522976, w: 0.6437572}
+  m_LocalPosition: {x: -1.3726196, y: 2.3302188, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 387231026}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1587608066
 MonoBehaviour:

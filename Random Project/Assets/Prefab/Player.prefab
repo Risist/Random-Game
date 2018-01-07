@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1658865134507860}
   m_IsPrefabParent: 1
+--- !u!1 &1062237019296688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4664540152127936}
+  - component: {fileID: 114162930464800708}
+  m_Layer: 0
+  m_Name: bulletSpawn Wind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1120279729298316
 GameObject:
   m_ObjectHideFlags: 0
@@ -52,12 +68,12 @@ GameObject:
   - component: {fileID: 4582483614128310}
   - component: {fileID: 114985293478659792}
   m_Layer: 0
-  m_Name: bulletSpawn (1)
+  m_Name: bulletSpawn Tornado (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1305593006870890
 GameObject:
   m_ObjectHideFlags: 1
@@ -84,12 +100,12 @@ GameObject:
   - component: {fileID: 4694070520035792}
   - component: {fileID: 114236730430216520}
   m_Layer: 0
-  m_Name: bulletSpawn
+  m_Name: bulletSpawn Tornado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1370893882484544
 GameObject:
   m_ObjectHideFlags: 1
@@ -122,6 +138,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1540646628692434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4516411547212326}
+  - component: {fileID: 114690070951822164}
+  m_Layer: 0
+  m_Name: bulletSpawn Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1658865134507860
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +171,7 @@ GameObject:
   - component: {fileID: 95418995943184012}
   - component: {fileID: 114491037430976288}
   - component: {fileID: 208215843920675812}
+  - component: {fileID: 114521562435448456}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -192,7 +225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1836024993690910
 GameObject:
   m_ObjectHideFlags: 1
@@ -225,6 +258,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1951281381804670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4042770382574274}
+  - component: {fileID: 114607402746523254}
+  m_Layer: 0
+  m_Name: bulletSpawn Devil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1997980422518702
 GameObject:
   m_ObjectHideFlags: 1
@@ -241,6 +290,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4042770382574274
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951281381804670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4072777291062634
 Transform:
   m_ObjectHideFlags: 1
@@ -312,6 +374,19 @@ Transform:
   m_Father: {fileID: 4914286268484342}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4516411547212326
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1540646628692434}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0000005364418, y: 2, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4582483614128310
 Transform:
   m_ObjectHideFlags: 1
@@ -325,6 +400,19 @@ Transform:
   m_Father: {fileID: 4914286268484342}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
+--- !u!4 &4664540152127936
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062237019296688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4682030580088866
 Transform:
   m_ObjectHideFlags: 1
@@ -399,17 +487,20 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658865134507860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.983882, y: 0.3563546, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.76522976, w: 0.6437572}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4694070520035792}
   - {fileID: 4682030580088866}
   - {fileID: 4582483614128310}
   - {fileID: 4407688762946098}
+  - {fileID: 4042770382574274}
+  - {fileID: 4664540152127936}
+  - {fileID: 4516411547212326}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.855}
 --- !u!4 &4917762231354740
 Transform:
   m_ObjectHideFlags: 1
@@ -510,10 +601,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actual: 100
-  max: 100
+  max: 1000
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114162930464800708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062237019296688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 20
+  prefab: {fileID: 1314080635737764, guid: 5cadec6a40b5560459d9b8b8c160413a, type: 2}
+  buttonCode: Fire1
+  timer:
+    actualTime: 0
+    cd: 0.15
+  animManager: {fileID: 114491037430976288}
+  movement: {fileID: 114687892731009294}
 --- !u!114 &114166570564966408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -528,7 +639,7 @@ MonoBehaviour:
   weapon: {fileID: 114669773493803934}
   ammoCost: 100
   prefab: {fileID: 1550924305828402, guid: 5ed4f093cb2a0894a9683edd317b3a38, type: 2}
-  buttonCode: Fire2
+  buttonCode: Movement
   timer:
     actualTime: 0
     cd: 3
@@ -558,7 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 7
+  ammoCost: 6
   prefab: {fileID: 1060058989794470, guid: ff1dbe4e5c6c9914d8666c181a162e3b, type: 2}
   buttonCode: Fire1
   timer:
@@ -579,6 +690,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95418995943184012}
   animStartCode: isCasting
+--- !u!114 &114521562435448456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25be4b7abb891b34180dfbae76d53040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakePositionBase: 0
+  shakePositionDamage: 0.04
+  shakeRotationBase: 0
+  shakeRotationDamage: 0.5
+  shakeScaleBase: 0
+  shakeScaleDamage: 0
+  shakePositionBaseDeath: 0
+  shakePositionDamageDeath: 0
+  shakeRotationBaseDeath: 0
+  shakeRotationDamageDeath: 0
+  shakeScaleBaseDeath: 0
+  shakeScaleDamageDeath: -0.25
+--- !u!114 &114607402746523254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951281381804670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 20
+  prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
+  buttonCode: Fire2
+  timer:
+    actualTime: 0
+    cd: 0.4
+  animManager: {fileID: 114491037430976288}
+  movement: {fileID: 114687892731009294}
 --- !u!114 &114669773493803934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -591,9 +745,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: boomerang
-  ammo: 300
-  maximumAmmo: 500
-  ammoRegeneration: 0
+  ammo: 350
+  maximumAmmo: 1000
+  ammoRegeneration: 3.75
 --- !u!114 &114687892731009294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -605,8 +759,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3000
+  movementSpeed: 3350
   body: {fileID: 50204895844437464}
+--- !u!114 &114690070951822164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1540646628692434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 30
+  prefab: {fileID: 1388764738251450, guid: 1503a9325bb60244b8c5e0ddb253097a, type: 2}
+  buttonCode: Movement
+  timer:
+    actualTime: 0
+    cd: 1.25
+  animManager: {fileID: 114491037430976288}
+  movement: {fileID: 114687892731009294}
 --- !u!114 &114985293478659792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -619,7 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 7
+  ammoCost: 6
   prefab: {fileID: 1479784963242058, guid: 4e13aeafe693a454ca22611fe64a1be9, type: 2}
   buttonCode: Fire1
   timer:
