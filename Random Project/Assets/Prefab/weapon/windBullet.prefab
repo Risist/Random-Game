@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
-  movementSpeed: 4000
+  movementSpeed: 3500
 --- !u!114 &114624157497397534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 2
+    cd: 1.5
 --- !u!114 &114927870906283816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 0}
-  cdMin: 0.2
-  cdMax: 0.25
+  cdMin: 0.25
+  cdMax: 0.3
   timer:
     actualTime: 0
     cd: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: New Post-Processing Profile
   m_EditorClassIdentifier: 
   debugViews:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
       depth:
@@ -25,11 +25,11 @@ MonoBehaviour:
         motionVectorsResolution: 24
         motionVectorsAmplitude: 64
   fog:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       excludeSkybox: 1
   antialiasing:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       method: 0
       fxaaSettings:
@@ -83,7 +83,7 @@ MonoBehaviour:
       sampleCount: 10
       frameBlending: 0
   eyeAdaptation:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       lowPercent: 45
       highPercent: 95
@@ -100,16 +100,16 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       bloom:
-        intensity: 0.5
+        intensity: 1.15
         threshold: 1.1
-        softKnee: 0.5
-        radius: 4
+        softKnee: 0.47
+        radius: 4.5
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
         intensity: 3
   colorGrading:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 2
@@ -134,13 +134,13 @@ MonoBehaviour:
       colorWheels:
         mode: 1
         log:
-          slope: {r: 0, g: 0, b: 0, a: 0}
-          power: {r: 0, g: 0, b: 0, a: 0}
-          offset: {r: 0, g: 0, b: 0, a: 0}
+          slope: {r: 1, g: 0.94517714, b: 0.8251627, a: 0}
+          power: {r: 0.9632218, g: 0.9837167, b: 1, a: 0}
+          offset: {r: 0.9358744, g: 1, b: 0.74466825, a: 0}
         linear:
-          lift: {r: 0, g: 0, b: 0, a: 0}
-          gamma: {r: 0, g: 0, b: 0, a: 0}
-          gain: {r: 0, g: 0, b: 0, a: 0}
+          lift: {r: 0.96322185, g: 0.9837168, b: 1, a: 0}
+          gamma: {r: 1, g: 1, b: 1, a: 0}
+          gain: {r: 1, g: 1, b: 1, a: 0}
       curves:
         master:
           curve:
@@ -149,18 +149,18 @@ MonoBehaviour:
             - serializedVersion: 2
               time: 0
               value: 0
-              inSlope: 1
-              outSlope: 1
+              inSlope: 1.8550208
+              outSlope: 1.8550208
               tangentMode: 0
             - serializedVersion: 2
               time: 1
               value: 1
-              inSlope: 1
-              outSlope: 1
+              inSlope: 3.676917
+              outSlope: 3.676917
               tangentMode: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
-            m_RotationOrder: 4
+            m_RotationOrder: 0
           m_Loop: 0
           m_ZeroValue: 0
           m_Range: 1
@@ -182,7 +182,7 @@ MonoBehaviour:
               tangentMode: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
-            m_RotationOrder: 4
+            m_RotationOrder: 0
           m_Loop: 0
           m_ZeroValue: 0
           m_Range: 1
@@ -272,7 +272,7 @@ MonoBehaviour:
           m_Range: 1
         e_CurrentEditingCurve: 0
         e_CurveY: 1
-        e_CurveR: 0
+        e_CurveR: 1
         e_CurveG: 0
         e_CurveB: 0
   userLut:
@@ -284,7 +284,7 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.1
+      intensity: 0.21
   grain:
     m_Enabled: 0
     m_Settings:
@@ -293,14 +293,14 @@ MonoBehaviour:
       size: 1
       luminanceContribution: 0.8
   vignette:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
-      color: {r: 0, g: 0, b: 0, a: 1}
+      color: {r: 0.28676468, g: 0.17711936, b: 0.17711936, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.45
-      smoothness: 0.2
-      roundness: 1
+      intensity: 0.52
+      smoothness: 0.52
+      roundness: 0.91
       mask: {fileID: 0}
       opacity: 1
       rounded: 0

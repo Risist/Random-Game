@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114738717274089426}
   - component: {fileID: 114901673165560842}
   - component: {fileID: 114813311147164046}
+  - component: {fileID: 114141113019858828}
   m_Layer: 0
   m_Name: ExplosionBig
   m_TagString: Untagged
@@ -252,8 +253,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1170263240658998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.220968, y: -6.7128334, z: -0.00390625}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -23.739964, y: -7.7478437, z: -0.00390625}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 4490076299079730}
   - {fileID: 4331225464314112}
@@ -363,6 +364,29 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114141113019858828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1170263240658998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25be4b7abb891b34180dfbae76d53040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakePositionBase: 0
+  shakePositionDamage: 0
+  shakeRotationBase: 0
+  shakeRotationDamage: 0
+  shakeScaleBase: 0
+  shakeScaleDamage: 0
+  shakePositionBaseDeath: 0
+  shakePositionDamageDeath: 0
+  shakeRotationBaseDeath: 0
+  shakeRotationDamageDeath: 0
+  shakeScaleBaseDeath: 0
+  shakeScaleDamageDeath: 0.35
 --- !u!114 &114243573732042562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,10 +414,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
+  radius: 3.75
   dmg:
-    damage: -40
+    damage: -15
 --- !u!114 &114738717274089426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1170263240658998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2.25
+  dmg:
+    damage: -15
+--- !u!114 &114797678494932966
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -406,21 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   dmg:
-    damage: -20
---- !u!114 &114797678494932966
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1170263240658998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 4
-  dmg:
-    damage: -20
+    damage: -15
 --- !u!114 &114813311147164046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,7 +458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1
   dmg:
-    damage: -10
+    damage: -15
 --- !u!114 &114901673165560842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -446,9 +470,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 1.5
   dmg:
-    damage: -10
+    damage: -15
 --- !u!212 &212142906201847476
 SpriteRenderer:
   m_ObjectHideFlags: 1

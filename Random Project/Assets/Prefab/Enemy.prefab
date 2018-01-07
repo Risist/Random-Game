@@ -122,6 +122,8 @@ GameObject:
   - component: {fileID: 114774002538259876}
   - component: {fileID: 114406603044813302}
   - component: {fileID: 114677949516117462}
+  - component: {fileID: 114742117227487156}
+  - component: {fileID: 114796367937368924}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -328,7 +330,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.75
   m_LinearDrag: 15
   m_AngularDrag: 15
   m_GravityScale: 1
@@ -415,6 +417,20 @@ MonoBehaviour:
   followFactor: 0.31
   objectToFollowTag: Player
   followScale: 1
+--- !u!114 &114742117227487156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892839396706268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 0}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 1
 --- !u!114 &114745261477913688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -446,7 +462,26 @@ MonoBehaviour:
   actual: 100
   max: 250
   regeneration: 5
-  removeOnDeath: 1
+  removeAfterDeath: 1
+  objectToRemove: {fileID: 0}
+--- !u!114 &114796367937368924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892839396706268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 0
+  randomPosition: 0
+  objects:
+  - prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
 --- !u!212 &212233149149346970
 SpriteRenderer:
   m_ObjectHideFlags: 1
