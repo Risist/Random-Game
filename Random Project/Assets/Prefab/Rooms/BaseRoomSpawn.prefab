@@ -57,6 +57,12 @@ MonoBehaviour:
   randomPosition: 0
   objects:
   - prefab: {fileID: 1051706523475592, guid: 85905a2008acbd04497a73dc5aeaf076, type: 2}
+    chance: 4
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1770870089749158, guid: fc195899b4a908046b135c5cfbaf0e12, type: 2}
     chance: 1
     minimalDistance: 0
     maximalDistance: 0
