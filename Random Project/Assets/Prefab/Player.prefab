@@ -488,7 +488,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658865134507860}
   m_LocalRotation: {x: -0, y: -0, z: 0.76522976, w: 0.6437572}
-  m_LocalPosition: {x: 0.980458, y: 0, z: 0}
+  m_LocalPosition: {x: 11.09, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4694070520035792}
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 35
+  ammoCost: 20
   prefab: {fileID: 1314080635737764, guid: 5cadec6a40b5560459d9b8b8c160413a, type: 2}
   buttonCode: Fire1
   timer:
@@ -637,12 +637,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 100
+  ammoCost: 40
   prefab: {fileID: 1550924305828402, guid: 5ed4f093cb2a0894a9683edd317b3a38, type: 2}
   buttonCode: Movement
   timer:
     actualTime: 0
-    cd: 3
+    cd: 2
   animManager: {fileID: 114491037430976288}
   movement: {fileID: 0}
 --- !u!114 &114233141637618136
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 6
+  ammoCost: 10
   prefab: {fileID: 1060058989794470, guid: ff1dbe4e5c6c9914d8666c181a162e3b, type: 2}
   buttonCode: Fire1
   timer:
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 20
+  ammoCost: 40
   prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
   buttonCode: Fire2
   timer:
@@ -746,8 +746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: boomerang
   ammo: 150
-  maximumAmmo: 300
-  ammoRegeneration: 10
+  maximumAmmo: 500
+  ammoRegeneration: 20
 --- !u!114 &114687892731009294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 30
+  ammoCost: 40
   prefab: {fileID: 1388764738251450, guid: 1503a9325bb60244b8c5e0ddb253097a, type: 2}
   buttonCode: Movement
   timer:
@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 6
+  ammoCost: 10
   prefab: {fileID: 1479784963242058, guid: 4e13aeafe693a454ca22611fe64a1be9, type: 2}
   buttonCode: Fire1
   timer:
