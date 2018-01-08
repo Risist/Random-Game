@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
 	{
 		ammo = Mathf.Clamp(ammo + bonus, 0, maximumAmmo);
 
-		Debug.Log("ammo = " + ammo);
+		//Debug.Log("ammo = " + ammo);
 	}
 
 	void OnTriggerEnter2D(Collider2D collision)

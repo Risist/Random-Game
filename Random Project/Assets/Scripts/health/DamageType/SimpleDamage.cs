@@ -19,4 +19,5 @@ public class SimpleDamage : IDamageType
         hpC.actual += damage;
         Mathf.Clamp(hpC.actual, 0, hpC.max);
     }
+	public float toFloat() { return damage;  } 
 }

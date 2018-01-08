@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 95786000787397772}
   - component: {fileID: 114018374712320282}
   - component: {fileID: 114756742502504628}
+  - component: {fileID: 114442930876561986}
   m_Layer: 0
   m_Name: ExplosionMicro
   m_TagString: Untagged
@@ -375,6 +376,29 @@ MonoBehaviour:
   regeneration: -100
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114442930876561986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411010839725274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25be4b7abb891b34180dfbae76d53040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakePositionBase: 0
+  shakePositionDamage: 0
+  shakeRotationBase: 0
+  shakeRotationDamage: 0
+  shakeScaleBase: 0
+  shakeScaleDamage: 0
+  shakePositionBaseDeath: 0
+  shakePositionDamageDeath: 0
+  shakeRotationBaseDeath: 0
+  shakeRotationDamageDeath: 0
+  shakeScaleBaseDeath: 0
+  shakeScaleDamageDeath: 0.05
 --- !u!114 &114756742502504628
 MonoBehaviour:
   m_ObjectHideFlags: 1

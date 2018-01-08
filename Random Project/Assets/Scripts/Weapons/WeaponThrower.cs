@@ -27,6 +27,10 @@ public class WeaponThrower : MonoBehaviour
 	{
 		if(ahouldShoot)
 		{
+			if (movement)
+			{
+				movement.applyRotationToMouse();
+			}
 			Instantiate(prefab, transform.position, transform.rotation);
 			ahouldShoot = false;
 		}

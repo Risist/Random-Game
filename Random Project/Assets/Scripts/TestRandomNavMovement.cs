@@ -16,10 +16,10 @@ public class TestRandomNavMovement : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+		//agent.Move()
 
-		Vector3 v = transform.position + Random.insideUnitSphere * radius;
-		v.y = 0;
+		Vector2 v = Random.insideUnitCircle * radius;
 		if (timer.isReadyRestart())
-			agent.SetDestination(v);
+			agent.SetDestination( new Vector3( transform.position.x + v.x, transform.position.y + v.y, transform.position.z) );
 	}
 }

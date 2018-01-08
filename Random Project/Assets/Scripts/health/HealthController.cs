@@ -3,7 +3,7 @@ using System.Collections;
 
 /*
  * Two kinds of events:
- *      death event (method "OnTakeDamage" with HealthController.DamageData argument) - called once the character is considered as dead
+ *      death event (method "OnReceiveDamage" with HealthController.DamageData argument) - called once the character is considered as dead
  *      damage event (method "OnDeath" with HealthController.DamageData argument) - called everytime character takes damage, unless those damage are fatal
  *      
  * 

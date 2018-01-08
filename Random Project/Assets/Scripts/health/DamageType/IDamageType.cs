@@ -7,5 +7,6 @@ using UnityEngine;
 public interface IDamageType
 {
     void ChangeHealth(HealthController hpC, GameObject causer);
+	float toFloat();
 }
 
