@@ -357,8 +357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114350611149630396}
-  nObjectsToSpawnMin: 0
-  nObjectsToSpawnMax: 5
+  nObjectsToSpawnMin: -2
+  nObjectsToSpawnMax: 3
 --- !u!114 &114350611149630396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -377,14 +377,20 @@ MonoBehaviour:
     chance: 1.5
     minimalDistance: 1
     maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
   - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
     chance: 1
     minimalDistance: 1
     maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
   - prefab: {fileID: 0}
-    chance: 3
+    chance: 4
     minimalDistance: 1
     maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!212 &212148330316289624
 SpriteRenderer:
   m_ObjectHideFlags: 1

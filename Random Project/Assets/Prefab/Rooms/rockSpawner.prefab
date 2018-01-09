@@ -58,13 +58,13 @@ MonoBehaviour:
   - prefab: {fileID: 1097058558770546, guid: 39a445e69ce2c5a4d9be45ea3bbc81a3, type: 2}
     chance: 1
     minimalDistance: 0
-    maximalDistance: 3
+    maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1139098503524304, guid: 6a3e3077c95f567468d533d85886818f, type: 2}
     chance: 1
     minimalDistance: 0
-    maximalDistance: 3
+    maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
 --- !u!114 &114758315918729816
@@ -81,5 +81,5 @@ MonoBehaviour:
   spawnList: {fileID: 0}
   destroy: 1
   objToRemove: {fileID: 0}
-  nSpawnMin: 6
-  nSpawnMax: 10
+  nSpawnMin: 3
+  nSpawnMax: 6

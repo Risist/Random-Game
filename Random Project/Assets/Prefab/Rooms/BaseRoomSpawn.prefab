@@ -56,14 +56,8 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 0
   objects:
-  - prefab: {fileID: 1051706523475592, guid: 85905a2008acbd04497a73dc5aeaf076, type: 2}
+  - prefab: {fileID: 1717314147802294, guid: 1c007402108879541bde7030914ca0c9, type: 2}
     chance: 4
-    minimalDistance: 0
-    maximalDistance: 0
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1770870089749158, guid: fc195899b4a908046b135c5cfbaf0e12, type: 2}
-    chance: 1
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
@@ -98,14 +92,26 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 0
   objects:
-  - prefab: {fileID: 1334087242488686, guid: 515463121c73f12439a38eec869b5243, type: 2}
+  - prefab: {fileID: 1765394431107492, guid: 2af828a62dc6b8f47bb4a7fea3bc4584, type: 2}
     chance: 1
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1020713184383122, guid: f0a631145393ee940a4d2d312a431146, type: 2}
-    chance: 2
+    chance: 4
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 90
+  - prefab: {fileID: 1629855889812686, guid: 746fa2276a6140544af8c24b059b84e5, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 90
+  - prefab: {fileID: 1210470133429684, guid: 13b3d126e5b2fdd4a803d7f1c5a0feb3, type: 2}
+    chance: 5
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}

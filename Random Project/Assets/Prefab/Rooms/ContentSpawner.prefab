@@ -56,21 +56,29 @@ MonoBehaviour:
   randomPosition: 1
   objects:
   - prefab: {fileID: 1249126083102856, guid: f61ca7c8e813de24d99f3d6420e15f05, type: 2}
-    chance: 8
+    chance: 9
     minimalDistance: 0
     maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
   - prefab: {fileID: 1932502686428302, guid: a856882c1f7d4ad42a2d4cebc6afb1ca, type: 2}
+    chance: 4
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
     chance: 1
     minimalDistance: 0
     maximalDistance: 3
-  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
-    chance: 2
-    minimalDistance: 0
-    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
   - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
-    chance: 2
+    chance: 1.25
     minimalDistance: 0
     maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114040301514319188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -84,5 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114025990494892676}
   destroy: 1
-  nSpawnMin: 1
-  nSpawnMax: 5
+  objToRemove: {fileID: 0}
+  nSpawnMin: 3
+  nSpawnMax: 8
