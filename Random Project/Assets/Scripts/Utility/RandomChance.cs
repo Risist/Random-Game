@@ -7,7 +7,7 @@ using UnityEngine;
  */
 
 [System.Serializable]
-class RandomChance
+public class RandomChance
 {
     public float[] chances = null;
 
