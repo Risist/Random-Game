@@ -9,6 +9,8 @@ public class DunnoJumpBehaviour : StateMachineBehaviour {
 	public float minRadiusFromAim;
 	public float maxRadiusFromAim;
 
+	public float addictionalAngle = 180.0f;
+
 	Vector2 directionOfMove;
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -28,7 +30,7 @@ public class DunnoJumpBehaviour : StateMachineBehaviour {
 	{
 		var rb = animator.transform.parent.GetComponent<Rigidbody2D>();
 		rb.AddForce(directionOfMove * movementSpeed);
-		rb.rotation = Vector2.Angle(Vector2.up, directionOfMove) * (directionOfMove.x > 0 ? -1 : 1) + 180;
+		rb.rotation = Vector2.Angle(Vector2.up, directionOfMove) * (directionOfMove.x > 0 ? -1 : 1) + addictionalAngle;
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state

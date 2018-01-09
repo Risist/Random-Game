@@ -5,37 +5,55 @@ using UnityEngine;
 public class dunnoMind : MonoBehaviour {
 	
 
-	// varriables to index animations
-	private int[] idAnim = new int[4];
-	public Animator animator;
+	[System.Serializable]
+	public class BehaviourData
+	{
+		public float chance;
+		[System.NonSerialized]
+		public int idAnim;
+		public string animKeyName;
 
+		public void initAnimId()
+		{
+			idAnim = Animator.StringToHash(animKeyName);
+		}
+
+		public float cdChangeAnimMin = 1.0f;
+		public float cdChangeAnimMax = 5.0f;
+	}
+
+	// varriables to index animations
+	public Animator animator;
+	public BehaviourData[] behaviours;
 	// random data
-	public RandomChance chancesOfBehaviours;
-	public float cdChangeBehaviourMin = 1.0f;
-	public float cdChangeBehaviourMax = 5.0f;
-	Timer cdChangeBehavour = new Timer();
+	public Timer cdChangeBehavour = new Timer();
 
 	// Use this for initialization
 	void Start () {
-		idAnim[0] = Animator.StringToHash("jump");
-		idAnim[1] = Animator.StringToHash("jumpFast");
-		idAnim[2] = Animator.StringToHash("swing");
-		idAnim[3] = Animator.StringToHash("crush");
-
+	
 		if(!animator)
 			animator = GetComponent<Animator>();
 
-		cdChangeBehavour.cd = Random.Range(cdChangeBehaviourMin, cdChangeBehaviourMax);
+		foreach (var it in behaviours)
+			it.initAnimId();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (cdChangeBehavour.isReadyRestart())
 		{
-			int id = chancesOfBehaviours.GetRandedId();
-			animator.SetTrigger(idAnim[id]);
+			float[] chances = new float[behaviours.Length];
+			for( int i = 0; i < chances.Length; ++i)
+			{
+				chances[i] = behaviours[i].chance;
+			}
 
-			cdChangeBehavour.cd = Random.Range(cdChangeBehaviourMin, cdChangeBehaviourMax);
+			RandomChance chancesOfBehaviours = new RandomChance();
+			chancesOfBehaviours.chances = chances;
+			int id = chancesOfBehaviours.GetRandedId();
+			animator.SetTrigger(behaviours[id].idAnim);
+
+			cdChangeBehavour.cd = Random.Range(behaviours[id].cdChangeAnimMin, behaviours[id].cdChangeAnimMax);
 		}
 	}
 }
