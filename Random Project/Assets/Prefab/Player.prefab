@@ -727,7 +727,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -15
+    damage: -20
   damageExit:
     damage: 0
 --- !u!114 &114054285537627552
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 75
+  actual: 100
   max: 125
   regeneration: 0.5
   removeAfterDeath: 1
@@ -830,14 +830,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 20
+  ammoCost: 30
   buttonCode: Fire1
   triggerEvent: meditate
   timer:
     actualTime: 0
     cd: 0.55
   animManager: {fileID: 114491037430976288}
-  movement: {fileID: 114687892731009294}
+  movement: {fileID: 0}
 --- !u!114 &114458500280392978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 70
+  ammoCost: 100
   buttonCode: Fire2
   triggerEvent: slash
   timer:
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50204895844437464}
-  movementSpeed: 3000
+  movementSpeed: 4000
 --- !u!114 &114588068175722784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: boomerang
-  ammo: 150
+  ammo: 500
   maximumAmmo: 500
   ammoRegeneration: 20
 --- !u!114 &114687892731009294
