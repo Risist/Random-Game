@@ -6,10 +6,12 @@ public class pullInside : MonoBehaviour {
 
 	public float force;
 	public float forceIncrease;
+	public float forceMax = float.MaxValue;
 
 	private void Update()
 	{
 		force += forceIncrease * Time.deltaTime;
+		force = Mathf.Clamp(force, -forceMax, forceMax);
 	}
 	private void OnTriggerStay2D(Collider2D collision)
 	{
