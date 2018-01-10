@@ -5,6 +5,7 @@ using UnityEngine;
 public class RoomController : SpawnMethodBase {
 
 	public SpawnListBase roomList;
+	public GameObject wallPrefab;
 	//public GameObject roomPrefab;
 
 	public float roomSize;
@@ -25,10 +26,13 @@ public class RoomController : SpawnMethodBase {
 		manager.signRoom(roomX, roomY);
 
 		//if (roomPrefab)
-			roomList.Spawn(Vector2.zero, Random.Range(0, 3) * 90.0f);
-			//Instantiate(roomPrefab, transform.position, Quaternion.Euler(0,0,transform.rotation.eulerAngles.z + Random.Range(0,3) * 90.0f ) );
+		roomList.Spawn(Vector2.zero, Random.Range(0, 3) * 90.0f);
+		//wallList.Spawn(Vector2.zero, Random.Range(0, 3) * 90.0f);
+	
+		{	
+			
+			
 
-		{
 			if (!manager.hasRoom(roomX - 1, roomY))
 			{
 				var door = spawnList.Spawn(new Vector2(-roomSize, 0), 0).GetComponent<Door>();
@@ -38,7 +42,9 @@ public class RoomController : SpawnMethodBase {
 					door.roomY = roomY;
 					door.offset = new Vector2(-roomSize,0);
 				}
-			}
+			}else if( !manager.isInside(roomX - 1, roomY))
+				Instantiate(wallPrefab, transform.position + new Vector3(-roomSize, 0, 0), Quaternion.identity);
+
 
 			if (!manager.hasRoom(roomX + 1, roomY))
 			{
@@ -50,6 +56,11 @@ public class RoomController : SpawnMethodBase {
 					door.offset = new Vector2(roomSize, 0);
 				}
 			}
+			else if (!manager.isInside(roomX + 1, roomY))
+				Instantiate(wallPrefab, transform.position + new Vector3(roomSize, 0, 0), Quaternion.identity);
+
+
+
 			if (!manager.hasRoom(roomX, roomY - 1))
 			{
 				var door = spawnList.Spawn(new Vector2(0, -roomSize), 90).GetComponent<Door>();
@@ -60,6 +71,10 @@ public class RoomController : SpawnMethodBase {
 					door.offset = new Vector2(0, -roomSize);
 				}
 			}
+			else if (!manager.isInside(roomX, roomY-1))
+				Instantiate(wallPrefab, transform.position + new Vector3(0, -roomSize, 0), Quaternion.identity);
+
+
 			if (!manager.hasRoom(roomX, roomY + 1))
 			{
 				var door = spawnList.Spawn(new Vector2(0, roomSize), 270).GetComponent<Door>();
@@ -70,6 +85,10 @@ public class RoomController : SpawnMethodBase {
 					door.offset = new Vector2(0, roomSize);
 				}
 			}
+			else if (!manager.isInside(roomX, roomY + 1))
+				Instantiate(wallPrefab, transform.position + new Vector3(0, roomSize, 0), Quaternion.identity);
+
+
 		}
 
 		/// remove RoomController after spawning room

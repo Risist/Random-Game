@@ -3248,6 +3248,7 @@ GameObject:
   - component: {fileID: 50127299971994006}
   - component: {fileID: 114682898657318014}
   - component: {fileID: 114732089776762064}
+  - component: {fileID: 114796298119815654}
   m_Layer: 0
   m_Name: dummy Trap (2)
   m_TagString: Untagged
@@ -6244,6 +6245,7 @@ GameObject:
   - component: {fileID: 50983721368360430}
   - component: {fileID: 114344143195797978}
   - component: {fileID: 114089501098364352}
+  - component: {fileID: 114775269615670232}
   m_Layer: 0
   m_Name: dummy Trap (1)
   m_TagString: Untagged
@@ -8778,6 +8780,7 @@ GameObject:
   - component: {fileID: 50849875121207798}
   - component: {fileID: 114739901328367392}
   - component: {fileID: 114223063196166306}
+  - component: {fileID: 114735035462986590}
   m_Layer: 0
   m_Name: dummy Trap
   m_TagString: Untagged
@@ -12698,6 +12701,7 @@ GameObject:
   - component: {fileID: 114123381985487192}
   - component: {fileID: 114881333252401164}
   - component: {fileID: 50840883211449864}
+  - component: {fileID: 114586430595079690}
   m_Layer: 0
   m_Name: dummy (3)
   m_TagString: Untagged
@@ -13888,6 +13892,7 @@ GameObject:
   - component: {fileID: 114698233072639658}
   - component: {fileID: 114978080735798056}
   - component: {fileID: 50475762685069764}
+  - component: {fileID: 114383726240135408}
   m_Layer: 0
   m_Name: dummy (1)
   m_TagString: Untagged
@@ -14676,6 +14681,7 @@ GameObject:
   - component: {fileID: 114556849967936322}
   - component: {fileID: 114871638265971026}
   - component: {fileID: 50825135043264194}
+  - component: {fileID: 114287540079472096}
   m_Layer: 0
   m_Name: dummy (2)
   m_TagString: Untagged
@@ -15649,6 +15655,7 @@ GameObject:
   - component: {fileID: 114181247443237196}
   - component: {fileID: 114427323296745546}
   - component: {fileID: 50847209434946164}
+  - component: {fileID: 114794117519789502}
   m_Layer: 0
   m_Name: dummy
   m_TagString: Untagged
@@ -24460,7 +24467,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1741660108257582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.53, y: -2.3599997, z: -20.12}
+  m_LocalPosition: {x: 16.98499, y: -2.6004925, z: -20.12}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4984879673076840}
@@ -32449,6 +32456,24 @@ MonoBehaviour:
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114287540079472096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943990640504076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae9d94228c743d4693ec6baa0d43b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3000
+  minimalDistance: 2
+  minRadius: 3
+  maxRadius: 10
+  cdMin: 1
+  cdMax: 2
+  addictionalRotation: 0
 --- !u!114 &114314239748409470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32649,6 +32674,24 @@ MonoBehaviour:
     maximalDistance: 0.75
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114383726240135408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1883202963092394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae9d94228c743d4693ec6baa0d43b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3000
+  minimalDistance: 2
+  minRadius: 3
+  maxRadius: 10
+  cdMin: 1
+  cdMax: 2
+  addictionalRotation: 0
 --- !u!114 &114385889732346416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33273,6 +33316,24 @@ MonoBehaviour:
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114586430595079690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800429838527230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae9d94228c743d4693ec6baa0d43b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3000
+  minimalDistance: 2
+  minRadius: 3
+  maxRadius: 10
+  cdMin: 1
+  cdMax: 2
+  addictionalRotation: 0
 --- !u!114 &114586824795457920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33636,6 +33697,24 @@ MonoBehaviour:
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114735035462986590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518714912172220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae9d94228c743d4693ec6baa0d43b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3000
+  minimalDistance: 2
+  minRadius: 3
+  maxRadius: 10
+  cdMin: 1
+  cdMax: 2
+  addictionalRotation: 0
 --- !u!114 &114739901328367392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33712,6 +33791,24 @@ MonoBehaviour:
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114775269615670232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1372934154477176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae9d94228c743d4693ec6baa0d43b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3000
+  minimalDistance: 2
+  minRadius: 3
+  maxRadius: 10
+  cdMin: 1
+  cdMax: 2
+  addictionalRotation: 0
 --- !u!114 &114776423259110830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33760,6 +33857,42 @@ MonoBehaviour:
     maximalDistance: 0.75
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114794117519789502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1997773339729252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae9d94228c743d4693ec6baa0d43b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3000
+  minimalDistance: 2
+  minRadius: 3
+  maxRadius: 10
+  cdMin: 1
+  cdMax: 2
+  addictionalRotation: 0
+--- !u!114 &114796298119815654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177206133026798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae9d94228c743d4693ec6baa0d43b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3000
+  minimalDistance: 2
+  minRadius: 3
+  maxRadius: 10
+  cdMin: 1
+  cdMax: 2
+  addictionalRotation: 0
 --- !u!114 &114802336801373872
 MonoBehaviour:
   m_ObjectHideFlags: 1

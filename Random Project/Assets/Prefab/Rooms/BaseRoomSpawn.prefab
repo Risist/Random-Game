@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114579300428377976}
   - component: {fileID: 114645783320326976}
   - component: {fileID: 114561343421709272}
+  - component: {fileID: 114726855155906200}
   m_Layer: 0
   m_Name: BaseRoomSpawn
   m_TagString: Untagged
@@ -56,14 +57,20 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 0
   objects:
-  - prefab: {fileID: 1051706523475592, guid: 85905a2008acbd04497a73dc5aeaf076, type: 2}
-    chance: 4
+  - prefab: {fileID: 1717314147802294, guid: 1c007402108879541bde7030914ca0c9, type: 2}
+    chance: 6
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1770870089749158, guid: fc195899b4a908046b135c5cfbaf0e12, type: 2}
-    chance: 1
+  - prefab: {fileID: 1461761533061336, guid: 0fb333261f1e95741bb2e7471bdd01d8, type: 2}
+    chance: 0.5
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1434507289160106, guid: 7de2bae8526edd5408c2429d07741917, type: 2}
+    chance: 2
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
@@ -81,9 +88,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114645783320326976}
   roomList: {fileID: 114561343421709272}
+  wallPrefab: {fileID: 1023067416265270, guid: 79563b2fbba7a21468f9117c91748221, type: 2}
   roomSize: 20
-  roomX: 10
-  roomY: 10
+  roomX: 100
+  roomY: 100
 --- !u!114 &114645783320326976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,15 +106,41 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 0
   objects:
-  - prefab: {fileID: 1334087242488686, guid: 515463121c73f12439a38eec869b5243, type: 2}
-    chance: 1
-    minimalDistance: 0
-    maximalDistance: 0
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
   - prefab: {fileID: 1020713184383122, guid: f0a631145393ee940a4d2d312a431146, type: 2}
     chance: 2
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 90
+  - prefab: {fileID: 1210470133429684, guid: 13b3d126e5b2fdd4a803d7f1c5a0feb3, type: 2}
+    chance: 4
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 90
+  - prefab: {fileID: 1023067416265270, guid: 79563b2fbba7a21468f9117c91748221, type: 2}
+    chance: 2
+    minimalDistance: 0
+    maximalDistance: 90
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+--- !u!114 &114726855155906200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1834126151135660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 0
+  randomPosition: 0
+  objects:
+  - prefab: {fileID: 1334087242488686, guid: 515463121c73f12439a38eec869b5243, type: 2}
+    chance: 0
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0

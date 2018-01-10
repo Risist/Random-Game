@@ -25,6 +25,10 @@ public class GameManager : MonoBehaviour {
 
 		return mapRooms[x, y];
 	}
+	public bool isInside(int x, int y)
+	{
+		return !(x < 0 || y < 0 || x >= mapSizeX || y >= mapSizeY);
+	}
 	public void signRoom(int x, int y)
 	{
 		mapRooms[x, y] = true;

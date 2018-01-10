@@ -62,10 +62,11 @@ public class RandomSpawnList : SpawnListBase {
                     else
                         offset = new Vector3();
 
+					Quaternion q = Quaternion.Euler(0, 0, rot + objects[i].rotationOffset);
 
 
-                    return Instantiate(objects[i].prefab, gameObject.transform.position + offset + (Vector3)objects[i].positionOffset,
-                        Quaternion.Euler(0, 0, rot + objects[i].rotationOffset));
+					return Instantiate(objects[i].prefab, gameObject.transform.position + offset + q*(Vector3)objects[i].positionOffset,
+                        q);
                 }
                 else
                 {

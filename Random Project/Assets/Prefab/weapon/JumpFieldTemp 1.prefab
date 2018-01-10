@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 58164988228606792}
   - component: {fileID: 114677131411034306}
   - component: {fileID: 114571561144209732}
+  - component: {fileID: 114778325309016554}
   m_Layer: 0
   m_Name: JumpFieldTemp 1
   m_TagString: Untagged
@@ -128,7 +129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1550924305828402}
   m_LocalRotation: {x: -0, y: -0, z: 0.99990517, w: 0.013774032}
-  m_LocalPosition: {x: -0.5953585, y: 0.8070137, z: 0}
+  m_LocalPosition: {x: -11.840607, y: -23.310785, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 4946793793666088}
@@ -193,7 +194,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 3
+    cd: 14
   changeRate: 1
   min: 0
   max: 0.9
@@ -211,7 +212,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 3
+    cd: 14
   changeRate: 1
   min: 0
   max: 0.9
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 4
+    cd: 15
 --- !u!114 &114677131411034306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,7 +241,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41996a4982e157643bd2ab1674d86833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0, y: 300}
+  force: {x: 0, y: 500}
+--- !u!114 &114778325309016554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1550924305828402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actual: 1000
+  max: 1000
+  regeneration: 0
+  removeAfterDeath: 1
+  objectToRemove: {fileID: 0}
 --- !u!114 &114855762631036976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,7 +272,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 3
+    cd: 14
   changeRate: 1
   min: 0
   max: 0.9
