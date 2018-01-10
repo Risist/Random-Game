@@ -90,6 +90,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1225394520044994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4959046142052542}
+  - component: {fileID: 114987641961073974}
+  m_Layer: 0
+  m_Name: bulletSpawn Devil wave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1305593006870890
 GameObject:
   m_ObjectHideFlags: 1
@@ -170,6 +186,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1564460167382242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4718455164513044}
+  - component: {fileID: 114521330513553136}
+  m_Layer: 0
+  m_Name: bulletSpawn Devil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1613892760517944
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,12 +333,12 @@ GameObject:
   - component: {fileID: 4042770382574274}
   - component: {fileID: 114607402746523254}
   m_Layer: 0
-  m_Name: bulletSpawn Devil
+  m_Name: bulletSpawn bLACKhOLE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1961287773121042
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1997980422518702
 GameObject:
   m_ObjectHideFlags: 1
@@ -348,12 +380,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1951281381804670}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 4
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4072777291062634
 Transform:
@@ -507,6 +539,19 @@ Transform:
   m_Father: {fileID: 4914286268484342}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50}
+--- !u!4 &4718455164513044
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1564460167382242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4757789903809926
 Transform:
   m_ObjectHideFlags: 1
@@ -574,11 +619,13 @@ Transform:
   - {fileID: 4682030580088866}
   - {fileID: 4582483614128310}
   - {fileID: 4407688762946098}
-  - {fileID: 4042770382574274}
+  - {fileID: 4718455164513044}
   - {fileID: 4664540152127936}
   - {fileID: 4516411547212326}
   - {fileID: 4354957460823904}
   - {fileID: 4851311901652056}
+  - {fileID: 4959046142052542}
+  - {fileID: 4042770382574274}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.855}
@@ -620,6 +667,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4851311901652056}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4959046142052542
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1225394520044994}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50204895844437464
 Rigidbody2D:
@@ -670,7 +730,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.25
+  m_Radius: 3
 --- !u!61 &61800780600898344
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -727,7 +787,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -20
+    damage: -25
   damageExit:
     damage: 0
 --- !u!114 &114054285537627552
@@ -758,7 +818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 20
+  ammoCost: 22.5
   prefab: {fileID: 1314080635737764, guid: 5cadec6a40b5560459d9b8b8c160413a, type: 2}
   buttonCode: Fire1
   timer:
@@ -831,7 +891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
   ammoCost: 30
-  buttonCode: Fire1
+  buttonCode: Fire2
   triggerEvent: meditate
   timer:
     actualTime: 0
@@ -850,12 +910,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 100
-  buttonCode: Fire2
+  ammoCost: 60
+  buttonCode: Fire1
   triggerEvent: slash
   timer:
     actualTime: 0
-    cd: 0.55
+    cd: 0.5
   animManager: {fileID: 114491037430976288}
   movement: {fileID: 114687892731009294}
 --- !u!114 &114491037430976288
@@ -871,6 +931,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95418995943184012}
   animStartCode: isCasting
+--- !u!114 &114521330513553136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1564460167382242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 40
+  prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
+  buttonCode: Fire1
+  timer:
+    actualTime: 0
+    cd: 0.4
+  animManager: {fileID: 114491037430976288}
+  movement: {fileID: 114687892731009294}
 --- !u!114 &114521562435448456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -932,12 +1012,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 40
-  prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
-  buttonCode: Fire2
+  ammoCost: 60
+  prefab: {fileID: 1640546546741108, guid: 59432a6293b06cc4a97a77921cec5119, type: 2}
+  buttonCode: Fire1
   timer:
     actualTime: 0
-    cd: 0.4
+    cd: 0.6
   animManager: {fileID: 114491037430976288}
   movement: {fileID: 114687892731009294}
 --- !u!114 &114669773493803934
@@ -1006,6 +1086,26 @@ MonoBehaviour:
   timer:
     actualTime: 0
     cd: 0.165
+  animManager: {fileID: 114491037430976288}
+  movement: {fileID: 114687892731009294}
+--- !u!114 &114987641961073974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1225394520044994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 175
+  prefab: {fileID: 1764599641537900, guid: e7653ac2c1d82244eaf3557cdf427f3c, type: 2}
+  buttonCode: Fire2
+  timer:
+    actualTime: 0
+    cd: 1
   animManager: {fileID: 114491037430976288}
   movement: {fileID: 114687892731009294}
 --- !u!212 &212025973185190512
