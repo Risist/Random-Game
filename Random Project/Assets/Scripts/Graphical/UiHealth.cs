@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class UiHealth : MonoBehaviour {
 
+	public float lenghtPerHp = 70;
 	HealthController playerHp;
 	Image image;
 
@@ -18,5 +19,6 @@ public class UiHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		image.fillAmount = playerHp.actual / playerHp.max;
+		image.transform.localScale = new Vector2(1 + playerHp.max / lenghtPerHp, 1);
 	}
 }

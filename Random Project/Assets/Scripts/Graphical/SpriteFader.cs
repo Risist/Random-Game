@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 ///  changes alpha canal of a sprite
@@ -18,6 +19,7 @@ public class SpriteFader : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 		sprite = GetComponent<SpriteRenderer>();
 		reverseTimer.restart();
 	}

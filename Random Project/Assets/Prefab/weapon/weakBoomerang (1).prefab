@@ -192,11 +192,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -10
+    damage: -14
   damageStay:
     damage: 0
   damageExit:
     damage: 0
+  ignoreTag: noTag
 --- !u!212 &212917255700523648
 SpriteRenderer:
   m_ObjectHideFlags: 1

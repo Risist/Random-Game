@@ -133,11 +133,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -30
+    damage: -40
   damageStay:
     damage: 0
   damageExit:
     damage: 0
+  ignoreTag: noTag
 --- !u!114 &114134881342430420
 MonoBehaviour:
   m_ObjectHideFlags: 1

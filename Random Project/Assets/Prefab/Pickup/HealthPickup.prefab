@@ -20,9 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4250165531958184}
   - component: {fileID: 58157097706242866}
-  - component: {fileID: 114719333208927616}
-  - component: {fileID: 114228948120467674}
   - component: {fileID: 114433085557501208}
+  - component: {fileID: 114675878717813718}
   m_Layer: 0
   m_Name: HealthPickup
   m_TagString: Untagged
@@ -71,8 +70,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1070186079473448}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.2206683, y: -1.4654205, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 3.9799666, y: 0.43819875, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 4720339114129264}
   - {fileID: 4346376383245182}
@@ -120,19 +119,6 @@ CircleCollider2D:
   m_Offset: {x: -0.44, y: -0.15}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &114228948120467674
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1070186079473448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7ee68db359beaf489a677581348af66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTrigger: 1
-  onCollision: 1
 --- !u!114 &114356447991252284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,7 +169,7 @@ MonoBehaviour:
   timer:
     actualTime: 0
     cd: 45
---- !u!114 &114719333208927616
+--- !u!114 &114675878717813718
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -191,15 +177,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070186079473448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e6ec63ad6ef364ebece5cc90b6f378, type: 3}
+  m_Script: {fileID: 11500000, guid: 056b82a7eb81570499467d6b14678bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageEnter:
-    damage: 25
-  damageStay:
-    damage: 0
-  damageExit:
-    damage: 0
+  healthMaxBonus: 0
+  healthActualBonus: 25
+  healthBonusRegen: 0
 --- !u!212 &212347412596813866
 SpriteRenderer:
   m_ObjectHideFlags: 1

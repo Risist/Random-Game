@@ -160,11 +160,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -10
+    damage: -14
   damageStay:
     damage: 0
   damageExit:
     damage: 0
+  ignoreTag: noTag
 --- !u!114 &114419789986969338
 MonoBehaviour:
   m_ObjectHideFlags: 1

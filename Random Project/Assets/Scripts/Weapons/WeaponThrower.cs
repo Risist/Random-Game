@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponThrower : MonoBehaviour
+public class WeaponThrower : WeaponBase
 {
-	public Weapon weapon;
-
-	public float ammoCost;
-	public GameObject prefab;
-	public string buttonCode = "Fire1";
-	public Timer timer = new Timer(0.5f);
-
 	public AnimationManager animManager;
-	public PlayerWSADMovement movement;
+	public GameObject prefab;
 	bool ahouldShoot = false;
 
 	// Use this for initialization
@@ -29,6 +22,7 @@ public class WeaponThrower : MonoBehaviour
 		{
 			if (movement)
 			{
+
 				movement.applyRotationToMouse();
 			}
 			Instantiate(prefab, transform.position, transform.rotation);

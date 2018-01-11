@@ -7,6 +7,7 @@ public class PlayerWSADMovement : MonoBehaviour
 {
     public float movementSpeed = 1.0f;
     public Rigidbody2D body;
+	public bool rotateToDirection = true;
     
     // Use this for initialization
     void Start()
@@ -43,9 +44,12 @@ public class PlayerWSADMovement : MonoBehaviour
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         if ((input.x != 0 || input.y != 0) && !appliedExternalRotation )
             lastInput = input;
-        body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
-		appliedExternalRotation = false;
-        
+		if (rotateToDirection)
+		{
+			body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
+			appliedExternalRotation = false;
+		}
+
         body.AddForce(input * movementSpeed * Time.fixedDeltaTime);
     }
 }

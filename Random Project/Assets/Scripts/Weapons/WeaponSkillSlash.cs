@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponSkillSlash: MonoBehaviour {
-
-	public Weapon weapon;
-
-	public float ammoCost;
-	public string buttonCode = "Fire1";
+public class WeaponSkillSlash: WeaponBase {
+	
 	public string triggerEvent = "slash";
-	public Timer timer = new Timer(0.5f);
-
 	public AnimationManager animManager;
-	public PlayerWSADMovement movement;
 	bool ahouldShoot = false;
 
 	// Use this for initialization
@@ -26,12 +19,11 @@ public class WeaponSkillSlash: MonoBehaviour {
 
 		if (Input.GetButton(buttonCode))
 		{
-			if (movement)
-			{
-				movement.applyRotationToMouse();
-			}
+			
 			if (timer.isReady() && weapon.UseAmmo(ammoCost))
 			{
+				if (movement)
+					movement.applyRotationToMouse();
 				if (animManager)
 					animManager.animator.SetTrigger(triggerEvent);
 				timer.restart();

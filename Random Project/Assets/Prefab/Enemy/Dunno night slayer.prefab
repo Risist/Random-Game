@@ -397,6 +397,7 @@ MonoBehaviour:
     damage: -7
   damageExit:
     damage: 0
+  ignoreTag: noTag
 --- !u!114 &114510915028862634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -422,14 +423,14 @@ MonoBehaviour:
     animKeyName: crush
     cdChangeAnimMin: 0
     cdChangeAnimMax: 1.5
-  - chance: 2
+  - chance: 1.75
     animKeyName: swing
     cdChangeAnimMin: 0
-    cdChangeAnimMax: 0.5
-  - chance: 1
+    cdChangeAnimMax: 0.75
+  - chance: 1.25
     animKeyName: avoid
     cdChangeAnimMin: 0
-    cdChangeAnimMax: 0.25
+    cdChangeAnimMax: 0.5
   cdChangeBehavour:
     actualTime: 0
     cd: 0.5

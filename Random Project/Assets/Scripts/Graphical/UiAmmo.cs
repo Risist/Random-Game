@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UiAmmo : MonoBehaviour {
 
+
+	public float lenghtPerAmmo = 70;
 	Weapon playerAmmo;
 	Image image;
 
@@ -19,5 +21,6 @@ public class UiAmmo : MonoBehaviour {
 	void Update()
 	{
 		image.fillAmount = playerAmmo.ammo / playerAmmo.maximumAmmo;
+		image.transform.localScale = new Vector2(1 + playerAmmo.maximumAmmo / lenghtPerAmmo, 1);
 	}
 }
