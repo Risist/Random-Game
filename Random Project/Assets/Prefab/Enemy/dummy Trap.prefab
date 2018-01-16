@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 114841374042187586}
   m_Layer: 0
   m_Name: dummy Trap
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,12 +462,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae9d94228c743d4693ec6baa0d43b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3000
-  minimalDistance: 2
-  minRadius: 3
-  maxRadius: 10
-  cdMin: 1
-  cdMax: 2
+  movementSpeed: 3900
+  minimalDistance: 1
+  minRadius: 5
+  maxRadius: 12
+  cdMin: 0.5
+  cdMax: 1.25
   addictionalRotation: 0
 --- !u!212 &212020430653918984
 SpriteRenderer:

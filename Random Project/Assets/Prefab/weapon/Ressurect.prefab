@@ -492,9 +492,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 4
+  radius: 6
   dmg:
-    damage: 150
+    damage: 15
+  ignoreTag: Player
 --- !u!114 &114256555250915258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -517,7 +518,7 @@ MonoBehaviour:
   shakeRotationBaseDeath: 0
   shakeRotationDamageDeath: 0
   shakeScaleBaseDeath: 0
-  shakeScaleDamageDeath: 0.1
+  shakeScaleDamageDeath: 0
 --- !u!114 &114412367197327276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -529,8 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 100
-  max: 100
+  actual: 90
+  max: 90
   regeneration: -100
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
@@ -547,7 +548,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 6
   dmg:
-    damage: -50
+    damage: -25
+  ignoreTag: enemy
 --- !u!212 &212141090021136344
 SpriteRenderer:
   m_ObjectHideFlags: 1

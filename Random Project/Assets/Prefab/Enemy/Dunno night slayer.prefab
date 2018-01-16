@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 58312913795510810}
   m_Layer: 0
   m_Name: Dunno night slayer
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1903837467419714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.706342, y: 4.0722747, z: -0.26171875}
+  m_LocalPosition: {x: -0.46802276, y: 2.4668133, z: -0.26171875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4929811361200260}
@@ -397,7 +397,7 @@ MonoBehaviour:
     damage: -7
   damageExit:
     damage: 0
-  ignoreTag: noTag
+  ignoreTag: enemy
 --- !u!114 &114510915028862634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -445,8 +445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 20
-  max: 20
+  actual: 40
+  max: 40
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

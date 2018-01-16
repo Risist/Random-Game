@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 58308899217176298}
   m_Layer: 0
   m_Name: Dunno thrower
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -433,6 +433,7 @@ MonoBehaviour:
     damage: -4
   damageExit:
     damage: 0
+  ignoreTag: noTag
 --- !u!114 &114682380576873684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -444,8 +445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 20
-  max: 20
+  actual: 50
+  max: 50
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

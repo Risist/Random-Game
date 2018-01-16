@@ -361,7 +361,7 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 0
   objects:
-  - prefab: {fileID: 1852319129915400, guid: f93e609c363f11c4ebea1bfc71880a72, type: 2}
+  - prefab: {fileID: 1719469881701862, guid: e3d265a6832a4ca4dbdbd8789cc2fb45, type: 2}
     chance: 1
     minimalDistance: 0
     maximalDistance: 0
@@ -379,6 +379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114212416816920566}
+  cdSpawn:
+    actualTime: 0
+    cd: 0
 --- !u!114 &114497329628932646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -393,7 +396,7 @@ MonoBehaviour:
   randomRotation: 1
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1170263240658998, guid: e1ddbd96261f2c04ca531b3ac912e5b2, type: 2}
+  - prefab: {fileID: 1781178559649850, guid: 31d328fb11a50ce40aa2b3e88b6692e2, type: 2}
     chance: 1
     minimalDistance: 0.25
     maximalDistance: 1.5

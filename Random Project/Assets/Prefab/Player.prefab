@@ -186,6 +186,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1443112807279014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4519243253433720}
+  - component: {fileID: 114479868516171020}
+  m_Layer: 0
+  m_Name: bulletSpawn Devil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1540646628692434
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +228,7 @@ GameObject:
   - component: {fileID: 4718455164513044}
   - component: {fileID: 114521330513553136}
   m_Layer: 0
-  m_Name: bulletSpawn Devil
+  m_Name: bulletSpawn rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,6 +262,22 @@ GameObject:
   - component: {fileID: 4113230993755934}
   m_Layer: 0
   m_Name: skillTornado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1653183406740368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4896809750531306}
+  - component: {fileID: 114728963157008794}
+  m_Layer: 0
+  m_Name: bulletSpawn bLACKhOLE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -404,7 +436,7 @@ GameObject:
   - component: {fileID: 4042770382574274}
   - component: {fileID: 114607402746523254}
   m_Layer: 0
-  m_Name: bulletSpawn bLACKhOLE
+  m_Name: bulletSpawn knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,11 +485,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1951281381804670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 8
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4072777291062634
 Transform:
@@ -572,6 +604,19 @@ Transform:
   m_Father: {fileID: 4914286268484342}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4519243253433720
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443112807279014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4582483614128310
 Transform:
   m_ObjectHideFlags: 1
@@ -646,12 +691,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1564460167382242}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 3
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4720175451355674
 Transform:
@@ -732,6 +777,19 @@ Transform:
   m_Father: {fileID: 4072929923828060}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4896809750531306
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1653183406740368}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4914286268484342
 Transform:
   m_ObjectHideFlags: 1
@@ -745,15 +803,17 @@ Transform:
   - {fileID: 4682030580088866}
   - {fileID: 4407688762946098}
   - {fileID: 4959046142052542}
-  - {fileID: 4718455164513044}
+  - {fileID: 4519243253433720}
   - {fileID: 4664540152127936}
   - {fileID: 4516411547212326}
   - {fileID: 4720175451355674}
   - {fileID: 4851311901652056}
-  - {fileID: 4042770382574274}
+  - {fileID: 4896809750531306}
   - {fileID: 4113230993755934}
   - {fileID: 4745985647160184}
   - {fileID: 4354957460823904}
+  - {fileID: 4718455164513044}
+  - {fileID: 4042770382574274}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.855}
@@ -945,7 +1005,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -10
+    damage: -25
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -960,9 +1020,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 70
+  actual: 100
   max: 100
-  regeneration: 0.5
+  regeneration: 2
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114162930464800708
@@ -983,6 +1043,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.2
   movement: {fileID: 114687892731009294}
+  displayName: wind
   animManager: {fileID: 114491037430976288}
   prefab: {fileID: 1314080635737764, guid: 5cadec6a40b5560459d9b8b8c160413a, type: 2}
 --- !u!114 &114166570564966408
@@ -1003,6 +1064,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 1
   movement: {fileID: 114687892731009294}
+  displayName: jump field
   animManager: {fileID: 114491037430976288}
   prefab: {fileID: 1550924305828402, guid: 5ed4f093cb2a0894a9683edd317b3a38, type: 2}
 --- !u!114 &114184790143510448
@@ -1023,6 +1085,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 2.5
   movement: {fileID: 114687892731009294}
+  displayName: crush
   triggerEvent: crush
   animManager: {fileID: 114491037430976288}
 --- !u!114 &114233141637618136
@@ -1068,6 +1131,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.165
   movement: {fileID: 114687892731009294}
+  displayName: 
   animManager: {fileID: 114491037430976288}
   prefab: {fileID: 1060058989794470, guid: ff1dbe4e5c6c9914d8666c181a162e3b, type: 2}
 --- !u!114 &114278036587875788
@@ -1084,7 +1148,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -12.5
+    damage: -25
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -1119,6 +1183,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.55
   movement: {fileID: 0}
+  displayName: meditation
   triggerEvent: meditate
   animManager: {fileID: 114491037430976288}
 --- !u!114 &114458500280392978
@@ -1139,8 +1204,30 @@ MonoBehaviour:
     actualTime: 0
     cd: 1
   movement: {fileID: 114687892731009294}
+  displayName: draw
   triggerEvent: draw
   animManager: {fileID: 114491037430976288}
+--- !u!114 &114479868516171020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443112807279014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 40
+  buttonCode: Fire1
+  timer:
+    actualTime: 0
+    cd: 0.4
+  movement: {fileID: 114687892731009294}
+  displayName: devil
+  animManager: {fileID: 114491037430976288}
+  prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
 --- !u!114 &114491037430976288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1166,14 +1253,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 40
+  ammoCost: 19
   buttonCode: Fire1
   timer:
     actualTime: 0
-    cd: 0.4
+    cd: 0.1
   movement: {fileID: 114687892731009294}
+  displayName: rock
   animManager: {fileID: 114491037430976288}
-  prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
+  prefab: {fileID: 1904601315950934, guid: e90a0cfef88afd545b0720bca77a0715, type: 2}
 --- !u!114 &114521562435448456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1235,14 +1323,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 60
+  ammoCost: 40
   buttonCode: Fire2
   timer:
     actualTime: 0
-    cd: 0.6
+    cd: 0.5
   movement: {fileID: 114687892731009294}
+  displayName: knife
   animManager: {fileID: 114491037430976288}
-  prefab: {fileID: 1640546546741108, guid: 59432a6293b06cc4a97a77921cec5119, type: 2}
+  prefab: {fileID: 1876976785215474, guid: e6fa957d119895c4bbb2fd0fb633450e, type: 2}
 --- !u!114 &114669773493803934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1290,6 +1379,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 1.25
   movement: {fileID: 114687892731009294}
+  displayName: teleport
   animManager: {fileID: 114491037430976288}
   prefab: {fileID: 1388764738251450, guid: 1503a9325bb60244b8c5e0ddb253097a, type: 2}
 --- !u!114 &114692092346642316
@@ -1304,14 +1394,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 32
+  ammoCost: 42.5
   buttonCode: Fire1
   timer:
     actualTime: 0
-    cd: 1.1
+    cd: 0.9
   movement: {fileID: 114687892731009294}
+  displayName: slash
   triggerEvent: slash
   animManager: {fileID: 114491037430976288}
+--- !u!114 &114728963157008794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1653183406740368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 60
+  buttonCode: Fire2
+  timer:
+    actualTime: 0
+    cd: 0.6
+  movement: {fileID: 114687892731009294}
+  displayName: black hole
+  animManager: {fileID: 114491037430976288}
+  prefab: {fileID: 1640546546741108, guid: 59432a6293b06cc4a97a77921cec5119, type: 2}
 --- !u!114 &114762939217869658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1362,28 +1474,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slots:
   - keyCode: Fire1
-    skillObject: {fileID: 0}
+    skillObject: {fileID: 1738402658699570}
+    text: {fileID: 0}
   - keyCode: Fire2
-    skillObject: {fileID: 0}
+    skillObject: {fileID: 1951281381804670}
+    text: {fileID: 0}
   - keyCode: Fire3
     skillObject: {fileID: 0}
+    text: {fileID: 0}
   - keyCode: Movement
     skillObject: {fileID: 0}
+    text: {fileID: 0}
   unlockedSkills:
   - {fileID: 1738402658699570}
   possibleSkills:
   - {fileID: 1817846371704110}
   - {fileID: 1225394520044994}
-  - {fileID: 1564460167382242}
+  - {fileID: 1443112807279014}
   - {fileID: 1062237019296688}
   - {fileID: 1540646628692434}
   - {fileID: 1738402658699570}
   - {fileID: 1613892760517944}
-  - {fileID: 1951281381804670}
+  - {fileID: 1653183406740368}
   - {fileID: 1807242101744312}
   - {fileID: 1961287773121042}
-  nInitialSkillMin: 5
-  nInitialSkillMax: 5
+  - {fileID: 1564460167382242}
+  - {fileID: 1951281381804670}
+  nInitialSkillMin: 1
+  nInitialSkillMax: 1
+  unlockedText: {fileID: 0}
 --- !u!114 &114985293478659792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1402,6 +1521,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.165
   movement: {fileID: 114687892731009294}
+  displayName: 
   animManager: {fileID: 114491037430976288}
   prefab: {fileID: 1479784963242058, guid: 4e13aeafe693a454ca22611fe64a1be9, type: 2}
 --- !u!114 &114987641961073974
@@ -1422,6 +1542,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 1
   movement: {fileID: 114687892731009294}
+  displayName: devil wave
   animManager: {fileID: 114491037430976288}
   prefab: {fileID: 1764599641537900, guid: e7653ac2c1d82244eaf3557cdf427f3c, type: 2}
 --- !u!114 &114993132365923086
@@ -1438,7 +1559,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -9
+    damage: -7.5
   damageExit:
     damage: 0
   ignoreTag: noTag

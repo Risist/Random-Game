@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1437803638221688}
+  m_IsPrefabParent: 1
+--- !u!1 &1437803638221688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4436457924669834}
+  - component: {fileID: 114210453452640064}
+  - component: {fileID: 114829098167210536}
+  - component: {fileID: 114742480424788438}
+  - component: {fileID: 114504527027125142}
+  m_Layer: 0
+  m_Name: waterSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4436457924669834
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437803638221688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.781342, y: -3.410083, z: 9.447266}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114210453452640064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437803638221688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 0
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1350239166862674, guid: 44f33a762b959304ba72ecfa8dae03e3, type: 2}
+    chance: 15
+    minimalDistance: 0
+    maximalDistance: 8
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+--- !u!114 &114504527027125142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437803638221688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143c22ec986701f45a299e6afac9cfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114742480424788438}
+  destroy: 1
+  objToRemove: {fileID: 0}
+  nSpawnMin: 0
+  nSpawnMax: 3
+--- !u!114 &114742480424788438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437803638221688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 1
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1240523977539888, guid: 6a18c1fce483dc442b13d1f67e676278, type: 2}
+    chance: 5
+    minimalDistance: 0
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1139098503524304, guid: 6a3e3077c95f567468d533d85886818f, type: 2}
+    chance: 1
+    minimalDistance: 10
+    maximalDistance: 12
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1097058558770546, guid: 39a445e69ce2c5a4d9be45ea3bbc81a3, type: 2}
+    chance: 1
+    minimalDistance: 10
+    maximalDistance: 12
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+--- !u!114 &114829098167210536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437803638221688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143c22ec986701f45a299e6afac9cfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114210453452640064}
+  destroy: 0
+  objToRemove: {fileID: 0}
+  nSpawnMin: 6
+  nSpawnMax: 8

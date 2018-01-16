@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillManager : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class SkillManager : MonoBehaviour {
 	{
 		public string keyCode;
 		public GameObject skillObject;
+		public Text text;
 	}
 
 	public SkillSlot[] slots;
@@ -17,6 +19,8 @@ public class SkillManager : MonoBehaviour {
 
 	public int nInitialSkillMin = 1;
 	public int nInitialSkillMax = 1;
+
+	public Text unlockedText;
 
 
 	// Use this for initialization
@@ -34,6 +38,8 @@ public class SkillManager : MonoBehaviour {
 				var w = itSlot.skillObject.GetComponent<WeaponBase>();
 				if (w)
 					w.buttonCode = itSlot.keyCode;
+
+				itSlot.text.text = w.buttonCode + ": " + w.displayName;
 				itSlot.skillObject.SetActive(true);
 			}
 	}
@@ -55,11 +61,23 @@ public class SkillManager : MonoBehaviour {
 				itSlot.skillObject = possibleSkills[id];
 				var w = itSlot.skillObject.GetComponent<WeaponBase>();
 				if (w)
+				{
 					w.buttonCode = itSlot.keyCode;
+					itSlot.text.text = w.buttonCode + ": " + w.displayName;
+				}
 
 				itSlot.skillObject.SetActive(true);
-				return true;
+				break;
 			}
+		}
+
+		unlockedText.text = "";
+		int i = 0;
+		foreach (var it in unlockedSkills)
+		{
+			++i;
+			var w = it.GetComponent<WeaponBase>();
+			unlockedText.text += "" + i + ": " + w.displayName + "\n";
 		}
 
 		return true;
@@ -82,7 +100,10 @@ public class SkillManager : MonoBehaviour {
 						itSlot.skillObject = it;
 						var w = it.GetComponent<WeaponBase>();
 						if (w)
+						{
 							w.buttonCode = itSlot.keyCode;
+							itSlot.text.text = w.buttonCode + ": " + w.displayName;
+						}
 						b = true;
 					}
 				}

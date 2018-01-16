@@ -60,6 +60,8 @@ public class HealthController : MonoBehaviour
         {
 			BroadcastMessage("OnDeath", data);
         }
+
+		actual = Mathf.Clamp(actual, 0, max);
     }
     public void DealDamage(float damage, GameObject causer = null)
     {

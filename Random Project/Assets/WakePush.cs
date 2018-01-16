@@ -6,14 +6,13 @@ public class WakePush : MonoBehaviour {
 
 	public float powerMin = 0;
 	public float powerMax = 1;
+	public bool randomRotation = true;
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * Random.Range(powerMin, powerMax));
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		if(randomRotation)
+			GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * Random.Range(powerMin, powerMax));
+		else
+			GetComponent<Rigidbody2D>().AddForce(transform.up * Random.Range(powerMin, powerMax));
 	}
 }

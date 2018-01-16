@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 114847354839589882}
   m_Layer: 0
   m_Name: dunnoTotem
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,8 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114847354839589882}
-  cdMin: 5
-  cdMax: 8
+  cdMin: 16
+  cdMax: 17
   timer:
     actualTime: 0
     cd: 1

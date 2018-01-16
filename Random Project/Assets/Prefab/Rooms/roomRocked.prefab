@@ -251,7 +251,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1434507289160106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9463186, y: 1.6073357, z: 0}
+  m_LocalPosition: {x: -4.701679, y: 4.196834, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4711942132031422}
@@ -455,8 +455,8 @@ MonoBehaviour:
   spawnList: {fileID: 0}
   destroy: 1
   objToRemove: {fileID: 0}
-  nSpawnMin: 0
-  nSpawnMax: 2
+  nSpawnMin: -4
+  nSpawnMax: 8
 --- !u!114 &114393686050062066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -548,50 +548,32 @@ MonoBehaviour:
   randomRotation: 1
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1354361555343018, guid: 164f5fb2599a48843b0fba9f814fa861, type: 2}
+  - prefab: {fileID: 1440615102234788, guid: c8d9132da4d4c6342804915e2a3838b8, type: 2}
+    chance: 12
+    minimalDistance: 0
+    maximalDistance: 8
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1591349775926878, guid: 6aaaa0e732a1ea14c91679d91a21c96b, type: 2}
+    chance: 0.5
+    minimalDistance: 0
+    maximalDistance: 8
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1460835434788154, guid: 1d9a7a9a9c55d1343ad75848c90375a4, type: 2}
+    chance: 0.75
+    minimalDistance: 0
+    maximalDistance: 8
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1331621574636330, guid: d84daa8d9a2e9a94099618a91f51205e, type: 2}
     chance: 6
     minimalDistance: 0
     maximalDistance: 8
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1413263708739826, guid: 99997df397654c545aab37f85c280c70, type: 2}
-    chance: 3
-    minimalDistance: 0
-    maximalDistance: 8
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1179131251542042, guid: aed102976f95af247994327fa4702ddf, type: 2}
-    chance: 2
-    minimalDistance: 0
-    maximalDistance: 8
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1754987350296874, guid: 804d0beb0fd6e694ca79848252b668a8, type: 2}
-    chance: 2
-    minimalDistance: 0
-    maximalDistance: 8
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
   - prefab: {fileID: 1512157274646264, guid: d0f5c2b9378954c4286babc2eca6294f, type: 2}
-    chance: 0.5
-    minimalDistance: 0
-    maximalDistance: 8
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1946014388419848, guid: ae4767b148beb7948b7adaaf938a4dd1, type: 2}
-    chance: 0.5
-    minimalDistance: 0
-    maximalDistance: 8
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1708966377956338, guid: bb24fa82900ea0f49a2c48d99e0eefa0, type: 2}
-    chance: 0.5
-    minimalDistance: 0
-    maximalDistance: 8
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1392534334280252, guid: d6dce3821c9d17e468b07e2927c69784, type: 2}
-    chance: 2
+    chance: 0.25
     minimalDistance: 0
     maximalDistance: 8
     positionOffset: {x: 0, y: 0}
@@ -610,8 +592,8 @@ MonoBehaviour:
   spawnList: {fileID: 0}
   destroy: 1
   objToRemove: {fileID: 0}
-  nSpawnMin: 5
-  nSpawnMax: 8
+  nSpawnMin: 7
+  nSpawnMax: 10
 --- !u!114 &114722604530021350
 MonoBehaviour:
   m_ObjectHideFlags: 1

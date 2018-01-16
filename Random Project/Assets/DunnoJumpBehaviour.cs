@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DunnoJumpBehaviour : StateMachineBehaviour {
 
+	public string aimTag = "Player";
+	public float perceiveRadius = 99.0f;
+
 	public float movementSpeed;
 
 	public float minRadiusFromAim;
@@ -15,13 +18,17 @@ public class DunnoJumpBehaviour : StateMachineBehaviour {
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
-		// find move aim 
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		if (player)
+		var list = Physics2D.OverlapCircleAll(animator.transform.position, perceiveRadius);
+		foreach (var it in list)
 		{
-			Vector2 aim = (Vector2)player.transform.position + Random.insideUnitCircle.normalized * Random.Range(minRadiusFromAim, maxRadiusFromAim);
+			if(it && it.tag == aimTag)
+			{
+				Vector2 aim = (Vector2)it.transform.position + Random.insideUnitCircle.normalized * Random.Range(minRadiusFromAim, maxRadiusFromAim);
+				directionOfMove = (aim - (Vector2)animator.gameObject.transform.position).normalized;
 
-			directionOfMove = (aim - (Vector2)animator.gameObject.transform.position).normalized;
+				break;
+			}
+
 		}
 	}
 

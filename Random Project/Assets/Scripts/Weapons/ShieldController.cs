@@ -5,8 +5,10 @@ using UnityEngine;
 public class ShieldController : MonoBehaviour
 {
 
-    public GameObject player;       
-    public float rotationSpeed = 10;
+    public GameObject player;
+	public float rotationSpeedMin;
+	public float rotationSpeedMax;
+	float rotationSpeed = 10;
     private Vector3 offset;         
 
     public void linkToPlayer(GameObject _player)
@@ -19,7 +21,7 @@ public class ShieldController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+		rotationSpeed = Random.Range(rotationSpeedMin, rotationSpeedMax);
     }
     void Update()
     {

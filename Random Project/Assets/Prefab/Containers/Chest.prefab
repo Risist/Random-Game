@@ -763,24 +763,6 @@ MonoBehaviour:
   randomRotation: 1
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
-    chance: 4
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
-    chance: 4
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
-    chance: 4
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
   - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
     chance: 3
     minimalDistance: 2
@@ -788,30 +770,36 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1779476226724406, guid: 402d2edc08f4b9c4685f9aa4b64d7919, type: 2}
-    chance: 0
+    chance: 0.75
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
+    chance: 3
     minimalDistance: 2
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1569415996061464, guid: 897a36749ef0b684d85bb99ee1848043, type: 2}
-    chance: 0
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1655366846844308, guid: 6465f8ad622c3e94a99f526f9dc7c271, type: 2}
-    chance: 2
+    chance: 1
     minimalDistance: 2
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1225623095939970, guid: 1e47af22d6b7ff042b5731033a220345, type: 2}
-    chance: 2
+    chance: 5
     minimalDistance: 2
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 1655366846844308, guid: 6465f8ad622c3e94a99f526f9dc7c271, type: 2}
+    chance: 5
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
     chance: 1
     minimalDistance: 2
     maximalDistance: 5

@@ -112,7 +112,6 @@ public class RandomSpawnList : SpawnListBase {
 
 					return Instantiate(objects[i].prefab, gameObject.transform.position + offset + (Vector3)objects[i].positionOffset + (Vector3) position,
 						Quaternion.Euler(0, 0, rot + objects[i].rotationOffset + rotation));
-					break;
 				}
 				else
 				{

@@ -15,11 +15,18 @@ public class NatureSpawnMethod : SpawnMethodBase {
 
 		Vector2 position = transform.position;
 
+		int i = 0;
 		while((transform.position - aim.position).sqrMagnitude > endDistance * endDistance)
 		{
 			Vector2 toAim = -(transform.position - aim.position).normalized * spawnDist;
-			var obj = spawnList.Spawn(toAim, 0);
+			var obj = spawnList.Spawn(toAim, -Vector2.Angle(transform.up, toAim));
 			transform.position = obj.transform.position + (Vector3)influencePosition;
+
+			if (++i > 500)
+			{
+				Debug.LogError("Error with nature spawner");
+				break;
+			}
 		}
 
 		transform.position = position;

@@ -11,5 +11,6 @@ public class WeaponBase : MonoBehaviour
 	public Timer timer = new Timer(0.5f);
 
 	public PlayerWSADMovement movement;
+	public string displayName;
 	
 }

@@ -15,8 +15,8 @@ public class HealthUpgradePickup : MonoBehaviour
 			var hp = collision.GetComponent<HealthController>();
 			hp.max += healthMaxBonus;
 			hp.regeneration += healthBonusRegen;
-			hp.actual += healthActualBonus;
-
+			hp.DealDamage(healthActualBonus, gameObject);
+			
 			Destroy(gameObject);
 		}
 

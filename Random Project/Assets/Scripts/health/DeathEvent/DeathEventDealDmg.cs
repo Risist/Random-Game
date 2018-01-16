@@ -6,6 +6,7 @@ public class DeathEventDealDmg : MonoBehaviour {
 
 	public float radius;
 	public SimpleDamage dmg;
+	public string ignoreTag = "noTag";
 
 	void OnDeath()
 	{
@@ -13,7 +14,7 @@ public class DeathEventDealDmg : MonoBehaviour {
 		foreach (var it in list)
 		{
 			HealthController hp = it.gameObject.GetComponent<HealthController>();
-			if (hp)
+			if (hp && it.tag != ignoreTag)
 			{
 				hp.DealDamage(dmg, gameObject);
 			}

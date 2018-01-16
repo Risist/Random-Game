@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 58964385315447936}
   m_Layer: 0
   m_Name: DunnoShaman
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,7 +276,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331774934831342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8454156, y: -0.78804636, z: -0.26171875}
+  m_LocalPosition: {x: 5.122754, y: 2.9930043, z: -0.26171875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4452787995201916}
@@ -576,6 +576,7 @@ MonoBehaviour:
     damage: -4
   damageExit:
     damage: 0
+  ignoreTag: enemy
 --- !u!114 &114131580641653298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -627,8 +628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 50
-  max: 50
+  actual: 75
+  max: 75
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

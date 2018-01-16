@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 114296217604131224}
   m_Layer: 0
   m_Name: CthuluTotem
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114296217604131224}
-  cdMin: 5
-  cdMax: 8
+  cdMin: 10
+  cdMax: 12
   timer:
     actualTime: 0
     cd: 1

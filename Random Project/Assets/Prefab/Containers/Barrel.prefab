@@ -357,8 +357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114350611149630396}
-  nObjectsToSpawnMin: 0
-  nObjectsToSpawnMax: 3
+  nObjectsToSpawnMin: -1
+  nObjectsToSpawnMax: 2
 --- !u!114 &114350611149630396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,49 +380,25 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
-    chance: 5
+    chance: 3
     minimalDistance: 1
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
-    chance: 0.25
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
-    chance: 0.25
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1655366846844308, guid: 6465f8ad622c3e94a99f526f9dc7c271, type: 2}
-    chance: 1
+    chance: 0.1
     minimalDistance: 1
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1225623095939970, guid: 1e47af22d6b7ff042b5731033a220345, type: 2}
-    chance: 1
+    chance: 0.125
     minimalDistance: 1
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
-    chance: 0.5
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
-    chance: 0.5
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 0}
-    chance: 5
+  - prefab: {fileID: 1655366846844308, guid: 6465f8ad622c3e94a99f526f9dc7c271, type: 2}
+    chance: 0.125
     minimalDistance: 1
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}

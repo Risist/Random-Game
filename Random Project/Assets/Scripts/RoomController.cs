@@ -15,7 +15,7 @@ public class RoomController : SpawnMethodBase {
 	/// for checking whether to generate wall / nothing / another room
 	GameManager manager;
 
-	void Start () {
+	new void Start () {
 		manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();	
 	}
 	
@@ -26,7 +26,7 @@ public class RoomController : SpawnMethodBase {
 		manager.signRoom(roomX, roomY);
 
 		//if (roomPrefab)
-		roomList.Spawn(Vector2.zero, Random.Range(0, 3) * 90.0f);
+		roomList.Spawn(Vector2.zero, 0);
 		//wallList.Spawn(Vector2.zero, Random.Range(0, 3) * 90.0f);
 	
 		{	

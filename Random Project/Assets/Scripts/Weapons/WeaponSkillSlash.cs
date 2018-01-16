@@ -6,7 +6,6 @@ public class WeaponSkillSlash: WeaponBase {
 	
 	public string triggerEvent = "slash";
 	public AnimationManager animManager;
-	bool ahouldShoot = false;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +26,6 @@ public class WeaponSkillSlash: WeaponBase {
 				if (animManager)
 					animManager.animator.SetTrigger(triggerEvent);
 				timer.restart();
-				ahouldShoot = true;
 			}
 		}
 	}
