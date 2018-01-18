@@ -55,6 +55,8 @@ GameObject:
   - component: {fileID: 114836998397231302}
   - component: {fileID: 50757431778662256}
   - component: {fileID: 58750787282009364}
+  - component: {fileID: 114000047959447170}
+  - component: {fileID: 114553065992539294}
   m_Layer: 0
   m_Name: DunnoVillager
   m_TagString: enemy
@@ -380,6 +382,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000047959447170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331621574636330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 0}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 1
 --- !u!114 &114314807233781212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -414,6 +430,44 @@ MonoBehaviour:
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114553065992539294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331621574636330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 0
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
+    chance: 75
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
+    chance: 3
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114836998397231302
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -167,6 +167,8 @@ GameObject:
   - component: {fileID: 114510915028862634}
   - component: {fileID: 50115139343018894}
   - component: {fileID: 58312913795510810}
+  - component: {fileID: 114171036065952484}
+  - component: {fileID: 114560484533100690}
   m_Layer: 0
   m_Name: Dunno night slayer
   m_TagString: enemy
@@ -398,6 +400,20 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: enemy
+--- !u!114 &114171036065952484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1903837467419714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 0}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 1
 --- !u!114 &114510915028862634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,6 +450,44 @@ MonoBehaviour:
   cdChangeBehavour:
     actualTime: 0
     cd: 0.5
+--- !u!114 &114560484533100690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1903837467419714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 0
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
+    chance: 75
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
+    chance: 3
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114638200875812556
 MonoBehaviour:
   m_ObjectHideFlags: 1

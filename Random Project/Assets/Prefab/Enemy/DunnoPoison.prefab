@@ -54,6 +54,8 @@ GameObject:
   - component: {fileID: 114170592352557328}
   - component: {fileID: 50624854912176714}
   - component: {fileID: 58448606347201604}
+  - component: {fileID: 114770658908388116}
+  - component: {fileID: 114214459168804274}
   m_Layer: 0
   m_Name: DunnoPoison
   m_TagString: enemy
@@ -565,6 +567,44 @@ MonoBehaviour:
   cdChangeBehavour:
     actualTime: 0
     cd: 0.5
+--- !u!114 &114214459168804274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123494228537204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 0
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
+    chance: 75
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
+    chance: 3
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114367892426764528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -599,6 +639,20 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: enemy
+--- !u!114 &114770658908388116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123494228537204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 0}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 1
 --- !u!212 &212070993785397766
 SpriteRenderer:
   m_ObjectHideFlags: 1
