@@ -56,10 +56,10 @@ public class RandomSpawnList : SpawnListBase {
                         rot = transform.rotation.eulerAngles.z;
 
                     Vector3 offset;
-                    if (randomPosition)
-                        offset = Quaternion.Euler(0, 0, rot)
-                        * new Vector3(objects[i].GetDistance(), 0);
-                    else
+					if (randomPosition)
+						offset = Quaternion.Euler(0, 0, Random.Range(0, 360))
+						* new Vector3(objects[i].GetDistance(), 0);
+					else
                         offset = new Vector3();
 
 					Quaternion q = Quaternion.Euler(0, 0, rot + objects[i].rotationOffset);
@@ -103,7 +103,7 @@ public class RandomSpawnList : SpawnListBase {
 
 					Vector3 offset;
 					if (randomPosition)
-						offset = Quaternion.Euler(0, 0, rot)
+						offset = Quaternion.Euler(0, 0, Random.Range(0,360))
 						* new Vector3(objects[i].GetDistance(), 0);
 					else
 						offset = new Vector3();

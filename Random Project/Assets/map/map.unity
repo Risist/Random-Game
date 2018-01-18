@@ -942,6 +942,21 @@ Prefab:
       propertyPath: timer.cd
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 114947564111879034, guid: d0414571b25e6d149ab429944d2dfc22,
+        type: 2}
+      propertyPath: slots.Array.data[1].skillObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947564111879034, guid: d0414571b25e6d149ab429944d2dfc22,
+        type: 2}
+      propertyPath: nInitialSkillMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947564111879034, guid: d0414571b25e6d149ab429944d2dfc22,
+        type: 2}
+      propertyPath: nInitialSkillMax
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
   m_IsPrefabParent: 0
