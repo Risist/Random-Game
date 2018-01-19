@@ -257,6 +257,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 100868264}
+--- !u!1 &122902718 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1738402658699570, guid: d0414571b25e6d149ab429944d2dfc22,
+    type: 2}
+  m_PrefabInternal: {fileID: 745652342}
 --- !u!1 &141171301
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +734,7 @@ MonoBehaviour:
   reverseTimer:
     actualTime: 0
     cd: 1
-  changeRate: 0.25
+  changeRate: 0.675
   min: 0
   max: 0.75
 --- !u!1 &692917845
@@ -912,6 +917,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114731959472981860, guid: d0414571b25e6d149ab429944d2dfc22,
+        type: 2}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 676373609}
     - target: {fileID: 114947564111879034, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
       propertyPath: slots.Array.data[0].text
@@ -937,21 +947,6 @@ Prefab:
       propertyPath: unlockedText
       value: 
       objectReference: {fileID: 1501649970}
-    - target: {fileID: 114607402746523254, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: ammoCost
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114607402746523254, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: timer.cd
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114947564111879034, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: slots.Array.data[1].skillObject
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 114947564111879034, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
       propertyPath: nInitialSkillMin
@@ -962,11 +957,20 @@ Prefab:
       propertyPath: nInitialSkillMax
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1738402658699570, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114947564111879034, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
-      propertyPath: unlockedSkills.Array.data[1]
+      propertyPath: slots.Array.data[0].skillObject
       value: 
-      objectReference: {fileID: 961433272}
+      objectReference: {fileID: 122902718}
+    - target: {fileID: 114947564111879034, guid: d0414571b25e6d149ab429944d2dfc22,
+        type: 2}
+      propertyPath: unlockedSkills.Array.data[0]
+      value: 
+      objectReference: {fileID: 122902718}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
   m_IsPrefabParent: 0
@@ -1112,11 +1116,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 851696870}
---- !u!1 &961433272 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1951281381804670, guid: d0414571b25e6d149ab429944d2dfc22,
-    type: 2}
-  m_PrefabInternal: {fileID: 745652342}
 --- !u!1 &1501649968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1509,7 @@ MonoBehaviour:
   reverseTimer:
     actualTime: 0
     cd: 1
-  changeRate: 0.25
+  changeRate: 0.5
   min: 0
   max: 0.75
 --- !u!1 &2093988337

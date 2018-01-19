@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 114491037430976288}
   - component: {fileID: 114521562435448456}
   - component: {fileID: 114947564111879034}
+  - component: {fileID: 114731959472981860}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1323,11 +1324,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 40
+  ammoCost: 20
   buttonCode: Fire2
   timer:
     actualTime: 0
-    cd: 0.5
+    cd: 0.25
   movement: {fileID: 114687892731009294}
   displayName: knife
   animManager: {fileID: 114491037430976288}
@@ -1424,6 +1425,18 @@ MonoBehaviour:
   displayName: black hole
   animManager: {fileID: 114491037430976288}
   prefab: {fileID: 1640546546741108, guid: 59432a6293b06cc4a97a77921cec5119, type: 2}
+--- !u!114 &114731959472981860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec9831725582ea4c9adae2013350ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 0}
 --- !u!114 &114762939217869658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1477,7 +1490,7 @@ MonoBehaviour:
     skillObject: {fileID: 1738402658699570}
     text: {fileID: 0}
   - keyCode: Fire2
-    skillObject: {fileID: 1951281381804670}
+    skillObject: {fileID: 0}
     text: {fileID: 0}
   - keyCode: Fire3
     skillObject: {fileID: 0}
@@ -1500,8 +1513,8 @@ MonoBehaviour:
   - {fileID: 1961287773121042}
   - {fileID: 1564460167382242}
   - {fileID: 1951281381804670}
-  nInitialSkillMin: 1
-  nInitialSkillMax: 1
+  nInitialSkillMin: 0
+  nInitialSkillMax: 0
   unlockedText: {fileID: 0}
 --- !u!114 &114985293478659792
 MonoBehaviour:

@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 114362935200064034}
   - component: {fileID: 114804014690227980}
   - component: {fileID: 114129753013272046}
+  - component: {fileID: 114609255968855854}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -274,10 +275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925cd3eaeee536d42bfc780654e97ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enterForce: 4
+  enterForce: 6
   stayForce: 0
   exitForce: 0
-  ignoreTag: noTag
+  ignoreTag: Player
 --- !u!114 &114519508877859168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,6 +292,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTrigger: 1
   onCollision: 1
+--- !u!114 &114609255968855854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1876976785215474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e6ec63ad6ef364ebece5cc90b6f378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageEnter:
+    damage: -15
+  damageStay:
+    damage: 0
+  damageExit:
+    damage: 0
+  ignoreTag: noTag
 --- !u!114 &114776129292456222
 MonoBehaviour:
   m_ObjectHideFlags: 1
