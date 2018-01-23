@@ -6,7 +6,6 @@ public class RoomController : SpawnMethodBase {
 
 	public SpawnListBase roomList;
 	public GameObject wallPrefab;
-	//public GameObject roomPrefab;
 
 	public float roomSize;
 
@@ -24,14 +23,10 @@ public class RoomController : SpawnMethodBase {
 
 
 		manager.signRoom(roomX, roomY);
-
-		//if (roomPrefab)
+		
 		roomList.Spawn(Vector2.zero, 0);
-		//wallList.Spawn(Vector2.zero, Random.Range(0, 3) * 90.0f);
 	
 		{	
-			
-			
 
 			if (!manager.hasRoom(roomX - 1, roomY))
 			{

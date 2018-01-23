@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114537492692051062}
   - component: {fileID: 114626979115850408}
   - component: {fileID: 114736132518120650}
+  - component: {fileID: 114550458408901776}
   m_Layer: 0
   m_Name: ChestShooter
   m_TagString: Untagged
@@ -793,6 +794,27 @@ MonoBehaviour:
   tSpawn:
     actualTime: 0
     cd: 0.75
+--- !u!114 &114550458408901776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043931934361848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b9ea89a22c214182d47adc7855c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 58f3d631dde1b0d418f0e4c6bd28b528, type: 3}
+  restartCd:
+    actualTime: 0
+    cd: 0.5
+  pitchBase: 1
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.5
+  volumeDmgScale: 0.0075
+  volumeRandom: 0
 --- !u!114 &114626979115850408
 MonoBehaviour:
   m_ObjectHideFlags: 1

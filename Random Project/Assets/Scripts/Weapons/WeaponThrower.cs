@@ -25,6 +25,7 @@ public class WeaponThrower : WeaponBase
 
 				movement.applyRotationToMouse();
 			}
+			PlaySound();
 			Instantiate(prefab, transform.position, transform.rotation);
 			ahouldShoot = false;
 		}

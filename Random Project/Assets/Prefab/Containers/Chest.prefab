@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 114283865866118218}
   - component: {fileID: 114993810062208302}
   - component: {fileID: 114483197312326038}
+  - component: {fileID: 114330527758925394}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -733,6 +734,27 @@ MonoBehaviour:
   tSpawn:
     actualTime: 0
     cd: 0.75
+--- !u!114 &114330527758925394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917084062792500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b9ea89a22c214182d47adc7855c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 58f3d631dde1b0d418f0e4c6bd28b528, type: 3}
+  restartCd:
+    actualTime: 0
+    cd: 0.5
+  pitchBase: 1
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.5
+  volumeDmgScale: 0.0075
+  volumeRandom: 0
 --- !u!114 &114483197312326038
 MonoBehaviour:
   m_ObjectHideFlags: 1

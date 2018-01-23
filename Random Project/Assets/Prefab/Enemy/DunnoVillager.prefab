@@ -57,6 +57,12 @@ GameObject:
   - component: {fileID: 58750787282009364}
   - component: {fileID: 114000047959447170}
   - component: {fileID: 114553065992539294}
+  - component: {fileID: 114046142178113238}
+  - component: {fileID: 114957064903079008}
+  - component: {fileID: 114901651237532742}
+  - component: {fileID: 114558772280904514}
+  - component: {fileID: 114802457264936632}
+  - component: {fileID: 114533996766536446}
   m_Layer: 0
   m_Name: DunnoVillager
   m_TagString: enemy
@@ -215,7 +221,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331621574636330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8444135, y: 1.8748488, z: -0.26171875}
+  m_LocalPosition: {x: 8.414381, y: -0.2632759, z: -0.26171875}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children:
   - {fileID: 4009270340979438}
@@ -396,6 +402,27 @@ MonoBehaviour:
   spawnList: {fileID: 114553065992539294}
   nObjectsToSpawnMin: 1
   nObjectsToSpawnMax: 1
+--- !u!114 &114046142178113238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331621574636330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b9ea89a22c214182d47adc7855c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: ad9355abcd87407408597c610c9ad5f6, type: 3}
+  restartCd:
+    actualTime: 0
+    cd: 0.5
+  pitchBase: 1.3
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.675
+  volumeDmgScale: 0
+  volumeRandom: 0
 --- !u!114 &114314807233781212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,11 +452,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 35
-  max: 35
+  actual: 75
+  max: 75
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114533996766536446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331621574636330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38dc5b30391f44042b54e55ab30be0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 07c59ca4894421843b6648c00beb90d6, type: 3}
+  pitchBase: 1
+  pitchDmgScale: 0
+  pitchRandom: 0.1
+  volumeBase: 0.25
+  volumeDmgScale: 0
+  volumeRandom: 0
 --- !u!114 &114553065992539294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -444,8 +489,8 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
-    chance: 75
+  - prefab: {fileID: 0}
+    chance: 100
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
@@ -468,6 +513,35 @@ MonoBehaviour:
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114558772280904514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331621574636330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8596457322601947832916538f3f396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer:
+    actualTime: 0
+    cd: 20.1
+--- !u!114 &114802457264936632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331621574636330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8d6d4c44e5ff84f9bb24fa761c6523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31,
+    type: 2}
+  respawnPrefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3,
+    type: 2}
 --- !u!114 &114836998397231302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -504,6 +578,85 @@ MonoBehaviour:
   cdChangeBehavour:
     actualTime: 0
     cd: 0.5
+--- !u!114 &114901651237532742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331621574636330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8daaffb854d32b34fb0baac0fcd89bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114957064903079008}
+  cdMin: 20
+  cdMax: 20
+  timer:
+    actualTime: 0
+    cd: 1
+--- !u!114 &114957064903079008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331621574636330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotation: 0
+  randomPosition: 0
+  objects:
+  - prefab: {fileID: 1080198572633586, guid: 21d0bcee1ebebc34daab474227cfe428, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1724488959796998, guid: de1fe05029eb9144b9f70b20789daf3c, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1440615102234788, guid: c8d9132da4d4c6342804915e2a3838b8, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1123494228537204, guid: 264b3d88e468fba4ab9c7eedeb8b4640, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1331774934831342, guid: 7c2fd7e174d9d1b4e9d4661300e05607, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1591349775926878, guid: 6aaaa0e732a1ea14c91679d91a21c96b, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1460835434788154, guid: 1d9a7a9a9c55d1343ad75848c90375a4, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!212 &212002483261904012
 SpriteRenderer:
   m_ObjectHideFlags: 1

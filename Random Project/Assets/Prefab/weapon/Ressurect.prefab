@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 114667657887021724}
   - component: {fileID: 114023049246769172}
   - component: {fileID: 114256555250915258}
+  - component: {fileID: 114030735940057386}
   m_Layer: 0
   m_Name: Ressurect
   m_TagString: Untagged
@@ -496,6 +497,21 @@ MonoBehaviour:
   dmg:
     damage: 15
   ignoreTag: Player
+--- !u!114 &114030735940057386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1680425845014698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5eb0957198cb34694775f3765c8b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRespawn:
+    actualTime: 0
+    cd: 0.7
+  radius: 0
 --- !u!114 &114256555250915258
 MonoBehaviour:
   m_ObjectHideFlags: 1

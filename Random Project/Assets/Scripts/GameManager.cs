@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 	public int mapSizeY;
 	bool[,] mapRooms;
 
+	int roomsOppen = 0;
+
 	// Use this for initialization
 	void Start () {
 		mapRooms = new bool[mapSizeX, mapSizeY];
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour {
 	public void signRoom(int x, int y)
 	{
 		mapRooms[x, y] = true;
+		++roomsOppen;
 	}
 	
 	// Update is called once per frame

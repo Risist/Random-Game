@@ -24,7 +24,10 @@ public class WeaponSkillSlash: WeaponBase {
 				if (movement)
 					movement.applyRotationToMouse();
 				if (animManager)
+				{
 					animManager.animator.SetTrigger(triggerEvent);
+					PlaySound();
+				}
 				timer.restart();
 			}
 		}

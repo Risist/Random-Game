@@ -140,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4447781495997318}
   - component: {fileID: 114361389630513954}
+  - component: {fileID: 114283050891312648}
   m_Layer: 0
   m_Name: TheTurningShuriken
   m_TagString: Untagged
@@ -225,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1916024322881376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.813981, y: 5.3511972, z: 0}
+  m_LocalPosition: {x: 6.0559177, y: -1.5116205, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4084495556469976}
@@ -296,13 +297,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reverse: 0
+  reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 999
+    cd: 59
   changeRate: 1
   min: 0
   max: 1
+--- !u!114 &114283050891312648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1916024322881376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8596457322601947832916538f3f396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer:
+    actualTime: 0
+    cd: 60
 --- !u!114 &114361389630513954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -328,10 +343,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reverse: 0
+  reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 999
+    cd: 59
   changeRate: 1
   min: 0
   max: 1
@@ -349,7 +364,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -5
+    damage: -15
   damageExit:
     damage: 0
   ignoreTag: Player
@@ -364,10 +379,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reverse: 0
+  reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 999
+    cd: 59
   changeRate: 1
   min: 0
   max: 1
@@ -382,10 +397,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reverse: 0
+  reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 999
+    cd: 59
   changeRate: 1
   min: 0
   max: 1
@@ -400,10 +415,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reverse: 0
+  reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 999
+    cd: 59
   changeRate: 1
   min: 0
   max: 1
@@ -418,10 +433,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ce5397fe22d1f4ba1c11e497fc4587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reverse: 0
+  reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 999
+    cd: 59
   changeRate: 1
   min: 0
   max: 1

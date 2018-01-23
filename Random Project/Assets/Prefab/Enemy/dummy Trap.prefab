@@ -179,11 +179,11 @@ GameObject:
   - component: {fileID: 4385311295406132}
   - component: {fileID: 61156072026181984}
   - component: {fileID: 114129977736930118}
-  - component: {fileID: 114584861052700094}
   - component: {fileID: 50417214440034736}
   - component: {fileID: 114828372131997918}
   - component: {fileID: 114557920381091754}
   - component: {fileID: 114841374042187586}
+  - component: {fileID: 114023180215097534}
   m_Layer: 0
   m_Name: dummy Trap
   m_TagString: enemy
@@ -389,6 +389,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114023180215097534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877927526796676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8d6d4c44e5ff84f9bb24fa761c6523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31,
+    type: 2}
+  respawnPrefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3,
+    type: 2}
 --- !u!114 &114129977736930118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,18 +440,6 @@ MonoBehaviour:
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
---- !u!114 &114584861052700094
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1877927526796676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae3eb0d6f7d5054da9125423759ceb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
 --- !u!114 &114828372131997918
 MonoBehaviour:
   m_ObjectHideFlags: 1

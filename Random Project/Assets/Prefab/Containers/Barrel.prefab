@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 50848976760009030}
   - component: {fileID: 114010685016295102}
   - component: {fileID: 61116709872133158}
+  - component: {fileID: 114521429015672134}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -403,6 +404,27 @@ MonoBehaviour:
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114521429015672134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249126083102856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b9ea89a22c214182d47adc7855c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 58f3d631dde1b0d418f0e4c6bd28b528, type: 3}
+  restartCd:
+    actualTime: 0
+    cd: 0.5
+  pitchBase: 1
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.5
+  volumeDmgScale: 0.0075
+  volumeRandom: 0
 --- !u!212 &212148330316289624
 SpriteRenderer:
   m_ObjectHideFlags: 1

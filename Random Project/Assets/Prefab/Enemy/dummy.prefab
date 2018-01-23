@@ -116,9 +116,9 @@ GameObject:
   - component: {fileID: 4301745577586874}
   - component: {fileID: 61889087711984316}
   - component: {fileID: 114558107397640400}
-  - component: {fileID: 114132342359905070}
   - component: {fileID: 50523235513492002}
   - component: {fileID: 114857679904440696}
+  - component: {fileID: 114816417773402558}
   m_Layer: 0
   m_Name: dummy
   m_TagString: enemy
@@ -387,18 +387,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114132342359905070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1280588628235004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae3eb0d6f7d5054da9125423759ceb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
 --- !u!114 &114558107397640400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,6 +403,21 @@ MonoBehaviour:
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114816417773402558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1280588628235004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8d6d4c44e5ff84f9bb24fa761c6523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31,
+    type: 2}
+  respawnPrefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3,
+    type: 2}
 --- !u!114 &114857679904440696
 MonoBehaviour:
   m_ObjectHideFlags: 1

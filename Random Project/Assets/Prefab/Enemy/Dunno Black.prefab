@@ -414,6 +414,9 @@ GameObject:
   - component: {fileID: 114035994701483010}
   - component: {fileID: 114591403220533302}
   - component: {fileID: 114049734586010478}
+  - component: {fileID: 114306029004518210}
+  - component: {fileID: 114476023421534818}
+  - component: {fileID: 114776738887329340}
   m_Layer: 0
   m_Name: Dunno Black
   m_TagString: enemy
@@ -1441,6 +1444,27 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: enemy
+--- !u!114 &114306029004518210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724488959796998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b9ea89a22c214182d47adc7855c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: ad9355abcd87407408597c610c9ad5f6, type: 3}
+  restartCd:
+    actualTime: 0
+    cd: 0.5
+  pitchBase: 1
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.675
+  volumeDmgScale: 0
+  volumeRandom: 0
 --- !u!114 &114416454930888088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1459,6 +1483,21 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: enemy
+--- !u!114 &114476023421534818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724488959796998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8d6d4c44e5ff84f9bb24fa761c6523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31,
+    type: 2}
+  respawnPrefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3,
+    type: 2}
 --- !u!114 &114591403220533302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1491,6 +1530,24 @@ MonoBehaviour:
   cdChangeBehavour:
     actualTime: 0
     cd: 0.5
+--- !u!114 &114776738887329340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724488959796998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38dc5b30391f44042b54e55ab30be0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 07c59ca4894421843b6648c00beb90d6, type: 3}
+  pitchBase: 1
+  pitchDmgScale: 0
+  pitchRandom: 0.1
+  volumeBase: 0.25
+  volumeDmgScale: 0
+  volumeRandom: 0
 --- !u!114 &114809097374889458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1505,8 +1562,8 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
-    chance: 75
+  - prefab: {fileID: 0}
+    chance: 55
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
@@ -1554,8 +1611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 150
-  max: 400
+  actual: 600
+  max: 600
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

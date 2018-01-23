@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 50183607129023766}
   - component: {fileID: 114922849044813134}
   - component: {fileID: 61492811070732442}
+  - component: {fileID: 114082483386492656}
   m_Layer: 0
   m_Name: BarrelTrap
   m_TagString: Untagged
@@ -329,6 +330,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3072294, y: 1.5184512}
   m_EdgeRadius: 0
+--- !u!114 &114082483386492656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932502686428302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b9ea89a22c214182d47adc7855c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 58f3d631dde1b0d418f0e4c6bd28b528, type: 3}
+  restartCd:
+    actualTime: 0
+    cd: 0.5
+  pitchBase: 1
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.5
+  volumeDmgScale: 0.0075
+  volumeRandom: 0
 --- !u!114 &114356531359384764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,14 +383,20 @@ MonoBehaviour:
     chance: 0.75
     minimalDistance: 0.25
     maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
   - prefab: {fileID: 1411010839725274, guid: e7550583d44000047928809fe74d62fb, type: 2}
     chance: 1
     minimalDistance: 0
     maximalDistance: 0.5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
   - prefab: {fileID: 1170263240658998, guid: e1ddbd96261f2c04ca531b3ac912e5b2, type: 2}
     chance: 0.1
     minimalDistance: 0
     maximalDistance: 0.75
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114922849044813134
 MonoBehaviour:
   m_ObjectHideFlags: 1

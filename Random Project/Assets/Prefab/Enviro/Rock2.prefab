@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4030654317333362}
   - component: {fileID: 58284484544769026}
   - component: {fileID: 114568122359158278}
+  - component: {fileID: 114189971681588998}
   m_Layer: 0
   m_Name: Rock2
   m_TagString: rock
@@ -413,6 +414,24 @@ MonoBehaviour:
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114189971681588998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1139098503524304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38dc5b30391f44042b54e55ab30be0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 044ca268e37e21b48b4981d67f08ddb2, type: 3}
+  pitchBase: 1
+  pitchDmgScale: 0
+  pitchRandom: 0.2
+  volumeBase: 0.15
+  volumeDmgScale: 0
+  volumeRandom: 0.05
 --- !u!114 &114211400045845466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -504,8 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 750
-  max: 750
+  actual: 1500
+  max: 1500
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

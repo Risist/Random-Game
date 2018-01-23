@@ -169,6 +169,9 @@ GameObject:
   - component: {fileID: 58312913795510810}
   - component: {fileID: 114171036065952484}
   - component: {fileID: 114560484533100690}
+  - component: {fileID: 114294520463633664}
+  - component: {fileID: 114734539886755636}
+  - component: {fileID: 114362188841962952}
   m_Layer: 0
   m_Name: Dunno night slayer
   m_TagString: enemy
@@ -198,7 +201,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1903837467419714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.46802276, y: 2.4668133, z: -0.26171875}
+  m_LocalPosition: {x: 5.1603274, y: -0.63652325, z: -0.26171875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4929811361200260}
@@ -414,6 +417,45 @@ MonoBehaviour:
   spawnList: {fileID: 114560484533100690}
   nObjectsToSpawnMin: 1
   nObjectsToSpawnMax: 1
+--- !u!114 &114294520463633664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1903837467419714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b9ea89a22c214182d47adc7855c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: ad9355abcd87407408597c610c9ad5f6, type: 3}
+  restartCd:
+    actualTime: 0
+    cd: 0.5
+  pitchBase: 1
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.675
+  volumeDmgScale: 0
+  volumeRandom: 0
+--- !u!114 &114362188841962952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1903837467419714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38dc5b30391f44042b54e55ab30be0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 07c59ca4894421843b6648c00beb90d6, type: 3}
+  pitchBase: 1
+  pitchDmgScale: 0
+  pitchRandom: 0.1
+  volumeBase: 0.25
+  volumeDmgScale: 0
+  volumeRandom: 0
 --- !u!114 &114510915028862634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -464,8 +506,8 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
-    chance: 75
+  - prefab: {fileID: 0}
+    chance: 60
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
@@ -499,11 +541,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 40
-  max: 40
+  actual: 100
+  max: 100
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114734539886755636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1903837467419714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8d6d4c44e5ff84f9bb24fa761c6523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31,
+    type: 2}
+  respawnPrefab: {fileID: 1903837467419714}
 --- !u!212 &212232233527821692
 SpriteRenderer:
   m_ObjectHideFlags: 1

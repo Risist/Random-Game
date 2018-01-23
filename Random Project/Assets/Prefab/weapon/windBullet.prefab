@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114976093712367512}
   - component: {fileID: 114636795203765862}
   - component: {fileID: 114624157497397534}
+  - component: {fileID: 114827294756891564}
   m_Layer: 0
   m_Name: windBullet
   m_TagString: Untagged
@@ -109,6 +110,22 @@ MonoBehaviour:
   timer:
     actualTime: 0
     cd: 1.5
+--- !u!114 &114827294756891564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314080635737764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1edf4e54124ad04dab63acbec21283e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: c9104148602c3d94195a62acfd2792f3, type: 3}
+  pitchBase: 1.4
+  pitchRandom: 0.15
+  volumeBase: 0.3
+  volumeRandom: 0.1
 --- !u!114 &114927870906283816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,7 +161,11 @@ MonoBehaviour:
     chance: 1
     minimalDistance: 0
     maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
   - prefab: {fileID: 1540351251976428, guid: b9de286b990a00e4c8b15b1e9e90c923, type: 2}
     chance: 1
     minimalDistance: 0
     maximalDistance: 0
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0

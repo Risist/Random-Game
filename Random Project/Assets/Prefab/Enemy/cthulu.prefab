@@ -124,6 +124,8 @@ GameObject:
   - component: {fileID: 114677949516117462}
   - component: {fileID: 114742117227487156}
   - component: {fileID: 114796367937368924}
+  - component: {fileID: 114765281665835420}
+  - component: {fileID: 114151632554654924}
   m_Layer: 0
   m_Name: cthulu
   m_TagString: enemy
@@ -386,6 +388,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114151632554654924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892839396706268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8d6d4c44e5ff84f9bb24fa761c6523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31,
+    type: 2}
+  respawnPrefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3,
+    type: 2}
 --- !u!114 &114406603044813302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -449,6 +466,27 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: enemy
+--- !u!114 &114765281665835420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892839396706268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6b9ea89a22c214182d47adc7855c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: d4bb19dd407798f4a92a280fb9836e56, type: 3}
+  restartCd:
+    actualTime: 0
+    cd: 0.5
+  pitchBase: 1
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.75
+  volumeDmgScale: 0
+  volumeRandom: 0
 --- !u!114 &114774002538259876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -479,8 +517,8 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31, type: 2}
-    chance: 75
+  - prefab: {fileID: 0}
+    chance: 55
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
