@@ -21,6 +21,7 @@ public class SpawnMethodInitial : SpawnMethodBase {
 			else
 				Destroy(gameObject);
 		}
+		else Destroy(this);
 
 	}
 }

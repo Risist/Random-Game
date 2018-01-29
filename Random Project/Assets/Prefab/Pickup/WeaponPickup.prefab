@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4127332609228168}
   - component: {fileID: 58299083252605544}
   - component: {fileID: 114207805307370946}
-  - component: {fileID: 114408095533022542}
+  - component: {fileID: 114438963659237090}
   m_Layer: 0
   m_Name: WeaponPickup
   m_TagString: Untagged
@@ -133,17 +133,6 @@ MonoBehaviour:
   timer:
     actualTime: 0
     cd: 45
---- !u!114 &114408095533022542
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1973122063620584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e7e3a8e15268d4ca7e881f0c9d19ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114422083063892652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,6 +151,18 @@ MonoBehaviour:
   changeRate: 0.65
   min: 0.09803922
   max: 0.4509804
+--- !u!114 &114438963659237090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973122063620584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a8838357b9e4b4a8d9a0c4973e985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xp: 1
 --- !u!114 &114885079885550202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,7 +214,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300252, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0, g: 0.05882353, b: 0, a: 0.09803922}
+  m_Color: {r: 0, g: 0.15686275, b: 0, a: 0.09803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -222,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 1331621574636330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.052437, y: -2.099474, z: -0.26171875}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 4009270340979438}
   m_Father: {fileID: 0}
@@ -490,25 +490,33 @@ MonoBehaviour:
   randomPosition: 1
   objects:
   - prefab: {fileID: 0}
-    chance: 100
+    chance: 70
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
-    chance: 1
+    chance: 5
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
     chance: 3
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
@@ -610,49 +618,65 @@ MonoBehaviour:
   randomPosition: 0
   objects:
   - prefab: {fileID: 1080198572633586, guid: 21d0bcee1ebebc34daab474227cfe428, type: 2}
-    chance: 1
+    chance: 0.85
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
-    chance: 1
+  - prefab: {fileID: 1331621574636330}
+    chance: 2
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1724488959796998, guid: de1fe05029eb9144b9f70b20789daf3c, type: 2}
-    chance: 1
+    chance: 0.15
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1440615102234788, guid: c8d9132da4d4c6342804915e2a3838b8, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1123494228537204, guid: 264b3d88e468fba4ab9c7eedeb8b4640, type: 2}
-    chance: 1
+    chance: 0.5
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1331774934831342, guid: 7c2fd7e174d9d1b4e9d4661300e05607, type: 2}
-    chance: 1
+    chance: 0.5
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1591349775926878, guid: 6aaaa0e732a1ea14c91679d91a21c96b, type: 2}
-    chance: 1
+    chance: 0.1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1460835434788154, guid: 1d9a7a9a9c55d1343ad75848c90375a4, type: 2}
-    chance: 1
+    chance: 0.15
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}

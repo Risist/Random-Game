@@ -73,12 +73,16 @@ MonoBehaviour:
   objects:
   - prefab: {fileID: 1249126083102856, guid: f61ca7c8e813de24d99f3d6420e15f05, type: 2}
     chance: 10
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1932502686428302, guid: a856882c1f7d4ad42a2d4cebc6afb1ca, type: 2}
-    chance: 1
+    chance: 0.25
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}

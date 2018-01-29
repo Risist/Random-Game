@@ -16,9 +16,12 @@ public class RandomSpawnList : SpawnListBase {
         public GameObject prefab;
         // how probably it is to be spawned
         public float chance;
+		public float chanceScalePerRoom;
+		public float minChance;
 
-        // where to spawn, somewhere in (min,max) distance from game object
-        public float minimalDistance;
+
+		// where to spawn, somewhere in (min,max) distance from game object
+		public float minimalDistance;
         public float maximalDistance;
 
 		public Vector2 positionOffset;
@@ -31,7 +34,16 @@ public class RandomSpawnList : SpawnListBase {
     }
     public SpawnStruct[] objects;
 
-    public override GameObject Spawn()
+	public void Start()
+	{
+		var manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+		foreach (var it in objects)
+		{
+			it.chance = Mathf.Clamp(it.chance + it.chanceScalePerRoom * manager.GetRoomsVisited(), it.minChance, float.MaxValue);
+		}
+	}
+
+	public override GameObject Spawn()
     {
         float sum = 0;
         foreach (SpawnStruct it in objects)

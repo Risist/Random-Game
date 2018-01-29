@@ -12,6 +12,8 @@ public class RandomTorque
 	public float averageFactor = 0;
 	[Range(0.0f, 1.0f)]
 	public float followFactor = 0;
+
+	public float followFactorIgnoreDifference = 5.0f;
 	public string objectToFollowTag;
 	public float followScale = 0.1f;
 	GameObject objToFollow;
@@ -33,6 +35,9 @@ public class RandomTorque
 		{
 			Vector2 toFollow = transform.position - objToFollow.transform.position;
 			followDir = Quaternion.FromToRotation(Vector2.down, toFollow).eulerAngles.z;
+
+			if (Mathf.Abs(followDir) < followFactorIgnoreDifference)
+				return;
 		}
 		followDir -= transform.rotation.eulerAngles.z;
 

@@ -13,6 +13,7 @@ public class WeaponBase : MonoBehaviour
 
 	public PlayerWSADMovement movement;
 	public string displayName;
+	public string description;
 
 
 	protected void PlaySound()

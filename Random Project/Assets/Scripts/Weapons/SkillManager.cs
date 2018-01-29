@@ -22,6 +22,24 @@ public class SkillManager : MonoBehaviour {
 
 	public Text unlockedText;
 
+	public bool UnlockRandomSkill()
+	{
+		int n = 50;
+		while (--n > 0)
+		{
+			if (unlockSkill(Random.Range(0, possibleSkills.Length)))
+				return true;
+		}
+		return false;
+	}
+
+
+	public void freezeSkills(bool b)
+	{
+		foreach (var it in slots)
+			if(it.skillObject)
+				it.skillObject.SetActive(b);
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -81,6 +99,16 @@ public class SkillManager : MonoBehaviour {
 		}
 
 		return true;
+	}
+
+	public bool isUnlocked(int id)
+	{
+		foreach (var it in unlockedSkills)
+			if (it.Equals(possibleSkills[id]))
+			{
+				return true;
+			}
+		return false;
 	}
 	
 	// Update is called once per frame

@@ -835,25 +835,33 @@ MonoBehaviour:
   randomPosition: 1
   objects:
   - prefab: {fileID: 0}
-    chance: 55
+    chance: 40
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
-    chance: 1
+    chance: 5
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
     chance: 3
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}

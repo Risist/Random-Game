@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour {
 
 	int roomsOppen = 0;
 
+	public void increaseRoomsOpen(int i) { roomsOppen += i;  }
+	public int GetRoomsVisited()
+	{
+		return roomsOppen;
+	}
+
 	// Use this for initialization
 	void Start () {
 		mapRooms = new bool[mapSizeX, mapSizeY];

@@ -7,6 +7,7 @@ public class UiAmmo : MonoBehaviour {
 
 
 	public float lenghtPerAmmo = 70;
+	public bool updateProgress = true;
 	Weapon playerAmmo;
 	Image image;
 
@@ -20,7 +21,8 @@ public class UiAmmo : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		image.fillAmount = playerAmmo.ammo / playerAmmo.maximumAmmo;
+		if(updateProgress)
+			image.fillAmount = playerAmmo.ammo / playerAmmo.maximumAmmo;
 		image.transform.localScale = new Vector2(1 + playerAmmo.maximumAmmo / lenghtPerAmmo, 1);
 	}
 }

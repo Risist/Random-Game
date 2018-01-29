@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthMaxBonus: 0
   healthActualBonus: 5
-  healthBonusRegen: 0.25
+  healthBonusRegen: 0.5
   antidotum: 1
 --- !u!114 &114485994666107708
 MonoBehaviour:
@@ -308,7 +308,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300370, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0, g: 0.05882353, b: 0, a: 0.09803922}
+  m_Color: {r: 0, g: 0.15686275, b: 0, a: 0.09803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -350,7 +350,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300370, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0, g: 0.05882353, b: 0, a: 0.09803922}
+  m_Color: {r: 0, g: 0.15686275, b: 0, a: 0.09803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

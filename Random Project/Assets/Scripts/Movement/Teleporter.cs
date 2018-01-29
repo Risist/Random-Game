@@ -14,14 +14,18 @@ public class Teleporter : MonoBehaviour {
 	Animator animator;
 	int teleportHashId;
 	int removeHashId;
+	public bool remove = false;
 
 	private void Start()
 	{
 		other = this;
 
 		room = GameObject.Find(teleporterName).GetComponent<TeleportRoom>();
-		if(room)
+		if (room)
 			room.AddTeleporter(this);
+		else
+			Debug.Log("teleport init failed");
+
 		animator = GetComponent<Animator>();
 		teleportHashId = Animator.StringToHash("StartAnim");
 		removeHashId = Animator.StringToHash("remove");
@@ -35,7 +39,7 @@ public class Teleporter : MonoBehaviour {
 	{
 		if (liveTime.isReadyRestart() && animator)
 			animator.SetTrigger(removeHashId);
-		if (deathTimer.isReadyRestart())
+		if (deathTimer.isReadyRestart() && remove)
 			Destroy(gameObject);
 	}
 	private void OnDestroy()
