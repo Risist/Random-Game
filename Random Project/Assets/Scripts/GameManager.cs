@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+	GameObject player;
+
+	public float inactiveDistanceFromPlayer = 20.0f;
+	public Timer inactiveTimeCheck;
+	List<DistanceOptimalization> activeObjects = new List<DistanceOptimalization>();
+	public void addToActivationList(DistanceOptimalization obj) { activeObjects.Add(obj); }
+
 	public int mapSizeX;
 	public int mapSizeY;
 	bool[,] mapRooms;
@@ -23,6 +30,8 @@ public class GameManager : MonoBehaviour {
 		for (int i = 0; i < mapSizeX; ++i)
 			for (int j = 0; j < mapSizeY; ++j)
 				mapRooms[i, j] = false;
+
+		player = GameObject.FindGameObjectWithTag("Player");
 	}
 
 	public bool hasRoom(int x, int y)
@@ -49,6 +58,25 @@ public class GameManager : MonoBehaviour {
 		if(Input.GetButton("Cancel"))
 		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		}
+
+		if(inactiveTimeCheck.isReadyRestart() && player)
+		{
+			Vector3 playerPosition = player.transform.position;
+			for(int i = 0; i < activeObjects.Count; )
+				if(activeObjects[i])
+				{
+					activeObjects[i].gameObject.SetActive((
+						activeObjects[i].transform.position - playerPosition).sqrMagnitude <
+							(inactiveDistanceFromPlayer + activeObjects[i].distanceMidificator) *
+							(inactiveDistanceFromPlayer + activeObjects[i].distanceMidificator) 
+						);
+					++i;
+				}
+				else
+				{
+					activeObjects.Remove(activeObjects[i]);
+				}
 		}
 	}
 }

@@ -22,7 +22,6 @@ public class WeaponThrower : WeaponBase
 		{
 			if (movement)
 			{
-
 				movement.applyRotationToMouse();
 			}
 			PlaySound();
@@ -44,6 +43,14 @@ public class WeaponThrower : WeaponBase
 
 			if (animManager)
 				animManager.CastAnimation();
+		}
+	}
+
+	public void LateUpdate()
+	{
+		if (movement && ahouldShoot)
+		{
+			movement.applyRotationToMouse();
 		}
 	}
 }

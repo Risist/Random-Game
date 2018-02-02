@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 114580621443510852}
   - component: {fileID: 114264136870491854}
   - component: {fileID: 114716389866541616}
+  - component: {fileID: 114646131476376992}
   m_Layer: 0
   m_Name: DunnoPoison
   m_TagString: enemy
@@ -304,7 +305,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1123494228537204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.006181, y: -1.6641587, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4626754983200140}
@@ -547,23 +548,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95162848637445916}
   behaviours:
-  - chance: 2
+  - chance: 1.25
     animKeyName: jump
     cdChangeAnimMin: 0
     cdChangeAnimMax: 1.5
-  - chance: 1.25
+  - chance: 0.75
     animKeyName: jumpFast
     cdChangeAnimMin: 0
     cdChangeAnimMax: 0.5
-  - chance: 1.75
+  - chance: 1.25
     animKeyName: poison
     cdChangeAnimMin: 0.1
     cdChangeAnimMax: 1
-  - chance: 1
+  - chance: 0.75
     animKeyName: swing
     cdChangeAnimMin: 0
     cdChangeAnimMax: 1
-  - chance: 1
+  - chance: 1.5
     animKeyName: avoid
     cdChangeAnimMin: 0
     cdChangeAnimMax: 1
@@ -581,6 +582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 1
   objects:
@@ -642,9 +645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 300
-  max: 350
-  regeneration: 10
+  actual: 200
+  max: 200
+  regeneration: 2.5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114580621443510852
@@ -668,6 +671,18 @@ MonoBehaviour:
   volumeBase: 0.675
   volumeDmgScale: 0
   volumeRandom: 0
+--- !u!114 &114646131476376992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123494228537204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMidificator: 0
 --- !u!114 &114653748732210640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -686,6 +701,9 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: enemy
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114716389866541616
 MonoBehaviour:
   m_ObjectHideFlags: 1

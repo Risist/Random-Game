@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 114543428792701178}
   - component: {fileID: 114374018223079548}
   - component: {fileID: 114334118433635038}
+  - component: {fileID: 114987941247456890}
   m_Layer: 0
   m_Name: Dunno Rock
   m_TagString: enemy
@@ -533,7 +534,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1591349775926878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.488852, y: -1.748213, z: -0.26171875}
+  m_LocalPosition: {x: 1.0698068, y: -3.1199403, z: -0.26171875}
   m_LocalScale: {x: 1.75, y: 1.75, z: 1}
   m_Children:
   - {fileID: 4262396003434196}
@@ -658,8 +659,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2.5
-  m_LinearDrag: 10
+  m_Mass: 1.4
+  m_LinearDrag: 12
   m_AngularDrag: 10
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -739,6 +740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 1
   objects:
@@ -825,6 +828,9 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: enemy
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114457950479715238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -838,7 +844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95449596782023802}
   behaviours:
-  - chance: 4
+  - chance: 3.5
     animKeyName: jump
     cdChangeAnimMin: 0
     cdChangeAnimMax: 1.5
@@ -850,11 +856,11 @@ MonoBehaviour:
     animKeyName: worker
     cdChangeAnimMin: 0
     cdChangeAnimMax: 2
-  - chance: 0.9
+  - chance: 1
     animKeyName: swing
     cdChangeAnimMin: 0
     cdChangeAnimMax: 1
-  - chance: 1
+  - chance: 1.35
     animKeyName: rock
     cdChangeAnimMin: 0.1
     cdChangeAnimMax: 1
@@ -898,6 +904,18 @@ MonoBehaviour:
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114987941247456890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591349775926878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMidificator: 0
 --- !u!212 &212018217775757898
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 114971779832916562}
   - component: {fileID: 114304888862460430}
   - component: {fileID: 114064031283704412}
+  - component: {fileID: 114426537943329212}
   m_Layer: 0
   m_Name: DunnoShaman
   m_TagString: enemy
@@ -281,7 +282,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331774934831342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.0809488, y: -3.0458198, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4452787995201916}
@@ -600,6 +601,9 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: enemy
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114131580641653298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -633,9 +637,9 @@ MonoBehaviour:
     animKeyName: avoid
     cdChangeAnimMin: 0
     cdChangeAnimMax: 0.5
-  - chance: 1
+  - chance: 0.35
     animKeyName: spawn
-    cdChangeAnimMin: 1
+    cdChangeAnimMin: 2
     cdChangeAnimMax: 3
   cdChangeBehavour:
     actualTime: 0
@@ -651,6 +655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 1
   objects:
@@ -701,6 +707,18 @@ MonoBehaviour:
     type: 2}
   respawnPrefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3,
     type: 2}
+--- !u!114 &114426537943329212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331774934831342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMidificator: 0
 --- !u!114 &114772203743699944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -726,8 +744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 300
-  max: 350
+  actual: 250
+  max: 250
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

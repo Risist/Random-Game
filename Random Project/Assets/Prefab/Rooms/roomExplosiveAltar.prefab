@@ -166,6 +166,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4454942125808400}
+  - component: {fileID: 114375118331526584}
   m_Layer: 0
   m_Name: roomExplosiveAltar
   m_TagString: Untagged
@@ -328,7 +329,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1578721130941962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.078173, y: 5.61, z: 0}
+  m_LocalPosition: {x: 14.1682625, y: -0.34943655, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4996650302985312}
@@ -476,35 +477,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4454942125808400}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1043931934361848, guid: b5f01ec74659a014ebd6d2eeae8b1ebf, type: 2}
     chance: 10
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 7
     maximalDistance: 15
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1466675637418800, guid: 18385ab5175f7ce489973cb05a59962c, type: 2}
     chance: 7
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 7
     maximalDistance: 15
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1917084062792500, guid: fc94bd26614868a408c7cf2a9eab097f, type: 2}
     chance: 4
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 8
     maximalDistance: 15
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1972821493565550, guid: 95fd0011860fc384f92409860d6e128f, type: 2}
     chance: 4
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 10
     maximalDistance: 15
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1249126083102856, guid: f61ca7c8e813de24d99f3d6420e15f05, type: 2}
     chance: 2
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 10
     maximalDistance: 15
     positionOffset: {x: 0, y: 0}
@@ -536,11 +549,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4454942125808400}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1233773228962726, guid: 6f5effbdbdafa0a4fb917a41aa3bce77, type: 2}
     chance: 10
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 4
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
@@ -556,29 +573,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4454942125808400}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
     chance: 1.5
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1655366846844308, guid: 6465f8ad622c3e94a99f526f9dc7c271, type: 2}
     chance: 0.1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1225623095939970, guid: 1e47af22d6b7ff042b5731033a220345, type: 2}
     chance: 0.1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
     chance: 0.075
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
@@ -611,17 +638,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4454942125808400}
+  myParent: 0
   randomRotation: 0
   randomPosition: 1
   objects:
   - prefab: {fileID: 1215922936871496, guid: d28f2c7c24a45cc4eb8807b73cbf0f03, type: 2}
     chance: 10
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 4
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1692004721216658, guid: 3414b6f7ef3f4904e862fe593d2abefa, type: 2}
     chance: 1.5
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 4
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
@@ -637,21 +670,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4454942125808400}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1629855889812686, guid: 746fa2276a6140544af8c24b059b84e5, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0.25
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1765394431107492, guid: 2af828a62dc6b8f47bb4a7fea3bc4584, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0.25
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114375118331526584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578721130941962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMidificator: 25
 --- !u!114 &114399902436738056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -696,17 +747,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4454942125808400}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1629855889812686, guid: 746fa2276a6140544af8c24b059b84e5, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0.25
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1765394431107492, guid: 2af828a62dc6b8f47bb4a7fea3bc4584, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0.25
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
@@ -771,17 +828,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4454942125808400}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1629855889812686, guid: 746fa2276a6140544af8c24b059b84e5, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0.25
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1765394431107492, guid: 2af828a62dc6b8f47bb4a7fea3bc4584, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0.25
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
@@ -813,17 +876,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4454942125808400}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1629855889812686, guid: 746fa2276a6140544af8c24b059b84e5, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0.25
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1765394431107492, guid: 2af828a62dc6b8f47bb4a7fea3bc4584, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0.25
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
@@ -873,29 +942,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4454942125808400}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1158046349384536, guid: 0dd9317db444b4b448313715ee9a4f9c, type: 2}
     chance: 0
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1158046349384536, guid: 0dd9317db444b4b448313715ee9a4f9c, type: 2}
     chance: 0.5
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 4
     maximalDistance: 7
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1158046349384536, guid: 0dd9317db444b4b448313715ee9a4f9c, type: 2}
     chance: 1.5
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 7
     maximalDistance: 12
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1158046349384536, guid: 0dd9317db444b4b448313715ee9a4f9c, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 12
     maximalDistance: 15
     positionOffset: {x: 0, y: 0}
@@ -911,11 +990,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 1
   objects:
   - prefab: {fileID: 1946014388419848, guid: ae4767b148beb7948b7adaaf938a4dd1, type: 2}
     chance: 6
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 8
     maximalDistance: 9
     positionOffset: {x: 0, y: 0}

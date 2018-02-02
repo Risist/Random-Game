@@ -71,6 +71,8 @@ public class UpgradeField : MonoBehaviour {
 			{
 				foreach (var it in button)
 					it.randId(skillManager);
+
+				lastLevel = lvlManager.lvl;
 			}
 			lefSkillPointsTxt.text = leftSkillPoints__ + lvlManager.leftUpgradePoints;
 			upgradeUi.SetActive( true );

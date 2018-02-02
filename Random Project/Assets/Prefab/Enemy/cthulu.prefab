@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 114796367937368924}
   - component: {fileID: 114765281665835420}
   - component: {fileID: 114151632554654924}
+  - component: {fileID: 114696606585690878}
   m_Layer: 0
   m_Name: cthulu
   m_TagString: enemy
@@ -215,7 +216,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1892839396706268}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.368151, y: 1.4333332, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 4806259156660626}
@@ -435,6 +436,18 @@ MonoBehaviour:
   followFactorIgnoreDifference: 5
   objectToFollowTag: Player
   followScale: 1
+--- !u!114 &114696606585690878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892839396706268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMidificator: 0
 --- !u!114 &114742117227487156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,10 +476,13 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -4
+    damage: -2.5
   damageExit:
     damage: 0
   ignoreTag: enemy
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114765281665835420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -499,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 150
+  actual: 125
   max: 150
   regeneration: 5
   removeAfterDeath: 1
@@ -515,6 +531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 1
   objects:

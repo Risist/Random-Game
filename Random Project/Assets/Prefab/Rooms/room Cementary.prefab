@@ -51,6 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4238714969953738}
+  - component: {fileID: 114241947689961134}
   m_Layer: 0
   m_Name: room Cementary
   m_TagString: Untagged
@@ -264,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1405165327876052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 323.32996, y: -94.73129, z: 0}
+  m_LocalPosition: {x: 8.587752, y: -0.5198338, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4220987558400762}
@@ -383,6 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 1
   objects:
@@ -438,6 +441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4238714969953738}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
@@ -457,6 +462,18 @@ MonoBehaviour:
     maximalDistance: 1.5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114241947689961134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1405165327876052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMidificator: 25
 --- !u!114 &114368403237909052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,6 +485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4238714969953738}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
@@ -530,6 +549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4238714969953738}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
@@ -577,6 +598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4238714969953738}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
@@ -663,6 +686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4238714969953738}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
@@ -710,6 +735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 4238714969953738}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:

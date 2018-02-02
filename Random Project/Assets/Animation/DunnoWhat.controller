@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minRadiusFromAim: 0
-  maxRadiusFromAim: 5
+  maxRadiusFromAim: 3.75
   bulletPrefab: {fileID: 1997699234228658, guid: 7df26c0c5670f5b4a8e7e9a00f261f7b,
     type: 2}
   bulletSpawnPositionOffset: {x: 0, y: -2}
@@ -206,10 +206,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimTag: Player
-  perceiveRadius: 20
+  perceiveRadius: 30
   movementSpeed: 100
-  minRadiusFromAim: 6
-  maxRadiusFromAim: 15
+  minRadiusFromAim: 9
+  maxRadiusFromAim: 17
   addictionalAngle: 180
 --- !u!114 &114861605928659802
 MonoBehaviour:

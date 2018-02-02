@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 0}
-  cdMin: 0.2
-  cdMax: 0.25
+  cdMin: 0.15
+  cdMax: 0.2
   timer:
     actualTime: 0
     cd: 1
@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 0}
-  cdMin: 0.25
-  cdMax: 0.3
+  cdMin: 0.3
+  cdMax: 0.325
   timer:
     actualTime: 0
     cd: 1
@@ -154,17 +154,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 0
   objects:
   - prefab: {fileID: 1547122921428638, guid: 0ce1be82d6cafe94faaaca73e5050921, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1540351251976428, guid: b9de286b990a00e4c8b15b1e9e90c923, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}

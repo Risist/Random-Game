@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114635553407154692}
   - component: {fileID: 114658539423617966}
   - component: {fileID: 114306492186039748}
+  - component: {fileID: 114542249578435352}
   m_Layer: 0
   m_Name: Dunno thrower
   m_TagString: enemy
@@ -272,7 +273,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1158333339460184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.119184, y: 5.2547693, z: -0.26171875}
+  m_LocalPosition: {x: -4.482656, y: 0.34376168, z: -0.26171875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4227363544109046}
@@ -330,7 +331,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 7.5
+  m_LinearDrag: 10
   m_AngularDrag: 10
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -398,26 +399,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95341640514014158}
   behaviours:
-  - chance: 1.5
+  - chance: 1
     animKeyName: jump
     cdChangeAnimMin: 0
-    cdChangeAnimMax: 1.5
-  - chance: 1.5
+    cdChangeAnimMax: 0.75
+  - chance: 0.5
     animKeyName: jumpFast
     cdChangeAnimMin: 0
-    cdChangeAnimMax: 0.5
-  - chance: 1.45
+    cdChangeAnimMax: 0.25
+  - chance: 5.5
     animKeyName: crush
-    cdChangeAnimMin: 0
-    cdChangeAnimMax: 1
-  - chance: 0.25
+    cdChangeAnimMin: 0.3
+    cdChangeAnimMax: 0.65
+  - chance: 0.4
     animKeyName: swing
     cdChangeAnimMin: 0
     cdChangeAnimMax: 1
-  - chance: 1.5
+  - chance: 1
     animKeyName: avoid
     cdChangeAnimMin: 0
-    cdChangeAnimMax: 1
+    cdChangeAnimMax: 0.5
   cdChangeBehavour:
     actualTime: 0
     cd: 0.5
@@ -457,6 +458,9 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114475516335920138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,6 +472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 1
   objects:
@@ -503,6 +509,18 @@ MonoBehaviour:
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114542249578435352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1158333339460184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMidificator: 0
 --- !u!114 &114635553407154692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -564,8 +582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 150
-  max: 150
+  actual: 200
+  max: 200
   regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

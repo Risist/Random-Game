@@ -52,17 +52,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 1
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1765394431107492, guid: 2af828a62dc6b8f47bb4a7fea3bc4584, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1629855889812686, guid: 746fa2276a6140544af8c24b059b84e5, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}

@@ -5,6 +5,8 @@ using System.Collections;
 /// Spawn list which spawns an object from list with random chance in distance (minimalDistance, maximal Distance from the game object containing RandomSpawnList script
 public class RandomSpawnList : SpawnListBase {
 
+	public Transform spawnParent;
+	public bool myParent = false;
     public bool randomRotation;
     public bool randomPosition;
 
@@ -77,8 +79,15 @@ public class RandomSpawnList : SpawnListBase {
 					Quaternion q = Quaternion.Euler(0, 0, rot + objects[i].rotationOffset);
 
 
-					return Instantiate(objects[i].prefab, gameObject.transform.position + offset + q*(Vector3)objects[i].positionOffset,
+					var obj = Instantiate(objects[i].prefab, gameObject.transform.position + offset + q*(Vector3)objects[i].positionOffset,
                         q);
+
+					if (myParent)
+						obj.transform.parent = transform.parent;
+					else
+						obj.transform.parent = spawnParent;
+
+					return obj;
                 }
                 else
                 {
@@ -122,8 +131,15 @@ public class RandomSpawnList : SpawnListBase {
 
 
 
-					return Instantiate(objects[i].prefab, gameObject.transform.position + offset + (Vector3)objects[i].positionOffset + (Vector3) position,
+					var obj = Instantiate(objects[i].prefab, gameObject.transform.position + offset + (Vector3)objects[i].positionOffset + (Vector3) position,
 						Quaternion.Euler(0, 0, rot + objects[i].rotationOffset + rotation));
+
+					if (myParent)
+						obj.transform.parent = transform.parent;
+					else
+						obj.transform.parent = spawnParent;
+
+					return obj;
 				}
 				else
 				{

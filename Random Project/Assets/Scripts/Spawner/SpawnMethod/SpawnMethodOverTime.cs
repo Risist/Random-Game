@@ -12,6 +12,8 @@ public class SpawnMethodOverTime : SpawnMethodBase {
 	// Use this for initialization
 	new void Start () {
         base.Start();
+		timer.restart();
+		timer.cd = Random.Range(cdMin, cdMax);
 	}
 	
 	// Update is called once per frame

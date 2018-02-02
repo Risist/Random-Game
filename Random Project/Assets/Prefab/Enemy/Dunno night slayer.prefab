@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 114294520463633664}
   - component: {fileID: 114734539886755636}
   - component: {fileID: 114362188841962952}
+  - component: {fileID: 114999949647505488}
   m_Layer: 0
   m_Name: Dunno night slayer
   m_TagString: enemy
@@ -201,7 +202,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1903837467419714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.590332, y: -2.5072134, z: -0.26171875}
+  m_LocalPosition: {x: -1.32, y: 5.469978, z: -0.26171875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4929811361200260}
@@ -329,7 +330,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1.05
+  m_Mass: 1.1
   m_LinearDrag: 7.5
   m_AngularDrag: 10
   m_GravityScale: 1
@@ -403,6 +404,9 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: enemy
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114171036065952484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -469,26 +473,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95007107467659988}
   behaviours:
-  - chance: 1.5
+  - chance: 1.25
     animKeyName: jump
-    cdChangeAnimMin: 0
-    cdChangeAnimMax: 1
-  - chance: 2
+    cdChangeAnimMin: 0.1
+    cdChangeAnimMax: 0.6
+  - chance: 2.4
     animKeyName: jumpFast
     cdChangeAnimMin: 0
-    cdChangeAnimMax: 0.25
-  - chance: 0
-    animKeyName: crush
-    cdChangeAnimMin: 0
-    cdChangeAnimMax: 1.5
-  - chance: 1.75
-    animKeyName: swing
-    cdChangeAnimMin: 0
-    cdChangeAnimMax: 0.75
-  - chance: 1.25
+    cdChangeAnimMax: 0.2
+  - chance: 1.5
     animKeyName: avoid
     cdChangeAnimMin: 0
-    cdChangeAnimMax: 0.5
+    cdChangeAnimMax: 0.4
+  - chance: 1.5
+    animKeyName: swing
+    cdChangeAnimMin: 0.1
+    cdChangeAnimMax: 0.75
   cdChangeBehavour:
     actualTime: 0
     cd: 0.5
@@ -503,6 +503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 1
   objects:
@@ -549,9 +551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 100
-  max: 100
-  regeneration: 10
+  actual: 140
+  max: 140
+  regeneration: 2.5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114734539886755636
@@ -568,6 +570,18 @@ MonoBehaviour:
   bloodPrefab: {fileID: 1887650518509024, guid: aac672f752755a34885e08a58b19de31,
     type: 2}
   respawnPrefab: {fileID: 1903837467419714}
+--- !u!114 &114999949647505488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1903837467419714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMidificator: 0
 --- !u!212 &212232233527821692
 SpriteRenderer:
   m_ObjectHideFlags: 1

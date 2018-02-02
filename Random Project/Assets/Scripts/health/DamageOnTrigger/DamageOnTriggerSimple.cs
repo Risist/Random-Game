@@ -8,12 +8,24 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 	public SimpleDamage damageExit;
 	public string ignoreTag = "noTag";
 
+	public bool removeOnEnter = false;
+	public bool removeOnExit = false;
+	public GameObject objToRemove;
+
+	private void Start()
+	{
+		if (!objToRemove)
+			objToRemove = gameObject;
+	}
+
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{
 			healthController.DealDamage(damageEnter, gameObject);
+			if (removeOnEnter)
+				Destroy(objToRemove);
 		}
 	}
 
@@ -32,6 +44,8 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{
 			healthController.DealDamage(damageExit, gameObject);
+			if (removeOnExit)
+				Destroy(objToRemove);
 		}
 	}
 
@@ -41,6 +55,8 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{
 			healthController.DealDamage(damageEnter, gameObject);
+			if (removeOnEnter)
+				Destroy(objToRemove);
 		}
 	}
 
@@ -59,6 +75,8 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{
 			healthController.DealDamage(damageExit, gameObject);
+			if (removeOnExit)
+				Destroy(objToRemove);
 		}
 	}
 }

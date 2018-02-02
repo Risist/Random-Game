@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 114374082991660312}
   - component: {fileID: 114642308407035016}
   - component: {fileID: 114928756836399954}
+  - component: {fileID: 114551198940205368}
   m_Layer: 0
   m_Name: dummyShaman
   m_TagString: enemy
@@ -445,6 +446,17 @@ MonoBehaviour:
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114551198940205368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1815087942767602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114642308407035016
 MonoBehaviour:
   m_ObjectHideFlags: 1

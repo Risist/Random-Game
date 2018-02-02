@@ -258,9 +258,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4718455164513044}
-  - component: {fileID: 114521330513553136}
+  - component: {fileID: 114825205162286494}
   m_Layer: 0
-  m_Name: bulletSpawn rock
+  m_Name: skill Sprint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -440,6 +440,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1779959301918838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4657133994089314}
+  - component: {fileID: 114521330513553136}
+  m_Layer: 0
+  m_Name: bulletSpawn rock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1807242101744312
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,13 +680,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1709267299375718}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
-  m_LocalPosition: {x: -1, y: 1.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.17364816, w: 0.9848078}
+  m_LocalPosition: {x: -0.9, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4042770382574274}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
 --- !u!4 &4216244920438780
 Transform:
   m_ObjectHideFlags: 1
@@ -703,13 +719,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829075064218490}
-  m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
-  m_LocalPosition: {x: 1, y: 1.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.17364825, w: 0.9848078}
+  m_LocalPosition: {x: 0.9, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4042770382574274}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20}
 --- !u!4 &4354957460823904
 Transform:
   m_ObjectHideFlags: 1
@@ -782,13 +798,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1771926207535982}
-  m_LocalRotation: {x: 0, y: 0, z: 0.13052616, w: 0.9914449}
-  m_LocalPosition: {x: -0.75, y: 1.65, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.08715578, w: 0.9961947}
+  m_LocalPosition: {x: -0.6, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4042770382574274}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10}
 --- !u!4 &4582483614128310
 Transform:
   m_ObjectHideFlags: 1
@@ -808,13 +824,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676571384184798}
-  m_LocalRotation: {x: 0, y: 0, z: -0.13052624, w: 0.9914449}
-  m_LocalPosition: {x: 0.75, y: 1.65, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.08715578, w: 0.9961947}
+  m_LocalPosition: {x: 0.6, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4042770382574274}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
 --- !u!4 &4653445611578946
 Transform:
   m_ObjectHideFlags: 1
@@ -827,6 +843,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4354957460823904}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4657133994089314
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779959301918838}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4664540152127936
 Transform:
@@ -881,7 +910,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 12
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4720175451355674
 Transform:
@@ -1023,10 +1052,11 @@ Transform:
   - {fileID: 4113230993755934}
   - {fileID: 4745985647160184}
   - {fileID: 4354957460823904}
-  - {fileID: 4718455164513044}
+  - {fileID: 4657133994089314}
   - {fileID: 4729502500914292}
   - {fileID: 4385834542207774}
   - {fileID: 4042770382574274}
+  - {fileID: 4718455164513044}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.855}
@@ -1278,8 +1308,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a4424799e66707843a303b3d213ab3d0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.65
+  m_Pitch: 0.85
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1518,7 +1548,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a4424799e66707843a303b3d213ab3d0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1598,7 +1628,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a4424799e66707843a303b3d213ab3d0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1698,10 +1728,13 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -20
+    damage: -17.5
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114054285537627552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1730,11 +1763,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 20
+  ammoCost: 22.5
   buttonCode: Fire2
   timer:
     actualTime: 0
-    cd: 0.25
+    cd: 0.6
   audio: {fileID: 82873821938761342}
   movement: {fileID: 114687892731009294}
   displayName: Poisoning knife
@@ -1754,11 +1787,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 20
+  ammoCost: 15
   buttonCode: Fire1
   timer:
     actualTime: 0
-    cd: 0.165
+    cd: 0.145
   audio: {fileID: 0}
   movement: {fileID: 114687892731009294}
   displayName: Tornado
@@ -1828,11 +1861,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 75
+  ammoCost: 35
   buttonCode: Fire2
   timer:
     actualTime: 0
-    cd: 2.5
+    cd: 1
   audio: {fileID: 82460613337367736}
   movement: {fileID: 114687892731009294}
   displayName: crush
@@ -1863,7 +1896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50204895844437464}
-  movementSpeed: 2500
+  movementSpeed: 2000
 --- !u!114 &114278036587875788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1878,10 +1911,13 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -25
+    damage: -22.5
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114330020342777738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1930,11 +1966,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 50
+  ammoCost: 30
   buttonCode: Movement
   timer:
     actualTime: 0
-    cd: 1
+    cd: 0.75
   audio: {fileID: 82427424237438490}
   movement: {fileID: 114687892731009294}
   displayName: draw
@@ -1982,7 +2018,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564460167382242}
+  m_GameObject: {fileID: 1779959301918838}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
@@ -2065,7 +2101,7 @@ MonoBehaviour:
   buttonCode: Fire2
   timer:
     actualTime: 0
-    cd: 0.25
+    cd: 0.5
   audio: {fileID: 82625563181587352}
   movement: {fileID: 114687892731009294}
   displayName: knife
@@ -2104,9 +2140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f304d3fb4e2e6954eb58fc6f6c6627b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 125
-  maximumAmmo: 125
-  ammoRegeneration: 25
+  ammo: 160
+  maximumAmmo: 160
+  ammoRegeneration: 20
 --- !u!114 &114687892731009294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2133,11 +2169,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 60
+  ammoCost: 40
   buttonCode: Movement
   timer:
     actualTime: 0
-    cd: 1.25
+    cd: 1
   audio: {fileID: 0}
   movement: {fileID: 114687892731009294}
   displayName: teleport
@@ -2156,11 +2192,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 39
+  ammoCost: 25
   buttonCode: Fire1
   timer:
     actualTime: 0
-    cd: 0.8
+    cd: 0.75
   audio: {fileID: 82282696546738914}
   movement: {fileID: 114687892731009294}
   displayName: slash
@@ -2214,7 +2250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50204895844437464}
-  movementSpeed: -12000
+  movementSpeed: -9000
 --- !u!114 &114794927240931280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2227,11 +2263,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114669773493803934}
-  ammoCost: 40
+  ammoCost: 50
   buttonCode: Fire2
   timer:
     actualTime: 0
-    cd: 0.5
+    cd: 1.35
   audio: {fileID: 82320935128632836}
   movement: {fileID: 114687892731009294}
   displayName: knife wave
@@ -2260,6 +2296,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: {x: 0, y: -400}
+--- !u!114 &114825205162286494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1564460167382242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb44bfd15a030ae49859904d57180d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114669773493803934}
+  ammoCost: 20
+  buttonCode: Fire1
+  timer:
+    actualTime: 0
+    cd: 0.3
+  audio: {fileID: 0}
+  movement: {fileID: 114687892731009294}
+  displayName: Sprint
+  description: 
+  sprintSpeed: 7000
+  sprintTime:
+    actualTime: 0
+    cd: 0.3
 --- !u!114 &114919781249781714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2271,7 +2332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41996a4982e157643bd2ab1674d86833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0, y: 1000}
+  force: {x: 0, y: 1500}
 --- !u!114 &114933666631775402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2302,16 +2363,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slots:
   - keyCode: Fire1
-    skillObject: {fileID: 1738402658699570}
+    skillObject: {fileID: 1540540124292438}
     text: {fileID: 0}
   - keyCode: Fire2
-    skillObject: {fileID: 0}
+    skillObject: {fileID: 1238675832307074}
     text: {fileID: 0}
   - keyCode: Fire3
-    skillObject: {fileID: 0}
+    skillObject: {fileID: 1951281381804670}
     text: {fileID: 0}
   - keyCode: Movement
-    skillObject: {fileID: 0}
+    skillObject: {fileID: 1540646628692434}
     text: {fileID: 0}
   unlockedSkills:
   - {fileID: 1738402658699570}
@@ -2326,7 +2387,7 @@ MonoBehaviour:
   - {fileID: 1653183406740368}
   - {fileID: 1807242101744312}
   - {fileID: 1961287773121042}
-  - {fileID: 1564460167382242}
+  - {fileID: 1779959301918838}
   - {fileID: 1238675832307074}
   - {fileID: 1540540124292438}
   - {fileID: 1951281381804670}
@@ -2372,10 +2433,13 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -6
+    damage: -7
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!212 &212025973185190512
 SpriteRenderer:
   m_ObjectHideFlags: 1
