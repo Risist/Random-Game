@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UiAmmo : MonoBehaviour {
 
 
-	public float lenghtPerAmmo = 70;
+	//public float lenghtPerAmmo = 70;
 	public bool updateProgress = true;
 	Weapon playerAmmo;
 	Image image;
@@ -23,6 +23,6 @@ public class UiAmmo : MonoBehaviour {
 	{
 		if(updateProgress)
 			image.fillAmount = playerAmmo.ammo / playerAmmo.maximumAmmo;
-		image.transform.localScale = new Vector2(1 + playerAmmo.maximumAmmo / lenghtPerAmmo, 1);
+		//image.transform.localScale = new Vector2(1 + playerAmmo.maximumAmmo / lenghtPerAmmo, 1);
 	}
 }
