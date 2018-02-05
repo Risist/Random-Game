@@ -200,7 +200,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1460835434788154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7554226, y: -2.3231437, z: 0}
+  m_LocalPosition: {x: 7.012995, y: -2.1724067, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 4918788626563994}
@@ -368,7 +368,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.1
+  m_Radius: 1.7
 --- !u!95 &95726574344502368
 Animator:
   serializedVersion: 3
@@ -485,7 +485,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -5.5
+    damage: -3.5
   damageExit:
     damage: 0
   ignoreTag: enemy

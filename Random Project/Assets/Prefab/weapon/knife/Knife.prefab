@@ -211,7 +211,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.5}
+  m_Size: {x: 2, y: 2.5}
   m_EdgeRadius: 0
 --- !u!114 &114129753013272046
 MonoBehaviour:
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
-  movementSpeed: 5000
+  movementSpeed: 5375
 --- !u!114 &114137690442377298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -55
+    damage: -60
   damageStay:
     damage: 0
   damageExit:
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 0.45
+    cd: 0.65
 --- !u!114 &114942371043296708
 MonoBehaviour:
   m_ObjectHideFlags: 1

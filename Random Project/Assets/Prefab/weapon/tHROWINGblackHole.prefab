@@ -144,7 +144,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.35500002
+  m_Radius: 0.425
 --- !u!58 &58749022813146568
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -310,10 +310,13 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -4
+    damage: -2
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114412713462455976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -346,6 +349,9 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114759421723273552
 MonoBehaviour:
   m_ObjectHideFlags: 1

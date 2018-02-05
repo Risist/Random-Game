@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 114690170052215998}
   - component: {fileID: 61338639963855530}
   - component: {fileID: 114201164699673786}
+  - component: {fileID: 114617911966070418}
   m_Layer: 0
   m_Name: throwingDevil
   m_TagString: Untagged
@@ -326,6 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
@@ -351,6 +354,27 @@ MonoBehaviour:
   spawnList: {fileID: 114332763552738744}
   nObjectsToSpawnMin: 1
   nObjectsToSpawnMax: 1
+--- !u!114 &114617911966070418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577014727243174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e6ec63ad6ef364ebece5cc90b6f378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageEnter:
+    damage: -6
+  damageStay:
+    damage: 0
+  damageExit:
+    damage: 0
+  ignoreTag: Player
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114686527956126978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -378,6 +402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 0
   objects:

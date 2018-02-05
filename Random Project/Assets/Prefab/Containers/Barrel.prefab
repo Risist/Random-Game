@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 61116709872133158}
   - component: {fileID: 114521429015672134}
   - component: {fileID: 114880632538122984}
+  - component: {fileID: 114126316066642550}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -347,6 +348,24 @@ MonoBehaviour:
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114126316066642550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249126083102856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38dc5b30391f44042b54e55ab30be0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 58f3d631dde1b0d418f0e4c6bd28b528, type: 3}
+  pitchBase: 1
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.5
+  volumeDmgScale: 0.0075
+  volumeRandom: 0
 --- !u!114 &114269902084359506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -372,6 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:

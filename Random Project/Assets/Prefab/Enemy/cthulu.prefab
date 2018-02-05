@@ -216,7 +216,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1892839396706268}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -4.368151, y: 1.4333332, z: 0}
+  m_LocalPosition: {x: -29.706303, y: 3.2860534, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 4806259156660626}
@@ -333,8 +333,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.75
-  m_LinearDrag: 15
+  m_Mass: 0.875
+  m_LinearDrag: 12
   m_AngularDrag: 15
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -476,7 +476,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -2.5
+    damage: -2.25
   damageExit:
     damage: 0
   ignoreTag: enemy
@@ -515,8 +515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 125
-  max: 150
+  actual: 175
+  max: 200
   regeneration: 5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

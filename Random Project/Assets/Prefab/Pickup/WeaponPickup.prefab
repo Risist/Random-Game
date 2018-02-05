@@ -54,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4127332609228168}
   - component: {fileID: 58299083252605544}
-  - component: {fileID: 114207805307370946}
   - component: {fileID: 114438963659237090}
   m_Layer: 0
   m_Name: WeaponPickup
@@ -119,20 +118,6 @@ CircleCollider2D:
   m_Offset: {x: -0.44, y: -0.15}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &114207805307370946
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1973122063620584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8596457322601947832916538f3f396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer:
-    actualTime: 0
-    cd: 45
 --- !u!114 &114422083063892652
 MonoBehaviour:
   m_ObjectHideFlags: 1

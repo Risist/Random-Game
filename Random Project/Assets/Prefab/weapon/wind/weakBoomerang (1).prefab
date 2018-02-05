@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 4362829028550318}
   - component: {fileID: 50268451138088000}
   - component: {fileID: 114955261369010714}
-  - component: {fileID: 114811146802007508}
   - component: {fileID: 114628926232600958}
   - component: {fileID: 114698653860828236}
   - component: {fileID: 61563825767281766}
@@ -167,19 +166,6 @@ MonoBehaviour:
   timer:
     actualTime: 0
     cd: 1
---- !u!114 &114811146802007508
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1547122921428638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7ee68db359beaf489a677581348af66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTrigger: 1
-  onCollision: 0
 --- !u!114 &114955261369010714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,12 +178,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -35
+    damage: -30
   damageStay:
     damage: 0
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 1
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!212 &212917255700523648
 SpriteRenderer:
   m_ObjectHideFlags: 1

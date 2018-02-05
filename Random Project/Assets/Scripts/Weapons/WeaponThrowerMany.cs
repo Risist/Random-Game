@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponThrowerMany : WeaponBase
 {
 	public AnimationManager animManager;
+	public bool animateWhenReadyOnly = false;
 	[System.Serializable]
 	public class SpawnStruct
 	{
@@ -36,6 +37,7 @@ public class WeaponThrowerMany : WeaponBase
 			foreach(var it in spawns)
 				Instantiate(it.prefab, it.transform.position, it.transform.rotation);
 			ahouldShoot = false;
+
 		}
 
 		if (Input.GetButton(buttonCode) )
@@ -48,9 +50,12 @@ public class WeaponThrowerMany : WeaponBase
 			{
 				ahouldShoot = true;
 				timer.restart();
+
+				if (animManager)
+					animManager.CastAnimation();
 			}
 
-			if (animManager)
+			if (animManager && !animateWhenReadyOnly)
 				animManager.CastAnimation();
 		}
 	}

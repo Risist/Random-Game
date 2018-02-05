@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponThrower : WeaponBase
 {
 	public AnimationManager animManager;
+	public bool animateWhenReadyOnly = false;
 	public GameObject prefab;
 	bool ahouldShoot = false;
 
@@ -39,9 +40,12 @@ public class WeaponThrower : WeaponBase
 			{
 				ahouldShoot = true;
 				timer.restart();
+
+				if (animManager)
+					animManager.CastAnimation();
 			}
 
-			if (animManager)
+			if (animManager && !animateWhenReadyOnly)
 				animManager.CastAnimation();
 		}
 	}

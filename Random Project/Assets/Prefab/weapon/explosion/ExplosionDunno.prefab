@@ -291,7 +291,7 @@ Transform:
   m_GameObject: {fileID: 1781178559649850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.7212696, y: -4.3613744, z: -0.00390625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 4150050630448092}
   - {fileID: 4574906667705142}
@@ -453,9 +453,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2.5
+  radius: 3
   dmg:
-    damage: -50
+    damage: -70
   ignoreTag: enemy
 --- !u!114 &114636267044398730
 MonoBehaviour:
@@ -468,10 +468,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 1.5
   dmg:
-    damage: -25
-  ignoreTag: noTag
+    damage: -35
+  ignoreTag: enemy
 --- !u!114 &114690275423381634
 MonoBehaviour:
   m_ObjectHideFlags: 1

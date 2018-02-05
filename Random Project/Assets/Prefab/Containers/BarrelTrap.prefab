@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 114922849044813134}
   - component: {fileID: 61492811070732442}
   - component: {fileID: 114082483386492656}
+  - component: {fileID: 114012883447947822}
   m_Layer: 0
   m_Name: BarrelTrap
   m_TagString: Untagged
@@ -330,6 +331,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3072294, y: 1.5184512}
   m_EdgeRadius: 0
+--- !u!114 &114012883447947822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932502686428302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38dc5b30391f44042b54e55ab30be0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 58f3d631dde1b0d418f0e4c6bd28b528, type: 3}
+  pitchBase: 1
+  pitchDmgScale: -0.004
+  pitchRandom: 0.1
+  volumeBase: 0.5
+  volumeDmgScale: 0.0075
+  volumeRandom: 0
 --- !u!114 &114082483386492656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -376,6 +395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
@@ -414,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 70
+  actual: 50
   max: 100
   regeneration: 0
   removeAfterDeath: 1

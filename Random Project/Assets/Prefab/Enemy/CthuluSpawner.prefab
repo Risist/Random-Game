@@ -52,19 +52,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1892839396706268, guid: c93fccdb409fb704c96154cdecdb2bc9, type: 2}
     chance: 10
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 2
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1708966377956338, guid: bb24fa82900ea0f49a2c48d99e0eefa0, type: 2}
-    chance: 1
-    minimalDistance: 0
-    maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
 --- !u!114 &114926323709384944
@@ -81,5 +79,5 @@ MonoBehaviour:
   spawnList: {fileID: 114106230268877708}
   destroy: 1
   objToRemove: {fileID: 0}
-  nSpawnMin: 2
-  nSpawnMax: 4
+  nSpawnMin: 3
+  nSpawnMax: 7

@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4499445512734884}
   - component: {fileID: 50790003806727002}
   - component: {fileID: 114234888079885268}
-  - component: {fileID: 114006763815840332}
   - component: {fileID: 114105481548316524}
   - component: {fileID: 114635814981262612}
   - component: {fileID: 61380230069208966}
@@ -121,19 +120,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &114006763815840332
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540351251976428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7ee68db359beaf489a677581348af66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTrigger: 1
-  onCollision: 0
 --- !u!114 &114105481548316524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,12 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -35
+    damage: -30
   damageStay:
     damage: 0
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 1
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114419789986969338
 MonoBehaviour:
   m_ObjectHideFlags: 1

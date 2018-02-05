@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114309612123621184}
   - component: {fileID: 114136560468059968}
   m_Layer: 0
-  m_Name: DunnoSpawnerThrow
+  m_Name: DunnoThrowSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,29 +68,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1080198572633586, guid: 21d0bcee1ebebc34daab474227cfe428, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1460835434788154, guid: 1d9a7a9a9c55d1343ad75848c90375a4, type: 2}
     chance: 3
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1158333339460184, guid: 2a7e2fb93437c5b4ab592c301be0b542, type: 2}
     chance: 7
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
     chance: 1
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}

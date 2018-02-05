@@ -133,12 +133,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -60
+    damage: -55
   damageStay:
     damage: 0
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114134881342430420
 MonoBehaviour:
   m_ObjectHideFlags: 1

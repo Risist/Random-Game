@@ -55,8 +55,8 @@ MonoBehaviour:
   spawnList: {fileID: 114699485832451124}
   destroy: 1
   objToRemove: {fileID: 0}
-  nSpawnMin: 2
-  nSpawnMax: 4
+  nSpawnMin: 3
+  nSpawnMax: 6
 --- !u!114 &114699485832451124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,30 +68,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
   - prefab: {fileID: 1080198572633586, guid: 21d0bcee1ebebc34daab474227cfe428, type: 2}
-    chance: 6
+    chance: 10
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1460835434788154, guid: 1d9a7a9a9c55d1343ad75848c90375a4, type: 2}
-    chance: 3
-    minimalDistance: 0
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1158333339460184, guid: 2a7e2fb93437c5b4ab592c301be0b542, type: 2}
-    chance: 3
-    minimalDistance: 0
-    maximalDistance: 3
+    maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
-    chance: 3
+    chance: 3.5
+    chanceScalePerRoom: 0
+    minChance: 0
     minimalDistance: 0
-    maximalDistance: 3
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1158333339460184, guid: 2a7e2fb93437c5b4ab592c301be0b542, type: 2}
+    chance: 2
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1331774934831342, guid: 7c2fd7e174d9d1b4e9d4661300e05607, type: 2}
+    chance: 0
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1342212759904094, guid: 0a40a0bc1adb378469d22abd3bb962ac, type: 2}
+    chance: 3
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1123494228537204, guid: 264b3d88e468fba4ab9c7eedeb8b4640, type: 2}
+    chance: 0.25
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0

@@ -705,12 +705,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -20
+    damage: -15
   damageStay:
-    damage: -2
+    damage: -1
   damageExit:
     damage: 0
   ignoreTag: enemy
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
 --- !u!114 &114986775177293782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -722,8 +725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 2500
-  max: 2500
+  actual: 1500
+  max: 1500
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

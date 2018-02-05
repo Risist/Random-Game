@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 58164988228606792}
   - component: {fileID: 114677131411034306}
   - component: {fileID: 114571561144209732}
-  - component: {fileID: 114778325309016554}
   m_Layer: 0
   m_Name: JumpFieldTemp 1
   m_TagString: Untagged
@@ -229,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 15
+    cd: 10
 --- !u!114 &114677131411034306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,22 +241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: {x: 0, y: 500}
---- !u!114 &114778325309016554
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1550924305828402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actual: 1000
-  max: 1000
-  regeneration: 0
-  removeAfterDeath: 1
-  objectToRemove: {fileID: 0}
 --- !u!114 &114855762631036976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -285,7 +268,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -301,7 +283,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -329,7 +310,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -345,7 +325,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -373,7 +352,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -389,7 +367,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

@@ -212,7 +212,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.5}
+  m_Size: {x: 2, y: 2.5}
   m_EdgeRadius: 0
 --- !u!114 &114129753013272046
 MonoBehaviour:
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
-  movementSpeed: 4250
+  movementSpeed: 4500
 --- !u!114 &114137690442377298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925cd3eaeee536d42bfc780654e97ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enterForce: 10
+  enterForce: 5
   stayForce: 0
   exitForce: 0
   ignoreTag: Player

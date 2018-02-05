@@ -202,7 +202,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1903837467419714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.32, y: 5.469978, z: -0.26171875}
+  m_LocalPosition: {x: -26.674196, y: -3.1150608, z: -0.26171875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4929811361200260}
@@ -330,7 +330,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1.1
+  m_Mass: 1.075
   m_LinearDrag: 7.5
   m_AngularDrag: 10
   m_GravityScale: 1
@@ -400,7 +400,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -7
+    damage: -5
   damageExit:
     damage: 0
   ignoreTag: enemy

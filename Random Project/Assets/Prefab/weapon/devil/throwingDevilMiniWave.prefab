@@ -313,6 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 0
   objects:
@@ -375,8 +377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114045378713851682}
-  nObjectsToSpawnMin: 3
-  nObjectsToSpawnMax: 5
+  nObjectsToSpawnMin: 4
+  nObjectsToSpawnMax: 6
 --- !u!114 &114523160547128636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -401,6 +403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 0
   objects:
