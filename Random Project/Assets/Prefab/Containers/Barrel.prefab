@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 114010685016295102}
   - component: {fileID: 61116709872133158}
   - component: {fileID: 114521429015672134}
-  - component: {fileID: 114880632538122984}
   - component: {fileID: 114126316066642550}
   m_Layer: 0
   m_Name: Barrel
@@ -343,7 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 25
+  type: 
+  actual: 100
   max: 100
   regeneration: 0
   removeAfterDeath: 1
@@ -473,76 +473,6 @@ MonoBehaviour:
   volumeBase: 0.5
   volumeDmgScale: 0.0075
   volumeRandom: 0
---- !u!114 &114880632538122984
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1249126083102856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc2540496c0396248a51cb28829ebcdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomRotation: 1
-  randomPosition: 1
-  objects:
-  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
-    chance: 8
-    chanceScalePerRoom: 0
-    minChance: 0
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
-    chance: 4
-    chanceScalePerRoom: 0
-    minChance: 0
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1655366846844308, guid: 6465f8ad622c3e94a99f526f9dc7c271, type: 2}
-    chance: 0.35
-    chanceScalePerRoom: -0.05
-    minChance: 0.1
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1225623095939970, guid: 1e47af22d6b7ff042b5731033a220345, type: 2}
-    chance: 0.35
-    chanceScalePerRoom: -0.05
-    minChance: 0.1
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1825395744119852, guid: 8af856c9ff7a95e49ae4e33662d1bc9f, type: 2}
-    chance: 0.35
-    chanceScalePerRoom: -0.05
-    minChance: 0.1
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1884669492228036, guid: d40b365ffbaf1ea49a7a3befa142ee4c, type: 2}
-    chance: 0.35
-    chanceScalePerRoom: -0.05
-    minChance: 0.1
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
-    chance: 0.2
-    chanceScalePerRoom: -0.0125
-    minChance: 0.15
-    minimalDistance: 1
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
 --- !u!212 &212148330316289624
 SpriteRenderer:
   m_ObjectHideFlags: 1

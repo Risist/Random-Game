@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4573417674978082}
   - component: {fileID: 58148249342032360}
   - component: {fileID: 114784608193878890}
-  - component: {fileID: 114903272651124190}
+  - component: {fileID: 114143414198975344}
   m_Layer: 0
   m_Name: energyPickup
   m_TagString: Untagged
@@ -119,6 +119,22 @@ CircleCollider2D:
   m_Offset: {x: -0.35, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114143414198975344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1526651894845042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056b82a7eb81570499467d6b14678bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: Energy
+  maxBonus: 0
+  actualBonus: 100
+  bonusRegen: 0
+  antidotum: 1
 --- !u!114 &114463078097817552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,21 +185,6 @@ MonoBehaviour:
   changeRate: 0.75
   min: 0.09803922
   max: 1
---- !u!114 &114903272651124190
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1526651894845042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3547b7ddbb1fa3240a8bed34a53b60f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energyMaxBonus: 0
-  energyActualBonus: 100
-  energyBonusRegen: 0
-  antidotum: 0
 --- !u!212 &212161162413782328
 SpriteRenderer:
   m_ObjectHideFlags: 1

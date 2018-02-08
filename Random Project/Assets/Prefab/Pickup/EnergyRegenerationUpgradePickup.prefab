@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4825696192579180}
   - component: {fileID: 58739191570177496}
   - component: {fileID: 114834929375930800}
-  - component: {fileID: 114776952938382422}
+  - component: {fileID: 114300253187222948}
   m_Layer: 0
   m_Name: EnergyRegenerationUpgradePickup
   m_TagString: Untagged
@@ -150,6 +150,22 @@ CircleCollider2D:
   m_Offset: {x: -0.44, y: -0.15}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114300253187222948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884669492228036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056b82a7eb81570499467d6b14678bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: Energy
+  maxBonus: 0
+  actualBonus: 0
+  bonusRegen: 1
+  antidotum: 1
 --- !u!114 &114520682505584808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,21 +184,6 @@ MonoBehaviour:
   changeRate: 0.75
   min: 0.09803922
   max: 0.8352941
---- !u!114 &114776952938382422
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1884669492228036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3547b7ddbb1fa3240a8bed34a53b60f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energyMaxBonus: 0
-  energyActualBonus: 5
-  energyBonusRegen: 3.5
-  antidotum: 1
 --- !u!114 &114834929375930800
 MonoBehaviour:
   m_ObjectHideFlags: 1

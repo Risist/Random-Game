@@ -72,10 +72,10 @@ GameObject:
   - component: {fileID: 4118102318588354}
   - component: {fileID: 50171437131143414}
   - component: {fileID: 61789895254056648}
-  - component: {fileID: 114362935200064034}
   - component: {fileID: 114804014690227980}
   - component: {fileID: 114129753013272046}
   - component: {fileID: 114609255968855854}
+  - component: {fileID: 114115298157577236}
   m_Layer: 0
   m_Name: Poisoning Knife
   m_TagString: Untagged
@@ -187,7 +187,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &61789895254056648
 BoxCollider2D:
@@ -214,6 +214,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.5}
   m_EdgeRadius: 0
+--- !u!114 &114115298157577236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1876976785215474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476154cb1f6d3474fb88bf46dbeb8c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1384500426690516, guid: 27e58f9b7483d9a418ae76ea35590e27, type: 2}
+  ignoreTag: Player
+  attachType: Poison
+  onEnter: 1
+  onExit: 0
 --- !u!114 &114129753013272046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
-  movementSpeed: 4500
+  movementSpeed: 5000
 --- !u!114 &114137690442377298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,21 +279,6 @@ MonoBehaviour:
   changeRate: 1
   min: 0
   max: 1
---- !u!114 &114362935200064034
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1876976785215474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925cd3eaeee536d42bfc780654e97ff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterForce: 5
-  stayForce: 0
-  exitForce: 0
-  ignoreTag: Player
 --- !u!114 &114609255968855854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,12 +291,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -30
+    damage: -40
   damageStay:
     damage: 0
   damageExit:
     damage: 0
-  ignoreTag: noTag
+  ignoreTag: Player
   removeOnEnter: 1
   removeOnExit: 0
   objToRemove: {fileID: 0}
@@ -330,7 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 3
+    cd: 2
 --- !u!114 &114942371043296708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,7 +383,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300512, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0, g: 0.3137255, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0.47058824, b: 0, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -424,7 +425,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0, g: 0.3137255, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0.47058824, b: 0, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -466,7 +467,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300512, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0, g: 0.3137255, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0.47058824, b: 0, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -508,7 +509,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300544, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0, g: 0.3137255, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0.47058824, b: 0, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -383,7 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114745207775990328}
   nObjectsToSpawnMin: 1
-  nObjectsToSpawnMax: 5
+  nObjectsToSpawnMax: 3
 --- !u!114 &114745207775990328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -401,7 +401,7 @@ MonoBehaviour:
   randomPosition: 1
   objects:
   - prefab: {fileID: 1414992316005840, guid: 6035481521e644e489c63f4d049d72c0, type: 2}
-    chance: 0.75
+    chance: 1.5
     chanceScalePerRoom: 0
     minChance: 0
     minimalDistance: 0.25
@@ -409,7 +409,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1411010839725274, guid: e7550583d44000047928809fe74d62fb, type: 2}
-    chance: 1
+    chance: 0
     chanceScalePerRoom: 0
     minChance: 0
     minimalDistance: 0
@@ -435,6 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 
   actual: 50
   max: 100
   regeneration: 0

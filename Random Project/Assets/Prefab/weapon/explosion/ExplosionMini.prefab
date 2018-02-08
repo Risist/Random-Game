@@ -478,7 +478,7 @@ MonoBehaviour:
   shakeRotationBaseDeath: 0
   shakeRotationDamageDeath: 0
   shakeScaleBaseDeath: 0
-  shakeScaleDamageDeath: 0.025
+  shakeScaleDamageDeath: 0.0125
 --- !u!114 &114826767986678968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 
   actual: 100
   max: 100
   regeneration: -100

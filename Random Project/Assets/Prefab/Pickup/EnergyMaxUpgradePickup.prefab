@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4657264087917038}
   - component: {fileID: 58292762590600052}
   - component: {fileID: 114075719366006022}
-  - component: {fileID: 114676577871729838}
+  - component: {fileID: 114276137230710352}
   m_Layer: 0
   m_Name: EnergyMaxUpgradePickup
   m_TagString: Untagged
@@ -213,6 +213,22 @@ MonoBehaviour:
   timer:
     actualTime: 0
     cd: 300
+--- !u!114 &114276137230710352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1825395744119852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056b82a7eb81570499467d6b14678bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: Energy
+  maxBonus: 30
+  actualBonus: 0
+  bonusRegen: 0
+  antidotum: 1
 --- !u!114 &114556527447122112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,21 +247,6 @@ MonoBehaviour:
   changeRate: 0.75
   min: 0.09803922
   max: 0.8352941
---- !u!114 &114676577871729838
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1825395744119852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3547b7ddbb1fa3240a8bed34a53b60f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energyMaxBonus: 40
-  energyActualBonus: 5
-  energyBonusRegen: 0
-  antidotum: 1
 --- !u!114 &114833739825812440
 MonoBehaviour:
   m_ObjectHideFlags: 1
