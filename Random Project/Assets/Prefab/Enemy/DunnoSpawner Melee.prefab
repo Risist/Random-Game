@@ -9,31 +9,31 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1754987350296874}
+  m_RootGameObject: {fileID: 1392534334280252}
   m_IsPrefabParent: 1
---- !u!1 &1754987350296874
+--- !u!1 &1392534334280252
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4237494804429116}
-  - component: {fileID: 114309612123621184}
-  - component: {fileID: 114136560468059968}
+  - component: {fileID: 4896387518950060}
+  - component: {fileID: 114699485832451124}
+  - component: {fileID: 114090187674165170}
   m_Layer: 0
-  m_Name: DunnoThrowSpawner
+  m_Name: DunnoSpawner Melee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4237494804429116
+--- !u!4 &4896387518950060
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1754987350296874}
+  m_GameObject: {fileID: 1392534334280252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0923495, y: -0.7572111, z: 0}
   m_LocalScale: {x: 0.6692951, y: 3.4089212, z: 1}
@@ -41,28 +41,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114136560468059968
+--- !u!114 &114090187674165170
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1754987350296874}
+  m_GameObject: {fileID: 1392534334280252}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 143c22ec986701f45a299e6afac9cfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnList: {fileID: 114309612123621184}
+  spawnList: {fileID: 114699485832451124}
   destroy: 1
   objToRemove: {fileID: 0}
-  nSpawnMin: 2
-  nSpawnMax: 4
---- !u!114 &114309612123621184
+  nSpawnMin: 3
+  nSpawnMax: 6
+--- !u!114 &114699485832451124
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1754987350296874}
+  m_GameObject: {fileID: 1392534334280252}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
@@ -74,34 +74,50 @@ MonoBehaviour:
   randomPosition: 1
   objects:
   - prefab: {fileID: 1080198572633586, guid: 21d0bcee1ebebc34daab474227cfe428, type: 2}
-    chance: 1
+    chance: 10
     chanceScalePerRoom: 0
     minChance: 0
     minimalDistance: 0
-    maximalDistance: 3
+    maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1460835434788154, guid: 1d9a7a9a9c55d1343ad75848c90375a4, type: 2}
-    chance: 3
-    chanceScalePerRoom: 0
-    minChance: 0
-    minimalDistance: 0
-    maximalDistance: 3
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1158333339460184, guid: 2a7e2fb93437c5b4ab592c301be0b542, type: 2}
+  - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
     chance: 7
     chanceScalePerRoom: 0
     minChance: 0
     minimalDistance: 0
-    maximalDistance: 3
+    maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
-    chance: 1
+  - prefab: {fileID: 1158333339460184, guid: 2a7e2fb93437c5b4ab592c301be0b542, type: 2}
+    chance: 0
     chanceScalePerRoom: 0
     minChance: 0
     minimalDistance: 0
-    maximalDistance: 3
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1331774934831342, guid: 7c2fd7e174d9d1b4e9d4661300e05607, type: 2}
+    chance: 0
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1342212759904094, guid: 0a40a0bc1adb378469d22abd3bb962ac, type: 2}
+    chance: 0
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 2
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1123494228537204, guid: 264b3d88e468fba4ab9c7eedeb8b4640, type: 2}
+    chance: 0
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0

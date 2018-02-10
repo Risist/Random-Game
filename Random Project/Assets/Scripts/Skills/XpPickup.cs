@@ -10,7 +10,7 @@ public class XpPickup : MonoBehaviour {
 	{
 		if (collision.tag == "Player")
 		{
-			var manager = collision.GetComponent<LvlManager>();
+			var manager = collision.GetComponent<ProgressionManager>();
 			if (manager)
 			{
 				manager.GainXp(xp);

@@ -4,17 +4,56 @@ using UnityEngine;
 
 public class WeaponBase : MonoBehaviour
 {
-	public EnergyController resource;
+	[System.NonSerialized]
+	public bool isUnlocked = false;
+
+#region Requirements
+	public ProgressionManager.Fate[] requiredFates;
+	public WeaponBase[] requiredSkills;
+
+	public bool MeetsRequirements()
+	{
+		var manager = GetComponentInParent<ProgressionManager>();
+		foreach (var itRequired in requiredFates)
+		{
+			bool found = false;
+			foreach (var itOwned in manager.chosenFates)
+				if (itOwned.name == itRequired.name && itOwned.lvl >= itRequired.lvl)
+				{
+					found = true;
+					break;
+				}
+
+			if (!found)
+				return false;
+		}
+
+		foreach (var itRequired in requiredSkills)
+			if (!itRequired.isUnlocked)
+				return false;
+		
+		return true;
+	}
+#endregion Requirements
+
+	EnergyController resource;
 	public float cost;
 
-	public string buttonCode = "Fire1";
+	[System.NonSerialized]
+	public string buttonCode;
 	public Timer cd = new Timer(0.5f);
+	[System.NonSerialized]
 	public new AudioSource audio;
 
 	public PlayerMovement movement;
 	public string displayName;
 	public string description;
 
+	protected void Start()
+	{
+		resource = GetComponentInParent<EnergyController>();
+		audio = GetComponent<AudioSource>();
+	}
 
 	protected void PlaySound()
 	{
