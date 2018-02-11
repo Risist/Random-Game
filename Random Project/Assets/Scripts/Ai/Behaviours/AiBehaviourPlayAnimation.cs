@@ -2,29 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmyBehaviourPlayAnimation : ArmyBehaviourBase {
+public class AiBehaviourPlayAnimation : AiBehaviourBase {
 
 	protected new void Start()
 	{
 		base.Start();
 		animationCodeHash = Animator.StringToHash(animationCode);
-		if (!animator)
-			animator = GetComponent<Animator>();
+		animator = GetComponentInParent<Animator>();
 	}
 
+	
 	public override void EnterAction()
 	{
-		PlayAnimationTrigger();
 		base.EnterAction();
+		PlayAnimationTrigger();
 	}
 
-	#region animation
+#region animation
 	public string animationCode;
+	[System.NonSerialized]
 	public Animator animator;
 	int animationCodeHash;
 	protected void PlayAnimationTrigger()
 	{
 		animator.SetTrigger(animationCodeHash);
 	}
-	#endregion animation
+#endregion animation
 }

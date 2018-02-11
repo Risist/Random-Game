@@ -2,87 +2,70 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmyUnitMind : MonoBehaviour
+public class AiUnitMind : MonoBehaviour
 {
+
+	public float utilityThreshold = 0.0f;
 
 	void Start()
 	{
-		behaviourChance = new RandomChance();
-		behaviourChance.chances = new float[behaviours.Length];
+		conditions = GetComponents<AiConditionBase>();
 
-		if (!myFraction)
-			myFraction = GetComponent<AiFraction>();
-		if (!perceptionTransform)
-			perceptionTransform = transform;
-
-		currentBehaviour = selectNewBehaviour("freeWill");
+		conditionChance = new RandomChance();
+		conditionChance.chances = new float[conditions.Length];
+		
+		myFraction = GetComponentInParent<AiFraction>();
+		myPerception = GetComponentInParent<AiPerception>();
 	}
 
 	void Update()
 	{
-		if (currentBehaviour.PerformAction())
+		if (!currentBehaviour || currentBehaviour.PerformAction())
 		{
 			// choose new action
-			currentBehaviour.ExitAction();
-			currentBehaviour = selectNewBehaviour("freeWill");
+			if(currentBehaviour)
+				currentBehaviour.ExitAction();
+			currentBehaviour = selectNewBehaviour();
+
+			if (currentBehaviour )
+			{
+				if(!currentBehaviour.CanEnter())
+					currentBehaviour = null;
+				else
+					currentBehaviour.EnterAction();
+			}
+			
 		}
-
-		if (perceptionPeriod.isReadyRestart())
-			enemyAim = PerformPerceptionCheck();
-
-	}
-	void FixedUpdate()
-	{
-		currentBehaviour.PerformActionFixed();	
 	}
 
 
 
-	#region behaviours
-	public ArmyBehaviourBase[] behaviours;
-	public ArmyBehaviourBase currentBehaviour;
-	RandomChance behaviourChance;
+#region behaviours
+	[System.NonSerialized]
+	public AiConditionBase[] conditions;
+	AiBehaviourBase currentBehaviour;
+	RandomChance conditionChance;
 
-	ArmyBehaviourBase selectNewBehaviour(string orderCode)
+	AiBehaviourBase selectNewBehaviour()
 	{
-		for (int i = 0; i < behaviours.Length; ++i)
-			behaviourChance.chances[i] = behaviours[i].GetUtility(orderCode);
-		var v = behaviours[behaviourChance.GetRandedId()];
-		v.EnterAction();
-		return v;
-	}
-	#endregion behaviours
+		if (currentBehaviour && currentBehaviour.nextBehaviour)
+			return currentBehaviour.nextBehaviour;
 
-	#region perception
-	/// fraction data. Perception will scan for any object in the area with ArmyFraction component that differs in fraction
-	public AiFraction myFraction;
-
-	/// how often to perform perception checks
-	public Timer perceptionPeriod = new Timer(0.3f);
-	
-	/// Circle-type collider data of perception area
-	/// transform by default is equal to owner of mind
-	public float perceptionRadius = 10.0f;
-	public Transform perceptionTransform;
-
-	public GameObject PerformPerceptionCheck()
-	{
-		var colliders = Physics2D.OverlapCircleAll(perceptionTransform.position,
-			perceptionRadius * Mathf.Max(perceptionTransform.localScale.x, perceptionTransform.localScale.y)
-			);
-
-		foreach( var it in colliders)
+		for (int i = 0; i < conditions.Length; ++i)
 		{
-			var fraction = it.GetComponent<AiFraction>();
-			if (fraction && !fraction.fractionName.Equals(myFraction.fractionName))
-				return it.gameObject;
+			float utility = conditions[i].GetUtility();
+			conditionChance.chances[i] = utility >= utilityThreshold ? utility : 0;
 		}
-		return null;
+		var v = conditions[conditionChance.GetRandedId()];
+		return v.behaviour;
 	}
+#endregion behaviours
 
-	/// first found non-ally object in perception area
-	GameObject enemyAim;
-	public GameObject GetEnemyAim() { return enemyAim; }
+#region Perception
+	[System.NonSerialized]
+	public AiFraction myFraction;
+	[System.NonSerialized]
+	public AiPerception myPerception;
+#endregion Perception
 
-	#endregion perception
 }
