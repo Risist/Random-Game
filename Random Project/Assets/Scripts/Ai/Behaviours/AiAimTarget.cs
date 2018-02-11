@@ -22,7 +22,9 @@ public class AiAimTarget : AiAimBase {
 
 	public void RecalculateDestination()
 	{
-		destination = (Vector2)target.transform.position + Random.insideUnitCircle * Random.Range(offsetMin, offsetMax);
+		if (target)
+			destination = (Vector2)target.transform.position + Random.insideUnitCircle * Random.Range(offsetMin, offsetMax);
+		else destination = transform.position;
 	}
 
 	public bool RecalculateTarget()
