@@ -11,20 +11,22 @@ public class AiBehaviourSpawn : AiBehaviourBase
 	/// in what delay from beggining of animation
 	public Timer delay;
 
+	bool bSpawned;
+
 	public override bool PerformAction()
 	{
-		if(delay.isReady())
+		if (!bSpawned && delay.isReady())
 		{
 			Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
-			return true;
+			bSpawned = true;
 		}
-
-		return false;
+		return bSpawned;
 	}
 
 	public override void EnterAction()
 	{
 		delay.restart();
+		bSpawned = false;
 		base.EnterAction();
 	}
 }

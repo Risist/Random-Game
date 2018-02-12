@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114658539423617966}
   - component: {fileID: 114306492186039748}
   - component: {fileID: 114542249578435352}
+  - component: {fileID: 114396329615077698}
   m_Layer: 0
   m_Name: Dunno thrower
   m_TagString: enemy
@@ -472,6 +473,20 @@ MonoBehaviour:
   volumeBase: 0.25
   volumeDmgScale: 0
   volumeRandom: 0
+--- !u!114 &114396329615077698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1158333339460184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f966943b0e3d6bd40b07a6b0569998f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fractionName: enemy
+  friendlyFractions: []
+  enemyFractions: []
 --- !u!114 &114421921968505726
 MonoBehaviour:
   m_ObjectHideFlags: 1

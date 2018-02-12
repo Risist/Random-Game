@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AiBehaviourPlayAnimation : AiBehaviourBase {
 
+
+	bool b;
 	protected new void Start()
 	{
 		base.Start();
@@ -11,11 +13,20 @@ public class AiBehaviourPlayAnimation : AiBehaviourBase {
 		animator = GetComponentInParent<Animator>();
 	}
 
-	
+
+	public override bool PerformAction()
+	{
+		if(b)
+		{
+			PlayAnimationTrigger();
+			b = false;
+		}
+		return true;
+	}
 	public override void EnterAction()
 	{
 		base.EnterAction();
-		PlayAnimationTrigger();
+		b = true;
 	}
 
 #region animation

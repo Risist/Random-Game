@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AiBehaviourRandomMovement : AiBehaviourMotor {
+public class AiBehaviourRandomMovement : AiBehaviourMotor
+{
 
 	Timer cd = new Timer();
 	public float minCd = 1.0f;
@@ -18,16 +19,16 @@ public class AiBehaviourRandomMovement : AiBehaviourMotor {
 	Vector2 destination = Vector2.zero;
 	void RandDestination()
 	{
-		destination = (Vector2)center.position + Random.insideUnitCircle * Random.Range(radiusMin, radiusMax); 
+		destination = (Vector2)center.position + Random.insideUnitCircle * Random.Range(radiusMin, radiusMax);
 	}
 
 	// Use this for initialization
-	new void Start ()
+	new void Start()
 	{
 		base.Start();
 		if (!center)
 			center = transform;
-		
+
 	}
 
 	public override void EnterAction()
@@ -38,7 +39,7 @@ public class AiBehaviourRandomMovement : AiBehaviourMotor {
 	}
 	public override bool PerformAction()
 	{
-		if(cd.isReady())
+		if (cd.isReady())
 		{
 			RestartCd();
 			RandDestination();

@@ -418,6 +418,7 @@ GameObject:
   - component: {fileID: 114476023421534818}
   - component: {fileID: 114776738887329340}
   - component: {fileID: 114797044693353834}
+  - component: {fileID: 114763052005890462}
   m_Layer: 0
   m_Name: Dunno Black
   m_TagString: enemy
@@ -1595,6 +1596,20 @@ MonoBehaviour:
   cdChangeBehavour:
     actualTime: 0
     cd: 0.5
+--- !u!114 &114763052005890462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724488959796998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f966943b0e3d6bd40b07a6b0569998f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fractionName: enemy
+  friendlyFractions: []
+  enemyFractions: []
 --- !u!114 &114776738887329340
 MonoBehaviour:
   m_ObjectHideFlags: 1

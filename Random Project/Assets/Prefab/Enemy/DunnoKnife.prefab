@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 114938695570473920}
   - component: {fileID: 114292163311053464}
   - component: {fileID: 114169648881593906}
+  - component: {fileID: 114581798243446140}
   m_Layer: 0
   m_Name: DunnoKnife
   m_TagString: enemy
@@ -668,6 +669,20 @@ MonoBehaviour:
   volumeBase: 0.675
   volumeDmgScale: 0
   volumeRandom: 0
+--- !u!114 &114581798243446140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342212759904094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f966943b0e3d6bd40b07a6b0569998f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fractionName: enemy
+  friendlyFractions: []
+  enemyFractions: []
 --- !u!114 &114583899960515232
 MonoBehaviour:
   m_ObjectHideFlags: 1

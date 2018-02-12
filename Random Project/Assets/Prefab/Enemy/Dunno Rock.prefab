@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 114374018223079548}
   - component: {fileID: 114334118433635038}
   - component: {fileID: 114987941247456890}
+  - component: {fileID: 114666038045792584}
   m_Layer: 0
   m_Name: Dunno Rock
   m_TagString: enemy
@@ -940,6 +941,20 @@ MonoBehaviour:
   volumeBase: 0.675
   volumeDmgScale: 0
   volumeRandom: 0
+--- !u!114 &114666038045792584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591349775926878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f966943b0e3d6bd40b07a6b0569998f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fractionName: enemy
+  friendlyFractions: []
+  enemyFractions: []
 --- !u!114 &114953826450700018
 MonoBehaviour:
   m_ObjectHideFlags: 1

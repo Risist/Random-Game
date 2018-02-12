@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 114304888862460430}
   - component: {fileID: 114064031283704412}
   - component: {fileID: 114426537943329212}
+  - component: {fileID: 114592760687469134}
   m_Layer: 0
   m_Name: DunnoShaman
   m_TagString: enemy
@@ -771,6 +772,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceMidificator: 0
+--- !u!114 &114592760687469134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331774934831342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f966943b0e3d6bd40b07a6b0569998f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fractionName: enemy
+  friendlyFractions: []
+  enemyFractions: []
 --- !u!114 &114772203743699944
 MonoBehaviour:
   m_ObjectHideFlags: 1

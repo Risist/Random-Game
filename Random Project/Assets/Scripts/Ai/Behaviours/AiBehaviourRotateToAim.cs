@@ -19,7 +19,7 @@ public class AiBehaviourRotateToAim : AiBehaviourBase
 		if (update)
 		{
 			Vector2 directionOfMove = aim.GetAimPoint() - body.position;
-			body.rotation = Vector2.Angle(Vector2.up, directionOfMove) * (directionOfMove.x > 0 ? -1 : 1);	
+			body.rotation = Vector2.Angle(Vector2.up, directionOfMove) * (directionOfMove.x > 0 ? -1 : 1);
 		}
 		return true;
 	}
@@ -30,6 +30,4 @@ public class AiBehaviourRotateToAim : AiBehaviourBase
 		Vector2 directionOfMove = aim.GetAimPoint() - body.position;
 		body.rotation = Vector2.Angle(Vector2.up, directionOfMove) * (directionOfMove.x > 0 ? -1 : 1);
 	}
-
-
 }

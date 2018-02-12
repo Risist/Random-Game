@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114325093423859386}
   - component: {fileID: 114935004354613886}
   - component: {fileID: 114786669411645588}
+  - component: {fileID: 114575999454061580}
   m_Layer: 0
   m_Name: Dunno
   m_TagString: enemy
@@ -515,6 +516,20 @@ MonoBehaviour:
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114575999454061580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080198572633586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f966943b0e3d6bd40b07a6b0569998f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fractionName: enemy
+  friendlyFractions: []
+  enemyFractions: []
 --- !u!114 &114727930109876608
 MonoBehaviour:
   m_ObjectHideFlags: 1

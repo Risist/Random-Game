@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AiBehaviourMotor : AiBehaviourBase {
+public class AiBehaviourMotor : AiBehaviourBase
+{
 
 	public float movementSpeedMin = 1000.0f;
 	public float movementSpeedMax = 1000.0f;
@@ -29,7 +30,7 @@ public class AiBehaviourMotor : AiBehaviourBase {
 
 	public void FixedUpdate()
 	{
-		if(bShouldMove)
+		if (bShouldMove)
 			body.AddForce(body.transform.up * movementSpeed * Time.fixedDeltaTime);
 		bShouldMove = false;
 	}

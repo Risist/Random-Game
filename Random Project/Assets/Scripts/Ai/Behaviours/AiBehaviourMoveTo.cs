@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AiBehaviourMoveTo : AiBehaviourMotor {
+public class AiBehaviourMoveTo : AiBehaviourMotor
+{
 
 	public AiAimBase aim;
 	public float stopDistance;
