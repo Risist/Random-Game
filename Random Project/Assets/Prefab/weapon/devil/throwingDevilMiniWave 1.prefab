@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 61967192769369058}
   - component: {fileID: 114523160547128636}
   m_Layer: 0
-  m_Name: throwingDevilMiniWave
+  m_Name: throwingDevilMiniWave Dunno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
+  - prefab: {fileID: 1901648238278704, guid: 9b167325c86fc4e4c85e9ba89d296512, type: 2}
     chance: 1
     chanceScalePerRoom: 0
     minChance: 0
@@ -378,8 +378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114045378713851682}
-  nObjectsToSpawnMin: 4
-  nObjectsToSpawnMax: 6
+  nObjectsToSpawnMin: 3
+  nObjectsToSpawnMax: 5
 --- !u!114 &114523160547128636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -409,7 +409,7 @@ MonoBehaviour:
   randomRotation: 0
   randomPosition: 0
   objects:
-  - prefab: {fileID: 1414992316005840, guid: 6035481521e644e489c63f4d049d72c0, type: 2}
+  - prefab: {fileID: 1781178559649850, guid: 31d328fb11a50ce40aa2b3e88b6692e2, type: 2}
     chance: 0.5
     chanceScalePerRoom: 0
     minChance: 0

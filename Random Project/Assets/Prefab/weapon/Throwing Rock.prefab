@@ -196,7 +196,6 @@ GameObject:
   - component: {fileID: 114645088372234230}
   - component: {fileID: 114986775177293782}
   - component: {fileID: 82149911847391656}
-  - component: {fileID: 114082055876021548}
   m_Layer: 0
   m_Name: Throwing Rock
   m_TagString: rock
@@ -490,19 +489,6 @@ MonoBehaviour:
   changeRate: 1
   min: 0
   max: 0.65
---- !u!114 &114082055876021548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1997699234228658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 011d6cf3d37b35748b875e2ab309547f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pitchMin: 0.7
-  pitchMax: 0.85
 --- !u!114 &114091932691761958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -714,6 +700,7 @@ MonoBehaviour:
   removeOnEnter: 0
   removeOnExit: 0
   objToRemove: {fileID: 0}
+  myFraction: {fileID: 0}
 --- !u!114 &114986775177293782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -725,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 
   actual: 1500
   max: 1500
   regeneration: 0

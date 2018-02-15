@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 114145396699461636}
   - component: {fileID: 114412713462455976}
   - component: {fileID: 82309830820002248}
-  - component: {fileID: 114406638462995128}
   m_Layer: 0
   m_Name: tHROWINGblackHole
   m_TagString: Untagged
@@ -283,19 +282,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
   movementSpeed: 6000
---- !u!114 &114406638462995128
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1640546546741108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 011d6cf3d37b35748b875e2ab309547f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pitchMin: 0.8
-  pitchMax: 1.1
 --- !u!114 &114410832796660432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -317,6 +303,7 @@ MonoBehaviour:
   removeOnEnter: 0
   removeOnExit: 0
   objToRemove: {fileID: 0}
+  myFraction: {fileID: 0}
 --- !u!114 &114412713462455976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -352,6 +339,7 @@ MonoBehaviour:
   removeOnEnter: 0
   removeOnExit: 0
   objToRemove: {fileID: 0}
+  myFraction: {fileID: 0}
 --- !u!114 &114759421723273552
 MonoBehaviour:
   m_ObjectHideFlags: 1

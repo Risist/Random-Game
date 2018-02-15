@@ -162,7 +162,6 @@ GameObject:
   - component: {fileID: 114747499644787940}
   - component: {fileID: 114085537525693212}
   - component: {fileID: 82911661036570048}
-  - component: {fileID: 114079020588794608}
   m_Layer: 0
   m_Name: Throwing Rock Player
   m_TagString: rock
@@ -472,19 +471,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114079020588794608
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1904601315950934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 011d6cf3d37b35748b875e2ab309547f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pitchMin: 0.7
-  pitchMax: 0.85
 --- !u!114 &114085537525693212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -496,6 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 
   actual: 200
   max: 200
   regeneration: 0
@@ -659,6 +646,10 @@ MonoBehaviour:
   damageExit:
     damage: 0
   ignoreTag: noTag
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
+  myFraction: {fileID: 0}
 --- !u!114 &114793259926340950
 MonoBehaviour:
   m_ObjectHideFlags: 1

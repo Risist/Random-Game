@@ -11,6 +11,7 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 	public bool removeOnEnter = false;
 	public bool removeOnExit = false;
 	public GameObject objToRemove;
+	public AiFraction myFraction;
 
 	private void Start()
 	{
@@ -20,6 +21,13 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		if (myFraction)
+		{
+			var otherFraction = other.gameObject.GetComponent<AiFraction>();
+			if (otherFraction && myFraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
+				return;
+		}
+
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{
@@ -31,6 +39,13 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other)
 	{
+		if(myFraction)
+		{
+			var otherFraction = other.gameObject.GetComponent<AiFraction>();
+			if (otherFraction && myFraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
+				return;
+		}
+
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
 		if (healthController != null && other.gameObject.tag != ignoreTag)
 		{
@@ -40,6 +55,13 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D other)
 	{
+		if (myFraction)
+		{
+			var otherFraction = other.gameObject.GetComponent<AiFraction>();
+			if (otherFraction && myFraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
+				return;
+		}
+
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{
@@ -51,6 +73,13 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
+		if (myFraction)
+		{
+			var otherFraction = other.gameObject.GetComponent<AiFraction>();
+			if (otherFraction && myFraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
+				return;
+		}
+
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{
@@ -62,6 +91,13 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D other)
 	{
+		if (myFraction)
+		{
+			var otherFraction = other.gameObject.GetComponent<AiFraction>();
+			if (otherFraction && myFraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
+				return;
+		}
+
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{
@@ -71,6 +107,13 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 
 	void OnCollisionExit2D(Collision2D other)
 	{
+		if (myFraction)
+		{
+			var otherFraction = other.gameObject.GetComponent<AiFraction>();
+			if (otherFraction && myFraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
+				return;
+		}
+
 		HealthController healthController = other.gameObject.GetComponent<HealthController>();
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{

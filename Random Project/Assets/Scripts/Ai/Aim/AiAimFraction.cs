@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AiAimTarget : AiAimBase {
+public class AiAimFraction : AiAimBase {
 
 #region Reevaluate
 	Timer cdChange = new Timer();
-	public float cdChangeMin = 1.0f;
-	public float cdChangeMax = 1.0f;
+	public float cdChangeMin = 0.0f;
+	public float cdChangeMax = 0.0f;
 	public void ResetCdChange()
 	{
 		cdChange.restart();
 		cdChange.cd = Random.Range(cdChangeMin, cdChangeMax);
 	}
-#endregion Reevaluate
+	#endregion Reevaluate
 
-	public AiFraction.Attitude expectedAttitude;
+	public string fractionName;
 	public float offsetMin;
 	public float offsetMax;
 
@@ -32,7 +32,7 @@ public class AiAimTarget : AiAimBase {
 		target = null;
 		foreach(var it in myMind.myPerception.memory)
 			if(it.fraction && it.fraction.gameObject != myMind.myFraction.gameObject)
-				if (myMind.myFraction.GetAttitude(it.fraction.fractionName) == expectedAttitude)
+				if (it.fraction.fractionName == fractionName)
 				{
 					target = it.fraction;
 					return true;

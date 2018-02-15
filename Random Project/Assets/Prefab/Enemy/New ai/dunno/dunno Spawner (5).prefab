@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1888606640752708}
+  m_IsPrefabParent: 1
+--- !u!1 &1888606640752708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4491031733750544}
+  - component: {fileID: 114365619462057220}
+  - component: {fileID: 114507876879258926}
+  m_Layer: 0
+  m_Name: dunno Spawner (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4491031733750544
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888606640752708}
+  m_LocalRotation: {x: -0, y: -0, z: -0.76522976, w: 0.6437572}
+  m_LocalPosition: {x: 19.79, y: -8.67, z: 0}
+  m_LocalScale: {x: 0.66929984, y: 3.4089198, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114365619462057220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888606640752708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
+  randomRotation: 1
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1770065202143496, guid: 21a347dffc097e84ea6bcc61cbd18990, type: 2}
+    chance: 13.5
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1702448981282862, guid: 1f8aa074136882448866c18f9280ae1c, type: 2}
+    chance: 10
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1737433510027720, guid: 05d6d8a8d144e3f4a8f128bc865ab893, type: 2}
+    chance: 2.5
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1482256551233454, guid: cfc25b37852ae2b488445f9c58d20e35, type: 2}
+    chance: 0.75
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1194581470914002, guid: cdaa0de013673954182138c2c2f0082e, type: 2}
+    chance: 1.25
+    chanceScalePerRoom: 0
+    minChance: 0
+    minimalDistance: 0
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+--- !u!114 &114507876879258926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888606640752708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143c22ec986701f45a299e6afac9cfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114365619462057220}
+  destroy: 1
+  objToRemove: {fileID: 0}
+  nSpawnMin: 9
+  nSpawnMax: 10
