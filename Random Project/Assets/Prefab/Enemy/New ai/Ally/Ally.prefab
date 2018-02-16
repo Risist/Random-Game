@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 114958802929066180}
   - component: {fileID: 114770912213853572}
   - component: {fileID: 114175130329028332}
+  - component: {fileID: 114815285473976816}
   m_Layer: 0
   m_Name: Ally
   m_TagString: Untagged
@@ -595,7 +596,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958945683442406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5052938, y: 4.6387887, z: 0}
+  m_LocalPosition: {x: -10.255578, y: -1.9245244, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4304893969682126}
@@ -1482,9 +1483,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Health
-  actual: 300
-  max: 300
-  regeneration: 3.7
+  actual: 400
+  max: 500
+  regeneration: 5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114447804552416368
@@ -1966,6 +1967,24 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   minPerformanceTime: 0.5
   maxPerformanceTime: 0.75
+--- !u!114 &114815285473976816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958945683442406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 0
+  type: unit
+  fraction: {fileID: 114175130329028332}
+  health: {fileID: 114414772852460698}
+  mind: {fileID: 114496784371352138}
+  movement: {fileID: 0}
 --- !u!114 &114877429712907694
 MonoBehaviour:
   m_ObjectHideFlags: 1

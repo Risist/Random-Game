@@ -31,10 +31,10 @@ public class AiAimFraction : AiAimBase {
 	{
 		target = null;
 		foreach(var it in myMind.myPerception.memory)
-			if(it.fraction && it.fraction.gameObject != myMind.myFraction.gameObject)
-				if (it.fraction.fractionName == fractionName)
+			if(it.unit.fraction && it.unit.fraction != myMind.myFraction)
+				if (it.unit.fraction.fractionName == fractionName)
 				{
-					target = it.fraction;
+					target = it.unit.fraction;
 					return true;
 				}
 		return false;

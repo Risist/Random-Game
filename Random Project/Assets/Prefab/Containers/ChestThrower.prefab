@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 114142773062075440}
   - component: {fileID: 114054659191251740}
   - component: {fileID: 114121406265037984}
+  - component: {fileID: 114153468745981400}
   m_Layer: 0
   m_Name: ChestThrower
   m_TagString: Untagged
@@ -785,6 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 0
   randomPosition: 0
   objects:
@@ -843,11 +846,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 
   actual: 2000
   max: 2000
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114153468745981400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593151364461260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 1
+  type: container
+  fraction: {fileID: 0}
+  health: {fileID: 114150237430692132, guid: 18385ab5175f7ce489973cb05a59962c, type: 2}
+  mind: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!212 &212029847763004284
 SpriteRenderer:
   m_ObjectHideFlags: 1

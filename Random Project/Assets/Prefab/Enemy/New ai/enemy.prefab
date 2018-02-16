@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 114349147483121686}
   - component: {fileID: 114197739588853492}
   - component: {fileID: 114902234194122504}
+  - component: {fileID: 114719793450430504}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -602,7 +603,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436502356920382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.458509, y: 2.7160177, z: 0}
+  m_LocalPosition: {x: -9.151415, y: -1.7609447, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4500578023384452}
@@ -1235,6 +1236,7 @@ MonoBehaviour:
   nRays: 15
   coneRadius: 170
   memoryTime: 40
+  rayOffset: 1
 --- !u!114 &114216120420566406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1811,6 +1813,24 @@ MonoBehaviour:
   expectedAttitude: 2
   offsetMin: 0
   offsetMax: 5
+--- !u!114 &114719793450430504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436502356920382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 0
+  type: unit
+  fraction: {fileID: 114175130329028332, guid: 88bbd7d7a11bc514493b67ca4bdb398d, type: 2}
+  health: {fileID: 114414772852460698, guid: 88bbd7d7a11bc514493b67ca4bdb398d, type: 2}
+  mind: {fileID: 114980513040556038}
+  movement: {fileID: 0}
 --- !u!114 &114723352997026108
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 58284484544769026}
   - component: {fileID: 114568122359158278}
   - component: {fileID: 114189971681588998}
+  - component: {fileID: 114489250526549926}
   m_Layer: 0
   m_Name: Rock2
   m_TagString: rock
@@ -503,6 +504,24 @@ MonoBehaviour:
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114489250526549926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1139098503524304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 1
+  type: obstacle
+  fraction: {fileID: 0}
+  health: {fileID: 114521713441282024, guid: 39a445e69ce2c5a4d9be45ea3bbc81a3, type: 2}
+  mind: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!114 &114557970012139860
 MonoBehaviour:
   m_ObjectHideFlags: 1

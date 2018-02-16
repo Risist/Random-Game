@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114705917405478264}
   - component: {fileID: 114486823079848782}
   - component: {fileID: 114061298979831714}
+  - component: {fileID: 114485719343570738}
   m_Layer: 0
   m_Name: GraveTotem
   m_TagString: Untagged
@@ -223,6 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
@@ -242,6 +245,24 @@ MonoBehaviour:
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114485719343570738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1284842327891322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 1
+  type: container
+  fraction: {fileID: 0}
+  health: {fileID: 114150237430692132, guid: 18385ab5175f7ce489973cb05a59962c, type: 2}
+  mind: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!114 &114486823079848782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,6 +288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
   randomRotation: 1
   randomPosition: 1
   objects:
@@ -337,6 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 
   actual: 300
   max: 500
   regeneration: 0

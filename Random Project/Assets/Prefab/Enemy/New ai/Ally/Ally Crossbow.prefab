@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 114627148491217916}
   - component: {fileID: 114382876282969508}
   - component: {fileID: 114629690727859148}
+  - component: {fileID: 114602945083486144}
   m_Layer: 0
   m_Name: Ally Crossbow
   m_TagString: Untagged
@@ -880,7 +881,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858145605807670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9615679, y: 14.396609, z: 0}
+  m_LocalPosition: {x: -10.378263, y: -0.69767714, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4027483374323056}
@@ -1436,6 +1437,24 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   minCdTime: 1
   maxCdTime: 1.5
+--- !u!114 &114602945083486144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858145605807670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 0
+  type: unit
+  fraction: {fileID: 114175130329028332, guid: 88bbd7d7a11bc514493b67ca4bdb398d, type: 2}
+  health: {fileID: 114414772852460698, guid: 88bbd7d7a11bc514493b67ca4bdb398d, type: 2}
+  mind: {fileID: 114424409091221420}
+  movement: {fileID: 0}
 --- !u!114 &114617922723852448
 MonoBehaviour:
   m_ObjectHideFlags: 1

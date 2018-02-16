@@ -24,17 +24,21 @@ public class AiAimAttitude : AiAimBase {
 	{
 		if (target)
 			destination = (Vector2)target.transform.position + Random.insideUnitCircle * Random.Range(offsetMin, offsetMax);
-		else destination = transform.position;
+		else
+		{
+			destination = transform.position;
+		}
 	}
 
 	public bool RecalculateTarget()
 	{
 		target = null;
 		foreach(var it in myMind.myPerception.memory)
-			if(it.fraction && it.fraction.gameObject != myMind.myFraction.gameObject)
-				if (myMind.myFraction.GetAttitude(it.fraction.fractionName) == expectedAttitude)
+			if(it.unit.fraction && it.unit.fraction.gameObject != myMind.myFraction.gameObject)
+				if (myMind.myFraction.GetAttitude(it.unit.fraction.fractionName) == expectedAttitude)
 				{
-					target = it.fraction;
+					target = it.unit.fraction;
+					//Debug.Log("found " + myMind.gameObject + " against " + it.unit.gameObject);
 					return true;
 				}
 		return false;
@@ -64,6 +68,9 @@ public class AiAimAttitude : AiAimBase {
 			ResetCdChange();
 			RecalculateDestination();
 		}
+
+
+		//Debug.Log("destination = " + destination + " target " + target);
 		return destination;
 	}
 }

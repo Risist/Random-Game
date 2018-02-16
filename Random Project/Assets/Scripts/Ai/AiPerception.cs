@@ -21,7 +21,7 @@ public class AiPerception : MonoBehaviour {
 	public class MemoryItem
 	{
 		public Timer remainedTime;
-		public AiFraction fraction;
+		public AiPerceiveUnit unit;
 		public float lastDistance;
 	}
 	[System.NonSerialized]
@@ -33,8 +33,43 @@ public class AiPerception : MonoBehaviour {
 		if(timerPerformSearch.isReadyRestart())
 		{
 			PerformClear();
-			PerformSearch();
+			PerformSearchNonTransparent();
+			//PerformSearch();
 		}
+	}
+
+	/// <summary>
+	/// performs prception search over an environment where agents cant see through objects
+	/// and adds perceived objects to the memory / refreshes memory
+	/// </summary>
+	void PerformSearchNonTransparent()
+	{
+		float angleOffset = coneRadius / nRays;
+
+		for (int i = 0; i < nRays; ++i)
+		{
+			var rays = Physics2D.RaycastAll(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up, searchDistance);
+			Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up * searchDistance, Color.green, 0.25f);
+
+			var rayList = new List<RaycastHit2D>(rays);
+			rayList.Sort(delegate (RaycastHit2D item1, RaycastHit2D item2) { return item1.distance.CompareTo(item2.distance); } );
+
+			foreach (var it in rayList)
+			{
+				var unit = it.collider.GetComponent<AiPerceiveUnit>();
+				if (unit && unit.gameObject != gameObject)
+				{
+					if(unit.distanceModificator*searchDistance > it.distance)
+						insertToMemory(unit, it.distance);
+
+					if (unit.blocksVision)
+						break;
+				}
+			}
+			///
+		}
+		///
+		memory.Sort(delegate (MemoryItem item1, MemoryItem item2) { return item1.lastDistance.CompareTo(item2.lastDistance); });
 	}
 
 	void PerformSearch()
@@ -48,27 +83,10 @@ public class AiPerception : MonoBehaviour {
 
 			foreach (var it in rays)
 			{
-				var f = it.collider.GetComponent<AiFraction>();
-				if(f)
+				var unit = it.collider.GetComponent<AiPerceiveUnit>();
+				if(unit && unit.gameObject != gameObject)
 				{
-					bool bFound = false;
-					foreach(var itMemory in memory)
-						if(itMemory.fraction == f)
-						{
-							itMemory.remainedTime.restart();
-							itMemory.lastDistance = it.distance;
-							bFound = true;
-							break;
-						}
-					if(!bFound)
-					{
-						var memoryItem = new MemoryItem();
-						memoryItem.fraction = f;
-						memoryItem.remainedTime = new Timer(memoryTime);
-						memoryItem.lastDistance = it.distance;
-
-						memory.Add(memoryItem);
-					}
+					insertToMemory(unit, it.distance);
 				}
 			}
 			///
@@ -84,5 +102,27 @@ public class AiPerception : MonoBehaviour {
 				memory.RemoveAt(i);
 				--i;
 			}
+	}
+
+	void insertToMemory(AiPerceiveUnit unit, float distance)
+	{
+		bool bFound = false;
+		foreach (var itMemory in memory)
+			if (itMemory.unit == unit)
+			{
+				itMemory.remainedTime.restart();
+				itMemory.lastDistance = distance;
+				bFound = true;
+				break;
+			}
+		if (!bFound)
+		{
+			var memoryItem = new MemoryItem();
+			memoryItem.unit = unit;
+			memoryItem.remainedTime = new Timer(memoryTime);
+			memoryItem.lastDistance = distance;
+
+			memory.Add(memoryItem);
+		}
 	}
 }

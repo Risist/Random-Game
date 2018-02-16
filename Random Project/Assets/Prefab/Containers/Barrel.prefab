@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 61116709872133158}
   - component: {fileID: 114521429015672134}
   - component: {fileID: 114126316066642550}
+  - component: {fileID: 114520369034676956}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -452,6 +453,24 @@ MonoBehaviour:
     maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+--- !u!114 &114520369034676956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249126083102856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 1
+  type: container
+  fraction: {fileID: 0}
+  health: {fileID: 114150237430692132, guid: 18385ab5175f7ce489973cb05a59962c, type: 2}
+  mind: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!114 &114521429015672134
 MonoBehaviour:
   m_ObjectHideFlags: 1

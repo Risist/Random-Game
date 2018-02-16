@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 61492811070732442}
   - component: {fileID: 114082483386492656}
   - component: {fileID: 114012883447947822}
+  - component: {fileID: 114469558619218230}
   m_Layer: 0
   m_Name: BarrelTrap
   m_TagString: Untagged
@@ -384,6 +385,24 @@ MonoBehaviour:
   spawnList: {fileID: 114745207775990328}
   nObjectsToSpawnMin: 1
   nObjectsToSpawnMax: 3
+--- !u!114 &114469558619218230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932502686428302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 1
+  type: container
+  fraction: {fileID: 0}
+  health: {fileID: 114150237430692132, guid: 18385ab5175f7ce489973cb05a59962c, type: 2}
+  mind: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!114 &114745207775990328
 MonoBehaviour:
   m_ObjectHideFlags: 1
