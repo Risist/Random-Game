@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 114645088372234230}
   - component: {fileID: 114986775177293782}
   - component: {fileID: 82149911847391656}
+  - component: {fileID: 114982377554470466}
   m_Layer: 0
   m_Name: Throwing Rock
   m_TagString: rock
@@ -368,7 +369,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 30
-  m_LinearDrag: 2
+  m_LinearDrag: 3.5
   m_AngularDrag: 15
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -485,7 +486,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -503,7 +504,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -521,7 +522,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -539,7 +540,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -557,7 +558,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -572,8 +573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92cad0ca2e524d1488e59473ba8d440a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerMin: 25000
-  powerMax: 27000
+  powerMin: 35000
+  powerMax: 42500
   randomRotation: 0
 --- !u!114 &114389712983171440
 MonoBehaviour:
@@ -589,7 +590,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -607,7 +608,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -625,7 +626,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -642,7 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 60
+    cd: 20
 --- !u!114 &114570533239660040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -657,7 +658,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -675,7 +676,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 59
+    cd: 19
   changeRate: 1
   min: 0
   max: 0.65
@@ -693,7 +694,7 @@ MonoBehaviour:
   damageEnter:
     damage: -15
   damageStay:
-    damage: -1
+    damage: -2
   damageExit:
     damage: 0
   ignoreTag: enemy
@@ -701,6 +702,24 @@ MonoBehaviour:
   removeOnExit: 0
   objToRemove: {fileID: 0}
   myFraction: {fileID: 0}
+--- !u!114 &114982377554470466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1997699234228658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 1
+  type: obstacle
+  fraction: {fileID: 0}
+  health: {fileID: 114986775177293782}
+  mind: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!114 &114986775177293782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -713,8 +732,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  actual: 1500
-  max: 1500
+  actual: 900
+  max: 900
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

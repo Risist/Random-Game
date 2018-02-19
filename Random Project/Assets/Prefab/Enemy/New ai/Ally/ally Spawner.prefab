@@ -59,18 +59,14 @@ MonoBehaviour:
   objects:
   - prefab: {fileID: 1958945683442406, guid: 88bbd7d7a11bc514493b67ca4bdb398d, type: 2}
     chance: 10
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 6
     maximalDistance: 10
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1858145605807670, guid: d3ce2fe9f4e71f4419ddab27871e58c8, type: 2}
-    chance: 0
-    chanceScalePerRoom: 0
-    minChance: 0
-    minimalDistance: 0
-    maximalDistance: 5
+  - prefab: {fileID: 1879170618998164, guid: e39f73c8dd30f9d498a9020eae9f1792, type: 2}
+    chance: 0.75
+    minimalDistance: 3
+    maximalDistance: 8
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
 --- !u!114 &114561201495594772
@@ -88,4 +84,4 @@ MonoBehaviour:
   destroy: 1
   objToRemove: {fileID: 0}
   nSpawnMin: 9
-  nSpawnMax: 10
+  nSpawnMax: 12

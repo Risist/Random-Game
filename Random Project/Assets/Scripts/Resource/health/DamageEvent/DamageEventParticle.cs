@@ -16,21 +16,28 @@ public class DamageEventParticle : MonoBehaviour {
 	private void Start()
 	{
 		if (!particle)
-			particle = GetComponent<ParticleSystem>();
+			particle =  GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().particleBlood;
+
 	}
 
 	void OnReceiveDamage(HealthController.DamageData data)
 	{
 		if (data.damage.toFloat() < minimumDamage && emitCd.isReadyRestart() )
 		{
-			particle.Emit(minParticles + (int)(-data.damage.toFloat() * damageScale) );
+			int n = minParticles + (int)(-data.damage.toFloat() * damageScale);
+			particle.transform.position = transform.position;
+			particle.transform.rotation = transform.rotation;
+			particle.Emit(n);
 		}
 	}
 
 	void OnDeath(HealthController.DamageData data)
 	{
 		{
-			particle.Emit(minParticlesDeath + (int)(-data.damage.toFloat() * damageScaleDeath));
+			int n = minParticlesDeath + (int)(-data.damage.toFloat() * damageScaleDeath);
+			particle.transform.position = transform.position;
+			particle.transform.rotation = transform.rotation;
+			particle.Emit(n);
 		}
 	}
 }

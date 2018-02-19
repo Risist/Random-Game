@@ -178,8 +178,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4022307577108340}
-  - component: {fileID: 114992116700813358}
   - component: {fileID: 58734739667794450}
+  - component: {fileID: 114559146106060044}
   m_Layer: 0
   m_Name: heal
   m_TagString: Untagged
@@ -505,11 +505,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fractionName: dunno
   friendlyFractions:
-  - ally
-  - Player
-  - enemy
-  enemyFractions:
   - dunno
+  enemyFractions: []
+--- !u!114 &114559146106060044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1623794369062158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b284a7ec8d0f44481bd945dd8cb45e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageEnter:
+    damage: 0
+  damageStay:
+    damage: 1
+  damageExit:
+    damage: 0
+  ignoreTag: noTag
+  removeOnEnter: 0
+  removeOnExit: 0
+  objToRemove: {fileID: 0}
+  myFraction: {fileID: 114100713083373498}
 --- !u!114 &114581533132171572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -527,28 +546,6 @@ MonoBehaviour:
   regeneration: 5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
---- !u!114 &114992116700813358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1623794369062158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e6ec63ad6ef364ebece5cc90b6f378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageEnter:
-    damage: 0
-  damageStay:
-    damage: 1
-  damageExit:
-    damage: 0
-  ignoreTag: noTag
-  removeOnEnter: 0
-  removeOnExit: 0
-  objToRemove: {fileID: 0}
-  myFraction: {fileID: 114100713083373498}
 --- !u!212 &212063314130271404
 SpriteRenderer:
   m_ObjectHideFlags: 1

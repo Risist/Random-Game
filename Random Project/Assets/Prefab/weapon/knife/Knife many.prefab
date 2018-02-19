@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -42.5
+    damage: -50
   damageStay:
     damage: 0
   damageExit:
@@ -283,6 +283,7 @@ MonoBehaviour:
   removeOnEnter: 1
   removeOnExit: 0
   objToRemove: {fileID: 0}
+  myFraction: {fileID: 0}
 --- !u!114 &114776129292456222
 MonoBehaviour:
   m_ObjectHideFlags: 1

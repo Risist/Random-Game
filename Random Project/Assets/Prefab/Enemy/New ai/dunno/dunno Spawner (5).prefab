@@ -61,40 +61,36 @@ MonoBehaviour:
   objects:
   - prefab: {fileID: 1997489491792532, guid: 21a347dffc097e84ea6bcc61cbd18990, type: 2}
     chance: 13.5
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 7
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1493591712694552, guid: 1f8aa074136882448866c18f9280ae1c, type: 2}
     chance: 10
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 7
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1128905386631698, guid: 05d6d8a8d144e3f4a8f128bc865ab893, type: 2}
     chance: 2.5
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 7
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1464968888052356, guid: cfc25b37852ae2b488445f9c58d20e35, type: 2}
-    chance: 0.75
-    chanceScalePerRoom: 0
-    minChance: 0
+    chance: 0.65
     minimalDistance: 2
     maximalDistance: 7
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1159125117755076, guid: cdaa0de013673954182138c2c2f0082e, type: 2}
     chance: 1.25
-    chanceScalePerRoom: 0
-    minChance: 0
+    minimalDistance: 2
+    maximalDistance: 7
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1842474939233700, guid: 284174ce208a76c45a1aaf5468bfcccb, type: 2}
+    chance: 0.35
     minimalDistance: 2
     maximalDistance: 7
     positionOffset: {x: 0, y: 0}
@@ -113,8 +109,8 @@ MonoBehaviour:
   spawnList: {fileID: 114365619462057220}
   destroy: 0
   objToRemove: {fileID: 0}
-  nSpawnMin: 9
-  nSpawnMax: 10
+  nSpawnMin: 7
+  nSpawnMax: 9
 --- !u!114 &114874761372665032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,8 +145,6 @@ MonoBehaviour:
   objects:
   - prefab: {fileID: 1842531096028886, guid: 313edecfba292d647bf898cd6a384b5a, type: 2}
     chance: 1
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
