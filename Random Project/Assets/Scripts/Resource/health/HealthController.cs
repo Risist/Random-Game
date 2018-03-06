@@ -68,7 +68,7 @@ public class HealthController : ResourceController
 	}
 	void OnDeath(DamageData data)
 	{
-		if(objectToRemove)
+		if(objectToRemove && removeAfterDeath)
 			Destroy(objectToRemove);
 	}
 

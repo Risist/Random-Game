@@ -12,7 +12,8 @@ public class AiFraction : MonoBehaviour
 	{
 		friendly,
 		neutral,
-		enemy
+		enemy,
+		none
 	}
 	public string fractionName;
 	public string[] friendlyFractions;
