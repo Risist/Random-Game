@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1658865134507860}
   m_IsPrefabParent: 1
+--- !u!1 &1020042102206562
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4414504356238230}
+  - component: {fileID: 212865169533234108}
+  m_Layer: 0
+  m_Name: ZnakiSprogowane_133
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1046004309741144
 GameObject:
   m_ObjectHideFlags: 1
@@ -27,6 +43,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1052504426170574
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4251777298420602}
+  m_Layer: 0
+  m_Name: Spear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1062237019296688
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,7 +68,7 @@ GameObject:
   - component: {fileID: 4664540152127936}
   - component: {fileID: 114162930464800708}
   m_Layer: 0
-  m_Name: bulletSpawn Wind
+  m_Name: Skill Wind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,6 +136,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1215938208687930
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4234458710839180}
+  - component: {fileID: 212494192530457326}
+  m_Layer: 0
+  m_Name: ZnakiSprogowane_105
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1225394520044994
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +162,7 @@ GameObject:
   - component: {fileID: 4959046142052542}
   - component: {fileID: 114987641961073974}
   m_Layer: 0
-  m_Name: bulletSpawn Devil wave
+  m_Name: Skill Devil wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,12 +179,44 @@ GameObject:
   - component: {fileID: 114155311503264600}
   - component: {fileID: 82873821938761342}
   m_Layer: 0
-  m_Name: bulletSpawn poisoning knife
+  m_Name: Skill poisoning knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1253334169450306
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4132863984617552}
+  - component: {fileID: 212661516504866312}
+  m_Layer: 0
+  m_Name: ZnakiSprogowane_106
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1259239936731486
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4651548226189636}
+  - component: {fileID: 212051521750639798}
+  m_Layer: 0
+  m_Name: ZnakiSprogowane_103
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1305593006870890
 GameObject:
   m_ObjectHideFlags: 1
@@ -164,6 +243,22 @@ GameObject:
   - component: {fileID: 4694070520035792}
   m_Layer: 0
   m_Name: bulletSpawn Tornado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1311030664923948
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4891784404257716}
+  - component: {fileID: 212730388117365184}
+  m_Layer: 0
+  m_Name: ZnakiSprogowane_106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,12 +306,28 @@ GameObject:
   - component: {fileID: 4519243253433720}
   - component: {fileID: 114479868516171020}
   m_Layer: 0
-  m_Name: bulletSpawn Devil
+  m_Name: Skill Devil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1500228805805956
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4914434795579048}
+  - component: {fileID: 212991740660586348}
+  m_Layer: 0
+  m_Name: ZnakiSprogowane_133 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1540540124292438
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +339,7 @@ GameObject:
   - component: {fileID: 114607402746523254}
   - component: {fileID: 82625563181587352}
   m_Layer: 0
-  m_Name: bulletSpawn knife
+  m_Name: Skill knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,28 +355,44 @@ GameObject:
   - component: {fileID: 4516411547212326}
   - component: {fileID: 114690070951822164}
   m_Layer: 0
-  m_Name: bulletSpawn Teleport
+  m_Name: Skill Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!1 &1564460167382242
+--- !u!1 &1600027486029790
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4718455164513044}
-  - component: {fileID: 114825205162286494}
+  - component: {fileID: 4169095063487626}
+  - component: {fileID: 212050163204397686}
   m_Layer: 0
-  m_Name: skill Sprint
+  m_Name: ZnakiSprogowane_105 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
+--- !u!1 &1610014074303562
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4425631668429090}
+  - component: {fileID: 212448238536002040}
+  m_Layer: 0
+  m_Name: ZnakiSprogowane_107 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1613892760517944
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +405,7 @@ GameObject:
   - component: {fileID: 58026100304502518}
   - component: {fileID: 114588068175722784}
   m_Layer: 0
-  m_Name: Meditation
+  m_Name: Skill Meditation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,7 +421,7 @@ GameObject:
   - component: {fileID: 4113230993755934}
   - component: {fileID: 114159614256320310}
   m_Layer: 0
-  m_Name: skillTornado
+  m_Name: Skill Tornado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +437,7 @@ GameObject:
   - component: {fileID: 4896809750531306}
   - component: {fileID: 114728963157008794}
   m_Layer: 0
-  m_Name: bulletSpawn bLACKhOLE
+  m_Name: Skill Blackhole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -325,18 +452,21 @@ GameObject:
   m_Component:
   - component: {fileID: 4914286268484342}
   - component: {fileID: 114687892731009294}
+  - component: {fileID: 114984379929334018}
   - component: {fileID: 50204895844437464}
   - component: {fileID: 61800780600898344}
-  - component: {fileID: 114669773493803934}
+  - component: {fileID: 114400322798698040}
   - component: {fileID: 114054285537627552}
   - component: {fileID: 114233141637618136}
   - component: {fileID: 95418995943184012}
   - component: {fileID: 114491037430976288}
   - component: {fileID: 114521562435448456}
-  - component: {fileID: 114947564111879034}
   - component: {fileID: 114731959472981860}
   - component: {fileID: 114651707639471668}
-  - component: {fileID: 114933666631775402}
+  - component: {fileID: 114225524018685368}
+  - component: {fileID: 114917657792791524}
+  - component: {fileID: 114618043096200898}
+  - component: {fileID: 114115940906243138}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -390,6 +520,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1715892601138040
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4132396959900446}
+  - component: {fileID: 212922684530258272}
+  m_Layer: 0
+  m_Name: ZnakiSprogowane_107 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1728628103222168
 GameObject:
   m_ObjectHideFlags: 1
@@ -419,7 +565,7 @@ GameObject:
   - component: {fileID: 114692092346642316}
   - component: {fileID: 82282696546738914}
   m_Layer: 0
-  m_Name: SkillSlash
+  m_Name: Skill Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,7 +596,7 @@ GameObject:
   - component: {fileID: 4657133994089314}
   - component: {fileID: 114521330513553136}
   m_Layer: 0
-  m_Name: bulletSpawn rock
+  m_Name: Skill rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +617,7 @@ GameObject:
   - component: {fileID: 114919781249781714}
   - component: {fileID: 82460613337367736}
   m_Layer: 0
-  m_Name: SkillCrush
+  m_Name: Skill Crush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -487,7 +633,7 @@ GameObject:
   - component: {fileID: 4407688762946098}
   - component: {fileID: 114166570564966408}
   m_Layer: 0
-  m_Name: jumpSpawn
+  m_Name: Skill Jump Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -555,6 +701,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1945878453675956
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4302409373493062}
+  - component: {fileID: 114071869231799218}
+  - component: {fileID: 114982312740894922}
+  m_Layer: 0
+  m_Name: crossbow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1951281381804670
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +729,7 @@ GameObject:
   - component: {fileID: 82320935128632836}
   - component: {fileID: 114794927240931280}
   m_Layer: 0
-  m_Name: bulletSpawn knife wave
+  m_Name: Skill knife wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -587,7 +750,7 @@ GameObject:
   - component: {fileID: 114823209004386232}
   - component: {fileID: 82427424237438490}
   m_Layer: 0
-  m_Name: SkillDraw
+  m_Name: Skill Draw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -672,7 +835,7 @@ Transform:
   - {fileID: 4694070520035792}
   - {fileID: 4582483614128310}
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4115001574038510
 Transform:
@@ -687,6 +850,46 @@ Transform:
   m_Father: {fileID: 4042770382574274}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
+--- !u!4 &4132396959900446
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715892601138040}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0041403, y: 1.3069603, z: 1.00414}
+  m_Children:
+  - {fileID: 4891784404257716}
+  m_Father: {fileID: 4302409373493062}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!4 &4132863984617552
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253334169450306}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7531053, z: 0}
+  m_LocalScale: {x: 0.32674015, y: 1.5062108, z: 0.9676374}
+  m_Children: []
+  m_Father: {fileID: 4251777298420602}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4169095063487626
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1600027486029790}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7805886, w: 0.6250452}
+  m_LocalPosition: {x: -0.4060699, y: 0.2234792, z: 0}
+  m_LocalScale: {x: 0.8664126, y: 0.52648497, z: 0.508518}
+  m_Children: []
+  m_Father: {fileID: 4651548226189636}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 192.629}
 --- !u!4 &4216244920438780
 Transform:
   m_ObjectHideFlags: 1
@@ -700,6 +903,35 @@ Transform:
   m_Father: {fileID: 4072929923828060}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4234458710839180
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215938208687930}
+  m_LocalRotation: {x: -0, y: -0, z: -0.62504655, w: -0.78058743}
+  m_LocalPosition: {x: -0.4060699, y: -0.22347915, z: 0}
+  m_LocalScale: {x: -0.86641306, y: 0.52648425, z: 0.508518}
+  m_Children: []
+  m_Father: {fileID: 4651548226189636}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -192.629}
+--- !u!4 &4251777298420602
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052504426170574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalScale: {x: 3.3387628, y: 3.3964434, z: 1}
+  m_Children:
+  - {fileID: 4425631668429090}
+  - {fileID: 4132863984617552}
+  - {fileID: 4651548226189636}
+  m_Father: {fileID: 4284182546340532}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4284182546340532
 Transform:
   m_ObjectHideFlags: 1
@@ -709,10 +941,26 @@ Transform:
   m_LocalRotation: {x: -0, y: 0, z: -0.30070576, w: 0.953717}
   m_LocalPosition: {x: 0.75, y: 0, z: 0}
   m_LocalScale: {x: 0.40000004, y: 0.6, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4302409373493062}
+  - {fileID: 4251777298420602}
   m_Father: {fileID: 4682030580088866}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
+--- !u!4 &4302409373493062
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945878453675956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.075, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children:
+  - {fileID: 4132396959900446}
+  m_Father: {fileID: 4284182546340532}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4306850513599270
 Transform:
   m_ObjectHideFlags: 1
@@ -747,7 +995,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1540540124292438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8, z: 0}
+  m_LocalPosition: {x: 0.25, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
@@ -766,6 +1014,32 @@ Transform:
   m_Father: {fileID: 4914286268484342}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4414504356238230
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1020042102206562}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.02664742, y: -0.15628375, z: 0}
+  m_LocalScale: {x: 2.0498092, y: 2.4826326, z: 1.0334429}
+  m_Children: []
+  m_Father: {fileID: 4891784404257716}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4425631668429090
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1610014074303562}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.35, z: 0}
+  m_LocalScale: {x: 1.75, y: 0.7, z: 1.00414}
+  m_Children: []
+  m_Father: {fileID: 4251777298420602}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4516411547212326
 Transform:
   m_ObjectHideFlags: 1
@@ -831,6 +1105,21 @@ Transform:
   m_Father: {fileID: 4042770382574274}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
+--- !u!4 &4651548226189636
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259239936731486}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.0065345764, y: 0.9037263, z: 0}
+  m_LocalScale: {x: 0.5714292, y: 0.29708368, z: 1}
+  m_Children:
+  - {fileID: 4234458710839180}
+  - {fileID: 4169095063487626}
+  m_Father: {fileID: 4251777298420602}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4653445611578946
 Transform:
   m_ObjectHideFlags: 1
@@ -899,19 +1188,6 @@ Transform:
   m_Father: {fileID: 4113230993755934}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50}
---- !u!4 &4718455164513044
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564460167382242}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4720175451355674
 Transform:
   m_ObjectHideFlags: 1
@@ -923,7 +1199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4729502500914292
 Transform:
@@ -932,7 +1208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1238675832307074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8, z: 0}
+  m_LocalPosition: {x: 0.25, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
@@ -976,7 +1252,7 @@ Transform:
   m_Children:
   - {fileID: 4940684916233846}
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4863350456736630
 Transform:
@@ -1017,6 +1293,21 @@ Transform:
   m_Father: {fileID: 4072929923828060}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4891784404257716
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1311030664923948}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.553, y: 0, z: 0}
+  m_LocalScale: {x: 0.31442595, y: 0.6117336, z: 0.9636479}
+  m_Children:
+  - {fileID: 4414504356238230}
+  - {fileID: 4914434795579048}
+  m_Father: {fileID: 4132396959900446}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4896809750531306
 Transform:
   m_ObjectHideFlags: 1
@@ -1028,7 +1319,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4914286268484342
 Transform:
@@ -1037,7 +1328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658865134507860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4682030580088866}
@@ -1046,20 +1337,32 @@ Transform:
   - {fileID: 4519243253433720}
   - {fileID: 4664540152127936}
   - {fileID: 4516411547212326}
-  - {fileID: 4720175451355674}
   - {fileID: 4851311901652056}
   - {fileID: 4896809750531306}
   - {fileID: 4113230993755934}
+  - {fileID: 4720175451355674}
   - {fileID: 4745985647160184}
   - {fileID: 4354957460823904}
   - {fileID: 4657133994089314}
   - {fileID: 4729502500914292}
   - {fileID: 4385834542207774}
   - {fileID: 4042770382574274}
-  - {fileID: 4718455164513044}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.855}
+--- !u!4 &4914434795579048
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1500228805805956}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.04, y: -0.5, z: 0}
+  m_LocalScale: {x: 2.0498092, y: -0.4, z: 1.0334429}
+  m_Children: []
+  m_Father: {fileID: 4891784404257716}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4917762231354740
 Transform:
   m_ObjectHideFlags: 1
@@ -1728,13 +2031,14 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -25
+    damage: -18
   damageExit:
     damage: 0
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
   objToRemove: {fileID: 0}
+  myFraction: {fileID: 114917657792791524}
 --- !u!114 &114054285537627552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1746,11 +2050,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actual: 125
-  max: 125
-  regeneration: 0
+  type: Health
+  actual: 200
+  max: 200
+  regeneration: 1.75
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114071869231799218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945878453675956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432dbe725fa41e34abeacfbea39e3dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationCd:
+    actualTime: 0
+    cd: 0.75
+  animator: {fileID: 95418995943184012}
+  animStartCode: shoot
+--- !u!114 &114115940906243138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7761d9166e3cbc49a1e834094579ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 0}
+  emitCd:
+    actualTime: 0
+    cd: 0.5
+  minParticles: 5
+  damageScale: 2
+  minimumDamage: -2
+  minParticlesDeath: 0
+  damageScaleDeath: 1
 --- !u!114 &114155311503264600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1759,22 +2100,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1238675832307074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 22.5
-  buttonCode: Fire2
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 45
+  cd:
     actualTime: 0
-    cd: 0.6
-  audio: {fileID: 82873821938761342}
+    cd: 0.5
   movement: {fileID: 114687892731009294}
   displayName: Poisoning knife
   description: Throws poisoning knife dealing endlesly damage over time to the target
     hit
-  animManager: {fileID: 114491037430976288}
+  animManager: {fileID: 114071869231799218}
+  animateWhenReadyOnly: 1
   prefab: {fileID: 1876976785215474, guid: e6fa957d119895c4bbb2fd0fb633450e, type: 2}
+  freezeRotation: 1
+  shootDelay:
+    actualTime: 0
+    cd: 0.15
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0.35
 --- !u!114 &114159614256320310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1783,26 +2131,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1649920077667580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdafe4bf77ef24345a7eeeb225b97d63, type: 3}
+  m_Script: {fileID: 11500000, guid: 1017fd7788365b443a17c11712d96242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 15
-  buttonCode: Fire1
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 20
+  cd:
     actualTime: 0
-    cd: 0.145
-  audio: {fileID: 0}
+    cd: 0.2
   movement: {fileID: 114687892731009294}
   displayName: Tornado
   description: Spawns tornado in front of you remaining for a while and dealing massive
     damage to targets hit
   animManager: {fileID: 114491037430976288}
+  animateWhenReadyOnly: 1
   spawns:
   - prefab: {fileID: 1060058989794470, guid: ff1dbe4e5c6c9914d8666c181a162e3b, type: 2}
     transform: {fileID: 4694070520035792}
   - prefab: {fileID: 1479784963242058, guid: 4e13aeafe693a454ca22611fe64a1be9, type: 2}
     transform: {fileID: 4582483614128310}
+  freezeRotation: 0
+  shootDelay:
+    actualTime: 0
+    cd: 0.05
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0
 --- !u!114 &114162930464800708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1811,21 +2166,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1062237019296688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 35
-  buttonCode: Fire1
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 0
+  cd:
     actualTime: 0
-    cd: 0.225
-  audio: {fileID: 0}
+    cd: 0.5
   movement: {fileID: 114687892731009294}
   displayName: wind
   description: Creates wind wave damaging enemies on hit
   animManager: {fileID: 114491037430976288}
+  animateWhenReadyOnly: 1
   prefab: {fileID: 1314080635737764, guid: 5cadec6a40b5560459d9b8b8c160413a, type: 2}
+  freezeRotation: 0
+  shootDelay:
+    actualTime: 0
+    cd: 0.1
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0.5
 --- !u!114 &114166570564966408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1834,21 +2196,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1817846371704110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 40
-  buttonCode: Fire2
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 35
+  cd:
     actualTime: 0
-    cd: 0.7
-  audio: {fileID: 0}
+    cd: 1.25
   movement: {fileID: 114687892731009294}
   displayName: jump field
   description: Creates force field pushing forward all targets hit
   animManager: {fileID: 114491037430976288}
+  animateWhenReadyOnly: 1
   prefab: {fileID: 1550924305828402, guid: 5ed4f093cb2a0894a9683edd317b3a38, type: 2}
+  freezeRotation: 0
+  shootDelay:
+    actualTime: 0
+    cd: 0.05
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0
 --- !u!114 &114184790143510448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1857,21 +2226,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1807242101744312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2418d97ea9465ac46adbf980798dcd1c, type: 3}
+  m_Script: {fileID: 11500000, guid: eea40b640f514964b96040d3fcce17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 35
-  buttonCode: Fire2
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 35
+  cd:
     actualTime: 0
-    cd: 1
-  audio: {fileID: 82460613337367736}
+    cd: 1.15
   movement: {fileID: 114687892731009294}
   displayName: crush
   description: A leap melee attack repeling hit targets
   triggerEvent: crush
-  animManager: {fileID: 114491037430976288}
+  animManager: {fileID: 95418995943184012}
+  initialRotationToMouse: 1
+--- !u!114 &114225524018685368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308d73d3cfdb03c42b8b9c858e2c792e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHpBonus: 0
+  regHpBonus: 0
+  maxEnergyBonus: 0
+  regEnergyBonus: 0
+  movementSpeedBonus: 0
+  xpGainBonus: 0
 --- !u!114 &114233141637618136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1896,7 +2282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50204895844437464}
-  movementSpeed: 2000
+  movementSpeed: 2150
 --- !u!114 &114278036587875788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1911,13 +2297,14 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -22.5
+    damage: -20
   damageExit:
     damage: 0
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
   objToRemove: {fileID: 0}
+  myFraction: {fileID: 114917657792791524}
 --- !u!114 &114330020342777738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1939,21 +2326,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1613892760517944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2418d97ea9465ac46adbf980798dcd1c, type: 3}
+  m_Script: {fileID: 11500000, guid: eea40b640f514964b96040d3fcce17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 40
-  buttonCode: Fire2
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 20
+  cd:
     actualTime: 0
-    cd: 0.55
-  audio: {fileID: 0}
-  movement: {fileID: 0}
+    cd: 0.4
+  movement: {fileID: 114687892731009294}
   displayName: meditation
   description: Slowly regenerates health
   triggerEvent: meditate
-  animManager: {fileID: 114491037430976288}
+  animManager: {fileID: 95418995943184012}
+  initialRotationToMouse: 1
+--- !u!114 &114400322798698040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b93086ccb7984c4a90d44cd8b96d7b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: Energy
+  actual: 125
+  max: 125
+  regeneration: 20
 --- !u!114 &114458500280392978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1962,21 +2364,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1961287773121042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2418d97ea9465ac46adbf980798dcd1c, type: 3}
+  m_Script: {fileID: 11500000, guid: eea40b640f514964b96040d3fcce17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 30
-  buttonCode: Movement
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 35
+  cd:
     actualTime: 0
-    cd: 0.75
-  audio: {fileID: 82427424237438490}
+    cd: 1.15
   movement: {fileID: 114687892731009294}
   displayName: draw
   description: A leap melee attack pulling enemies towards you
   triggerEvent: draw
-  animManager: {fileID: 114491037430976288}
+  animManager: {fileID: 95418995943184012}
+  initialRotationToMouse: 1
 --- !u!114 &114479868516171020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1985,21 +2387,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443112807279014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 40
-  buttonCode: Fire1
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 40
+  cd:
     actualTime: 0
-    cd: 0.4
-  audio: {fileID: 0}
+    cd: 0.3
   movement: {fileID: 114687892731009294}
   displayName: devil
   description: throws a devil bomb creating explosioins on collision
   animManager: {fileID: 114491037430976288}
+  animateWhenReadyOnly: 1
   prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
+  freezeRotation: 0
+  shootDelay:
+    actualTime: 0
+    cd: 0.05
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0.1
 --- !u!114 &114491037430976288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2011,6 +2420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432dbe725fa41e34abeacfbea39e3dc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationCd:
+    actualTime: 0
+    cd: 0
   animator: {fileID: 95418995943184012}
   animStartCode: isCasting
 --- !u!114 &114521330513553136
@@ -2021,21 +2433,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1779959301918838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 19
-  buttonCode: Fire1
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 30
+  cd:
     actualTime: 0
-    cd: 0.1
-  audio: {fileID: 0}
+    cd: 0.2
   movement: {fileID: 114687892731009294}
   displayName: rock
   description: Spawns rocks which deals damage on contact
   animManager: {fileID: 114491037430976288}
+  animateWhenReadyOnly: 0
   prefab: {fileID: 1904601315950934, guid: e90a0cfef88afd545b0720bca77a0715, type: 2}
+  freezeRotation: 0
+  shootDelay:
+    actualTime: 0
+    cd: 0.05
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0
 --- !u!114 &114521562435448456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2071,7 +2490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50204895844437464}
-  movementSpeed: 4000
+  movementSpeed: 3000
 --- !u!114 &114588068175722784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2093,21 +2512,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 1540540124292438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 18.5
-  buttonCode: Fire2
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 22.5
+  cd:
     actualTime: 0
     cd: 0.5
-  audio: {fileID: 82625563181587352}
   movement: {fileID: 114687892731009294}
   displayName: knife
   description: Throws knife dealing damage to the target hit
-  animManager: {fileID: 114491037430976288}
+  animManager: {fileID: 114071869231799218}
+  animateWhenReadyOnly: 1
   prefab: {fileID: 1876976785215474, guid: 9ce3876e460d8ae44b3569cd2da6b770, type: 2}
+  freezeRotation: 1
+  shootDelay:
+    actualTime: 0
+    cd: 0.15
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0.35
+--- !u!114 &114618043096200898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658865134507860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 0
+  type: unit
+  fraction: {fileID: 114917657792791524}
+  health: {fileID: 114054285537627552}
+  mind: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!114 &114651707639471668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2129,20 +2573,6 @@ MonoBehaviour:
   volumeBase: 0.25
   volumeDmgScale: 0.025
   volumeRandom: 0
---- !u!114 &114669773493803934
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1658865134507860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f304d3fb4e2e6954eb58fc6f6c6627b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammo: 160
-  maximumAmmo: 160
-  ammoRegeneration: 20
 --- !u!114 &114687892731009294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2165,21 +2595,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1540646628692434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 27.5
-  buttonCode: Movement
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 35
+  cd:
     actualTime: 0
     cd: 0.75
-  audio: {fileID: 0}
   movement: {fileID: 114687892731009294}
   displayName: teleport
   description: throws a bullet which after a delay teleports player to the position
   animManager: {fileID: 114491037430976288}
+  animateWhenReadyOnly: 1
   prefab: {fileID: 1388764738251450, guid: 1503a9325bb60244b8c5e0ddb253097a, type: 2}
+  freezeRotation: 0
+  shootDelay:
+    actualTime: 0
+    cd: 0.05
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0.25
 --- !u!114 &114692092346642316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2188,21 +2625,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1738402658699570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2418d97ea9465ac46adbf980798dcd1c, type: 3}
+  m_Script: {fileID: 11500000, guid: eea40b640f514964b96040d3fcce17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 25
-  buttonCode: Fire1
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 19
+  cd:
     actualTime: 0
-    cd: 0.75
-  audio: {fileID: 82282696546738914}
+    cd: 0.85
   movement: {fileID: 114687892731009294}
   displayName: slash
   description: short range aoe attack
   triggerEvent: slash
-  animManager: {fileID: 114491037430976288}
+  animManager: {fileID: 95418995943184012}
+  initialRotationToMouse: 1
 --- !u!114 &114728963157008794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2211,21 +2648,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1653183406740368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 60
-  buttonCode: Fire2
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 50
+  cd:
     actualTime: 0
     cd: 1
-  audio: {fileID: 0}
   movement: {fileID: 114687892731009294}
   displayName: black hole
   description: Spawns a black hole which pulls everything inside damaging on collision
   animManager: {fileID: 114491037430976288}
+  animateWhenReadyOnly: 0
   prefab: {fileID: 1640546546741108, guid: 59432a6293b06cc4a97a77921cec5119, type: 2}
+  freezeRotation: 0
+  shootDelay:
+    actualTime: 0
+    cd: 0.05
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0
 --- !u!114 &114731959472981860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2250,7 +2694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50204895844437464}
-  movementSpeed: -14000
+  movementSpeed: -6500
 --- !u!114 &114794927240931280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2259,31 +2703,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1951281381804670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdafe4bf77ef24345a7eeeb225b97d63, type: 3}
+  m_Script: {fileID: 11500000, guid: 1017fd7788365b443a17c11712d96242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 50
-  buttonCode: Fire2
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 60
+  cd:
     actualTime: 0
-    cd: 1.35
-  audio: {fileID: 82320935128632836}
+    cd: 0.5
   movement: {fileID: 114687892731009294}
   displayName: knife wave
   description: Throws a wave of knifes dealing damage to targets hit
-  animManager: {fileID: 114491037430976288}
+  animManager: {fileID: 114071869231799218}
+  animateWhenReadyOnly: 1
   spawns:
-  - prefab: {fileID: 1876976785215474, guid: 9ce3876e460d8ae44b3569cd2da6b770, type: 2}
+  - prefab: {fileID: 1876976785215474, guid: 63d1884058aac2e4391571275f201d17, type: 2}
     transform: {fileID: 4872763909167132}
-  - prefab: {fileID: 1876976785215474, guid: 9ce3876e460d8ae44b3569cd2da6b770, type: 2}
+  - prefab: {fileID: 1876976785215474, guid: 63d1884058aac2e4391571275f201d17, type: 2}
     transform: {fileID: 4115001574038510}
-  - prefab: {fileID: 1876976785215474, guid: 9ce3876e460d8ae44b3569cd2da6b770, type: 2}
+  - prefab: {fileID: 1876976785215474, guid: 63d1884058aac2e4391571275f201d17, type: 2}
     transform: {fileID: 4306850513599270}
-  - prefab: {fileID: 1876976785215474, guid: 9ce3876e460d8ae44b3569cd2da6b770, type: 2}
+  - prefab: {fileID: 1876976785215474, guid: 63d1884058aac2e4391571275f201d17, type: 2}
     transform: {fileID: 4586813891329356}
-  - prefab: {fileID: 1876976785215474, guid: 9ce3876e460d8ae44b3569cd2da6b770, type: 2}
+  - prefab: {fileID: 1876976785215474, guid: 63d1884058aac2e4391571275f201d17, type: 2}
     transform: {fileID: 4574701683219194}
+  freezeRotation: 1
+  shootDelay:
+    actualTime: 0
+    cd: 0.15
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0.35
 --- !u!114 &114823209004386232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2295,32 +2746,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41996a4982e157643bd2ab1674d86833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0, y: -150}
---- !u!114 &114825205162286494
+  force: {x: 0, y: -175}
+  ignoreTrigger: 1
+--- !u!114 &114917657792791524
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564460167382242}
+  m_GameObject: {fileID: 1658865134507860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb44bfd15a030ae49859904d57180d7e, type: 3}
+  m_Script: {fileID: 11500000, guid: f966943b0e3d6bd40b07a6b0569998f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 20
-  buttonCode: Fire1
-  timer:
-    actualTime: 0
-    cd: 0.3
-  audio: {fileID: 0}
-  movement: {fileID: 114687892731009294}
-  displayName: Sprint
-  description: 
-  sprintSpeed: 7000
-  sprintTime:
-    actualTime: 0
-    cd: 0.3
+  fractionName: Player
+  friendlyFractions:
+  - ally
+  enemyFractions:
+  - enemy
+  - dunno
 --- !u!114 &114919781249781714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2332,8 +2776,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41996a4982e157643bd2ab1674d86833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0, y: 1500}
---- !u!114 &114933666631775402
+  force: {x: 0, y: 850}
+  ignoreTrigger: 1
+--- !u!114 &114982312740894922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945878453675956}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c6660becc221f4680ad56e22900d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 50204895844437464}
+  movementSpeed: -8000
+--- !u!114 &114984379929334018
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2341,60 +2799,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1658865134507860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70b263cf312bb1b4e95580b91ec07a14, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a20e3c9633c3d043baeedee2d86128d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvl: 0
-  requiredXpBase: 3
-  requiredXpScale: 3
-  xp: 0
-  xpBar: {fileID: 0}
-  leftUpgradePoints: 0
---- !u!114 &114947564111879034
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1658865134507860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff83f9495e102df4c8d2eb5a0c2fe250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  lvl: 1
+  leftSkillPoints: 0
+  requiredXpBase: 1
+  requiredXpScale: 2
+  maxFateLvl: 5
+  chosenFates:
+  - name: 
+    lvl: 0
+  - name: 
+    lvl: 0
   slots:
   - keyCode: Fire1
-    skillObject: {fileID: 1738402658699570}
-    text: {fileID: 0}
+    skillObject: {fileID: 114692092346642316}
   - keyCode: Fire2
-    skillObject: {fileID: 1807242101744312}
-    text: {fileID: 0}
+    skillObject: {fileID: 114184790143510448}
   - keyCode: Fire3
-    skillObject: {fileID: 1961287773121042}
-    text: {fileID: 0}
+    skillObject: {fileID: 114458500280392978}
   - keyCode: Movement
-    skillObject: {fileID: 1613892760517944}
-    text: {fileID: 0}
+    skillObject: {fileID: 114607402746523254}
   unlockedSkills:
-  - {fileID: 1738402658699570}
-  possibleSkills:
-  - {fileID: 1817846371704110}
-  - {fileID: 1225394520044994}
-  - {fileID: 1443112807279014}
-  - {fileID: 1062237019296688}
-  - {fileID: 1540646628692434}
-  - {fileID: 1738402658699570}
-  - {fileID: 1613892760517944}
-  - {fileID: 1653183406740368}
-  - {fileID: 1807242101744312}
-  - {fileID: 1961287773121042}
-  - {fileID: 1779959301918838}
-  - {fileID: 1238675832307074}
-  - {fileID: 1540540124292438}
-  - {fileID: 1951281381804670}
-  - {fileID: 1649920077667580}
-  nInitialSkillMin: 0
-  nInitialSkillMax: 0
-  unlockedText: {fileID: 0}
+  - {fileID: 114692092346642316}
 --- !u!114 &114987641961073974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2403,22 +2831,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1225394520044994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91514d504b0c6354692a1514cbe2c0eb, type: 3}
+  m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114669773493803934}
-  ammoCost: 150
-  buttonCode: Fire2
-  timer:
+  requiredFates: []
+  requiredSkills: []
+  cost: 100
+  cd:
     actualTime: 0
-    cd: 1
-  audio: {fileID: 0}
+    cd: 1.5
   movement: {fileID: 114687892731009294}
   displayName: devil wave
   description: Creates devil bomb which spawns another bombs on death making unpredictable
     destructive force
   animManager: {fileID: 114491037430976288}
+  animateWhenReadyOnly: 1
   prefab: {fileID: 1764599641537900, guid: e7653ac2c1d82244eaf3557cdf427f3c, type: 2}
+  freezeRotation: 0
+  shootDelay:
+    actualTime: 0
+    cd: 0.05
+  rotationApplyTime:
+    actualTime: 0
+    cd: 0.1
 --- !u!114 &114993132365923086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2433,13 +2868,14 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -7
+    damage: -6
   damageExit:
     damage: 0
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
   objToRemove: {fileID: 0}
+  myFraction: {fileID: 114917657792791524}
 --- !u!212 &212025973185190512
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -2478,6 +2914,90 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.36, y: 0.33}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212050163204397686
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1600027486029790}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300210, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.68, y: 0.87}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212051521750639798
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259239936731486}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300206, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.9200001, y: 0.89000005}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2599,7 +3119,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300216, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2646,6 +3166,90 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.21000001, y: 0.19000001}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212448238536002040
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1610014074303562}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300238, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.02, y: 0.14}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212494192530457326
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215938208687930}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300210, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.68, y: 0.87}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2734,6 +3338,132 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!212 &212661516504866312
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253334169450306}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300212, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.40000004, y: 0.41000003}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212730388117365184
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1311030664923948}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300212, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.40000004, y: 0.41000003}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212865169533234108
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1020042102206562}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.35, y: 0.41000003}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212905725819667848
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -2776,6 +3506,48 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!212 &212922684530258272
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715892601138040}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300238, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.02, y: 0.14}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212928058253698646
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -2814,6 +3586,48 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.87, y: 1.1600001}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212991740660586348
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1500228805805956}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.35, y: 0.41000003}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
