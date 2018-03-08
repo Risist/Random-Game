@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AiBehaviourRotateTo : AiBehaviourBase {
 
-	public AiAimBase aim;
+	public AiLocationBase aim;
 	public bool update = true;
 	public float rotationSpeed;
 	AiMovement movement;
@@ -18,8 +18,7 @@ public class AiBehaviourRotateTo : AiBehaviourBase {
 	{
 		if (update)
 		{
-			Debug.Log("at rotation update");
-			movement.applyInfluencePointRotation(aim.GetAimPoint(), rotationSpeed);
+			movement.applyInfluencePointRotation(aim.GetLocation(), rotationSpeed);
 		}
 		return true;
 	}
@@ -29,7 +28,7 @@ public class AiBehaviourRotateTo : AiBehaviourBase {
 		base.EnterAction();
 		if (!update)
 		{
-			movement.SetRotationPoint(aim.GetAimPoint());
+			movement.SetRotationPoint(aim.GetLocation());
 		}
 	}
 

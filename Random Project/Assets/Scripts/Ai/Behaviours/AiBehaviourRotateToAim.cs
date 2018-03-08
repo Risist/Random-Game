@@ -5,7 +5,7 @@ using UnityEngine;
 public class AiBehaviourRotateToAim : AiBehaviourBase
 {
 	public bool update = true;
-	public AiAimBase aim;
+	public AiLocationBase aim;
 	Rigidbody2D body;
 
 	protected new void Start()
@@ -18,7 +18,7 @@ public class AiBehaviourRotateToAim : AiBehaviourBase
 	{
 		if (update)
 		{
-			Vector2 directionOfMove = aim.GetAimPoint() - body.position;
+			Vector2 directionOfMove = aim.GetLocation() - body.position;
 			body.rotation = Vector2.Angle(Vector2.up, directionOfMove) * (directionOfMove.x > 0 ? -1 : 1);
 		}
 		return true;
@@ -27,7 +27,7 @@ public class AiBehaviourRotateToAim : AiBehaviourBase
 	public override void EnterAction()
 	{
 		base.EnterAction();
-		Vector2 directionOfMove = aim.GetAimPoint() - body.position;
+		Vector2 directionOfMove = aim.GetLocation() - body.position;
 		body.rotation = Vector2.Angle(Vector2.up, directionOfMove) * (directionOfMove.x > 0 ? -1 : 1);
 	}
 }

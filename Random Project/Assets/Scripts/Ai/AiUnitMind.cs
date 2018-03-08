@@ -29,10 +29,7 @@ public class AiUnitMind : MonoBehaviour
 
 			if (currentBehaviour )
 			{
-				if(!currentBehaviour.CanEnter())
-					currentBehaviour = null;
-				else
-					currentBehaviour.EnterAction();
+				currentBehaviour.EnterAction();
 			}
 			
 		}
@@ -48,13 +45,14 @@ public class AiUnitMind : MonoBehaviour
 
 	AiBehaviourBase selectNewBehaviour()
 	{
-		if (currentBehaviour && currentBehaviour.nextBehaviour)
+		if (currentBehaviour && currentBehaviour.nextBehaviour )
 			return currentBehaviour.nextBehaviour;
 
 		for (int i = 0; i < conditions.Length; ++i)
 		{
 			float utility = conditions[i].GetUtility();
 			conditionChance.chances[i] = utility >= utilityThreshold ? utility : 0;
+			conditionChance.chances[i] = conditions[i].enabled && conditions[i].behaviour.CanEnter() ? conditionChance.chances[i] : 0;
 		}
 		var v = conditions[conditionChance.GetRandedId()];
 		return v.behaviour;
@@ -68,4 +66,6 @@ public class AiUnitMind : MonoBehaviour
 	public AiPerception myPerception;
 #endregion Perception
 
+	// reference to my current army
+	public AiArmy myArmy;
 }
