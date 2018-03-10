@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class WeaponBase : MonoBehaviour
 {
@@ -44,8 +46,8 @@ public class WeaponBase : MonoBehaviour
 	public Timer cd = new Timer(0.5f);
 	[System.NonSerialized]
 	public new AudioSource audio;
-
 	public PlayerMovement movement;
+    public Sprite skillIcon;
 	public string displayName;
 	public string description;
 
@@ -62,11 +64,12 @@ public class WeaponBase : MonoBehaviour
 	}
 	protected bool CastSkill()
 	{
-		if (cd.isReady() && resource.Spend(cost) )
-		{
-			cd.restart();
-			return true;
-		}
-		return false;
+        if (!EventSystem.current.IsPointerOverGameObject())
+            if (cd.isReady() && resource.Spend(cost))
+            {
+                cd.restart();
+                return true;
+            }
+        return false;
 	}
 }

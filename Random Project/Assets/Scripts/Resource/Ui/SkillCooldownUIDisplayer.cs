@@ -10,15 +10,18 @@ public class SkillCooldownUIDisplayer : MonoBehaviour {
     public ProgressionManager manager;
     public int skillNum;
     WeaponBase skill;
-    Image image;
+    Image maskImage;
+    public Image skillIcon;
     Text text;
 
     // Use this for initialization
     void Start ()
     {
-        image = GetComponentsInChildren<Image>()[1];
+        maskImage = GetComponentsInChildren<Image>()[1];
         text = GetComponentInChildren<Text>();
         skill = manager.slots[skillNum].skillObject;
+        skillIcon = GetComponent<Image>();
+        skillIcon.overrideSprite = manager.slots[skillNum].skillObject.skillIcon;
     }
 	
 	// Update is called once per frame
@@ -33,19 +36,19 @@ public class SkillCooldownUIDisplayer : MonoBehaviour {
     private void SkillReady()
     {
         text.enabled = false;
-        image.enabled = false;
+        maskImage.enabled = false;
     }
 
     private void SkillCooldown()
     {
         if (text.enabled == false)
             text.enabled = true;
-        if (image.enabled == false)
-            image.enabled = true;
+        if (maskImage.enabled == false)
+            maskImage.enabled = true;
 
         float cdTimeLeft = skill.cd.actualTime + skill.cd.cd - Time.time;
         float roundedCooldown = Mathf.Round(cdTimeLeft);
         text.text = roundedCooldown.ToString();
-        image.fillAmount = (cdTimeLeft / skill.cd.cd);
+        maskImage.fillAmount = (cdTimeLeft / skill.cd.cd);
     }
 }
