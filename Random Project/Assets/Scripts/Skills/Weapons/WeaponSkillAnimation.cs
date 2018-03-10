@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class WeaponSkillAnimation : WeaponBase {
 	
@@ -10,7 +11,7 @@ public class WeaponSkillAnimation : WeaponBase {
 
 	void Update ()
 	{
-		if (Input.GetButton(buttonCode) && CastSkill())
+		if (Input.GetButton(buttonCode) && CastSkill() && !EventSystem.current.IsPointerOverGameObject())
 		{
 			if (animManager)
 				animManager.SetTrigger(triggerEvent);
