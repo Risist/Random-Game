@@ -13,12 +13,25 @@ public class CharPanelUIDisplayer : MonoBehaviour {
     public Text levelText;
     public Text hpRegenText;
     public Text enRegenText;
+    public SkillSlot skillSlot;
+    public GameObject skillContent;
 
     // Use this for initialization
     void Start ()
     {
         energyController = manager.GetComponent<EnergyController>();
         healthController = manager.GetComponent<HealthController>();
+        foreach (var skill in manager.slots)
+        {
+            var sSlot = Instantiate(skillSlot) as SkillSlot;
+            sSlot.gameObject.SetActive(true);
+            sSlot.skillNameText.text = skill.skillObject.displayName.ToString();
+            sSlot.skillIcon.overrideSprite = skill.skillObject.skillIcon;
+            sSlot.skillDescriptionText.text = skill.skillObject.description.ToString();
+            sSlot.skillCostText.text = "EN: " + skill.skillObject.cost.ToString();
+
+            sSlot.gameObject.transform.SetParent(skillContent.transform, false);
+        }
     }
 	
 	// Update is called once per frame
