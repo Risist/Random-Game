@@ -1018,7 +1018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   update: 0
-  aim: {fileID: 114842402513711750}
+  aim: {fileID: 0}
 --- !u!114 &114015479303783932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   update: 1
-  aim: {fileID: 114351100805887002}
+  aim: {fileID: 0}
 --- !u!114 &114187186459387994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114351100805887002}
+  aim: {fileID: 0}
   distanceMin: 7.5
   distanceMax: 15
   inside: 1
@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   update: 0
-  aim: {fileID: 114667784532881270}
+  aim: {fileID: 0}
 --- !u!114 &114275976365939732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1301,11 +1301,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  movementSpeedMin: 3500
-  movementSpeedMax: 7500
-  aim: {fileID: 114616883993350196}
+  aim: {fileID: 0}
   stopDistance: 5
-  returnArrived: 0
+  rotationSpeed: 0
+  movementSpeed: 0
+  updateRotation: 0
 --- !u!114 &114325905358332682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1369,7 +1369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114879740375135764}
+  aim: {fileID: 0}
   distanceMin: 5
   distanceMax: 15
   inside: 1
@@ -1562,11 +1562,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  movementSpeedMin: 1500
-  movementSpeedMax: 3000
-  aim: {fileID: 114149656830853254}
+  aim: {fileID: 0}
   stopDistance: 5
-  returnArrived: 0
+  rotationSpeed: 0
+  movementSpeed: 0
+  updateRotation: 0
 --- !u!114 &114521237564345572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1607,11 +1607,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  movementSpeedMin: 1500
-  movementSpeedMax: 3000
-  aim: {fileID: 114087904402702780}
+  aim: {fileID: 0}
   stopDistance: 5
-  returnArrived: 0
+  rotationSpeed: 0
+  movementSpeed: 0
+  updateRotation: 0
 --- !u!114 &114531962412823564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   update: 0
-  aim: {fileID: 114879740375135764}
+  aim: {fileID: 0}
 --- !u!114 &114648856312494222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1764,6 +1764,7 @@ MonoBehaviour:
   removeOnExit: 0
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114902234194122504}
+  instigator: {fileID: 0}
 --- !u!114 &114667784532881270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1836,7 +1837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114880670229033906}
+  aim: {fileID: 0}
   distanceMin: 0
   distanceMax: 10
   inside: 0
@@ -1852,7 +1853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114667784532881270}
+  aim: {fileID: 0}
   distanceMin: 0
   distanceMax: 8
   inside: 1
@@ -1919,7 +1920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114087904402702780}
+  aim: {fileID: 0}
   distanceMin: 0
   distanceMax: 12
   inside: 1
@@ -1952,7 +1953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114842402513711750}
+  aim: {fileID: 0}
   distanceMin: 15
   distanceMax: 25
   inside: 1
@@ -2060,11 +2061,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  movementSpeedMin: 2500
-  movementSpeedMax: 6000
-  aim: {fileID: 114880670229033906}
+  aim: {fileID: 0}
   stopDistance: 5
-  returnArrived: 0
+  rotationSpeed: 0
+  movementSpeed: 0
+  updateRotation: 0
 --- !u!114 &114900356736193522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2122,7 +2123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114149656830853254}
+  aim: {fileID: 0}
   distanceMin: 0
   distanceMax: 12
   inside: 1
@@ -2151,6 +2152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   utilityThreshold: 0
+  myArmy: {fileID: 0}
 --- !u!212 &212065942222739406
 SpriteRenderer:
   m_ObjectHideFlags: 1

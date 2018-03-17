@@ -34,7 +34,6 @@ public class AiMovement : MonoBehaviour
 
 	private void Update()
 	{
-		rotation.FixedUpdate();
 	}
 
 	private void FixedUpdate()
@@ -43,7 +42,6 @@ public class AiMovement : MonoBehaviour
 		if (influencePosition.sqrMagnitude > maximalMovementSpeed * maximalMovementSpeed)
 			body.AddForce(influencePosition.normalized * maximalMovementSpeed * Time.fixedDeltaTime);
 		else body.AddForce(influencePosition * Time.fixedDeltaTime);
-
 
 		float difference = Vector2.Dot(-transform.right, influenceRotation);
 
@@ -56,6 +54,8 @@ public class AiMovement : MonoBehaviour
 
 		rotation.AddForce(difference * Time.fixedDeltaTime);
 
+		rotation.FixedUpdate();
+
 		influencePosition *= positionDamping;
 		influenceRotation *= rotationDamping;
 
@@ -66,7 +66,7 @@ public class AiMovement : MonoBehaviour
 
 #region Apply
 
-	public void setRotation( float s)
+	public void SetRotation( float s)
 	{
 		rotation.value = s;
 	}
@@ -76,21 +76,21 @@ public class AiMovement : MonoBehaviour
 		rotation.value = Vector2.Angle(Vector2.up, point) * (point.x > 0 ? -1 : 1);
 	}
 
-	public void applyInfluence(Vector2 inf)
+	public void ApplyInfluence(Vector2 inf)
 	{
 		influencePosition += inf;
 		influenceRotation += inf;
 	}
-	public void applyInfluencePosition(Vector2 inf)
+	public void ApplyInfluencePosition(Vector2 inf)
 	{
 		influencePosition += inf;
 	}
-	public void applyInfluenceRotation(Vector2 inf)
+	public void ApplyInfluenceRotation(Vector2 inf)
 	{
 		influenceRotation += inf;
 	}
 
-	public void applyInfluencePoint(Vector2 point, 
+	public void ApplyInfluencePoint(Vector2 point, 
 		float movementSpeed = 1000.0f, float rotationSpeed = 100.0f, 
 		float stopDistance = 0.0f)
 	{
@@ -103,7 +103,7 @@ public class AiMovement : MonoBehaviour
 
 		influenceRotation += inf * rotationSpeed;
 	}
-	public void applyInfluencePointPosition(Vector2 point, float movementSpeed = 1000.0f, float stopDistance = 0.0f)
+	public void ApplyInfluencePointPosition(Vector2 point, float movementSpeed = 1000.0f, float stopDistance = 0.0f)
 	{
 		Vector2 inf = (point - (Vector2)transform.position);
 		if (inf.sqrMagnitude < stopDistance * stopDistance)
@@ -111,7 +111,7 @@ public class AiMovement : MonoBehaviour
 		inf.Normalize();
 		influencePosition += inf * movementSpeed;
 	}
-	public void applyInfluencePointRotation(Vector2 point, float rotationSpeed = 100.0f)
+	public void ApplyInfluencePointRotation(Vector2 point, float rotationSpeed = 100.0f)
 	{
 		Vector2 inf = (point - (Vector2)transform.position);
 		inf.Normalize();

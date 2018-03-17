@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023067416265270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8510451, y: 4.205285, z: 9.447266}
+  m_LocalPosition: {x: 4.0995812, y: 8.51, z: 9.447266}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,20 +57,28 @@ MonoBehaviour:
   randomRotation: 1
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1765394431107492, guid: 2af828a62dc6b8f47bb4a7fea3bc4584, type: 2}
+  - prefab: {fileID: 1128905386631698, guid: 05d6d8a8d144e3f4a8f128bc865ab893, type: 2}
     chance: 1
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 0
-    maximalDistance: 5
+    maximalDistance: 12
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1629855889812686, guid: 746fa2276a6140544af8c24b059b84e5, type: 2}
-    chance: 1
-    chanceScalePerRoom: 0
-    minChance: 0
+  - prefab: {fileID: 1493591712694552, guid: 1f8aa074136882448866c18f9280ae1c, type: 2}
+    chance: 2
     minimalDistance: 0
-    maximalDistance: 5
+    maximalDistance: 10
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1997489491792532, guid: 21a347dffc097e84ea6bcc61cbd18990, type: 2}
+    chance: 0.25
+    minimalDistance: 0
+    maximalDistance: 10
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1679164877005704, guid: 941a23078e1e2ee4f930ebe5b8cd3737, type: 2}
+    chance: 0.1
+    minimalDistance: 0
+    maximalDistance: 10
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
 --- !u!114 &114759494238530246
@@ -87,5 +95,5 @@ MonoBehaviour:
   spawnList: {fileID: 0}
   destroy: 1
   objToRemove: {fileID: 0}
-  nSpawnMin: 4
-  nSpawnMax: 5
+  nSpawnMin: 7
+  nSpawnMax: 9
