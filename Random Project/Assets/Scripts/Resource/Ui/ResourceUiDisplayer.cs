@@ -12,8 +12,9 @@ public class ResourceUiDisplayer : MonoBehaviour
 	public ResourceController resource;
 	Image image;
 
-	// Use this for initialization
-	void Start()
+
+    // Use this for initialization
+    void Start()
 	{
 		image = GetComponent<Image>();
 	}
@@ -23,6 +24,10 @@ public class ResourceUiDisplayer : MonoBehaviour
 	{
 		if (updateProgress)
 			image.fillAmount = resource.actual / resource.max;
-		//image.transform.localScale = new Vector2(1 + playerHp.max / lenghtPerHp, 1);
-	}
+        image.rectTransform.sizeDelta = new Vector2(resource.max, image.rectTransform.rect.height);
+        //image.transform.localScale = new Vector2(1 + playerHp.max / lenghtPerHp, 1);
+
+
+    }
+
 }
