@@ -28,6 +28,6 @@ public abstract class AiLocationBase : MonoBehaviour {
 	}
 	public virtual bool IsValid()
 	{
-		return true;
+		return true; // !addLocation || addLocation.IsValid();
 	}
 }

@@ -15,10 +15,10 @@ public class AiLocationTransform : AiLocationBase{
 
 	public override Vector2 GetLocation()
 	{
-		return base.GetLocation() + (Vector2)transform.position;
+		return base.GetLocation() + (Vector2)aim.position;
 	}
 	public override bool IsValid()
 	{
-		return aim;
+		return aim && base.IsValid();
 	}
 }

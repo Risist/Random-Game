@@ -58,7 +58,7 @@ public class AiLocationTarget : AiLocationBase {
 
 	public override bool IsValid()
 	{
-		return GetTarget();
+		return GetTarget() && base.IsValid();
 	}
 	public override Vector2 GetLocation()
 	{

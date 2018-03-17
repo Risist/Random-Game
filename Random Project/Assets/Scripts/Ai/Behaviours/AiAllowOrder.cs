@@ -11,7 +11,7 @@ public class AiAllowOrder : AiBehaviourBase {
 	{
 		if (myMind.myArmy && base.CanEnter())
 		{
-			var v = myMind.myArmy.HasOrder_Struct(orderName, transform.position);
+			var v = myMind.myArmy.HasOrder(orderName, transform.position);
 			if (v != null)
 			{
 				holder.location = v.position;

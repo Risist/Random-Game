@@ -18,7 +18,7 @@ public class AiBehaviourRotateTo : AiBehaviourBase {
 	{
 		if (update)
 		{
-			movement.applyInfluencePointRotation(aim.GetLocation(), rotationSpeed);
+			movement.ApplyInfluencePointRotation(aim.GetLocation(), rotationSpeed);
 		}
 		return true;
 	}

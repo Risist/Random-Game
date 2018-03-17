@@ -17,16 +17,42 @@ public class AiArmy : MonoBehaviour {
 		public string name;
 		public Timer livetime;
 	}
-
 	List<Order> orders = new List<Order>();
+
+	public List<AiUnitMind> agentsIsideArmy;
+	public void AddAgent(AiUnitMind agent)
+	{
+		if (!agent || agent.myArmy == this)
+			return; // already added or no agent has been passed to the function
+		agentsIsideArmy.Add(agent);
+		agent.myArmy = this;
+	}
+
+	public Vector2 GetCorrectionLocationAvoidance(Vector2 center, float minDistance, AiUnitMind ignoreAgent, float correctionDistance = 1.0f)
+	{
+		Vector2 correction = Vector2.zero;
+
+		int i = 1;
+		foreach( var it in agentsIsideArmy)
+			if(it && it != ignoreAgent)
+		{
+			Vector2 distance = center - (Vector2)it.transform.position;
+			float sqMag = distance.sqrMagnitude;
+			if (sqMag < minDistance * minDistance)
+			{
+				distance -= distance.normalized * correctionDistance;
+				++i;
+			}
+		}
+
+		return center + correction;
+	}
 
 	private void Start()
 	{
-		
-
 	}
 
-	public void addOrder(string name, Vector2 position, float radius, float time)
+	public void AddOrder(string name, Vector2 position, float radius, float time)
 	{
 		Order o = new Order();
 
@@ -44,14 +70,7 @@ public class AiArmy : MonoBehaviour {
 		public Vector2 position;
 		public float radius;
 	}
-	public bool HasOrder(string name, Vector2 myPosition)
-	{
-		foreach (var it in orders)
-			if (name == it.name && (it.position - myPosition).sqrMagnitude < it.radius * it.radius)
-				return true;
-		return false;
-	}
-	public HasOrderReturn HasOrder_Struct(string name, Vector2 myPosition)
+	public HasOrderReturn HasOrder(string name, Vector2 myPosition)
 	{
 		foreach (var it in orders)
 			if (name == it.name && (it.position - myPosition).sqrMagnitude < it.radius * it.radius)
@@ -78,12 +97,14 @@ public class AiArmy : MonoBehaviour {
 		
 	}
 
+
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		AiUnitMind mind = collision.gameObject.GetComponentInChildren<AiUnitMind>();
 		if (mind && mind.myFraction.fractionName == fractionName)
 		{
-			mind.myArmy = this;
+			AddAgent(mind);
 		}
 	}
 

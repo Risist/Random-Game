@@ -30,7 +30,7 @@ public class AiLocationDamage : AiLocationBase {
 	}
 	public override bool IsValid()
 	{
-		return (damageAccumulator > minimalDamage);
+		return (damageAccumulator > minimalDamage) && base.IsValid();
 	}
 
 	/// ///////////////////////////

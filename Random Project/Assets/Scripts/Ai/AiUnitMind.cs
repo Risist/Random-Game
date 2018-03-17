@@ -25,12 +25,11 @@ public class AiUnitMind : MonoBehaviour
 			// choose new action
 			if(currentBehaviour)
 				currentBehaviour.ExitAction();
+
 			currentBehaviour = selectNewBehaviour();
 
 			if (currentBehaviour )
-			{
 				currentBehaviour.EnterAction();
-			}
 			
 		}
 	}
