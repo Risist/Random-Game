@@ -108,7 +108,6 @@ GameObject:
   - component: {fileID: 114140789046622846}
   - component: {fileID: 114396064096910322}
   - component: {fileID: 114430283609998830}
-  - component: {fileID: 114317415139503174}
   m_Layer: 0
   m_Name: throw devil wave
   m_TagString: Untagged
@@ -165,6 +164,26 @@ GameObject:
   - component: {fileID: 114513630264340536}
   - component: {fileID: 114958250342439716}
   - component: {fileID: 114930914727244718}
+  m_Layer: 0
+  m_Name: randomMovement Fast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1565759576881858
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4990173074175580}
+  - component: {fileID: 114325751922117164}
+  - component: {fileID: 114668339136559390}
+  - component: {fileID: 114176169534613264}
+  - component: {fileID: 114681394599405076}
+  - component: {fileID: 114588877100557088}
   m_Layer: 0
   m_Name: randomMovement
   m_TagString: Untagged
@@ -482,13 +501,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4232440356561818}
-  - {fileID: 4158502353164226}
+  - {fileID: 4990173074175580}
   - {fileID: 4790037858839738}
   - {fileID: 4320921544859664}
   - {fileID: 4115762262173210}
   - {fileID: 4029740064967144}
   - {fileID: 4384275241053884}
   - {fileID: 4510114595934844}
+  - {fileID: 4158502353164226}
   - {fileID: 4930355727182040}
   m_Father: {fileID: 4894477262721334}
   m_RootOrder: 6
@@ -551,12 +571,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1478319805452676}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 4017428506993552}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4227342924621976
 Transform:
@@ -565,7 +585,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1159125117755076}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -11.187504, y: -7.9639397, z: 0}
+  m_LocalPosition: {x: -4.199257, y: -1.2170887, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4894477262721334}
@@ -818,7 +838,20 @@ Transform:
   - {fileID: 4025940908924598}
   - {fileID: 4347816609710616}
   m_Father: {fileID: 4017428506993552}
-  m_RootOrder: 8
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4990173074175580
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565759576881858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4017428506993552}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50239109057226956
 Rigidbody2D:
@@ -1066,6 +1099,20 @@ MonoBehaviour:
   aim: {fileID: 114748489528600248}
   attitude: 0
   fractionName: dunno
+--- !u!114 &114176169534613264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565759576881858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355c39a6d504765448dbe29278c7bea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextBehaviour: {fileID: 0}
+  aim: {fileID: 114969711087432260}
+  movementSpeed: 3000
 --- !u!114 &114183968180062074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1232,20 +1279,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   minPerformanceTime: 0.5
-  maxPerformanceTime: 0.75
---- !u!114 &114317415139503174
+  maxPerformanceTime: 0.85
+--- !u!114 &114325751922117164
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1388597178769432}
+  m_GameObject: {fileID: 1565759576881858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af1f69bda4fcdd4d98f4160d087af40, type: 3}
+  m_Script: {fileID: 11500000, guid: 61505e3713ce2ce49a78692b7c13c8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  castLeft: 1
 --- !u!114 &114351606941634426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1361,7 +1407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61505e3713ce2ce49a78692b7c13c8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextBehaviour: {fileID: 0}
+  nextBehaviour: {fileID: 114069481076901536}
 --- !u!114 &114449767184113742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1374,8 +1420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  minPerformanceTime: 0.4
-  maxPerformanceTime: 1
+  minPerformanceTime: 0.2
+  maxPerformanceTime: 0.6
 --- !u!114 &114481170299775076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1434,7 +1480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   aim: {fileID: 114969711087432260}
-  movementSpeed: 3000
+  movementSpeed: 6000
 --- !u!114 &114529247831278088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1545,6 +1591,20 @@ MonoBehaviour:
   - Player
   - ally
   - animal
+--- !u!114 &114588877100557088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565759576881858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9961afec01b2ca468b72437f36d6877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextBehaviour: {fileID: 0}
+  minCdTime: 0.25
+  maxCdTime: 1
 --- !u!114 &114613574845332532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1617,6 +1677,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114421604455567894}
+--- !u!114 &114668339136559390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565759576881858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a0311e0f205e443983f60728c3f9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextBehaviour: {fileID: 0}
+  minPerformanceTime: 0.5
+  maxPerformanceTime: 0.75
+--- !u!114 &114681394599405076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565759576881858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9157835bcacf0bc44af17014533d98fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextBehaviour: {fileID: 0}
+  animationCode: move
 --- !u!114 &114711498593438670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1657,7 +1744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66904cf02bbc2764482a55562f61ea73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviour: {fileID: 114069481076901536}
+  behaviour: {fileID: 114325751922117164}
   baseUtility: 0.15
 --- !u!114 &114802098113661322
 MonoBehaviour:
@@ -1859,9 +1946,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  actual: 200
-  max: 200
-  regeneration: 5.5
+  actual: 250
+  max: 250
+  regeneration: 6
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114949268648891614
@@ -1939,8 +2026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addLocation: {fileID: 114529247831278088}
-  minRadius: 3
-  maxRadius: 5
+  minRadius: 4
+  maxRadius: 9
   recalculateTimeMin: 0.25
   recalculateTimeMax: 0.35
 --- !u!114 &114976980808411670
@@ -1954,7 +2041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61505e3713ce2ce49a78692b7c13c8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextBehaviour: {fileID: 0}
+  nextBehaviour: {fileID: 114069481076901536}
 --- !u!114 &114984353210652858
 MonoBehaviour:
   m_ObjectHideFlags: 1
