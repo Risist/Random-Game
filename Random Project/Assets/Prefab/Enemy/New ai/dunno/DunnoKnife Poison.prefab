@@ -779,7 +779,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1464968888052356}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -1.0504384, y: -1.2195098, z: 0}
+  m_LocalPosition: {x: -10.502406, y: -1.9298451, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4906016426590590}
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114048323658600324}
+  aim: {fileID: 114850293297250332}
   movementSpeed: 4500
 --- !u!114 &114084048975479920
 MonoBehaviour:
@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114850293297250332}
+  aim: {fileID: 114972725712791630}
   distanceMin: 0
   distanceMax: 6
   inside: 0
@@ -1655,8 +1655,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 
   actual: 150
-  max: 300
-  regeneration: 5.5
+  max: 200
+  regeneration: 5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114808831032690848
