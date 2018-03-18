@@ -186,6 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4043080687878176}
   - component: {fileID: 95047175940848626}
+  - component: {fileID: 114854252421522988}
   m_Layer: 0
   m_Name: DunnoWhat
   m_TagString: Untagged
@@ -642,7 +643,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997489491792532}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -2.772479, y: -5.447222, z: 0}
+  m_LocalPosition: {x: 2.5353818, y: -0.9595976, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 4043080687878176}
@@ -1400,9 +1401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  actual: 475
-  max: 500
-  regeneration: 7
+  actual: 400
+  max: 400
+  regeneration: 6.5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114520456240761704
@@ -1646,6 +1647,25 @@ MonoBehaviour:
   targetList:
   - {fileID: 114898482631626594}
   - {fileID: 114581221066726400}
+--- !u!114 &114854252421522988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344521448454180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceBase: -1600
+  forceScale: -500
+  forceMax: 4500
+  explosionRadius: 3
+  removeDelay: 1.5
+  mass: 1
+  linearDamping: 0.1
+  angularDamping: 0.1
 --- !u!114 &114869987125427032
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 114600354801559144}
   - component: {fileID: 114038160363002284}
   - component: {fileID: 114511245537649516}
+  - component: {fileID: 114334076633674054}
   m_Layer: 0
   m_Name: cthulu
   m_TagString: enemy
@@ -471,6 +472,24 @@ MonoBehaviour:
   minimumDamage: -2
   minParticlesDeath: 0
   damageScaleDeath: 1
+--- !u!114 &114334076633674054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099687137909306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceBase: -1600
+  forceScale: -500
+  explosionRadius: 3
+  removeDelay: 1.5
+  mass: 1
+  linearDamping: 0.1
+  angularDamping: 0.1
 --- !u!114 &114365559067775936
 MonoBehaviour:
   m_ObjectHideFlags: 1

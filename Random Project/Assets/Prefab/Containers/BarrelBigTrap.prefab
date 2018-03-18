@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 114082483386492656}
   - component: {fileID: 114012883447947822}
   - component: {fileID: 114469558619218230}
+  - component: {fileID: 114060041740326696}
   m_Layer: 0
   m_Name: BarrelBigTrap
   m_TagString: Untagged
@@ -350,6 +351,24 @@ MonoBehaviour:
   volumeBase: 0.5
   volumeDmgScale: 0.0075
   volumeRandom: 0
+--- !u!114 &114060041740326696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932502686428302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceBase: -1600
+  forceScale: -500
+  explosionRadius: 3
+  removeDelay: 1.5
+  mass: 1.5
+  linearDamping: 0.1
+  angularDamping: 0.1
 --- !u!114 &114082483386492656
 MonoBehaviour:
   m_ObjectHideFlags: 1

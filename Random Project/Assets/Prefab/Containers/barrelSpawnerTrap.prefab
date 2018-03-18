@@ -58,7 +58,7 @@ MonoBehaviour:
   randomPosition: 1
   objects:
   - prefab: {fileID: 1249126083102856, guid: f61ca7c8e813de24d99f3d6420e15f05, type: 2}
-    chance: 0.325
+    chance: 0.45
     minimalDistance: 0
     maximalDistance: 2
     positionOffset: {x: 0, y: 0}
@@ -83,5 +83,5 @@ MonoBehaviour:
   spawnList: {fileID: 114274476308579240}
   destroy: 1
   objToRemove: {fileID: 0}
-  nSpawnMin: 5
-  nSpawnMax: 8
+  nSpawnMin: 3
+  nSpawnMax: 4

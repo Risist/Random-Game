@@ -41,6 +41,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4304893969682126}
+  - component: {fileID: 114309431828788836}
   m_Layer: 0
   m_Name: modelCharacter
   m_TagString: Untagged
@@ -659,15 +660,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958945683442406}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4654052, y: 0.9937004, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.99997777, w: 0.0066677555}
+  m_LocalPosition: {x: 2.0228674, y: -6.3211236, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4304893969682126}
   - {fileID: 4697214933881928}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.855}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.23601}
 --- !u!4 &4182910643664470
 Transform:
   m_ObjectHideFlags: 1
@@ -1198,8 +1199,8 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   aim: {fileID: 114697018053685652}
   stopDistance: 5
-  rotationSpeed: 400
-  movementSpeed: 3000
+  rotationSpeed: 800
+  movementSpeed: 4000
 --- !u!114 &114058083546897384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1453,6 +1454,24 @@ MonoBehaviour:
   distanceMin: 0
   distanceMax: 7
   inside: 1
+--- !u!114 &114309431828788836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1092500516531960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceBase: 1600
+  forceScale: 500
+  explosionRadius: 3
+  removeDelay: 1.5
+  mass: 1
+  linearDamping: 0.1
+  angularDamping: 0.1
 --- !u!114 &114310069032977870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1555,7 +1574,7 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   aim: {fileID: 114174562064828656}
   stopDistance: 1.5
-  rotationSpeed: 300
+  rotationSpeed: 500
   movementSpeed: 3000
 --- !u!114 &114379425534534412
 MonoBehaviour:
@@ -1653,8 +1672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Health
-  actual: 400
-  max: 400
+  actual: 300
+  max: 350
   regeneration: 5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
@@ -1670,7 +1689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114882272763657852}
+  aim: {fileID: 114388786265696168}
   update: 0
   rotationSpeed: 0
 --- !u!114 &114449478717461748
@@ -1686,9 +1705,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   aim: {fileID: 114764744498870848}
-  stopDistance: 5
-  rotationSpeed: 1000
-  movementSpeed: 3500
+  stopDistance: 3
+  rotationSpeed: 800
+  movementSpeed: 4000
 --- !u!114 &114462103847181618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1852,7 +1871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  aim: {fileID: 114351365584681162}
+  aim: {fileID: 114661309528709808}
   update: 0
   rotationSpeed: 0
 --- !u!114 &114623088569094148
@@ -1965,8 +1984,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  movementSpeedMin: 1000
-  movementSpeedMax: 25000
+  movementSpeedMin: 30000
+  movementSpeedMax: 50000
 --- !u!114 &114687914307221882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2265,8 +2284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
-  movementSpeedMin: 1000
-  movementSpeedMax: 25000
+  movementSpeedMin: 30000
+  movementSpeedMax: 50000
 --- !u!114 &114958802929066180
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2314,8 +2333,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   aim: {fileID: 114764744498870848}
-  stopDistance: 5
-  rotationSpeed: 1000
+  stopDistance: 3
+  rotationSpeed: 800
   movementSpeed: 4000
 --- !u!114 &114968533708256590
 MonoBehaviour:

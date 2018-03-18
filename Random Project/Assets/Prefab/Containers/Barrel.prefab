@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114521429015672134}
   - component: {fileID: 114126316066642550}
   - component: {fileID: 114520369034676956}
+  - component: {fileID: 114885706523046420}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -448,6 +449,24 @@ MonoBehaviour:
   volumeBase: 0.5
   volumeDmgScale: 0.0075
   volumeRandom: 0
+--- !u!114 &114885706523046420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249126083102856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceBase: -1600
+  forceScale: -500
+  explosionRadius: 3
+  removeDelay: 1.5
+  mass: 1.5
+  linearDamping: 0.1
+  angularDamping: 0.1
 --- !u!212 &212148330316289624
 SpriteRenderer:
   m_ObjectHideFlags: 1

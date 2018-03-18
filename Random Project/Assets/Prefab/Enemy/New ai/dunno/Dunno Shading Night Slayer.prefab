@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 4301673001805566}
   - component: {fileID: 95772069657041256}
   - component: {fileID: 114395434448167120}
+  - component: {fileID: 114086882612076360}
   m_Layer: 0
   m_Name: DunnoWhat
   m_TagString: Untagged
@@ -934,6 +935,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviour: {fileID: 114563460649318036}
   baseUtility: 0.75
+--- !u!114 &114086882612076360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314510121698354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceBase: -1600
+  forceScale: -500
+  forceMax: 4500
+  explosionRadius: 3
+  removeDelay: 1.5
+  mass: 1
+  linearDamping: 0.1
+  angularDamping: 0.1
 --- !u!114 &114117500902433246
 MonoBehaviour:
   m_ObjectHideFlags: 1
