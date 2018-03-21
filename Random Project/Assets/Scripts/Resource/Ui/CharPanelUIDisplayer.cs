@@ -21,16 +21,20 @@ public class CharPanelUIDisplayer : MonoBehaviour {
     {
         energyController = manager.GetComponent<EnergyController>();
         healthController = manager.GetComponent<HealthController>();
-        foreach (var skill in manager.slots)
+
+        // Instantiate skillslots in skill book for every skill player has
+        foreach (var skill in manager.unlockedSkills)
         {
             var sSlot = Instantiate(skillSlot) as SkillSlot;
+            sSlot.skill = skill;
             sSlot.gameObject.SetActive(true);
-            sSlot.skillNameText.text = skill.skillObject.displayName.ToString();
-            sSlot.skillIcon.overrideSprite = skill.skillObject.skillIcon;
-            sSlot.skillDescriptionText.text = skill.skillObject.description.ToString();
-            sSlot.skillCostText.text = "EN: " + skill.skillObject.cost.ToString();
+            sSlot.skillNameText.text = skill.displayName.ToString();
+            sSlot.skillIcon.sprite = skill.skillIcon;
+            sSlot.skillDescriptionText.text = skill.description.ToString();
+            sSlot.skillCostText.text = "EN: " + skill.cost.ToString();
 
             sSlot.gameObject.transform.SetParent(skillContent.transform, false);
+            
         }
     }
 	

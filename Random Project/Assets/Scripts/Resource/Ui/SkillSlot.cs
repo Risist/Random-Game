@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SkillSlot : MonoBehaviour 
 {
+    public WeaponBase skill;
 	public Button button;
 	public Text skillNameText;
 	public Text skillCostText;

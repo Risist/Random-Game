@@ -11,14 +11,13 @@ public class WeaponSkillAnimation : WeaponBase {
 
 	void Update ()
 	{
-        if(!EventSystem.current.IsPointerOverGameObject())
-		    if (Input.GetButton(buttonCode) && CastSkill())
-		    {
-			    if (animManager)
-				    animManager.SetTrigger(triggerEvent);
-			    PlaySound();
-			    if (initialRotationToMouse && movement)
-				    movement.applyRotationToMouse();
+        if (Input.GetButton(buttonCode) && CastSkill())
+		{
+			if (animManager)
+				animManager.SetTrigger(triggerEvent);
+			PlaySound();
+			if (initialRotationToMouse && movement)
+				movement.applyRotationToMouse();
 
 		    }
 	}

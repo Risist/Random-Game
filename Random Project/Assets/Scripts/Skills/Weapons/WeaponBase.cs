@@ -64,12 +64,11 @@ public class WeaponBase : MonoBehaviour
 	}
 	protected bool CastSkill()
 	{
-        if (!EventSystem.current.IsPointerOverGameObject())
-            if (cd.isReady() && resource.Spend(cost))
-            {
-                cd.restart();
-                return true;
-            }
+        if (!EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost))
+        {
+            cd.restart();
+            return true;
+        }
         return false;
 	}
 }

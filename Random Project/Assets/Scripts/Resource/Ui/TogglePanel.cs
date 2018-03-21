@@ -15,7 +15,7 @@ public class TogglePanel: MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && openedPanel != null)
+        if (Input.GetKeyDown(KeyCode.Q) && openedPanel != null)
         {
             openedPanel.gameObject.SetActive(false);
             openedPanel = null;
