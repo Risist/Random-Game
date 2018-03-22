@@ -16,6 +16,9 @@ public class PullInside : MonoBehaviour {
 	}
 	private void OnTriggerStay2D(Collider2D collision)
 	{
+		if (collision.isTrigger)
+			return;
+
 		var rb = collision.GetComponent<Rigidbody2D>();
 		if (rb && rb.tag != ignoreTag)
 		{

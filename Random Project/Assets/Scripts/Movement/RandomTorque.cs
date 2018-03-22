@@ -14,9 +14,12 @@ public class RandomTorque
 	public float followFactor = 0;
 
 	public float followFactorIgnoreDifference = 5.0f;
-	public string objectToFollowTag;
 	public float followScale = 0.1f;
 	GameObject objToFollow;
+
+	public Timer timerRescan;
+	AiFraction myFraction;
+	AiPerception myPerception;
 
 	float averageTorque;
 
@@ -24,9 +27,20 @@ public class RandomTorque
 	void Start () {
 		if (!rb)
 			rb = GetComponent<Rigidbody2D>();
-		objToFollow = GameObject.FindGameObjectWithTag(objectToFollowTag);
+		myFraction = GetComponent<AiFraction>();
+		myPerception = GetComponent<AiPerception>();
 	}
-	
+	private void Update()
+	{
+		if(timerRescan.isReadyRestart())
+			foreach (var it in myPerception.memory)
+				if (it.unit.fraction && myFraction.GetAttitude(it.unit.fraction.fractionName) == AiFraction.Attitude.enemy)
+				{
+					objToFollow = it.unit.gameObject;
+					break;
+				}
+	}
+
 	// Update is called once per frame
 	void FixedUpdate ()
 	{

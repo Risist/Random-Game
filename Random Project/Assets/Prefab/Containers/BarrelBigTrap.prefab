@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 114082483386492656}
   - component: {fileID: 114012883447947822}
   - component: {fileID: 114469558619218230}
+  - component: {fileID: 114060041740326696}
   m_Layer: 0
   m_Name: BarrelBigTrap
   m_TagString: Untagged
@@ -350,6 +351,25 @@ MonoBehaviour:
   volumeBase: 0.5
   volumeDmgScale: 0.0075
   volumeRandom: 0
+--- !u!114 &114060041740326696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932502686428302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceBase: -1600
+  forceScale: -500
+  forceMax: 4500
+  explosionRadius: 3
+  removeDelay: 1.5
+  mass: 1.5
+  linearDamping: 0.1
+  angularDamping: 0.1
 --- !u!114 &114082483386492656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -489,7 +509,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300176, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.27450982, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.54901963, g: 0.11764706, b: 0.11764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -533,7 +553,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300174, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.27450982, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.54901963, g: 0.11764706, b: 0.11764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -577,7 +597,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300180, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.27450982, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.54901963, g: 0.11764706, b: 0.11764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -621,7 +641,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300174, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.27450982, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.54901963, g: 0.11764706, b: 0.11764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -665,7 +685,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300200, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.27450982, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.54901963, g: 0.11764706, b: 0.11764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -709,7 +729,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300180, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.27450982, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.54901963, g: 0.11764706, b: 0.11764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -753,7 +773,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300176, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.27450982, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.54901963, g: 0.11764706, b: 0.11764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -797,7 +817,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300200, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.27450982, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.54901963, g: 0.11764706, b: 0.11764706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

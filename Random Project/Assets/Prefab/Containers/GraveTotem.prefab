@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114486823079848782}
   - component: {fileID: 114061298979831714}
   - component: {fileID: 114485719343570738}
+  - component: {fileID: 114332711515245030}
   m_Layer: 0
   m_Name: GraveTotem
   m_TagString: Untagged
@@ -213,6 +214,24 @@ MonoBehaviour:
   volumeBase: 0.5
   volumeDmgScale: 0.0075
   volumeRandom: 0
+--- !u!114 &114332711515245030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1284842327891322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceBase: -1600
+  forceScale: -500
+  explosionRadius: 3
+  removeDelay: 1.5
+  mass: 1.5
+  linearDamping: 0.1
+  angularDamping: 0.1
 --- !u!114 &114445214821085106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,16 +250,12 @@ MonoBehaviour:
   objects:
   - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
     chance: 13
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1724488959796998, guid: de1fe05029eb9144b9f70b20789daf3c, type: 2}
     chance: 0
-    chanceScalePerRoom: 0.1
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
@@ -295,56 +310,42 @@ MonoBehaviour:
   objects:
   - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
     chance: 3
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1569415996061464, guid: 897a36749ef0b684d85bb99ee1848043, type: 2}
     chance: 3
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
     chance: 8
-    chanceScalePerRoom: 0.05
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
     chance: 22.5
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1804277989348560, guid: 6d19594edd6add648a5c983b7862f6a6, type: 2}
     chance: 5
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1724488959796998, guid: de1fe05029eb9144b9f70b20789daf3c, type: 2}
     chance: 0.1
-    chanceScalePerRoom: 0.1
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 0}
     chance: 10
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
@@ -392,6 +393,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -407,6 +409,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -434,6 +437,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -449,6 +453,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -476,6 +481,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -491,6 +497,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -518,6 +525,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -533,6 +541,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
