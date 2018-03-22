@@ -191,6 +191,23 @@ public class ProgressionManager : MonoBehaviour {
         return !r;
     }
 
+    public bool UnbindSlot(SkillSlot slot)
+    {
+        bool r = slot.skillObject;
+        if(r)
+            slot.skillObject = null;
+        return !r;
+    }
+
+    public int FindSkill(WeaponBase skill)
+    {
+        for(int idx = 0; idx < slots.Length; idx++)
+            // If it finds slot with the same skill, returns the slot index
+            if (slots[idx].skillObject == skill)
+                return idx;
+        return -1;
+    }
+
 	public WeaponBase GetRandomLockedSkill()
 	{
 		List<WeaponBase> skills = new List<WeaponBase>();

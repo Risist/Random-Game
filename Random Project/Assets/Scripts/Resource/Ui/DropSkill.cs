@@ -41,6 +41,11 @@ public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         WeaponBase dropSkill = GetDropSkill(data);
         if(dropSkill != null)
         {
+            int idx = manager.FindSkill(dropSkill);
+            if (idx != -1)
+            {
+                manager.UnbindSlot(manager.slots[idx]);
+            }
             manager.BindToSlot(dropSkill, manager.slots[skillPanelButton.GetComponent<SkillCooldownUIDisplayer>().skillNum]);
             skillPanelButton.GetComponent<SkillCooldownUIDisplayer>().skill = dropSkill;
             skillPanelCDText.GetComponent<Text>().enabled = true;
