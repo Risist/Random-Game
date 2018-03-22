@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 114806976146666386}
   - component: {fileID: 114169179105271250}
   - component: {fileID: 114697018053685652}
+  - component: {fileID: 114229868349879196}
   m_Layer: 0
   m_Name: subBehaviourMove to enemy
   m_TagString: Untagged
@@ -660,15 +661,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958945683442406}
-  m_LocalRotation: {x: -0, y: -0, z: -0.99997777, w: 0.0066677555}
-  m_LocalPosition: {x: 2.0228674, y: -6.3211236, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6, y: -27.016432, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4304893969682126}
   - {fileID: 4697214933881928}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.23601}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4182910643664470
 Transform:
   m_ObjectHideFlags: 1
@@ -998,7 +999,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1448168466381632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0037532, y: -3.834768, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4405278073396610}
@@ -1413,6 +1414,8 @@ MonoBehaviour:
   enemyFractions:
   - enemy
   - dunno
+  - animal
+  - dunnoBuilding
 --- !u!114 &114178317225710314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1438,6 +1441,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviour: {fileID: 114977244121430380}
   baseUtility: 0.25
+--- !u!114 &114229868349879196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228101971885668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e255f59ee57f0a4eae5507e8f76a864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextBehaviour: {fileID: 0}
+  target: {fileID: 114764744498870848}
 --- !u!114 &114262321424516736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1467,6 +1483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceBase: 1600
   forceScale: 500
+  forceMax: 4500
   explosionRadius: 3
   removeDelay: 1.5
   mass: 1
@@ -1574,8 +1591,8 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   aim: {fileID: 114174562064828656}
   stopDistance: 1.5
-  rotationSpeed: 500
-  movementSpeed: 3000
+  rotationSpeed: 900
+  movementSpeed: 6000
 --- !u!114 &114379425534534412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2384,7 +2401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addLocation: {fileID: 0}
-  aim: {fileID: 4083207476080268}
+  aim: {fileID: 4004015359058240}
 --- !u!212 &212074826021762642
 SpriteRenderer:
   m_ObjectHideFlags: 1

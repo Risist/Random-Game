@@ -98,6 +98,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4682030580088866}
+  - component: {fileID: 114280996934150198}
   m_Layer: 0
   m_Name: modelCharacter
   m_TagString: Untagged
@@ -2109,8 +2110,9 @@ MonoBehaviour:
   cost: 45
   cd:
     actualTime: 0
-    cd: 0.5
+    cd: 1
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: Poisoning knife
   description: Throws poisoning knife dealing endlesly damage over time to the target
     hit
@@ -2142,6 +2144,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.2
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: Tornado
   description: Spawns tornado in front of you remaining for a while and dealing massive
     damage to targets hit
@@ -2177,6 +2180,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.5
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: wind
   description: Creates wind wave damaging enemies on hit
   animManager: {fileID: 114491037430976288}
@@ -2207,6 +2211,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 1.25
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: jump field
   description: Creates force field pushing forward all targets hit
   animManager: {fileID: 114491037430976288}
@@ -2237,6 +2242,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 1.15
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: crush
   description: A leap melee attack repeling hit targets
   triggerEvent: crush
@@ -2307,6 +2313,25 @@ MonoBehaviour:
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
+--- !u!114 &114280996934150198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120279729298316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceBase: 1600
+  forceScale: 500
+  forceMax: 4500
+  explosionRadius: 3
+  removeDelay: 1.5
+  mass: 1
+  linearDamping: 0.1
+  angularDamping: 0.1
 --- !u!114 &114330020342777738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2338,6 +2363,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.4
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: meditation
   description: Slowly regenerates health
   triggerEvent: meditate
@@ -2376,6 +2402,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 1.15
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: draw
   description: A leap melee attack pulling enemies towards you
   triggerEvent: draw
@@ -2399,6 +2426,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.3
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: devil
   description: throws a devil bomb creating explosioins on collision
   animManager: {fileID: 114491037430976288}
@@ -2445,6 +2473,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.2
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: rock
   description: Spawns rocks which deals damage on contact
   animManager: {fileID: 114491037430976288}
@@ -2519,11 +2548,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 27
+  cost: 32
   cd:
     actualTime: 0
-    cd: 0.85
+    cd: 0.7
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: knife
   description: Throws knife dealing damage to the target hit
   animManager: {fileID: 114071869231799218}
@@ -2607,6 +2637,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.75
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: teleport
   description: throws a bullet which after a delay teleports player to the position
   animManager: {fileID: 114491037430976288}
@@ -2637,6 +2668,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 0.85
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: slash
   description: short range aoe attack
   triggerEvent: slash
@@ -2655,11 +2687,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 50
+  cost: 55
   cd:
     actualTime: 0
-    cd: 1
+    cd: 0.4
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: black hole
   description: Spawns a black hole which pulls everything inside damaging on collision
   animManager: {fileID: 114491037430976288}
@@ -2710,11 +2743,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 60
+  cost: 55
   cd:
     actualTime: 0
     cd: 0.5
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: knife wave
   description: Throws a wave of knifes dealing damage to targets hit
   animManager: {fileID: 114071869231799218}
@@ -2818,11 +2852,11 @@ MonoBehaviour:
   - keyCode: Fire1
     skillObject: {fileID: 114692092346642316}
   - keyCode: Fire2
-    skillObject: {fileID: 114184790143510448}
+    skillObject: {fileID: 114728963157008794}
   - keyCode: Fire3
-    skillObject: {fileID: 114458500280392978}
+    skillObject: {fileID: 114987641961073974}
   - keyCode: Movement
-    skillObject: {fileID: 114607402746523254}
+    skillObject: {fileID: 114690070951822164}
   unlockedSkills:
   - {fileID: 114692092346642316}
 --- !u!114 &114987641961073974
@@ -2843,6 +2877,7 @@ MonoBehaviour:
     actualTime: 0
     cd: 1.5
   movement: {fileID: 114687892731009294}
+  skillIcon: {fileID: 0}
   displayName: devil wave
   description: Creates devil bomb which spawns another bombs on death making unpredictable
     destructive force

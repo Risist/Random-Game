@@ -23,7 +23,17 @@ public class AiBehaviourMoveTo : AiBehaviourBase
 
 		//movement.ApplyInfluencePointRotation(aim.GetLocation(),  rotationSpeed);
 		//movement.SetRotationPoint(aim.GetLocation());
-		movement.ApplyInfluencePoint(aim.GetLocation(), movementSpeed, rotationSpeed, stopDistance);
+		//movement.ApplyInfluencePoint(aim.GetLocation(), movementSpeed, rotationSpeed, stopDistance);
+
+		Vector2 point = aim.GetLocation();
+		Vector2 inf = (point - (Vector2)movement.transform.position);
+
+		float sqMag = inf.sqrMagnitude;
+		inf.Normalize();
+		if (sqMag > stopDistance * stopDistance)
+			movement.ApplyInfluencePosition( inf * movementSpeed );
+
+		movement.ApplyInfluenceRotation(inf * rotationSpeed);
 
 		return true;
 	}

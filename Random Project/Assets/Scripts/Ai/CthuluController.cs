@@ -35,15 +35,18 @@ public class CthuluController : MonoBehaviour {
 	
 	void Update () {
 		if (timerRescan.isReadyRestart())
+		{
+			aim = GameObject.FindGameObjectWithTag("Player");
 			foreach (var it in perception.memory)
 			{
-				if (it.unit && it.unit.gameObject != gameObject && it.unit.fraction 
+				if (it.unit && it.unit.gameObject != gameObject && it.unit.fraction
 					&& fraction.GetAttitude(it.unit.fraction.fractionName) == AiFraction.Attitude.enemy)
 				{
 					aim = it.unit.gameObject;
 					break;
 				}
 			}
+		}
 	}
 
 	void FixedUpdate()
