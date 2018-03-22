@@ -9,10 +9,14 @@ public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
     public Image containerImage;
     public Image receivingImage;
     public Image skillPanelButton;
-    public Image darkMask;
+    public Image charPanelDarkMask;
     public Image skillPanelDarkMask;
+    public Text charPanelCDText;
+    public Text skillPanelCDText;
+
     private Color normalColor;
     public Color highlightColor = Color.yellow;
+
 
     public void OnEnable()
     {
@@ -31,15 +35,18 @@ public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         if (dropSprite != null)
         {
             receivingImage.overrideSprite = dropSprite;
-            //darkMask.overrideSprite = dropSprite;
             skillPanelButton.overrideSprite = dropSprite;
-            //skillPanelDarkMask.overrideSprite = dropSprite;
         }
 
         WeaponBase dropSkill = GetDropSkill(data);
-        Debug.Log("Drop skil =" + dropSkill.displayName.ToString());
-        manager.BindToSlot(dropSkill, manager.slots[skillPanelButton.GetComponent<SkillCooldownUIDisplayer>().skillNum]);
-        skillPanelButton.GetComponent<SkillCooldownUIDisplayer>().skill = dropSkill;
+        if(dropSkill != null)
+        {
+            manager.BindToSlot(dropSkill, manager.slots[skillPanelButton.GetComponent<SkillCooldownUIDisplayer>().skillNum]);
+            skillPanelButton.GetComponent<SkillCooldownUIDisplayer>().skill = dropSkill;
+            skillPanelCDText.GetComponent<Text>().enabled = true;
+            charPanelCDText.GetComponent<Text>().enabled = true;
+        }
+
     }
 
     public void OnPointerEnter(PointerEventData data)
@@ -70,7 +77,6 @@ public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         if (dragMe == null)
             return null;
 
-        //var srcImage = originalObj.GetComponent<Image>();
         var srcImage = originalObj.GetComponentsInChildren<Image>()[1];
         if (srcImage == null)
             return null;
@@ -85,8 +91,7 @@ public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         {
             Debug.Log("got null on originalObj");
             return null;
-        }
-            
+        }      
 
         var dragMe = originalObj.GetComponent<DragSkill>();
         if (dragMe == null)
@@ -95,7 +100,6 @@ public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
             return null;
         }
 
-        //var srcImage = originalObj.GetComponent<Image>();
         var srcSkill = originalObj.GetComponent<DragSkill>().m_DraggingSkills[data.pointerId];
         if (srcSkill == null)
         {

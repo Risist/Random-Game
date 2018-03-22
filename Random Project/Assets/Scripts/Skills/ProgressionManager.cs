@@ -179,16 +179,17 @@ public class ProgressionManager : MonoBehaviour {
 	{
 		if (!skill || slot == null)
 			return false;
-		bool r = slot.skillObject;
-		if (r)
-			slot.skillObject.gameObject.SetActive(false);
 
-		skill.gameObject.SetActive(true);
+        bool r = slot.skillObject;
+        if (r)
+            slot.skillObject.gameObject.SetActive(false);
+
+        skill.gameObject.SetActive(true);
 		slot.skillObject = skill;
 		skill.buttonCode = slot.keyCode;
 
-		return !r;
-	}
+        return !r;
+    }
 
 	public WeaponBase GetRandomLockedSkill()
 	{

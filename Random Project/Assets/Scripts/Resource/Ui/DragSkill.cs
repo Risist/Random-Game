@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class DragSkill : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-
+    // Parameters of dragging template image
     public float iconAlpha;
     public float iconHeight;
     public float iconWidth;
-    //public Image iconImage;
-    public bool dragOnSurfaces = true;
+
+
+    // Dictionaries for holding currently dragged skill
     private Dictionary<int, GameObject> m_DraggingIcons = new Dictionary<int, GameObject>();
     private Dictionary<int, RectTransform> m_DraggingPlanes = new Dictionary<int, RectTransform>();
     public Dictionary<int, WeaponBase> m_DraggingSkills = new Dictionary<int, WeaponBase>();
@@ -36,21 +37,16 @@ public class DragSkill : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         var group = m_DraggingIcons[eventData.pointerId].AddComponent<CanvasGroup>();
         group.blocksRaycasts = false;
 
-        // Set the size and alpha of image
+        // Set the parameters of the dragging template image
         image.rectTransform.sizeDelta = new Vector2(iconWidth, iconHeight);
         var tempColor = image.color;
         tempColor.a = iconAlpha;
         image.color = tempColor;
-
         image.overrideSprite = GetComponentsInChildren<Image>()[1].sprite;
 
-        if (dragOnSurfaces)
-            m_DraggingPlanes[eventData.pointerId] = transform as RectTransform;
-        else
-            m_DraggingPlanes[eventData.pointerId] = canvas.transform as RectTransform;
 
+        m_DraggingPlanes[eventData.pointerId] = canvas.transform as RectTransform;
         m_DraggingSkills[eventData.pointerId] = GetComponent<SkillSlot>().skill;
-        //Debug.Log("dragging skill = " + m_DraggingSkills[eventData.pointerId].displayName);
 
         SetDraggedPosition(eventData);
     }
@@ -63,12 +59,11 @@ public class DragSkill : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     private void SetDraggedPosition(PointerEventData eventData)
     {
-        if (dragOnSurfaces && eventData.pointerEnter != null && eventData.pointerEnter.transform as RectTransform != null)
-            m_DraggingPlanes[eventData.pointerId] = eventData.pointerEnter.transform as RectTransform;
 
         var rt = m_DraggingIcons[eventData.pointerId].GetComponent<RectTransform>();
         Vector3 globalMousePos;
-        if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlanes[eventData.pointerId], eventData.position, eventData.pressEventCamera, out globalMousePos))
+        if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlanes[eventData.pointerId], 
+            eventData.position, eventData.pressEventCamera, out globalMousePos))
         {
             rt.position = globalMousePos;
             rt.rotation = m_DraggingPlanes[eventData.pointerId].rotation;

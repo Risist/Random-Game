@@ -11,25 +11,15 @@ public class SkillCooldownUIDisplayer : MonoBehaviour {
     public int skillNum;
     public WeaponBase skill;
     public Image skillPanelMaskImage;
-    public Image skillPanelIcon;
     public Image charPanelMaskImage;
-    public Image charPanelIcon;
-    Text text;
+    public Text charPanelCdText;
+    public Text skillPanelCdText;
 
     // Use this for initialization
     void Start ()
     {
-        text = GetComponentInChildren<Text>();
         skill = manager.slots[skillNum].skillObject;
         skillPanelMaskImage = GetComponentsInChildren<Image>()[1];
-        if (skill)
-        {
-            //skill = manager.unlockedSkills[skillNum];
-            skillPanelIcon = GetComponent<Image>();
-            skillPanelIcon.overrideSprite = manager.slots[skillNum].skillObject.skillIcon;
-            //skillPanelIcon.overrideSprite = skill.skillIcon;
-            //charPanelIcon.overrideSprite = skill.skillIcon;
-        }
     }
 	
 	// Update is called once per frame
@@ -43,24 +33,25 @@ public class SkillCooldownUIDisplayer : MonoBehaviour {
 
     private void SkillReady()
     {
-        text.enabled = false;
+        skillPanelCdText.enabled = false;
+        charPanelCdText.enabled = false;
         skillPanelMaskImage.enabled = false;
-        //skillPanelMaskImage.enabled = false;
+        charPanelMaskImage.enabled = false;
     }
 
     private void SkillCooldown()
     {
-        if (text.enabled == false)
-            text.enabled = true;
-        if (skillPanelMaskImage.enabled == false)
-            skillPanelMaskImage.enabled = true;
-        //if (skillPanelMaskImage.enabled == false)
-        //    skillPanelMaskImage.enabled = true;
+        skillPanelCdText.enabled = true;
+        skillPanelMaskImage.enabled = true;
+        charPanelCdText.enabled = true;
+        charPanelMaskImage.enabled = true;
 
         float cdTimeLeft = skill.cd.actualTime + skill.cd.cd - Time.time;
         float roundedCooldown = Mathf.Round(cdTimeLeft);
-        text.text = roundedCooldown.ToString();
-        //skillPanelMaskImage.fillAmount = (cdTimeLeft / skill.cd.cd);
-        skillPanelMaskImage.fillAmount = (cdTimeLeft / skill.cd.cd);
+        float fillAmount = cdTimeLeft / skill.cd.cd;
+        skillPanelCdText.text = roundedCooldown.ToString();
+        charPanelCdText.text = roundedCooldown.ToString();
+        skillPanelMaskImage.fillAmount = fillAmount;
+        charPanelMaskImage.fillAmount = fillAmount;
     }
 }
