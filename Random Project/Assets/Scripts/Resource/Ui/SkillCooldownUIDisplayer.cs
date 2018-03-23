@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class SkillCooldownUIDisplayer : MonoBehaviour {
 
     public bool updateProgress = true;
-    public ProgressionManager manager;
+    ProgressionManager manager;
     public int skillNum;
     public WeaponBase skill;
     public Image skillPanelMaskImage;
@@ -18,6 +18,7 @@ public class SkillCooldownUIDisplayer : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        manager = GameObject.FindGameObjectWithTag("Player").GetComponent<ProgressionManager>();
         skill = manager.slots[skillNum].skillObject;
         skillPanelMaskImage = GetComponentsInChildren<Image>()[1];
     }
