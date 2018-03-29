@@ -22,7 +22,7 @@ public class DamageEventParticle : MonoBehaviour {
 
 	void OnReceiveDamage(HealthController.DamageData data)
 	{
-		if (data.damage.toFloat() < minimumDamage && emitCd.isReadyRestart() )
+		if (particle && data.damage.toFloat() < minimumDamage && emitCd.isReadyRestart() )
 		{
 			int n = minParticles + (int)(-data.damage.toFloat() * damageScale);
 			particle.transform.position = transform.position;
@@ -33,6 +33,7 @@ public class DamageEventParticle : MonoBehaviour {
 
 	void OnDeath(HealthController.DamageData data)
 	{
+		if(particle)
 		{
 			int n = minParticlesDeath + (int)(-data.damage.toFloat() * damageScaleDeath);
 			particle.transform.position = transform.position;
