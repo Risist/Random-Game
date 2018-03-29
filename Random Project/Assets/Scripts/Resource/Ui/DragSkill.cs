@@ -46,7 +46,7 @@ public class DragSkill : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
 
         m_DraggingPlanes[eventData.pointerId] = canvas.transform as RectTransform;
-        m_DraggingSkills[eventData.pointerId] = GetComponent<SkillSlot>().skill;
+        m_DraggingSkills[eventData.pointerId] = GetComponent<SkillSlot>().Skill;
 
         SetDraggedPosition(eventData);
     }

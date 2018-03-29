@@ -210,11 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd3f2297d3add74f9f2fce866925904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 114426440694885838}
-  skillNameText: {fileID: 114274032283450850}
-  skillCostText: {fileID: 114286321413683030}
-  skillDescriptionText: {fileID: 114219463008975226}
-  skillIcon: {fileID: 114898223307950898}
 --- !u!114 &114426440694885838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,7 +292,6 @@ MonoBehaviour:
   iconAlpha: 0.5
   iconHeight: 50
   iconWidth: 50
-  dragOnSurfaces: 1
 --- !u!114 &114898223307950898
 MonoBehaviour:
   m_ObjectHideFlags: 1

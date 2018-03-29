@@ -73,10 +73,10 @@ GameObject:
   - component: {fileID: 224396836199529384}
   - component: {fileID: 222499160126854940}
   - component: {fileID: 114046906732023076}
-  - component: {fileID: 114311491442179646}
+  - component: {fileID: 114546911501380908}
   m_Layer: 5
-  m_Name: SkillPanelIcon4
-  m_TagString: Untagged
+  m_Name: SkillButton4
+  m_TagString: SkillButton4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,10 +125,10 @@ GameObject:
   - component: {fileID: 224334081258317830}
   - component: {fileID: 222363627689702810}
   - component: {fileID: 114395211972063564}
-  - component: {fileID: 114005754808299782}
+  - component: {fileID: 114277451824070388}
   m_Layer: 5
-  m_Name: SkillPanelIcon2
-  m_TagString: Untagged
+  m_Name: SkillButton2
+  m_TagString: SkillButton2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,10 +194,10 @@ GameObject:
   - component: {fileID: 224492351706701094}
   - component: {fileID: 222514946956253388}
   - component: {fileID: 114423003274504406}
-  - component: {fileID: 114377047266094364}
+  - component: {fileID: 114581758358890122}
   m_Layer: 5
-  m_Name: SkillPanelIcon3
-  m_TagString: Untagged
+  m_Name: SkillButton3
+  m_TagString: SkillButton3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,10 +212,10 @@ GameObject:
   - component: {fileID: 224709286573122784}
   - component: {fileID: 222561896482752598}
   - component: {fileID: 114350739356707152}
-  - component: {fileID: 114104321603302852}
+  - component: {fileID: 114571087542179616}
   m_Layer: 5
-  m_Name: SkillPanelIcon
-  m_TagString: Untagged
+  m_Name: SkillButton1
+  m_TagString: SkillButton1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,40 +237,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114005754808299782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1694520725072306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526645fa0dace6e4b942bb726facbb3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillButtonAxisName: Fire2
-  skillIcon: {fileID: 0}
-  charPanelSkillIcon: {fileID: 0}
-  darkMask: {fileID: 114948208410689304}
-  charPanelDarkMask: {fileID: 0}
-  cooldownText: {fileID: 114043874254895946}
-  charPanelCooldownText: {fileID: 0}
-  cooldownTimeLeft: 0
-  nextReadyTime: 0
-  cooldownDuration: 8
 --- !u!114 &114043874254895946
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1668298955571624}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9294118, g: 0.727167, b: 0.12156863, a: 1}
+  m_Color: {r: 0.9294118, g: 0.7254902, b: 0.121568635, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -303,14 +282,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.43137258, g: 0.36862746, b: 0.3254902, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89cf5a6be2e1f8647bc9d55597d8e24e, type: 3}
+  m_Sprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -318,40 +297,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114104321603302852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1823757255668134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526645fa0dace6e4b942bb726facbb3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillButtonAxisName: Fire1
-  skillIcon: {fileID: 0}
-  charPanelSkillIcon: {fileID: 0}
-  darkMask: {fileID: 114302506408788804}
-  charPanelDarkMask: {fileID: 0}
-  cooldownText: {fileID: 114909302489684928}
-  charPanelCooldownText: {fileID: 0}
-  cooldownTimeLeft: 0
-  nextReadyTime: 0
-  cooldownDuration: 5
 --- !u!114 &114108810027407418
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1762018712232538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9294118, g: 0.727167, b: 0.12156863, a: 1}
+  m_Color: {r: 0.9294118, g: 0.7254902, b: 0.121568635, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -391,7 +349,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 50, y: 50}
+  m_CellSize: {x: 40, y: 40}
   m_Spacing: {x: 5, y: 5}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -401,13 +359,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1176450231106650}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9294118, g: 0.727167, b: 0.12156863, a: 1}
+  m_Color: {r: 0.9294118, g: 0.7254902, b: 0.121568635, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -428,13 +386,31 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: CD
+--- !u!114 &114277451824070388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1694520725072306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e1d1312234e574fbb0fc701da3987a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateProgress: 1
+  skillNum: 1
+  skill: {fileID: 0}
+  skillPanelMaskImage: {fileID: 114948208410689304}
+  charPanelMaskImage: {fileID: 0}
+  charPanelCdText: {fileID: 0}
+  skillPanelCdText: {fileID: 114043874254895946}
 --- !u!114 &114302506408788804
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1998357774447402}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -447,7 +423,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89cf5a6be2e1f8647bc9d55597d8e24e, type: 3}
+  m_Sprite: {fileID: 21300526, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -455,27 +431,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 0
   m_FillOrigin: 0
---- !u!114 &114311491442179646
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1530846402426464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526645fa0dace6e4b942bb726facbb3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillButtonAxisName: LeftShift
-  skillIcon: {fileID: 0}
-  charPanelSkillIcon: {fileID: 0}
-  darkMask: {fileID: 114369796222864292}
-  charPanelDarkMask: {fileID: 0}
-  cooldownText: {fileID: 114108810027407418}
-  charPanelCooldownText: {fileID: 0}
-  cooldownTimeLeft: 0
-  nextReadyTime: 0
-  cooldownDuration: 20
 --- !u!114 &114350739356707152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -488,14 +443,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.43137258, g: 0.36862746, b: 0.3254902, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89cf5a6be2e1f8647bc9d55597d8e24e, type: 3}
+  m_Sprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -509,7 +464,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732684486803496}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -522,7 +477,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89cf5a6be2e1f8647bc9d55597d8e24e, type: 3}
+  m_Sprite: {fileID: 21300526, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -530,27 +485,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 0
   m_FillOrigin: 0
---- !u!114 &114377047266094364
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1789134357095998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526645fa0dace6e4b942bb726facbb3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillButtonAxisName: Fire3
-  skillIcon: {fileID: 0}
-  charPanelSkillIcon: {fileID: 0}
-  darkMask: {fileID: 114474350949664218}
-  charPanelDarkMask: {fileID: 0}
-  cooldownText: {fileID: 114231684786068628}
-  charPanelCooldownText: {fileID: 0}
-  cooldownTimeLeft: 0
-  nextReadyTime: 0
-  cooldownDuration: 10
 --- !u!114 &114391891087252414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -563,7 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5647059, g: 0.49411768, b: 0.34117648, a: 1}
+  m_Color: {r: 0.5647059, g: 0.49411768, b: 0.34117648, a: 0}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -590,14 +524,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.43137258, g: 0.36862746, b: 0.3254902, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89cf5a6be2e1f8647bc9d55597d8e24e, type: 3}
+  m_Sprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -617,14 +551,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.43137258, g: 0.36862746, b: 0.3254902, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89cf5a6be2e1f8647bc9d55597d8e24e, type: 3}
+  m_Sprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -638,7 +572,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721410208296736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -651,7 +585,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89cf5a6be2e1f8647bc9d55597d8e24e, type: 3}
+  m_Sprite: {fileID: 21300526, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -659,19 +593,73 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 0
   m_FillOrigin: 0
+--- !u!114 &114546911501380908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1530846402426464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e1d1312234e574fbb0fc701da3987a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateProgress: 1
+  skillNum: 3
+  skill: {fileID: 0}
+  skillPanelMaskImage: {fileID: 114369796222864292}
+  charPanelMaskImage: {fileID: 0}
+  charPanelCdText: {fileID: 0}
+  skillPanelCdText: {fileID: 114108810027407418}
+--- !u!114 &114571087542179616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823757255668134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e1d1312234e574fbb0fc701da3987a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateProgress: 1
+  skillNum: 0
+  skill: {fileID: 0}
+  skillPanelMaskImage: {fileID: 114302506408788804}
+  charPanelMaskImage: {fileID: 0}
+  charPanelCdText: {fileID: 0}
+  skillPanelCdText: {fileID: 114909302489684928}
+--- !u!114 &114581758358890122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789134357095998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e1d1312234e574fbb0fc701da3987a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateProgress: 1
+  skillNum: 2
+  skill: {fileID: 0}
+  skillPanelMaskImage: {fileID: 114474350949664218}
+  charPanelMaskImage: {fileID: 0}
+  charPanelCdText: {fileID: 0}
+  skillPanelCdText: {fileID: 114231684786068628}
 --- !u!114 &114909302489684928
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536847457828966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9294118, g: 0.727167, b: 0.12156863, a: 1}
+  m_Color: {r: 0.9294118, g: 0.7254902, b: 0.121568635, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -698,7 +686,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1163748076358964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -711,7 +699,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89cf5a6be2e1f8647bc9d55597d8e24e, type: 3}
+  m_Sprite: {fileID: 21300526, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -848,8 +836,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 0, y: -20}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &224334081258317830
 RectTransform:
@@ -886,8 +874,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 0, y: -20}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &224396836199529384
 RectTransform:
@@ -924,8 +912,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 0, y: -20}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &224492351706701094
 RectTransform:
@@ -985,7 +973,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 10, y: 10}
-  m_SizeDelta: {x: 225, y: 60}
+  m_SizeDelta: {x: 185, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &224709286573122784
 RectTransform:
@@ -1022,8 +1010,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 0, y: -20}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &224916723194475624
 RectTransform:
