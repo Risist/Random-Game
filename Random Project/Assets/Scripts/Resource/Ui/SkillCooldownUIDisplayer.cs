@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+
 
 
 public class SkillCooldownUIDisplayer : MonoBehaviour {
@@ -48,10 +50,10 @@ public class SkillCooldownUIDisplayer : MonoBehaviour {
         charPanelMaskImage.enabled = true;
 
         float cdTimeLeft = skill.cd.actualTime + skill.cd.cd - Time.time;
-        float roundedCooldown = Mathf.Round(cdTimeLeft);
+        float roundedCooldown = (float)Math.Round(cdTimeLeft, 1);
         float fillAmount = cdTimeLeft / skill.cd.cd;
-        skillPanelCdText.text = roundedCooldown.ToString();
-        charPanelCdText.text = roundedCooldown.ToString();
+        skillPanelCdText.text = roundedCooldown.ToString("0.0");
+        charPanelCdText.text = roundedCooldown.ToString("0.0");
         skillPanelMaskImage.fillAmount = fillAmount;
         charPanelMaskImage.fillAmount = fillAmount;
     }
