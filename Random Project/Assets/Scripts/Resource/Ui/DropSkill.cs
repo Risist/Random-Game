@@ -3,24 +3,25 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
 public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     ProgressionManager manager;
     public int skillNum;
-    public Image receivingImage;
-    public Image skillPanelButton;
-    public Image charPanelDarkMask;
-    public Image skillPanelDarkMask;
-    public Text charPanelCDText;
-    public Text skillPanelCDText;
-    public Sprite defaultSprite;
+    Image receivingImage;
     private Color normalColor;
     public Color highlightColor = Color.yellow;
 
+    SkillPanel skillPanel;
+    SkillPanel assignmentPanel;
+
+
     public void Awake()
     {
-        manager = GameObject.FindGameObjectWithTag("Player").GetComponent<ProgressionManager>();
-        
+        manager = GameObject.Find("Player").GetComponent<ProgressionManager>();
+        skillPanel = GameObject.Find("SkillPanel").GetComponent<SkillPanel>();
+        assignmentPanel = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>();
+        receivingImage = gameObject.GetComponent<Image>();
     }
 
     public void OnEnable()
@@ -39,40 +40,29 @@ public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         if (receivingImage == null)
             return;
 
-        // Get sprite we want to drop to skill button
-        Sprite dropSprite = GetDropSprite(data);
-        if (dropSprite != null)
-        {
-            // Override skill panel and char panel buttons sprites
-            receivingImage.overrideSprite = dropSprite;
-            skillPanelButton.overrideSprite = dropSprite;
-        }
 
-        // Get the skill we want to put into Progression Manager slot
+        // Get skill we want to drop
         WeaponBase dropSkill = GetDropSkill(data);
-        if(dropSkill != null)
+
+
+        if (dropSkill != null)
         {
             // Checks if the same skill is in any of slots in Progress Manager
             int idx = manager.FindSkill(dropSkill);
-            if (idx != -1 && idx != skillNum)
+
+            // If we find the same skill in any other slot, unbind it from other slot, update UI
+            if (idx != -1) // && idx != skillNum)
             {
                 manager.UnbindSlot(manager.slots[idx]);
-
-                GameObject skillButton = GameObject.FindGameObjectWithTag("SkillButton" + (idx + 1));
-                GameObject charSkillButton = GameObject.FindGameObjectWithTag("CharSkillButton" + (idx + 1));
-                skillButton.GetComponent<Image>().overrideSprite = defaultSprite;
-                charSkillButton.GetComponent<Image>().overrideSprite = defaultSprite;
-                skillButton.GetComponent<SkillCooldownUIDisplayer>().skill = null;
-                skillButton.GetComponent<SkillCooldownUIDisplayer>().skillPanelCdText.GetComponent<Text>().enabled = false;
-                charSkillButton.GetComponent<DropSkill>().skillPanelCDText.GetComponent<Text>().enabled = false;
+                skillPanel.UnsetSkill(idx);
+                assignmentPanel.UnsetSkill(idx);
             }
 
-            manager.BindToSlot(dropSkill, manager.slots[skillPanelButton.GetComponent<SkillCooldownUIDisplayer>().skillNum]);
-            skillPanelButton.GetComponent<SkillCooldownUIDisplayer>().skill = dropSkill;
-            skillPanelCDText.GetComponent<Text>().enabled = true;
-            charPanelCDText.GetComponent<Text>().enabled = true;
+            // Bind skill to slot, update UI 
+            manager.BindToSlot(dropSkill, manager.slots[skillNum]);
+            skillPanel.SetSkill(skillNum, dropSkill);
+            assignmentPanel.SetSkill(skillNum, dropSkill);
         }
-
     }
 
     public void OnPointerEnter(PointerEventData data)
@@ -80,6 +70,7 @@ public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         if (receivingImage == null)
             return;
 
+        // Highlight the button we want to drop skill to
         Sprite dropSprite = GetDropSprite(data);
         if (dropSprite != null)
             receivingImage.color = highlightColor;
@@ -90,6 +81,7 @@ public class DropSkill : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         if (receivingImage == null)
             return;
 
+        // Remove the highlight from the button when we move away mouse
         receivingImage.color = normalColor;
     }
 

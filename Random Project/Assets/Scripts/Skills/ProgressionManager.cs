@@ -11,8 +11,17 @@ using UnityEngine;
  */
 public class ProgressionManager : MonoBehaviour {
 
+    SkillPanel skillPanel;
+    SkillPanel assignmentPanel;
 
-	private void Start()
+    private void Awake()
+    {
+        skillPanel = GameObject.Find("SkillPanel").GetComponent<SkillPanel>();
+        assignmentPanel = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>();
+    }
+
+
+    private void Start()
 	{
 		possibleSkills = GetComponentsInChildren<WeaponBase>();
 
@@ -26,8 +35,18 @@ public class ProgressionManager : MonoBehaviour {
 		possibleFateNames[5] = "Wind";
 
 		/// initial binding
-		foreach (var itSlot in slots)	
-			BindToSlot(itSlot.skillObject, itSlot);
+		for(int idx = 0; idx < slots.Length; idx++)
+        {
+            if (slots[idx].skillObject != null)
+            {
+                BindToSlot(slots[idx].skillObject, slots[idx]);
+                skillPanel.skillButtons[idx].SetSkill(slots[idx].skillObject);
+                assignmentPanel.skillButtons[idx].SetSkill(slots[idx].skillObject);
+            }
+        }
+
+            
+            
 	}
 
 #region lvl
