@@ -8,26 +8,31 @@ public class SkillButton : MonoBehaviour {
     public Sprite defaultSprite;
     [HideInInspector]
     public WeaponBase skill;
-    Image icon;
+    [HideInInspector]
+    public Image icon;
     [HideInInspector]
     public Image mask;
     [HideInInspector]
     public Text cooldownText;
 
+    public void Start()
+    {
+        
+    }
 
     private void Awake()
     {
-        icon = gameObject.GetComponentsInChildren<Image>()[0];
-        mask = gameObject.GetComponentsInChildren<Image>()[1];
-        cooldownText = gameObject.GetComponentInChildren<Text>();
-        icon.overrideSprite = defaultSprite;
+        icon = gameObject.GetComponentsInChildren<Image>(true)[0];
+        mask = gameObject.GetComponentsInChildren<Image>(true)[1];
+        cooldownText = gameObject.GetComponentInChildren<Text>(true);
+        //icon.overrideSprite = defaultSprite;
         cooldownText.enabled = false;
     }
 
     public void SetSkill(WeaponBase skill)
     {
-        icon.overrideSprite = skill.skillIcon;
         this.skill = skill;
+        icon.overrideSprite = skill.skillIcon;
         cooldownText.enabled = true;
     }
 

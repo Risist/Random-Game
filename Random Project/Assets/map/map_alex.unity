@@ -1076,6 +1076,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1675691921424586, guid: 6f4529046bd712245a8461efd96aa9e9,
     type: 2}
   m_PrefabInternal: {fileID: 545895285}
+--- !u!114 &130881051 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114021883701479044, guid: 6f4529046bd712245a8461efd96aa9e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 545895285}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &130881053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1089,8 +1095,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   skill: {fileID: 0}
-  mask: {fileID: 0}
-  cooldownText: {fileID: 0}
+  icon: {fileID: 130881051}
+  mask: {fileID: 536791520}
+  cooldownText: {fileID: 1438693512}
 --- !u!1 &164820132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,6 +2014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   skill: {fileID: 0}
+  icon: {fileID: 0}
   mask: {fileID: 0}
   cooldownText: {fileID: 0}
 --- !u!1 &276058307
@@ -3462,6 +3470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a20e3c9633c3d043baeedee2d86128d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillPanel: {fileID: 0}
+  assignmentPanel: {fileID: 1626843894}
   lvl: 1
   leftSkillPoints: 0
   requiredXpBase: 1
@@ -3476,7 +3486,7 @@ MonoBehaviour:
   - keyCode: Fire1
     skillObject: {fileID: 276202240}
   - keyCode: Fire2
-    skillObject: {fileID: 0}
+    skillObject: {fileID: 1344252888}
   - keyCode: Fire3
     skillObject: {fileID: 0}
   - keyCode: Movement
@@ -4414,7 +4424,7 @@ Prefab:
     - target: {fileID: 224141107609032566, guid: 6f4529046bd712245a8461efd96aa9e9,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: 224141107609032566, guid: 6f4529046bd712245a8461efd96aa9e9,
         type: 2}
@@ -4429,7 +4439,7 @@ Prefab:
     - target: {fileID: 224358608557882430, guid: 6f4529046bd712245a8461efd96aa9e9,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.00000011920929
+      value: 0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: 224358608557882430, guid: 6f4529046bd712245a8461efd96aa9e9,
         type: 2}
@@ -4444,12 +4454,12 @@ Prefab:
     - target: {fileID: 224864788567156704, guid: 6f4529046bd712245a8461efd96aa9e9,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224864788567156704, guid: 6f4529046bd712245a8461efd96aa9e9,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00003062479
+      value: 0.000053512973
       objectReference: {fileID: 0}
     - target: {fileID: 224864788567156704, guid: 6f4529046bd712245a8461efd96aa9e9,
         type: 2}
@@ -4643,7 +4653,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1390741242395740, guid: 6f4529046bd712245a8461efd96aa9e9, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f4529046bd712245a8461efd96aa9e9, type: 2}
@@ -4653,6 +4663,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1971144825264820, guid: 6f4529046bd712245a8461efd96aa9e9,
     type: 2}
   m_PrefabInternal: {fileID: 545895285}
+--- !u!114 &564016807 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114578742349872122, guid: 6f4529046bd712245a8461efd96aa9e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 545895285}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &564016809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4666,8 +4682,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   skill: {fileID: 0}
-  mask: {fileID: 0}
-  cooldownText: {fileID: 0}
+  icon: {fileID: 564016807}
+  mask: {fileID: 531414655}
+  cooldownText: {fileID: 1109164882}
 --- !u!1 &577938254
 GameObject:
   m_ObjectHideFlags: 0
@@ -5974,6 +5991,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1871281616861064, guid: 6f4529046bd712245a8461efd96aa9e9,
     type: 2}
   m_PrefabInternal: {fileID: 545895285}
+--- !u!114 &806125893 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114947391456241742, guid: 6f4529046bd712245a8461efd96aa9e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 545895285}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &806125895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5987,8 +6010,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   skill: {fileID: 0}
-  mask: {fileID: 0}
-  cooldownText: {fileID: 0}
+  icon: {fileID: 806125893}
+  mask: {fileID: 334488727}
+  cooldownText: {fileID: 894433137}
 --- !u!1 &821079012
 GameObject:
   m_ObjectHideFlags: 0
@@ -7004,6 +7028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   skill: {fileID: 0}
+  icon: {fileID: 0}
   mask: {fileID: 0}
   cooldownText: {fileID: 0}
 --- !u!1 &1085185212 stripped
@@ -7024,6 +7049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   skill: {fileID: 0}
+  icon: {fileID: 0}
   mask: {fileID: 0}
   cooldownText: {fileID: 0}
 --- !u!4 &1102846282 stripped
@@ -8417,6 +8443,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1770196562858412, guid: 6f4529046bd712245a8461efd96aa9e9,
     type: 2}
   m_PrefabInternal: {fileID: 545895285}
+--- !u!114 &1467335254 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114981131525613128, guid: 6f4529046bd712245a8461efd96aa9e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 545895285}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1467335256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8430,8 +8462,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   skill: {fileID: 0}
-  mask: {fileID: 0}
-  cooldownText: {fileID: 0}
+  icon: {fileID: 1467335254}
+  mask: {fileID: 206768041}
+  cooldownText: {fileID: 514353336}
 --- !u!114 &1497342964 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114302506408788804, guid: 2a3a789011334e048a849df38c1c835c,
@@ -9412,7 +9445,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b20960958975441a79e400083ecc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillButtons: []
+  skillButtons:
+  - {fileID: 130881053}
+  - {fileID: 806125895}
+  - {fileID: 564016809}
+  - {fileID: 1467335256}
 --- !u!1 &1637890358
 GameObject:
   m_ObjectHideFlags: 0
@@ -10019,6 +10056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   skill: {fileID: 0}
+  icon: {fileID: 0}
   mask: {fileID: 0}
   cooldownText: {fileID: 0}
 --- !u!1 &1965723488
@@ -10455,6 +10493,26 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114571087542179616, guid: 2a3a789011334e048a849df38c1c835c,
+        type: 2}
+      propertyPath: assignmentButton
+      value: 
+      objectReference: {fileID: 130881053}
+    - target: {fileID: 114277451824070388, guid: 2a3a789011334e048a849df38c1c835c,
+        type: 2}
+      propertyPath: assignmentButton
+      value: 
+      objectReference: {fileID: 806125895}
+    - target: {fileID: 114581758358890122, guid: 2a3a789011334e048a849df38c1c835c,
+        type: 2}
+      propertyPath: assignmentButton
+      value: 
+      objectReference: {fileID: 564016809}
+    - target: {fileID: 114546911501380908, guid: 2a3a789011334e048a849df38c1c835c,
+        type: 2}
+      propertyPath: assignmentButton
+      value: 
+      objectReference: {fileID: 1467335256}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a3a789011334e048a849df38c1c835c, type: 2}
   m_IsPrefabParent: 0

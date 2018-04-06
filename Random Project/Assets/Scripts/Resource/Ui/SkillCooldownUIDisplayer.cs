@@ -8,15 +8,16 @@ public class SkillCooldownUIDisplayer : MonoBehaviour {
 
     public bool updateProgress = true;
     public int skillNum;
-
-    SkillButton button;
-    SkillButton assignmentButton;
+    [HideInInspector]
+    public SkillButton button;
+    [HideInInspector]
+    public SkillButton assignmentButton;
 
     // Use this for initialization
     void Start ()
     {
         button = gameObject.GetComponent<SkillButton>();
-        assignmentButton = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>().skillButtons[skillNum];
+        //assignmentButton = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>().skillButtons[skillNum];
     }
 	
 	// Update is called once per frame

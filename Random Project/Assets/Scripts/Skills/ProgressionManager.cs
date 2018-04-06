@@ -11,31 +11,32 @@ using UnityEngine;
  */
 public class ProgressionManager : MonoBehaviour {
 
-    SkillPanel skillPanel;
-    SkillPanel assignmentPanel;
+    public SkillPanel skillPanel;
+    public SkillPanel assignmentPanel;
 
     private void Awake()
     {
         skillPanel = GameObject.Find("SkillPanel").GetComponent<SkillPanel>();
-        assignmentPanel = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>();
+        //assignmentPanel = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>();
+ 
     }
 
 
     private void Start()
 	{
-		possibleSkills = GetComponentsInChildren<WeaponBase>();
+        possibleSkills = GetComponentsInChildren<WeaponBase>();
 
 
-		possibleFateNames = new string[6];
-		possibleFateNames[0] = "Melee";
-		possibleFateNames[1] = "Hunter";
-		possibleFateNames[2] = "Devil";
-		possibleFateNames[3] = "Void";
-		possibleFateNames[4] = "Earth";
-		possibleFateNames[5] = "Wind";
+        possibleFateNames = new string[6];
+        possibleFateNames[0] = "Melee";
+        possibleFateNames[1] = "Hunter";
+        possibleFateNames[2] = "Devil";
+        possibleFateNames[3] = "Void";
+        possibleFateNames[4] = "Earth";
+        possibleFateNames[5] = "Wind";
 
-		/// initial binding
-		for(int idx = 0; idx < slots.Length; idx++)
+        /// initial binding
+        for (int idx = 0; idx < slots.Length; idx++)
         {
             if (slots[idx].skillObject != null)
             {
@@ -45,9 +46,7 @@ public class ProgressionManager : MonoBehaviour {
             }
         }
 
-            
-            
-	}
+    }
 
 #region lvl
 	public int lvl;
