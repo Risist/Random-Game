@@ -651,7 +651,6 @@ GameObject:
   - component: {fileID: 224741646321679012}
   - component: {fileID: 222875979486838942}
   - component: {fileID: 114978845665620046}
-  - component: {fileID: 114894534233783110}
   m_Layer: 5
   m_Name: LvlUpPanelHeader
   m_TagString: Untagged
@@ -1923,17 +1922,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'EN: EN'
---- !u!114 &114894534233783110
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1862079968846612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a2e3319eb59a1e428e56848e236a511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114895469558885336
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222026606738681990}
   - component: {fileID: 114391891087252414}
   - component: {fileID: 114223610846074182}
+  - component: {fileID: 114641633468253958}
   m_Layer: 5
   m_Name: SkillPanel
   m_TagString: Untagged
@@ -74,6 +75,7 @@ GameObject:
   - component: {fileID: 222499160126854940}
   - component: {fileID: 114046906732023076}
   - component: {fileID: 114546911501380908}
+  - component: {fileID: 114921422588716248}
   m_Layer: 5
   m_Name: SkillButton4
   m_TagString: SkillButton4
@@ -126,6 +128,7 @@ GameObject:
   - component: {fileID: 222363627689702810}
   - component: {fileID: 114395211972063564}
   - component: {fileID: 114277451824070388}
+  - component: {fileID: 114675498843231194}
   m_Layer: 5
   m_Name: SkillButton2
   m_TagString: SkillButton2
@@ -195,6 +198,7 @@ GameObject:
   - component: {fileID: 222514946956253388}
   - component: {fileID: 114423003274504406}
   - component: {fileID: 114581758358890122}
+  - component: {fileID: 114060407671696848}
   m_Layer: 5
   m_Name: SkillButton3
   m_TagString: SkillButton3
@@ -213,6 +217,7 @@ GameObject:
   - component: {fileID: 222561896482752598}
   - component: {fileID: 114350739356707152}
   - component: {fileID: 114571087542179616}
+  - component: {fileID: 114109628954606056}
   m_Layer: 5
   m_Name: SkillButton1
   m_TagString: SkillButton1
@@ -297,6 +302,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114060407671696848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789134357095998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbe1edbf909fc842b45a2e2a9cf9ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  skill: {fileID: 0}
+  icon: {fileID: 0}
+  mask: {fileID: 0}
+  cooldownText: {fileID: 0}
 --- !u!114 &114108810027407418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,6 +351,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: CD
+--- !u!114 &114109628954606056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823757255668134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbe1edbf909fc842b45a2e2a9cf9ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  skill: {fileID: 0}
+  icon: {fileID: 0}
+  mask: {fileID: 0}
+  cooldownText: {fileID: 0}
 --- !u!114 &114223610846074182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -399,11 +436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 1
   skillNum: 1
-  skill: {fileID: 0}
-  skillPanelMaskImage: {fileID: 114948208410689304}
-  charPanelMaskImage: {fileID: 0}
-  charPanelCdText: {fileID: 0}
-  skillPanelCdText: {fileID: 114043874254895946}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!114 &114302506408788804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -606,11 +640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 1
   skillNum: 3
-  skill: {fileID: 0}
-  skillPanelMaskImage: {fileID: 114369796222864292}
-  charPanelMaskImage: {fileID: 0}
-  charPanelCdText: {fileID: 0}
-  skillPanelCdText: {fileID: 114108810027407418}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!114 &114571087542179616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -624,11 +655,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 1
   skillNum: 0
-  skill: {fileID: 0}
-  skillPanelMaskImage: {fileID: 114302506408788804}
-  charPanelMaskImage: {fileID: 0}
-  charPanelCdText: {fileID: 0}
-  skillPanelCdText: {fileID: 114909302489684928}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!114 &114581758358890122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -642,11 +670,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 1
   skillNum: 2
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
+--- !u!114 &114641633468253958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119344349153860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b20960958975441a79e400083ecc0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillButtons: []
+--- !u!114 &114675498843231194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1694520725072306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbe1edbf909fc842b45a2e2a9cf9ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   skill: {fileID: 0}
-  skillPanelMaskImage: {fileID: 114474350949664218}
-  charPanelMaskImage: {fileID: 0}
-  charPanelCdText: {fileID: 0}
-  skillPanelCdText: {fileID: 114231684786068628}
+  icon: {fileID: 0}
+  mask: {fileID: 0}
+  cooldownText: {fileID: 0}
 --- !u!114 &114909302489684928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -680,6 +733,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: CD
+--- !u!114 &114921422588716248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1530846402426464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbe1edbf909fc842b45a2e2a9cf9ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSprite: {fileID: 21300306, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  skill: {fileID: 0}
+  icon: {fileID: 0}
+  mask: {fileID: 0}
+  cooldownText: {fileID: 0}
 --- !u!114 &114948208410689304
 MonoBehaviour:
   m_ObjectHideFlags: 1
