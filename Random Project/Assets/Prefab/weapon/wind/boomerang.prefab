@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4744535458149482}
   - component: {fileID: 50204200536628570}
   - component: {fileID: 114853674589074456}
-  - component: {fileID: 114781439749501656}
   - component: {fileID: 114051302541864480}
   - component: {fileID: 114488617568774218}
   - component: {fileID: 61598082953413536}
@@ -148,20 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 10
---- !u!114 &114781439749501656
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1060058989794470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7ee68db359beaf489a677581348af66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTrigger: 1
-  onCollision: 0
+    cd: 15
 --- !u!114 &114853674589074456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,15 +160,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -55
+    damage: -7
   damageStay:
-    damage: 0
+    damage: -7
   damageExit:
     damage: 0
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
   objToRemove: {fileID: 0}
+  myFraction: {fileID: 0}
+  instigator: {fileID: 0}
 --- !u!114 &114998297664827086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,7 +185,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 9
+    cd: 14
   changeRate: 1
   min: 0
   max: 0.9
@@ -210,6 +198,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -225,6 +214,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

@@ -6,6 +6,8 @@ public class CameraController : MonoBehaviour
 {
 
     public GameObject player;
+    public GameObject player2;
+    public float multiScaleFactor = 0.0f;
 
 	[Range(0.0f,10.0f)]
 	public float learpFactor = 10.0f;
@@ -25,15 +27,32 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-		if (player)
+        float offsetScale = initialOffsetScale + shakeScaleInfluence;
+
+        if (player)
 		{
-			transform.position = transform.position + (player.transform.position - transform.position) * learpFactor * Time.deltaTime
-				+ initialOffsetPosition + (Vector3)shakePositionInfluence;
+            Vector3 middlePos = player.transform.position;
+            if (player2)
+            {
+                middlePos = (middlePos + player2.transform.position) * 0.5f;
+                offsetScale += middlePos.magnitude * multiScaleFactor;
+            }
+
+
+            transform.position = transform.position + ( middlePos - transform.position) * learpFactor * Time.deltaTime
+				+ (Vector3)shakePositionInfluence;
 			transform.position = new Vector3(transform.position.x, transform.position.y, initialOffsetPosition.z);
-		}
+
+            
+		}else if(player2)
+        {
+            transform.position = transform.position + (player2.transform.position - transform.position) * learpFactor * Time.deltaTime
+                + (Vector3)shakePositionInfluence;
+            transform.position = new Vector3(transform.position.x, transform.position.y, initialOffsetPosition.z);
+        }
 
 		transform.rotation = Quaternion.Euler(0, 0, initialOffsetRotation + shakeRotationInfluence);
-		Camera.main.orthographicSize = initialOffsetScale + shakeScaleInfluence;
+		Camera.main.orthographicSize = offsetScale;
 	}
 	private void FixedUpdate()
 	{

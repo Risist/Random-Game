@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114145396699461636}
   - component: {fileID: 114412713462455976}
   - component: {fileID: 82309830820002248}
+  - component: {fileID: 58417146579875944}
   m_Layer: 0
   m_Name: tHROWINGblackHole
   m_TagString: Untagged
@@ -56,7 +57,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4277063977210486}
   - component: {fileID: 212629976229575842}
-  - component: {fileID: 58416674622267794}
   - component: {fileID: 114410832796660432}
   - component: {fileID: 114759421723273552}
   m_Layer: 0
@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1640546546741108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.409389, y: -2.6586127, z: 0}
+  m_LocalPosition: {x: 4.4257, y: -4.5977755, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4277063977210486}
@@ -118,8 +118,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 35
-  m_LinearDrag: 0.1
+  m_Mass: 25
+  m_LinearDrag: 0.35
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -127,12 +127,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58416674622267794
+--- !u!58 &58417146579875944
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1961646495586342}
+  m_GameObject: {fileID: 1640546546741108}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -248,10 +248,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3090b3e7748d7224da289502ccc11d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 20
-  forceIncrease: 5
-  forceMax: 200
+  force: 45
+  forceIncrease: 10
+  forceMax: 700
   ignoreTag: noTag
+  returnOnTrigger: 0
+  inverseRotation: 0
 --- !u!114 &114145396699461636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -264,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
-  movementSpeed: 6000
+  movementSpeed: 4000
 --- !u!114 &114410832796660432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -301,7 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 8
+    cd: 13
 --- !u!114 &114759421723273552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,7 +318,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 7.5
+    cd: 12
   changeRate: 2
   min: 0
   max: 1

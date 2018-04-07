@@ -47,11 +47,15 @@ public class WeaponBase : MonoBehaviour
 	[System.NonSerialized]
 	public new AudioSource audio;
 	public PlayerMovement movement;
+
+#region Ui
     public Sprite skillIcon;
 	public string displayName;
 	public string description;
+#endregion Ui
 
-	protected void Start()
+
+    protected void Start()
 	{
 		resource = GetComponentInParent<EnergyController>();
 		audio = GetComponent<AudioSource>();
@@ -64,7 +68,7 @@ public class WeaponBase : MonoBehaviour
 	}
 	protected bool CastSkill()
 	{
-        if (!EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost))
+        if (Input.GetButton(buttonCode) && !EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost))
         {
             cd.restart();
             return true;
