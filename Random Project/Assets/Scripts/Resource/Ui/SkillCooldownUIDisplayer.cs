@@ -1,58 +1,56 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using System;
 
 
 public class SkillCooldownUIDisplayer : MonoBehaviour {
 
     public bool updateProgress = true;
-    ProgressionManager manager;
     public int skillNum;
-    public WeaponBase skill;
-    public Image skillPanelMaskImage;
-    public Image charPanelMaskImage;
-    public Text charPanelCdText;
-    public Text skillPanelCdText;
+    [HideInInspector]
+    public SkillButton button;
+    [HideInInspector]
+    public SkillButton assignmentButton;
 
     // Use this for initialization
     void Start ()
     {
-        manager = GameObject.FindGameObjectWithTag("Player").GetComponent<ProgressionManager>();
-        skill = manager.slots[skillNum].skillObject;
-        skillPanelMaskImage = GetComponentsInChildren<Image>()[1];
+        button = gameObject.GetComponent<SkillButton>();
+        //assignmentButton = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>().skillButtons[skillNum];
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (updateProgress && skill)
-            if ( skill.cd.isReady())
+        if (updateProgress && button.skill)
+            if (button.skill.cd.isReady())
                 SkillReady();
             else SkillCooldown();
     }
 
     private void SkillReady()
     {
-        skillPanelCdText.enabled = false;
-        charPanelCdText.enabled = false;
-        skillPanelMaskImage.enabled = false;
-        charPanelMaskImage.enabled = false;
+        button.mask.enabled = false;
+        button.cooldownText.enabled = false;
+        assignmentButton.mask.enabled = false;
+        assignmentButton.cooldownText.enabled = false;
     }
 
     private void SkillCooldown()
     {
-        skillPanelCdText.enabled = true;
-        skillPanelMaskImage.enabled = true;
-        charPanelCdText.enabled = true;
-        charPanelMaskImage.enabled = true;
 
-        float cdTimeLeft = skill.cd.actualTime + skill.cd.cd - Time.time;
-        float roundedCooldown = Mathf.Round(cdTimeLeft);
-        float fillAmount = cdTimeLeft / skill.cd.cd;
-        skillPanelCdText.text = roundedCooldown.ToString();
-        charPanelCdText.text = roundedCooldown.ToString();
-        skillPanelMaskImage.fillAmount = fillAmount;
-        charPanelMaskImage.fillAmount = fillAmount;
+        button.mask.enabled = true;
+        button.cooldownText.enabled = true;
+        assignmentButton.mask.enabled = true;
+        assignmentButton.cooldownText.enabled = true;
+
+        float cdTimeLeft = button.skill.cd.actualTime + button.skill.cd.cd - Time.time;
+        float roundedCooldown = (float)Math.Round(cdTimeLeft, 1);
+        float fillAmount = cdTimeLeft / button.skill.cd.cd;
+        button.cooldownText.text = roundedCooldown.ToString("0.0");
+        assignmentButton.cooldownText.text = roundedCooldown.ToString("0.0");
+        button.mask.fillAmount = fillAmount;
+        assignmentButton.mask.fillAmount = fillAmount;
     }
 }

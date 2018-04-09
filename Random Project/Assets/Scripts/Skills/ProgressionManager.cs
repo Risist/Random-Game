@@ -11,24 +11,42 @@ using UnityEngine;
  */
 public class ProgressionManager : MonoBehaviour {
 
+    public SkillPanel skillPanel;
+    public SkillPanel assignmentPanel;
 
-	private void Start()
+    private void Awake()
+    {
+        skillPanel = GameObject.Find("SkillPanel").GetComponent<SkillPanel>();
+        //assignmentPanel = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>();
+ 
+    }
+
+
+    private void Start()
 	{
-		possibleSkills = GetComponentsInChildren<WeaponBase>();
+        possibleSkills = GetComponentsInChildren<WeaponBase>();
 
 
-		possibleFateNames = new string[6];
-		possibleFateNames[0] = "Melee";
-		possibleFateNames[1] = "Hunter";
-		possibleFateNames[2] = "Devil";
-		possibleFateNames[3] = "Void";
-		possibleFateNames[4] = "Earth";
-		possibleFateNames[5] = "Wind";
+        possibleFateNames = new string[6];
+        possibleFateNames[0] = "Melee";
+        possibleFateNames[1] = "Hunter";
+        possibleFateNames[2] = "Devil";
+        possibleFateNames[3] = "Void";
+        possibleFateNames[4] = "Earth";
+        possibleFateNames[5] = "Wind";
 
-		/// initial binding
-		foreach (var itSlot in slots)	
-			BindToSlot(itSlot.skillObject, itSlot);
-	}
+        /// initial binding
+        for (int idx = 0; idx < slots.Length; idx++)
+        {
+            if (slots[idx].skillObject != null)
+            {
+                BindToSlot(slots[idx].skillObject, slots[idx]);
+                skillPanel.skillButtons[idx].SetSkill(slots[idx].skillObject);
+                assignmentPanel.skillButtons[idx].SetSkill(slots[idx].skillObject);
+            }
+        }
+
+    }
 
 #region lvl
 	public int lvl;
