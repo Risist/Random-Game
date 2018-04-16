@@ -6,10 +6,11 @@ public class SkillTeleport : MonoBehaviour {
 
 	GameObject player;
 	public Timer cd;
+    public string playerTag = "Player";
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player");
+		player = GameObject.FindGameObjectWithTag(playerTag);
 		cd.restart();
 	}
 	

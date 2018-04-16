@@ -242,10 +242,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: black hole
   description: Spawns a black hole which pulls everything inside damaging on collision
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 0
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1640546546741108, guid: 59432a6293b06cc4a97a77921cec5119, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -301,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 0
   resource: {fileID: 387231018}
+  maxHealthDisplayScale: 1
 --- !u!114 &33892676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,6 +673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 1
   resource: {fileID: 387231018}
+  maxHealthDisplayScale: 1
 --- !u!114 &100868267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1683,10 +1684,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: rock
   description: Spawns rocks which deals damage on contact
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 0
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1904601315950934, guid: e90a0cfef88afd545b0720bca77a0715, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -1832,10 +1832,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: jump field
   description: Creates force field pushing forward all targets hit
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1550924305828402, guid: 5ed4f093cb2a0894a9683edd317b3a38, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -2486,7 +2485,6 @@ MonoBehaviour:
   description: short range aoe attack
   triggerEvent: slash
   animManager: {fileID: 387231023}
-  initialRotationToMouse: 1
 --- !u!114 &276202241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3239,7 +3237,6 @@ MonoBehaviour:
   description: A leap melee attack repeling hit targets
   triggerEvent: crush
   animManager: {fileID: 387231023}
-  initialRotationToMouse: 1
 --- !u!114 &336756274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3381,9 +3378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateProgress: 1
-  manager: {fileID: 387231026}
   skillNum: 3
-  skillIcon: {fileID: 0}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!114 &358582018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3681,6 +3678,11 @@ MonoBehaviour:
   movementSpeed: 3600
   body: {fileID: 387231028}
   rotateToDirection: 1
+  xAxisCode: Horizontal
+  yAxisCode: Vertical
+  xControlAxisCode: Horizontal2
+  yControlAxisCode: Vertical2
+  pad: 0
 --- !u!114 &387231018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3842,6 +3844,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a20e3c9633c3d043baeedee2d86128d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillPanel: {fileID: 0}
+  assignmentPanel: {fileID: 0}
   lvl: 1
   leftSkillPoints: 0
   requiredXpBase: 1
@@ -5462,6 +5466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 0
   resource: {fileID: 387231025}
+  maxHealthDisplayScale: 1
 --- !u!114 &656318363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5749,6 +5754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 1
   resource: {fileID: 387231025}
+  maxHealthDisplayScale: 1
 --- !u!114 &676626696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6056,10 +6062,9 @@ MonoBehaviour:
   displayName: devil wave
   description: Creates devil bomb which spawns another bombs on death making unpredictable
     destructive force
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1764599641537900, guid: e7653ac2c1d82244eaf3557cdf427f3c, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -6202,10 +6207,9 @@ MonoBehaviour:
   displayName: Poisoning knife
   description: Throws poisoning knife dealing endlesly damage over time to the target
     hit
-  animManager: {fileID: 441060267}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1876976785215474, guid: e6fa957d119895c4bbb2fd0fb633450e, type: 2}
-  freezeRotation: 1
   shootDelay:
     actualTime: 0
     cd: 0.15
@@ -7530,9 +7534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateProgress: 1
-  manager: {fileID: 387231026}
   skillNum: 1
-  skillIcon: {fileID: 0}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!114 &942031668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8761,10 +8765,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: teleport
   description: throws a bullet which after a delay teleports player to the position
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1388764738251450, guid: 1503a9325bb60244b8c5e0ddb253097a, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -8858,9 +8861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateProgress: 1
-  manager: {fileID: 387231026}
   skillNum: 0
-  skillIcon: {fileID: 0}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!1 &1173893083
 GameObject:
   m_ObjectHideFlags: 0
@@ -9157,10 +9160,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: devil
   description: throws a devil bomb creating explosioins on collision
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -9466,7 +9468,6 @@ MonoBehaviour:
   description: A leap melee attack pulling enemies towards you
   triggerEvent: draw
   animManager: {fileID: 387231023}
-  initialRotationToMouse: 1
 --- !u!114 &1256567234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9755,9 +9756,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateProgress: 1
-  manager: {fileID: 387231026}
   skillNum: 2
-  skillIcon: {fileID: 0}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!114 &1300683517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10327,10 +10328,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: wind
   description: Creates wind wave damaging enemies on hit
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1314080635737764, guid: 5cadec6a40b5560459d9b8b8c160413a, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.1
@@ -11100,10 +11100,9 @@ MonoBehaviour:
   skillIcon: {fileID: 21300364, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: knife
   description: Throws knife dealing damage to the target hit
-  animManager: {fileID: 441060267}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1876976785215474, guid: 9ce3876e460d8ae44b3569cd2da6b770, type: 2}
-  freezeRotation: 1
   shootDelay:
     actualTime: 0
     cd: 0.15
@@ -11357,6 +11356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 387231016}
+  player2: {fileID: 0}
+  multiScaleFactor: 0
   learpFactor: 1.3
   shakePositionDamping: 0.8
   shakeRotationDamping: 0.6
@@ -11769,13 +11770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6216d841cdeed2f4fa3f1fde5d95fba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 387231026}
-  levelText: {fileID: 2065686489}
-  hpRegenText: {fileID: 1835898533}
-  enRegenText: {fileID: 1128617542}
-  skillSlot: {fileID: 114316891307496596, guid: ab21c64e16ec0354dbc337906a79162a,
-    type: 2}
-  skillContent: {fileID: 1661159085}
+  skillSlot: {fileID: 0}
 --- !u!1001 &1612387089
 Prefab:
   m_ObjectHideFlags: 0
@@ -12228,7 +12223,6 @@ MonoBehaviour:
   description: Slowly regenerates health
   triggerEvent: meditate
   animManager: {fileID: 387231023}
-  initialRotationToMouse: 1
 --- !u!1 &1725001061
 GameObject:
   m_ObjectHideFlags: 0

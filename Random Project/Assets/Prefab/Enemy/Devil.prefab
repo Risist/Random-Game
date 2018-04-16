@@ -55,11 +55,11 @@ GameObject:
   - component: {fileID: 114263629849597302}
   - component: {fileID: 114632067487687432}
   - component: {fileID: 114586512223519258}
-  - component: {fileID: 114461184669474174}
   - component: {fileID: 114609266659671922}
   - component: {fileID: 114970733960683922}
   - component: {fileID: 61311719245546824}
   - component: {fileID: 114817542212825890}
+  - component: {fileID: 114146935347552496}
   m_Layer: 0
   m_Name: Devil
   m_TagString: Untagged
@@ -303,6 +303,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114146935347552496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264278118369474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08272b0bb1bc34648a32a4d5c3472ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerMin: 500
+  powerMax: 2000
+  randomRotation: 1
 --- !u!114 &114263629849597302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -314,25 +328,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 
   actual: 75
   max: 75
   regeneration: -20
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
---- !u!114 &114461184669474174
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1264278118369474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92cad0ca2e524d1488e59473ba8d440a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerMin: 500
-  powerMax: 1000
-  randomRotation: 1
 --- !u!114 &114586512223519258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,8 +381,6 @@ MonoBehaviour:
   objects:
   - prefab: {fileID: 1170263240658998, guid: e1ddbd96261f2c04ca531b3ac912e5b2, type: 2}
     chance: 1
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
@@ -397,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe1aca468b369d478e16136a98f9f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceMidificator: 0
 --- !u!114 &114970733960683922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,8 +415,6 @@ MonoBehaviour:
   objects:
   - prefab: {fileID: 1414992316005840, guid: 6035481521e644e489c63f4d049d72c0, type: 2}
     chance: 1
-    chanceScalePerRoom: 0
-    minChance: 0
     minimalDistance: 0
     maximalDistance: 0
     positionOffset: {x: 0, y: 0}
@@ -430,6 +428,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -445,6 +444,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -472,6 +472,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -487,6 +488,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -514,6 +516,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -529,6 +532,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -556,6 +560,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -571,6 +576,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -598,6 +604,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -613,6 +620,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -640,6 +648,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -655,6 +664,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -682,6 +692,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -697,6 +708,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

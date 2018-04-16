@@ -69,14 +69,10 @@ GameObject:
   - component: {fileID: 4394302109451820}
   - component: {fileID: 50457608700297992}
   - component: {fileID: 114686527956126978}
-  - component: {fileID: 114332763552738744}
-  - component: {fileID: 114362164471862426}
-  - component: {fileID: 114985364123229440}
-  - component: {fileID: 114690170052215998}
   - component: {fileID: 61338639963855530}
   - component: {fileID: 114201164699673786}
-  - component: {fileID: 114617911966070418}
   - component: {fileID: 114975991789203860}
+  - component: {fileID: 114573063684943084}
   m_Layer: 0
   m_Name: throwingDevil
   m_TagString: Untagged
@@ -270,14 +266,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 1
   m_LinearDrag: 0.15
   m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 58b708d88e626e44f8bfd5d9a7225506, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &61338639963855530
 BoxCollider2D:
@@ -316,8 +312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50457608700297992}
-  movementSpeed: 650
---- !u!114 &114332763552738744
+  movementSpeed: 1100
+--- !u!114 &114573063684943084
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -325,57 +321,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1577014727243174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 90828ebb1f49def4aa334474f2fb4061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnParent: {fileID: 0}
-  myParent: 0
-  randomRotation: 1
-  randomPosition: 1
-  objects:
-  - prefab: {fileID: 1170263240658998, guid: e1ddbd96261f2c04ca531b3ac912e5b2, type: 2}
-    chance: 1
-    minimalDistance: 0.25
-    maximalDistance: 1.5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
---- !u!114 &114362164471862426
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1577014727243174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnList: {fileID: 114332763552738744}
-  nObjectsToSpawnMin: 1
-  nObjectsToSpawnMax: 1
---- !u!114 &114617911966070418
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1577014727243174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e6ec63ad6ef364ebece5cc90b6f378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageEnter:
-    damage: -6
-  damageStay:
-    damage: 0
-  damageExit:
-    damage: 0
-  ignoreTag: Player
-  removeOnEnter: 0
-  removeOnExit: 0
-  objToRemove: {fileID: 0}
-  myFraction: {fileID: 0}
-  instigator: {fileID: 0}
+  explosionDeath: {fileID: 1414992316005840, guid: 6035481521e644e489c63f4d049d72c0,
+    type: 2}
+  explosionCollsion: {fileID: 1414992316005840, guid: 6035481521e644e489c63f4d049d72c0,
+    type: 2}
+  spawnRadius: 2
+  deathExplosionRadius: 3
+  deathExplosionForce: 175
+  maxExplosionN: 10
 --- !u!114 &114686527956126978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,31 +346,9 @@ MonoBehaviour:
   type: 
   actual: 75
   max: 75
-  regeneration: -60
+  regeneration: -55
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
---- !u!114 &114690170052215998
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1577014727243174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnParent: {fileID: 0}
-  myParent: 0
-  randomRotation: 0
-  randomPosition: 0
-  objects:
-  - prefab: {fileID: 1414992316005840, guid: 6035481521e644e489c63f4d049d72c0, type: 2}
-    chance: 1
-    minimalDistance: 0
-    maximalDistance: 0
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
 --- !u!114 &114975991789203860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,21 +368,6 @@ MonoBehaviour:
   mass: 4
   linearDamping: 0.125
   angularDamping: 0.1
---- !u!114 &114985364123229440
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1577014727243174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 320d571cbeb33b64f87490f0fbde0b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnList: {fileID: 114690170052215998}
-  cdSpawn:
-    actualTime: 0
-    cd: 0
 --- !u!212 &212051915129028678
 SpriteRenderer:
   m_ObjectHideFlags: 1

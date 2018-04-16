@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 4669006472819246}
   - component: {fileID: 50388090863512058}
   - component: {fileID: 114021156207013860}
-  - component: {fileID: 114734305046739574}
   - component: {fileID: 114733059009220220}
   - component: {fileID: 114743275895148576}
   - component: {fileID: 61711576615490712}
@@ -133,15 +132,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -55
+    damage: -7
   damageStay:
-    damage: 0
+    damage: -7
   damageExit:
     damage: 0
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
   objToRemove: {fileID: 0}
+  myFraction: {fileID: 0}
+  instigator: {fileID: 0}
 --- !u!114 &114134881342430420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,7 +157,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 9
+    cd: 14
   changeRate: 1
   min: 0
   max: 0.9
@@ -174,19 +175,6 @@ MonoBehaviour:
   rigidbody: {fileID: 50388090863512058}
   movementSpeed: {x: -500, y: 3000}
   rotationSpeed: -17000
---- !u!114 &114734305046739574
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1479784963242058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7ee68db359beaf489a677581348af66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTrigger: 1
-  onCollision: 0
 --- !u!114 &114743275895148576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 10
+    cd: 15
 --- !u!212 &212280701833589362
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -210,6 +198,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -225,6 +214,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

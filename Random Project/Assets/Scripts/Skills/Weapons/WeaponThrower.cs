@@ -3,11 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * used in a few contexts:
- *	- rotate the player to mouse direction and freeze rotation for a period of time
- *	- rotate the player to mouse direction for the whole time the button is pressed
- *	- 
+ * Plays animation and after given delay spawns provided prefab
+ * Applies rotation to mouse after casting skill over given time period
  */
+public class WeaponThrower : WeaponThrowerFreeze
+{
+    //public Timer rotationApplyTime = new Timer(0);
+
+    protected void Update()
+    {
+        if (CastSkill())
+        {
+            PlayAnimation();
+            PlaySound();
+
+            if (movement)
+            {
+                rotationApplyTime.restart();
+            }
+
+            shootDelay.restart();
+            shouldShoot = true;
+        }
+    }
+
+    new protected void LateUpdate()
+    {
+        if (!rotationApplyTime.isReady())
+        {
+            movement.ApplyRotationToMouse();
+        }
+
+        if (shouldShoot)
+        {
+            if (shootDelay.isReady())
+            {
+                Instantiate(prefab, _transform.position, _transform.rotation);
+                shouldShoot = false;
+            }
+        }
+    }
+}
+
+
+/*
 public class WeaponThrower : WeaponBase
 {
 	public AnimationManager animManager;
@@ -82,4 +121,4 @@ public class WeaponThrower : WeaponBase
 			ahouldShoot = false;
 		}
 	}
-}
+}*/

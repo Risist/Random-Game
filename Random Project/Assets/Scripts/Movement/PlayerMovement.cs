@@ -8,7 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed = 1.0f;
     public Rigidbody2D body;
 	public bool rotateToDirection = true;
-    
+    public string xAxisCode = "Horizontal";
+    public string yAxisCode = "Vertical";
+
+    public string xControlAxisCode = "Horizontal2";
+    public string yControlAxisCode = "Vertical2";
+    public bool pad = false;
+
     // Use this for initialization
     void Start()
     {
@@ -16,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
             body = GetComponent<Rigidbody2D>();
     }
 
-	public float applyExternalRotation(Vector2 newInput)
+	public float ApplyExternalRotation(Vector2 newInput)
 	{
 		appliedExternalRotation = true;
 		lastInput = newInput;
@@ -26,30 +32,48 @@ public class PlayerMovement : MonoBehaviour
 
 		return rotation;
 	}
-	public float applyExternalRotation(float newRotation)
+	public float ApplyExternalRotation(float newRotation)
 	{
 		appliedExternalRotation = true;
 		lastInput = ( transform.rotation = Quaternion.Euler(0, 0, newRotation) ) * Vector2.up;
-
-		var rotation = body.rotation = newRotation;
-		return rotation;
+        
+		return body.rotation = newRotation;
 	}
 
-	public float applyRotationToMouse()
+	public float ApplyRotationToMouse()
 	{
-		Vector2 newInput = Camera.main.ScreenToWorldPoint(Input.mousePosition) - gameObject.transform.position;
+        if (pad)
+        {
+            Vector2 newInput = new Vector2(Input.GetAxis(xControlAxisCode), Input.GetAxis(yControlAxisCode));
 
-		appliedExternalRotation = true;
-		lastInput = newInput;
+            if (newInput.sqrMagnitude > 0.1)
+            {
+                lastInput = newInput;
 
-		return body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
-	}
+                body.rotation = Vector2.Angle(Vector2.up, -lastInput) * (lastInput.x > 0 ? -1 : 1);
+            }
+
+            return body.rotation;
+        }
+        else
+        {
+            Vector2 newInput = Camera.main.ScreenToWorldPoint(Input.mousePosition) - gameObject.transform.position;
+            
+            lastInput = newInput;
+            appliedExternalRotation = true;
+            return body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
+        }
+       
+    }
 
 	bool appliedExternalRotation;
     Vector2 lastInput;
 
 	private void LateUpdate()
 	{
+        if (!enabled)
+            return;
+
 		if (rotateToDirection && !appliedExternalRotation)
 		{
 			body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
@@ -60,7 +84,10 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate()
     {
-        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if (!enabled)
+            return;
+
+        Vector2 input = new Vector2(Input.GetAxisRaw(xAxisCode), Input.GetAxisRaw(yAxisCode)).normalized;
         if ( (input.x != 0 || input.y != 0) && !appliedExternalRotation )
             lastInput = input;
 

@@ -62,7 +62,7 @@ public class HealthController : ResourceController
         DealDamage(new SimpleDamage(damage), causer);
     }
 
-	void OnReceiveDamage(DamageData data)
+	public void OnReceiveDamage(DamageData data)
 	{
 
 	}

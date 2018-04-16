@@ -25,7 +25,7 @@ public class WeaponThrowerMany : WeaponBase
 		if (freezeRotation)
 		{
 			if (movement && !rotationApplyTime.isReady())
-				movement.applyExternalRotation(lastRotation);
+				movement.ApplyExternalRotation(lastRotation);
 
 			if (Input.GetButton(buttonCode))
 			{
@@ -33,7 +33,7 @@ public class WeaponThrowerMany : WeaponBase
 				if ((!animManager || animManager.CanCastAnimation()) && CastSkill())
 				{
 					if (movement)
-						lastRotation = movement.applyRotationToMouse();
+						lastRotation = movement.ApplyRotationToMouse();
 
 					if (animManager)
 						animManager.CastAnimation();
@@ -52,7 +52,7 @@ public class WeaponThrowerMany : WeaponBase
 		else if (Input.GetButton(buttonCode))
 		{
 			if (movement)
-				movement.applyRotationToMouse();
+				movement.ApplyRotationToMouse();
 
 			if ((!animManager || animManager.CanCastAnimation()) && CastSkill())
 			{

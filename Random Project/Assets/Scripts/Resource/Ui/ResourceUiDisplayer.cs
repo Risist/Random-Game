@@ -10,6 +10,7 @@ public class ResourceUiDisplayer : MonoBehaviour
 	//public float lenghtPerHp = 70;
 	public bool updateProgress = true;
 	public ResourceController resource;
+    public float maxHealthDisplayScale = 1.0f;
 	Image image;
 
 
@@ -24,7 +25,7 @@ public class ResourceUiDisplayer : MonoBehaviour
 	{
 		if (updateProgress)
 			image.fillAmount = resource.actual / resource.max;
-        image.rectTransform.sizeDelta = new Vector2(resource.max, image.rectTransform.rect.height);
+        image.rectTransform.sizeDelta = new Vector2(resource.max * maxHealthDisplayScale, image.rectTransform.rect.height);
         //image.transform.localScale = new Vector2(1 + playerHp.max / lenghtPerHp, 1);
 
 

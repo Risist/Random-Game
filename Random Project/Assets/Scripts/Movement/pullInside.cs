@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PullInside : MonoBehaviour {
+public class pullInside : MonoBehaviour {
 
 	public float force;
 	public float forceIncrease;
