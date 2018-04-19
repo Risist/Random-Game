@@ -49,6 +49,8 @@ GameObject:
   - component: {fileID: 114301709501013552}
   - component: {fileID: 114610579902125178}
   - component: {fileID: 114780257980799228}
+  - component: {fileID: 114125112033580246}
+  - component: {fileID: 114853425969156712}
   m_Layer: 0
   m_Name: DunnoKnife
   m_TagString: enemy
@@ -1118,6 +1120,34 @@ MonoBehaviour:
   mass: 1
   linearDamping: 0.1
   angularDamping: 0.1
+--- !u!114 &114125112033580246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128905386631698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
+  randomRotation: 1
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 1
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 1
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114129064919709336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1857,6 +1887,20 @@ MonoBehaviour:
   regeneration: 5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114853425969156712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128905386631698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114125112033580246}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 1
 --- !u!114 &114854677038541386
 MonoBehaviour:
   m_ObjectHideFlags: 1

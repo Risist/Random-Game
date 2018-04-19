@@ -8,19 +8,20 @@ public class WeaponSequenceAnimation : WeaponBase {
     public Animator animManager;
     /// resets animation trigger counter after given time from last ability usage
     public Timer idleReset;
-    IdleTrigger idle;
+    protected IdleTrigger idle;
 
     public Timer rotationApplytimer = new Timer(0);
-    int abilityCounter = 0;
-    float rotation;
+    protected int abilityCounter = 0;
+    protected float rotation;
 
-    new private void Start()
+
+    new protected void Start()
     {
         base.Start();
         idle = GetComponentInParent<IdleTrigger>();
     }
 
-    void Update()
+    protected void Update()
     {
         if (CastSkill())
         {
@@ -40,7 +41,7 @@ public class WeaponSequenceAnimation : WeaponBase {
             abilityCounter = 0;
         }
     }
-    private void LateUpdate()
+    protected void LateUpdate()
     {
         if (!rotationApplytimer.isReady())
         {

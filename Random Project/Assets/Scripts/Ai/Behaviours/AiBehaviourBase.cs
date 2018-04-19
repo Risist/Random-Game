@@ -30,10 +30,17 @@ public abstract class AiBehaviourBase : MonoBehaviour
 	{
 	}
 
+    ///decides if whole composite is ready to be played out
 	public virtual bool CanEnter()
 	{
 		return true;
 	}
+
+    /// allows behaviour to terminate execution of whole Composite
+    public virtual bool Treminate()
+    {
+        return false;
+    }
 #endregion Virtual
 
 }

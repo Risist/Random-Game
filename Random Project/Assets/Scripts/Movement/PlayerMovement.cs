@@ -22,7 +22,16 @@ public class PlayerMovement : MonoBehaviour
             body = GetComponent<Rigidbody2D>();
     }
 
-	public float ApplyExternalRotation(Vector2 newInput)
+    public void ApplyForce(Vector2 force)
+    {
+        body.AddForce(force);
+    }
+    public void ApplyForceToMouse(float force)
+    {
+        Vector2 v = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - body.position;
+        body.AddForce(v.normalized * force*Time.fixedDeltaTime);
+    }
+    public float ApplyExternalRotation(Vector2 newInput)
 	{
 		appliedExternalRotation = true;
 		lastInput = newInput;

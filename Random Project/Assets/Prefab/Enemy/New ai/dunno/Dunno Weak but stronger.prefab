@@ -419,6 +419,8 @@ GameObject:
   - component: {fileID: 114802349651627926}
   - component: {fileID: 114174688790425960}
   - component: {fileID: 114243686628484128}
+  - component: {fileID: 114957969191271464}
+  - component: {fileID: 114007622652105700}
   m_Layer: 0
   m_Name: Dunno Weak but stronger
   m_TagString: enemy
@@ -887,6 +889,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviour: {fileID: 114927888295369016}
   baseUtility: 1000
+--- !u!114 &114007622652105700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803322173580698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114957969191271464}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 1
 --- !u!114 &114026647297774752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1754,6 +1770,34 @@ MonoBehaviour:
   reevaluateTimeMax: 0.1
   distanceMin: 0
   distanceMax: 3.4028235e+38
+--- !u!114 &114957969191271464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803322173580698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
+  randomRotation: 1
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 1
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 1
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114970821301397828
 MonoBehaviour:
   m_ObjectHideFlags: 1

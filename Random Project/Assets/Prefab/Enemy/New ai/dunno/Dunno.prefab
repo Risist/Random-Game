@@ -452,6 +452,8 @@ GameObject:
   - component: {fileID: 114160306577547990}
   - component: {fileID: 114367962559374040}
   - component: {fileID: 114787952621704308}
+  - component: {fileID: 114049715035499852}
+  - component: {fileID: 114737511425429860}
   m_Layer: 0
   m_Name: Dunno
   m_TagString: enemy
@@ -914,6 +916,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114812069142585448}
+--- !u!114 &114049715035499852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1997489491792532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
+  randomRotation: 1
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 1
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 1
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114063959655075718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1434,6 +1464,8 @@ MonoBehaviour:
   forceIncrease: 0
   forceMax: 3.4028235e+38
   ignoreTag: noTag
+  returnOnTrigger: 1
+  inverseRotation: 0
 --- !u!114 &114535811947809062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1598,6 +1630,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 114138048834592668}
+--- !u!114 &114737511425429860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1997489491792532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114049715035499852}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 1
 --- !u!114 &114748442596831926
 MonoBehaviour:
   m_ObjectHideFlags: 1

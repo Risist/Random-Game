@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Central control of agent movement
+ */
 public class AiMovement : MonoBehaviour
 {
 
