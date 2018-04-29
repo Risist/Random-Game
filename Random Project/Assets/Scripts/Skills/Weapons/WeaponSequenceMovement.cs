@@ -34,8 +34,9 @@ public class WeaponSequenceMovement : WeaponSequenceAnimation {
             abilityCounter = 0;
         }
     }
-    protected void FixedUpdate()
+    protected new void FixedUpdate()
     {
+        base.FixedUpdate();
         if (!tMovementApplay.isReady())
         {
             movement.ApplyForceToMouse(movementSpeed);

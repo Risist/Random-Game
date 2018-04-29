@@ -43,7 +43,7 @@ public class AiBehaviourCompositeTogether : AiBehaviourBase {
 				b = it.PerformAction() && b;
                 terminate = terminate || it.Treminate();
 			}
-		return b || terminate;
+		return b;
 	}
 
 	public override bool CanEnter()

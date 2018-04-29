@@ -36,8 +36,10 @@ public class WeaponBase : MonoBehaviour
 		
 		return true;
 	}
-#endregion Requirements
+    #endregion Requirements
 
+    public NewtonianResource increaseCost;
+    public float increaseCostForce;
 	EnergyController resource;
 	public float cost;
 
@@ -60,16 +62,21 @@ public class WeaponBase : MonoBehaviour
 		resource = GetComponentInParent<EnergyController>();
 		audio = GetComponent<AudioSource>();
 	}
+    protected void FixedUpdate()
+    {
+        increaseCost.FixedUpdate();
+    }
 
-	protected void PlaySound()
+    protected void PlaySound()
 	{
 		if (audio)
 			audio.Play();
 	}
 	protected bool CastSkill()
 	{
-        if (Input.GetButton(buttonCode) && !EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost))
+        if (Input.GetButton(buttonCode) && !EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost + increaseCost.GetVelocity()))
         {
+            increaseCost.AddForce(increaseCostForce);
             cd.restart();
             return true;
         }
