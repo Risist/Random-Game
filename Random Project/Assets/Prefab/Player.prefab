@@ -2470,7 +2470,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658865134507860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: -26.34, z: 0}
+  m_LocalPosition: {x: 4, y: -9.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4682030580088866}
@@ -4120,7 +4120,7 @@ MonoBehaviour:
   cost: 15
   cd:
     actualTime: 0
-    cd: 0.45
+    cd: 0.7
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: slash
@@ -4249,7 +4249,7 @@ MonoBehaviour:
   cost: 15
   cd:
     actualTime: 0
-    cd: 0.5
+    cd: 0.75
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: slash
@@ -5599,13 +5599,13 @@ MonoBehaviour:
     lvl: 0
   slots:
   - keyCode: Fire1
-    skillObject: {fileID: 114593491323706472}
+    skillObject: {fileID: 114015074161376348}
   - keyCode: Fire2
-    skillObject: {fileID: 114380739332716436}
+    skillObject: {fileID: 114109161471209228}
   - keyCode: Fire3
-    skillObject: {fileID: 114979770697116834}
+    skillObject: {fileID: 114508735480481878}
   - keyCode: Movement
-    skillObject: {fileID: 114323412830576174}
+    skillObject: {fileID: 114969801619805556}
   unlockedSkills:
   - {fileID: 114593491323706472}
   - {fileID: 114380739332716436}

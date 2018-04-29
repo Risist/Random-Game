@@ -182,8 +182,7 @@ GameObject:
   - component: {fileID: 114648585071961460}
   - component: {fileID: 114715774931105170}
   - component: {fileID: 114924570397530666}
-  - component: {fileID: 114336776794804556}
-  - component: {fileID: 114482695228843328}
+  - component: {fileID: 114586120545513962}
   m_Layer: 0
   m_Name: Dunno Weak Trap
   m_TagString: enemy
@@ -1162,34 +1161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114224296779776692}
---- !u!114 &114336776794804556
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1469573752027892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnParent: {fileID: 0}
-  myParent: 0
-  randomRotation: 1
-  randomPosition: 1
-  objects:
-  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
-    chance: 1
-    minimalDistance: 0
-    maximalDistance: 1
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
-    chance: 1
-    minimalDistance: 0
-    maximalDistance: 1
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
 --- !u!114 &114345761941300850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1313,20 +1284,6 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   minPerformanceTime: 0.1
   maxPerformanceTime: 0.25
---- !u!114 &114482695228843328
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1469573752027892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnList: {fileID: 114336776794804556}
-  nObjectsToSpawnMin: 1
-  nObjectsToSpawnMax: 1
 --- !u!114 &114486754607021418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1418,6 +1375,18 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   minPerformanceTime: 0.35
   maxPerformanceTime: 0.75
+--- !u!114 &114586120545513962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469573752027892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae3eb0d6f7d5054da9125423759ceb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1413263708739826, guid: 99997df397654c545aab37f85c280c70, type: 2}
 --- !u!114 &114590241071633588
 MonoBehaviour:
   m_ObjectHideFlags: 1

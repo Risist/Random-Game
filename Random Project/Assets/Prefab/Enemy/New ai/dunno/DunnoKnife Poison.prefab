@@ -245,8 +245,6 @@ GameObject:
   - component: {fileID: 114314240096288394}
   - component: {fileID: 114404822272134888}
   - component: {fileID: 114182139065039962}
-  - component: {fileID: 114393441428838228}
-  - component: {fileID: 114569196263318418}
   m_Layer: 0
   m_Name: DunnoKnife Poison
   m_TagString: enemy
@@ -1335,40 +1333,6 @@ MonoBehaviour:
   aim: {fileID: 114808831032690848}
   attitude: 0
   fractionName: dunno
---- !u!114 &114393441428838228
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1464968888052356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnParent: {fileID: 0}
-  myParent: 0
-  randomRotation: 1
-  randomPosition: 1
-  objects:
-  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
-    chance: 1
-    minimalDistance: 0
-    maximalDistance: 1
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
-    chance: 1
-    minimalDistance: 0
-    maximalDistance: 1
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 0}
-    chance: 4
-    minimalDistance: 0
-    maximalDistance: 1
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
 --- !u!114 &114398396699492042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1457,20 +1421,6 @@ MonoBehaviour:
   maxRadius: 7
   recalculateTimeMin: 0.1
   recalculateTimeMax: 0.1
---- !u!114 &114569196263318418
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1464968888052356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnList: {fileID: 114393441428838228}
-  nObjectsToSpawnMin: 1
-  nObjectsToSpawnMax: 1
 --- !u!114 &114580400973960698
 MonoBehaviour:
   m_ObjectHideFlags: 1
