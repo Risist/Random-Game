@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer:
     actualTime: 0
-    cd: 15
+    cd: 13
 --- !u!114 &114853674589074456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,9 +160,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -2
+    damage: -3
   damageStay:
-    damage: -4
+    damage: -5
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -185,7 +185,7 @@ MonoBehaviour:
   reverse: 1
   reverseTimer:
     actualTime: 0
-    cd: 14
+    cd: 12
   changeRate: 1
   min: 0
   max: 0.9

@@ -35,7 +35,7 @@ public class RandomSpawnList : SpawnListBase {
 
 	public void Start()
 	{
-		var manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+		//var manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 	}
 
 	public override GameObject Spawn()

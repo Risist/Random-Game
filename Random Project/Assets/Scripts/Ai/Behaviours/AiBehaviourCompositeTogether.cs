@@ -35,13 +35,11 @@ public class AiBehaviourCompositeTogether : AiBehaviourBase {
 	public override bool PerformAction()
 	{
 		bool b = true;
-        bool terminate = false;
 
 		foreach (var it in behaviours)
 			if (it != this)
 			{
-				b = it.PerformAction() && b;
-                terminate = terminate || it.Treminate();
+				b = b && it.PerformAction();
 			}
 		return b;
 	}
@@ -54,13 +52,4 @@ public class AiBehaviourCompositeTogether : AiBehaviourBase {
 				b = b && it.CanEnter();
 		return b;
 	}
-
-    public override bool Treminate()
-    {
-        bool b = false;
-        foreach (var it in behaviours)
-            if (it != this)
-                b = b || it.Treminate();
-        return b;
-    }
 }

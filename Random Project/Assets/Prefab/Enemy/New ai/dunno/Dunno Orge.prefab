@@ -1150,6 +1150,8 @@ MonoBehaviour:
   forceIncrease: 0
   forceMax: 3.4028235e+38
   ignoreTag: noTag
+  returnOnTrigger: 1
+  inverseRotation: 0
 --- !u!114 &114251486535033258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1277,6 +1279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114431718190917936}
+  negation: 0
 --- !u!114 &114352184176982782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1520,6 +1523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114226800419311266}
+  negation: 0
 --- !u!114 &114663336497858896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1674,9 +1678,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  actual: 1500
-  max: 1500
-  regeneration: 9
+  actual: 2000
+  max: 2000
+  regeneration: 10
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114872728096276754
@@ -1720,6 +1724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114027981956714856}
+  negation: 0
 --- !u!114 &114897748494997598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1771,6 +1776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114118233435340486}
+  negation: 0
 --- !u!114 &114969272004673906
 MonoBehaviour:
   m_ObjectHideFlags: 1

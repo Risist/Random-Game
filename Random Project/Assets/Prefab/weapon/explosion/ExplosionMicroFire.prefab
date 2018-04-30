@@ -53,7 +53,6 @@ GameObject:
   - component: {fileID: 4508297613795278}
   - component: {fileID: 95984508566863618}
   - component: {fileID: 114965641353247348}
-  - component: {fileID: 114832017634346194}
   m_Layer: 0
   m_Name: ExplosionMicroFire
   m_TagString: Untagged
@@ -359,21 +358,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114832017634346194
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1692004721216658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 0.625
-  dmg:
-    damage: -40
-  ignoreTag: enemy
 --- !u!114 &114965641353247348
 MonoBehaviour:
   m_ObjectHideFlags: 1

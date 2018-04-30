@@ -790,7 +790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1551857663448088
 GameObject:
   m_ObjectHideFlags: 1
@@ -1752,7 +1752,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1548675831968554}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.44, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
@@ -1936,7 +1936,7 @@ Transform:
   m_GameObject: {fileID: 1134954912787766}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.68750036, y: 0.68249977, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 4682030580088866}
   m_RootOrder: 3
@@ -1948,7 +1948,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1882578547020900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.44, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4731631304376504}
@@ -2470,7 +2470,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658865134507860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: -9.08, z: 0}
+  m_LocalPosition: {x: -39.17, y: -10.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4682030580088866}
@@ -2696,14 +2696,14 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.5
 --- !u!58 &58311906388229312
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1548675831968554}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2711,7 +2711,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.5
 --- !u!58 &58489267322928560
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -2741,7 +2741,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 3.5
 --- !u!58 &58569425464335812
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -4087,7 +4087,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 50
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 7.5
+  cost: 30
   cd:
     actualTime: 0
     cd: 0.5
@@ -4117,10 +4123,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 15
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 5.5
+  cost: 10
   cd:
     actualTime: 0
-    cd: 0.7
+    cd: 0.75
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: slash
@@ -4147,7 +4159,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 20
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 5
+  cost: 15
   cd:
     actualTime: 0
     cd: 0.75
@@ -4177,8 +4195,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: Health
   actual: 125
-  max: 200
-  regeneration: 1.5
+  max: 125
+  regeneration: 2
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114061354262153132
@@ -4194,6 +4212,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  increaseCost:
+    value: 0
+    velocityDamping: 0.9
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 0
   cost: 20
   cd:
     actualTime: 0
@@ -4246,7 +4270,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 15
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 5.5
+  cost: 10
   cd:
     actualTime: 0
     cd: 0.75
@@ -4320,7 +4350,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -19
+    damage: -25
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -4385,7 +4415,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 20
+  increaseCost:
+    value: 0
+    velocityDamping: 0.9
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 0
+  cost: 18
   cd:
     actualTime: 0
     cd: 1.15
@@ -4408,10 +4444,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 20
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 4
+  cost: 10
   cd:
     actualTime: 0
-    cd: 0.4
+    cd: 0.35
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300270, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: slash
@@ -4466,7 +4508,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -19
+    damage: -32.5
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -4550,6 +4592,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  increaseCost:
+    value: 0
+    velocityDamping: 0.9
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 0
   cost: 40
   cd:
     actualTime: 0
@@ -4612,10 +4660,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 15
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 5
+  cost: 7.5
   cd:
     actualTime: 0
-    cd: 0.45
+    cd: 0.4
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300334, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: spear move back
@@ -4678,10 +4732,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  increaseCost:
+    value: 0
+    velocityDamping: 0.99
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 10
   cost: 25
   cd:
     actualTime: 0
-    cd: 0.9
+    cd: 0.75
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300168, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: push
@@ -4694,7 +4754,7 @@ MonoBehaviour:
     cd: 2
   rotationApplytimer:
     actualTime: 0
-    cd: 0.35
+    cd: 0.4
 --- !u!114 &114400322798698040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4707,9 +4767,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Energy
-  actual: 125
-  max: 125
-  regeneration: 18
+  actual: 100
+  max: 100
+  regeneration: 15
 --- !u!114 &114403699061410602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4724,7 +4784,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -9
+    damage: -12.5
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -4746,7 +4806,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 55
+  increaseCost:
+    value: 0
+    velocityDamping: 0.9
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 0
+  cost: 35
   cd:
     actualTime: 0
     cd: 0.5
@@ -4787,7 +4853,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 100
+  increaseCost:
+    value: 0
+    velocityDamping: 0.999
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 20
+  cost: 75
   cd:
     actualTime: 0
     cd: 1.5
@@ -4834,7 +4906,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 30
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 7.5
+  cost: 20
   cd:
     actualTime: 0
     cd: 0.65
@@ -4914,7 +4992,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -6
+    damage: -4
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -4936,10 +5014,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 40
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 5
+  cost: 20
   cd:
     actualTime: 0
-    cd: 0.5
+    cd: 0.45
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300288, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: devil boomb
@@ -4994,7 +5078,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 20
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 2.5
+  cost: 7.5
   cd:
     actualTime: 0
     cd: 0.2
@@ -5030,10 +5120,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 15
+  increaseCost:
+    value: 0
+    velocityDamping: 0.99
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 7.5
+  cost: 10
   cd:
     actualTime: 0
-    cd: 0.65
+    cd: 0.6
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: slash
@@ -5167,7 +5263,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 20
+  increaseCost:
+    value: 0
+    velocityDamping: 0.9
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 0
+  cost: 18
   cd:
     actualTime: 0
     cd: 1.15
@@ -5189,7 +5291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50204895844437464}
-  movementSpeed: 2250
+  movementSpeed: 2500
 --- !u!114 &114665656958438776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5235,10 +5337,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 17
+  increaseCost:
+    value: 0
+    velocityDamping: 0.975
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 2
+  cost: 13
   cd:
     actualTime: 0
-    cd: 0.75
+    cd: 0.7
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: slash
@@ -5282,6 +5390,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  increaseCost:
+    value: 0
+    velocityDamping: 0.9
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 0
   cost: 30
   cd:
     actualTime: 0
@@ -5363,6 +5477,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  increaseCost:
+    value: 0
+    velocityDamping: 0.9
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 0
   cost: 0
   cd:
     actualTime: 0
@@ -5406,7 +5526,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 45
+  increaseCost:
+    value: 0
+    velocityDamping: 0.9
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 0
+  cost: 35
   cd:
     actualTime: 0
     cd: 2
@@ -5484,7 +5610,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 30
+  increaseCost:
+    value: 0
+    velocityDamping: 0.9
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 0
+  cost: 20
   cd:
     actualTime: 0
     cd: 0.7
@@ -5514,7 +5646,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
-  cost: 25
+  increaseCost:
+    value: 0
+    velocityDamping: 0.99
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 4
+  cost: 15
   cd:
     actualTime: 0
     cd: 0.5
@@ -5544,6 +5682,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  increaseCost:
+    value: 0
+    velocityDamping: 0.95
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 7.5
   cost: 22
   cd:
     actualTime: 0
@@ -5599,13 +5743,13 @@ MonoBehaviour:
     lvl: 0
   slots:
   - keyCode: Fire1
-    skillObject: {fileID: 114015074161376348}
+    skillObject: {fileID: 114694436802871232}
   - keyCode: Fire2
-    skillObject: {fileID: 114109161471209228}
+    skillObject: {fileID: 114663683530094856}
   - keyCode: Fire3
-    skillObject: {fileID: 114508735480481878}
+    skillObject: {fileID: 114165638163536218}
   - keyCode: Movement
-    skillObject: {fileID: 114969801619805556}
+    skillObject: {fileID: 114168460960537296}
   unlockedSkills:
   - {fileID: 114593491323706472}
   - {fileID: 114380739332716436}
@@ -7246,7 +7390,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300184, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.052768163, g: 0.82718647, b: 0.89705884, a: 1}
+  m_Color: {r: 0.09439879, g: 0.66202116, b: 0.71323526, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
