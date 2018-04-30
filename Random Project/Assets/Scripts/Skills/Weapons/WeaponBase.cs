@@ -20,7 +20,7 @@ public class WeaponBase : MonoBehaviour
 		{
 			bool found = false;
 			foreach (var itOwned in manager.chosenFates)
-				if (itOwned.name == itRequired.name && itOwned.lvl >= itRequired.lvl)
+				if (itOwned.Name == itRequired.Name && itOwned.Lvl >= itRequired.Lvl)
 				{
 					found = true;
 					break;
@@ -36,8 +36,9 @@ public class WeaponBase : MonoBehaviour
 		
 		return true;
 	}
-#endregion Requirements
+    #endregion Requirements
 
+    public int level;
 	EnergyController resource;
 	public float cost;
 

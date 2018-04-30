@@ -1485,8 +1485,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1134954912787766}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.43, z: 0}
-  m_LocalScale: {x: 1.1939936, y: 0.8019372, z: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 0.68750036, y: 0.68249977, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
   m_RootOrder: 21
@@ -1888,7 +1888,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658865134507860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: -26.34, z: 0}
+  m_LocalPosition: {x: 4, y: -9.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4682030580088866}
@@ -3113,6 +3113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 50
   cd:
     actualTime: 0
@@ -3143,6 +3144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 20
   cd:
     actualTime: 0
@@ -3190,6 +3192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 20
   cd:
     actualTime: 0
@@ -3334,6 +3337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 24
   cd:
     actualTime: 0
@@ -3357,6 +3361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 20
   cd:
     actualTime: 0
@@ -3395,12 +3400,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308d73d3cfdb03c42b8b9c858e2c792e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHpBonus: 0
-  regHpBonus: 0
-  maxEnergyBonus: 0
-  regEnergyBonus: 0
-  movementSpeedBonus: 0
-  xpGainBonus: 0
+  maxHpBonus: 50
+  regHpBonus: 10
+  maxEnergyBonus: 50
+  regEnergyBonus: 10
+  movementSpeedBonus: 10
+  xpGainBonus: 200
 --- !u!114 &114232303704594778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3476,6 +3481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 40
   cd:
     actualTime: 0
@@ -3525,6 +3531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 15
   cd:
     actualTime: 0
@@ -3617,6 +3624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 35
   cd:
     actualTime: 0
@@ -3685,6 +3693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 55
   cd:
     actualTime: 0
@@ -3726,6 +3735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 100
   cd:
     actualTime: 0
@@ -3819,6 +3829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 40
   cd:
     actualTime: 0
@@ -3877,6 +3888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 20
   cd:
     actualTime: 0
@@ -3988,6 +4000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 24
   cd:
     actualTime: 0
@@ -4056,6 +4069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 21
   cd:
     actualTime: 0
@@ -4103,6 +4117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 30
   cd:
     actualTime: 0
@@ -4184,6 +4199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 0
   cd:
     actualTime: 0
@@ -4214,6 +4230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 45
   cd:
     actualTime: 0
@@ -4292,6 +4309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 30
   cd:
     actualTime: 0
@@ -4322,6 +4340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 17.5
   cd:
     actualTime: 0
@@ -4353,6 +4372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFates: []
   requiredSkills: []
+  level: 0
   cost: 22
   cd:
     actualTime: 0
@@ -4397,25 +4417,70 @@ MonoBehaviour:
   skillPanel: {fileID: 0}
   assignmentPanel: {fileID: 0}
   lvl: 1
-  leftSkillPoints: 0
+  leftSkillPoints: 5
   requiredXpBase: 1
   requiredXpScale: 2
+  possibleFates:
+  - name: 
+    lvl: 0
+    icon: {fileID: 0}
+    description: 
+  - name: 
+    lvl: 0
+    icon: {fileID: 0}
+    description: 
+  - name: 
+    lvl: 0
+    icon: {fileID: 0}
+    description: 
+  - name: 
+    lvl: 0
+    icon: {fileID: 0}
+    description: 
+  - name: 
+    lvl: 0
+    icon: {fileID: 0}
+    description: 
+  - name: 
+    lvl: 0
+    icon: {fileID: 0}
+    description: 
+  possibleFateNames: []
+  possibleFateIcons:
+  - {fileID: 21300122, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  - {fileID: 21300110, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  - {fileID: 21300100, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  - {fileID: 21300144, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  - {fileID: 21300102, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  - {fileID: 21300162, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  possibleFateDescription:
+  - Increases max HP
+  - Increases movement speed
+  - Increases max energy
+  - Increases energy regeneration
+  - Increases HP regeneration
+  - Increases XP gained
   maxFateLvl: 5
   chosenFates:
   - name: 
     lvl: 0
+    icon: {fileID: 0}
+    description: 
   - name: 
     lvl: 0
+    icon: {fileID: 0}
+    description: 
   slots:
   - keyCode: Fire1
-    skillObject: {fileID: 114537432067390530}
+    skillObject: {fileID: 0}
   - keyCode: Fire2
-    skillObject: {fileID: 114458750737384424}
+    skillObject: {fileID: 0}
   - keyCode: Fire3
-    skillObject: {fileID: 114012884041043920}
+    skillObject: {fileID: 0}
   - keyCode: Movement
-    skillObject: {fileID: 114061354262153132}
-  unlockedSkills:
+    skillObject: {fileID: 0}
+  unlockedSkills: []
+  possibleSkills:
   - {fileID: 114969801619805556}
   - {fileID: 114380739332716436}
   - {fileID: 114979770697116834}
