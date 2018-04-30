@@ -18,6 +18,8 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
 
     private void Awake()
     {
+
+
         manager = GameObject.FindGameObjectWithTag("Player").GetComponent<ProgressionManager>();
         skillPoints = gameObject.transform.Find("SelectionBlock").Find("PointsValueText").GetComponent<Text>();
         skillPoints.text = manager.leftSkillPoints.ToString();
@@ -39,6 +41,8 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
         SetSkillSlotsInteractive(false);
         SetFateSlotsInteractive(false);
         acceptButton.interactable = false;
+
+        gameObject.SetActive(false);
 
     }
 
@@ -242,7 +246,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
         //Debug.Log("Got " + skill.displayName.ToString() + " skill");
         slot.Skill = skill;
         slot.Name.text = skill.displayName.ToString();
-        slot.Level.text = "Level: " + skill.level.ToString();
+        //slot.Level.text = "Level: " + skill.level.ToString();
         slot.Icon.overrideSprite = skill.skillIcon;
         slot.Cost.text = "En: " + skill.cost.ToString();
         slot.Description.text = skill.description.ToString();

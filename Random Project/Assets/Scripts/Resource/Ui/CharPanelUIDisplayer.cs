@@ -20,6 +20,8 @@ public class CharPanelUIDisplayer : MonoBehaviour {
 
     private void Awake()
     {
+        
+
         manager = GameObject.FindGameObjectWithTag("Player").GetComponent<ProgressionManager>();
         energyController = manager.GetComponent<EnergyController>();
         healthController = manager.GetComponent<HealthController>();
@@ -42,6 +44,8 @@ public class CharPanelUIDisplayer : MonoBehaviour {
         {
             fateInfoPanels[i].gameObject.SetActive(false);
         }
+
+        gameObject.SetActive(false);
     }
 
 
@@ -122,7 +126,7 @@ public class CharPanelUIDisplayer : MonoBehaviour {
     void UpgradeFateInfoPanel(FateInfoPanel panel, ProgressionManager.Fate fate)
     {
        
-        Debug.Log("UpgradeFateSlot: upgrade FateInfoPanel " + panel.Name);
+        //Debug.Log("UpgradeFateSlot: upgrade FateInfoPanel " + panel.Name);
 
         // Find the matching fate from chosenFates
 

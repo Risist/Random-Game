@@ -40,6 +40,14 @@ public class ProgressionManager : MonoBehaviour {
                                                  "Increases HP regeneration", /*"Increases XP gained"*/ };
 
         possibleFates = new List<Fate>();
+        slots = new SkillSlot[4]
+        {
+            new SkillSlot("Fire1"),
+            new SkillSlot("Fire2"),
+            new SkillSlot("Fire3"),
+            new SkillSlot("Movement")
+        };
+
         //Debug.Log(ProgressionManager Awake: possibleFateNames.Length);
         for (int i = 0; i < possibleFateNames.Length; i++)
         {
@@ -147,11 +155,11 @@ public class ProgressionManager : MonoBehaviour {
         {
             if (("Fate: " + possibleFates[idx].Name) == name)
             {
-                Debug.Log("GetFateByName: found fate " + name + " at " + idx);
+                //Debug.Log("GetFateByName: found fate " + name + " at " + idx);
                 return possibleFates[idx];
             }
         }
-        Debug.Log("GetFateByName: Fate with such name wasn't found");
+        //Debug.Log("GetFateByName: Fate with such name wasn't found");
         return null;
     }
 
@@ -185,7 +193,7 @@ public class ProgressionManager : MonoBehaviour {
         for (int idx = 0; idx < chosenFates.Length; idx++)
             if (chosenFates[idx] == null)
             {
-                Debug.Log("UnlockFate: Assigned fate " + fate.Name + " to chosenFates[" + idx + "]");
+                //Debug.Log("UnlockFate: Assigned fate " + fate.Name + " to chosenFates[" + idx + "]");
                 chosenFates[idx] = fate;
                 --leftSkillPoints;
 
@@ -195,7 +203,7 @@ public class ProgressionManager : MonoBehaviour {
                 return true;
             }
 
-        Debug.Log("UnlockFate: ERROR: No chosenFates slot selected!");
+        //Debug.Log("UnlockFate: ERROR: No chosenFates slot selected!");
         return false;
     }
 
@@ -205,7 +213,7 @@ public class ProgressionManager : MonoBehaviour {
         for (int idx = 0; idx < chosenFates.Length; idx++)
             if (chosenFates[idx] == null)
             {
-                Debug.Log("UnlockFate: Assigned fate " + name + " to chosenFates[" + idx + "]");
+                //Debug.Log("UnlockFate: Assigned fate " + name + " to chosenFates[" + idx + "]");
                 chosenFates[idx] = GetFateByName(name);
                 --leftSkillPoints;
 
@@ -215,7 +223,7 @@ public class ProgressionManager : MonoBehaviour {
                 return true;
             }
 
-        Debug.Log("UnlockFate: ERROR: No chosenFates slot selected!");
+        //Debug.Log("UnlockFate: ERROR: No chosenFates slot selected!");
         return false;
     }
 
@@ -265,12 +273,12 @@ public class ProgressionManager : MonoBehaviour {
         {
             if (chosenFates[idx] == null)
             {
-                Debug.Log("IsChosenFatesFull: found empty slot in chosenFates[" + idx + "]");
+                //Debug.Log("IsChosenFatesFull: found empty slot in chosenFates[" + idx + "]");
                 return false;
             }
         }
 
-        Debug.Log("IsChosenFatesFull: chosenFates array if full");
+        //Debug.Log("IsChosenFatesFull: chosenFates array if full");
         return true;
     }
 
@@ -295,7 +303,7 @@ public class ProgressionManager : MonoBehaviour {
             // Call OnLvlUpFate method of component <FateUpgrade> to add fate bonus of upgraded fate
             gameObject.GetComponent<FateUpgrader>().OnLvlUpFate(chosenFates[idx]);
 
-            Debug.Log("UpgradeFate: Upgraded fate " + chosenFates[idx].Name + " at chosenFates[" + idx + "]");
+            //Debug.Log("UpgradeFate: Upgraded fate " + chosenFates[idx].Name + " at chosenFates[" + idx + "]");
             return true;
 
         }
@@ -325,7 +333,7 @@ public class ProgressionManager : MonoBehaviour {
             // Call OnLvlUpFate method of component <FateUpgrade> to add fate bonus of upgraded fate
             gameObject.GetComponent<FateUpgrader>().OnLvlUpFate(chosenFates[idx]);
 
-            Debug.Log("UpgradeFate: Upgraded fate " + chosenFates[idx].Name + " at chosenFates[" + idx + "]");
+            //Debug.Log("UpgradeFate: Upgraded fate " + chosenFates[idx].Name + " at chosenFates[" + idx + "]");
             return true;
 
         }
@@ -344,13 +352,20 @@ public class ProgressionManager : MonoBehaviour {
     /// Helper class for holding multiply skill slots data in compact way
     [System.Serializable]
     public class SkillSlot
-    {
+    { 
         public string KeyCode { get; set; }
         public WeaponBase SkillObject { get; set; }
+
+        public SkillSlot(string key, WeaponBase skill = null)
+        {
+            KeyCode = key;
+            SkillObject = skill;
+        }
     }
 
     // Slots for assigned skills
-    public SkillSlot[] slots = new SkillSlot[4];
+   
+    public SkillSlot[] slots;
 
     /// list of currently unlocked skills. Maintained by this script with possibility to set up initial ones in inspector; 
     public List<WeaponBase> unlockedSkills;

@@ -790,7 +790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1551857663448088
 GameObject:
   m_ObjectHideFlags: 1
@@ -2470,7 +2470,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658865134507860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.17, y: -10.05, z: 0}
+  m_LocalPosition: {x: 4, y: -9.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4682030580088866}
@@ -2703,7 +2703,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1548675831968554}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -4085,7 +4085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddefc0efd5fa7046b0902034b8a23a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -4121,11 +4120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
-    velocityDamping: 0.995
+    velocityDamping: 0.9
     forceDamping: 0
     inverseMass: 1
   increaseCostForce: 5.5
@@ -4157,7 +4155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddefc0efd5fa7046b0902034b8a23a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -4210,7 +4207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea40b640f514964b96040d3fcce17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -4239,7 +4235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41996a4982e157643bd2ab1674d86833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0, y: -175}
+  force: {x: 0, y: -300}
   ignoreTrigger: 1
 --- !u!114 &114071869231799218
 MonoBehaviour:
@@ -4268,11 +4264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
-    velocityDamping: 0.995
+    velocityDamping: 0.9
     forceDamping: 0
     inverseMass: 1
   increaseCostForce: 5.5
@@ -4350,7 +4345,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -25
+    damage: -19
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -4413,7 +4408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea40b640f514964b96040d3fcce17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -4442,14 +4436,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea40b640f514964b96040d3fcce17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
     velocityDamping: 0.995
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 4
+  increaseCostForce: 5
   cost: 10
   cd:
     actualTime: 0
@@ -4508,7 +4501,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -32.5
+    damage: -20
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -4590,7 +4583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -4658,7 +4650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -4730,15 +4721,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
-    velocityDamping: 0.99
+    velocityDamping: 0.95
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 10
-  cost: 25
+  increaseCostForce: 6
+  cost: 20
   cd:
     actualTime: 0
     cd: 0.75
@@ -4784,7 +4774,7 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -12.5
+    damage: -9.5
   damageExit:
     damage: 0
   ignoreTag: noTag
@@ -4804,7 +4794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1017fd7788365b443a17c11712d96242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -4851,7 +4840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddefc0efd5fa7046b0902034b8a23a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -4904,14 +4892,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
-    velocityDamping: 0.995
+    velocityDamping: 0.9
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 7.5
+  increaseCostForce: 0
   cost: 20
   cd:
     actualTime: 0
@@ -5012,7 +4999,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddefc0efd5fa7046b0902034b8a23a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -5076,7 +5062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1017fd7788365b443a17c11712d96242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -5118,7 +5103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -5261,7 +5245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea40b640f514964b96040d3fcce17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -5303,7 +5286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41996a4982e157643bd2ab1674d86833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0, y: 850}
+  force: {x: 0, y: 1250}
   ignoreTrigger: 1
 --- !u!114 &114687892731009294
 MonoBehaviour:
@@ -5335,15 +5318,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea40b640f514964b96040d3fcce17b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
     velocityDamping: 0.975
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 2
-  cost: 13
+  increaseCostForce: 4
+  cost: 15
   cd:
     actualTime: 0
     cd: 0.7
@@ -5388,7 +5370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddefc0efd5fa7046b0902034b8a23a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -5475,7 +5456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a793e6386e3552e45b3db390eb75fa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -5524,7 +5504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddefc0efd5fa7046b0902034b8a23a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -5608,7 +5587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddefc0efd5fa7046b0902034b8a23a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -5644,14 +5622,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
-    velocityDamping: 0.99
+    velocityDamping: 0.9
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 4
+  increaseCostForce: 0
   cost: 15
   cd:
     actualTime: 0
@@ -5680,7 +5657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredFates: []
   requiredSkills: []
   increaseCost:
     value: 0
@@ -5732,25 +5708,25 @@ MonoBehaviour:
   skillPanel: {fileID: 0}
   assignmentPanel: {fileID: 0}
   lvl: 1
-  leftSkillPoints: 0
+  leftSkillPoints: 10
   requiredXpBase: 1
   requiredXpScale: 2
-  maxFateLvl: 5
-  chosenFates:
-  - name: 
-    lvl: 0
-  - name: 
-    lvl: 0
-  slots:
-  - keyCode: Fire1
-    skillObject: {fileID: 114694436802871232}
-  - keyCode: Fire2
-    skillObject: {fileID: 114663683530094856}
-  - keyCode: Fire3
-    skillObject: {fileID: 114165638163536218}
-  - keyCode: Movement
-    skillObject: {fileID: 114168460960537296}
-  unlockedSkills:
+  possibleFateNames: []
+  possibleFateIcons:
+  - {fileID: 21300122, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  - {fileID: 21300110, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  - {fileID: 21300100, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  - {fileID: 21300144, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  - {fileID: 21300102, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  possibleFateDescription: []
+  fateMaxLvl: 5
+  slots: []
+  unlockedSkills: []
+  possibleSkills:
+  - {fileID: 114015074161376348}
+  - {fileID: 114109161471209228}
+  - {fileID: 114508735480481878}
+  - {fileID: 114969801619805556}
   - {fileID: 114593491323706472}
   - {fileID: 114380739332716436}
   - {fileID: 114979770697116834}
