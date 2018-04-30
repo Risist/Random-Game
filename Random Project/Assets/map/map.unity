@@ -242,10 +242,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: black hole
   description: Spawns a black hole which pulls everything inside damaging on collision
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 0
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1640546546741108, guid: 59432a6293b06cc4a97a77921cec5119, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -301,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 0
   resource: {fileID: 387231018}
+  maxHealthDisplayScale: 1
 --- !u!114 &33892676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,6 +673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 1
   resource: {fileID: 387231018}
+  maxHealthDisplayScale: 1
 --- !u!114 &100868267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1683,10 +1684,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: rock
   description: Spawns rocks which deals damage on contact
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 0
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1904601315950934, guid: e90a0cfef88afd545b0720bca77a0715, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -1832,10 +1832,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: jump field
   description: Creates force field pushing forward all targets hit
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1550924305828402, guid: 5ed4f093cb2a0894a9683edd317b3a38, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -2486,7 +2485,6 @@ MonoBehaviour:
   description: short range aoe attack
   triggerEvent: slash
   animManager: {fileID: 387231023}
-  initialRotationToMouse: 1
 --- !u!114 &276202241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2914,48 +2912,6 @@ Transform:
   m_Father: {fileID: 230562667}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &324538987
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4862767272674392, guid: 854707274f8db4c409400352cb566062, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.92728
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862767272674392, guid: 854707274f8db4c409400352cb566062, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -5.056601
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862767272674392, guid: 854707274f8db4c409400352cb566062, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862767272674392, guid: 854707274f8db4c409400352cb566062, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862767272674392, guid: 854707274f8db4c409400352cb566062, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862767272674392, guid: 854707274f8db4c409400352cb566062, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.10748477
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862767272674392, guid: 854707274f8db4c409400352cb566062, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.9942067
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862767272674392, guid: 854707274f8db4c409400352cb566062, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 854707274f8db4c409400352cb566062, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &328989832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,7 +3237,6 @@ MonoBehaviour:
   description: A leap melee attack repeling hit targets
   triggerEvent: crush
   animManager: {fileID: 387231023}
-  initialRotationToMouse: 1
 --- !u!114 &336756274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3423,9 +3378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateProgress: 1
-  manager: {fileID: 387231026}
   skillNum: 3
-  skillIcon: {fileID: 0}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!114 &358582018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3669,7 +3624,7 @@ RectTransform:
   - {fileID: 676373610}
   - {fileID: 164820133}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.056}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3723,6 +3678,11 @@ MonoBehaviour:
   movementSpeed: 3600
   body: {fileID: 387231028}
   rotateToDirection: 1
+  xAxisCode: Horizontal
+  yAxisCode: Vertical
+  xControlAxisCode: Horizontal2
+  yControlAxisCode: Vertical2
+  pad: 0
 --- !u!114 &387231018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3884,6 +3844,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a20e3c9633c3d043baeedee2d86128d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillPanel: {fileID: 0}
+  assignmentPanel: {fileID: 0}
   lvl: 1
   leftSkillPoints: 0
   requiredXpBase: 1
@@ -5504,6 +5466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 0
   resource: {fileID: 387231025}
+  maxHealthDisplayScale: 1
 --- !u!114 &656318363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5791,6 +5754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateProgress: 1
   resource: {fileID: 387231025}
+  maxHealthDisplayScale: 1
 --- !u!114 &676626696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6042,7 +6006,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &702419706
 GameObject:
@@ -6098,10 +6062,9 @@ MonoBehaviour:
   displayName: devil wave
   description: Creates devil bomb which spawns another bombs on death making unpredictable
     destructive force
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1764599641537900, guid: e7653ac2c1d82244eaf3557cdf427f3c, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -6244,10 +6207,9 @@ MonoBehaviour:
   displayName: Poisoning knife
   description: Throws poisoning knife dealing endlesly damage over time to the target
     hit
-  animManager: {fileID: 441060267}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1876976785215474, guid: e6fa957d119895c4bbb2fd0fb633450e, type: 2}
-  freezeRotation: 1
   shootDelay:
     actualTime: 0
     cd: 0.15
@@ -6904,48 +6866,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 851696870}
---- !u!1001 &860571038
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4746020389568850, guid: 36bf35a8b8432ed41a27ba987ba9ba82, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.6322427
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746020389568850, guid: 36bf35a8b8432ed41a27ba987ba9ba82, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -4.6086774
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746020389568850, guid: 36bf35a8b8432ed41a27ba987ba9ba82, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746020389568850, guid: 36bf35a8b8432ed41a27ba987ba9ba82, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746020389568850, guid: 36bf35a8b8432ed41a27ba987ba9ba82, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746020389568850, guid: 36bf35a8b8432ed41a27ba987ba9ba82, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746020389568850, guid: 36bf35a8b8432ed41a27ba987ba9ba82, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746020389568850, guid: 36bf35a8b8432ed41a27ba987ba9ba82, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 36bf35a8b8432ed41a27ba987ba9ba82, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &884710830
 GameObject:
   m_ObjectHideFlags: 0
@@ -7562,48 +7482,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 134268b4e12c13645a44982a2c0f70f0, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &933346671
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4487249779046202, guid: 9bfd88cf35aea2a47afaeb1e25c09059, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4487249779046202, guid: 9bfd88cf35aea2a47afaeb1e25c09059, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4487249779046202, guid: 9bfd88cf35aea2a47afaeb1e25c09059, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4487249779046202, guid: 9bfd88cf35aea2a47afaeb1e25c09059, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4487249779046202, guid: 9bfd88cf35aea2a47afaeb1e25c09059, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4487249779046202, guid: 9bfd88cf35aea2a47afaeb1e25c09059, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4487249779046202, guid: 9bfd88cf35aea2a47afaeb1e25c09059, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4487249779046202, guid: 9bfd88cf35aea2a47afaeb1e25c09059, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9bfd88cf35aea2a47afaeb1e25c09059, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &942031665
 GameObject:
   m_ObjectHideFlags: 0
@@ -7656,9 +7534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateProgress: 1
-  manager: {fileID: 387231026}
   skillNum: 1
-  skillIcon: {fileID: 0}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!114 &942031668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8887,10 +8765,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: teleport
   description: throws a bullet which after a delay teleports player to the position
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1388764738251450, guid: 1503a9325bb60244b8c5e0ddb253097a, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -8984,9 +8861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateProgress: 1
-  manager: {fileID: 387231026}
   skillNum: 0
-  skillIcon: {fileID: 0}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!1 &1173893083
 GameObject:
   m_ObjectHideFlags: 0
@@ -9283,10 +9160,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: devil
   description: throws a devil bomb creating explosioins on collision
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1577014727243174, guid: 7631456d185074f49875e1438e07cc47, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.05
@@ -9592,7 +9468,6 @@ MonoBehaviour:
   description: A leap melee attack pulling enemies towards you
   triggerEvent: draw
   animManager: {fileID: 387231023}
-  initialRotationToMouse: 1
 --- !u!114 &1256567234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9881,9 +9756,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateProgress: 1
-  manager: {fileID: 387231026}
   skillNum: 2
-  skillIcon: {fileID: 0}
+  button: {fileID: 0}
+  assignmentButton: {fileID: 0}
 --- !u!114 &1300683517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10453,10 +10328,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   displayName: wind
   description: Creates wind wave damaging enemies on hit
-  animManager: {fileID: 387231022}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1314080635737764, guid: 5cadec6a40b5560459d9b8b8c160413a, type: 2}
-  freezeRotation: 0
   shootDelay:
     actualTime: 0
     cd: 0.1
@@ -10501,48 +10375,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00003624, y: -20}
   m_SizeDelta: {x: 188, y: 60}
   m_Pivot: {x: 0.5, y: 1}
---- !u!1001 &1373442228
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4731503040086196, guid: f8b31faf43ad2554e888992945db6088, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.8532
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731503040086196, guid: f8b31faf43ad2554e888992945db6088, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.8947875
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731503040086196, guid: f8b31faf43ad2554e888992945db6088, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731503040086196, guid: f8b31faf43ad2554e888992945db6088, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731503040086196, guid: f8b31faf43ad2554e888992945db6088, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731503040086196, guid: f8b31faf43ad2554e888992945db6088, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731503040086196, guid: f8b31faf43ad2554e888992945db6088, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4731503040086196, guid: f8b31faf43ad2554e888992945db6088, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f8b31faf43ad2554e888992945db6088, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1429958383
 GameObject:
   m_ObjectHideFlags: 0
@@ -11268,58 +11100,15 @@ MonoBehaviour:
   skillIcon: {fileID: 21300364, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: knife
   description: Throws knife dealing damage to the target hit
-  animManager: {fileID: 441060267}
-  animateWhenReadyOnly: 1
+  triggerEvent: slash
+  animManager: {fileID: 0}
   prefab: {fileID: 1876976785215474, guid: 9ce3876e460d8ae44b3569cd2da6b770, type: 2}
-  freezeRotation: 1
   shootDelay:
     actualTime: 0
     cd: 0.15
   rotationApplyTime:
     actualTime: 0
     cd: 0.35
---- !u!1001 &1536778070
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4798000991727568, guid: 0c9dfe0f5aba9bb4b8aa9f70961dc839, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 12.117683
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798000991727568, guid: 0c9dfe0f5aba9bb4b8aa9f70961dc839, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -5.082949
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798000991727568, guid: 0c9dfe0f5aba9bb4b8aa9f70961dc839, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798000991727568, guid: 0c9dfe0f5aba9bb4b8aa9f70961dc839, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798000991727568, guid: 0c9dfe0f5aba9bb4b8aa9f70961dc839, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798000991727568, guid: 0c9dfe0f5aba9bb4b8aa9f70961dc839, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798000991727568, guid: 0c9dfe0f5aba9bb4b8aa9f70961dc839, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798000991727568, guid: 0c9dfe0f5aba9bb4b8aa9f70961dc839, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 0c9dfe0f5aba9bb4b8aa9f70961dc839, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1546592247
 GameObject:
   m_ObjectHideFlags: 0
@@ -11553,7 +11342,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1571016943
 MonoBehaviour:
@@ -11567,6 +11356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 387231016}
+  player2: {fileID: 0}
+  multiScaleFactor: 0
   learpFactor: 1.3
   shakePositionDamping: 0.8
   shakeRotationDamping: 0.6
@@ -11583,64 +11374,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 441acc7d5b673de4da88d66ccc4a61af, type: 2}
---- !u!1001 &1583696390
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4145035440406724, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145035440406724, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145035440406724, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145035440406724, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145035440406724, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145035440406724, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145035440406724, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145035440406724, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1717314147802294, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339891481556034, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1785381272298824, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1620440339044130, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 1c007402108879541bde7030914ca0c9, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1584170878
 GameObject:
   m_ObjectHideFlags: 0
@@ -11831,7 +11564,7 @@ Transform:
   - {fileID: 1102846282}
   - {fileID: 1781194744}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1587608066
 MonoBehaviour:
@@ -12037,13 +11770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6216d841cdeed2f4fa3f1fde5d95fba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 387231026}
-  levelText: {fileID: 2065686489}
-  hpRegenText: {fileID: 1835898533}
-  enRegenText: {fileID: 1128617542}
-  skillSlot: {fileID: 114316891307496596, guid: ab21c64e16ec0354dbc337906a79162a,
-    type: 2}
-  skillContent: {fileID: 1661159085}
+  skillSlot: {fileID: 0}
 --- !u!1001 &1612387089
 Prefab:
   m_ObjectHideFlags: 0
@@ -12496,7 +12223,6 @@ MonoBehaviour:
   description: Slowly regenerates health
   triggerEvent: meditate
   animManager: {fileID: 387231023}
-  initialRotationToMouse: 1
 --- !u!1 &1725001061
 GameObject:
   m_ObjectHideFlags: 0
@@ -13550,52 +13276,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1954471307
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4870305497781256, guid: e8294d823f65740439988515d608e7d8, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 9.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 4870305497781256, guid: e8294d823f65740439988515d608e7d8, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 4870305497781256, guid: e8294d823f65740439988515d608e7d8, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4870305497781256, guid: e8294d823f65740439988515d608e7d8, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4870305497781256, guid: e8294d823f65740439988515d608e7d8, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4870305497781256, guid: e8294d823f65740439988515d608e7d8, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4870305497781256, guid: e8294d823f65740439988515d608e7d8, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4870305497781256, guid: e8294d823f65740439988515d608e7d8, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1220364565469096, guid: e8294d823f65740439988515d608e7d8, type: 2}
-      propertyPath: m_Name
-      value: Graphic Card
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e8294d823f65740439988515d608e7d8, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1965723488
 GameObject:
   m_ObjectHideFlags: 0

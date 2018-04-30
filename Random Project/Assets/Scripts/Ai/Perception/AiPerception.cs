@@ -8,7 +8,8 @@ using UnityEngine;
  */
 public class AiPerception : MonoBehaviour {
 
-	public Timer timerPerformSearch;
+    public static float scanTimeDiff = 0.25f;
+    public Timer timerPerformSearch = new Timer();
 	/// how far the field of view goes
 	public float searchDistance = 5.0f;
 	/// how many rays to shoot each search
@@ -17,6 +18,10 @@ public class AiPerception : MonoBehaviour {
 	public float coneRadius = 100.0f;
 	/// how long the target is remembered
 	public float memoryTime = 5.0f;
+
+    float scanTimeBase;
+
+    static float scanDifference;
 
 	public class MemoryItem
 	{
@@ -27,15 +32,21 @@ public class AiPerception : MonoBehaviour {
 	[System.NonSerialized]
 	public List<MemoryItem> memory = new List<MemoryItem>();
 
-	// Update is called once per frame
-	void Update ()
+    private void Start()
+    {
+        scanTimeBase = timerPerformSearch.cd;
+        timerPerformSearch.cd = scanTimeBase + Random.value * scanTimeDiff;
+    }
+
+    // Update is called once per frame
+    void Update ()
 	{
 		if(timerPerformSearch.isReadyRestart())
 		{
 			PerformClear();
 			PerformSearchNonTransparent();
-			//PerformSearch();
-		}
+            //PerformSearch();
+        }
 	}
 
 	/// <summary>

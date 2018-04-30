@@ -5,9 +5,13 @@ using UnityEngine;
 public class AiAllowLocationValid : AiBehaviourBase {
 
 	public AiLocationBase target;
+    public bool negation = false;
 
 	public override bool CanEnter()
 	{
-		return target && target.IsValid();
+        if(negation)
+            return target && !target.IsValid();
+        else
+           return target && target.IsValid();
 	}
 }

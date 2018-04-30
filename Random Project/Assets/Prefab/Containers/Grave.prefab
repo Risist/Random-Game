@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1310367885402726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3309584, y: 2.149093, z: 0}
+  m_LocalPosition: {x: -9.479206, y: 25.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4856240053008686}
@@ -164,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceBase: -1600
   forceScale: -500
+  forceMax: 4500
   explosionRadius: 3
   removeDelay: 1.5
   mass: 1.5
@@ -182,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114726392909474584}
   nObjectsToSpawnMin: 0
-  nObjectsToSpawnMax: 2
+  nObjectsToSpawnMax: 4
 --- !u!114 &114316750519509814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,7 +200,7 @@ MonoBehaviour:
   randomRotation: 1
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
+  - prefab: {fileID: 1493591712694552, guid: 1f8aa074136882448866c18f9280ae1c, type: 2}
     chance: 0
     minimalDistance: 2
     maximalDistance: 5
@@ -238,8 +239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  actual: 300
-  max: 500
+  actual: 750
+  max: 1500
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
@@ -276,38 +277,26 @@ MonoBehaviour:
   randomRotation: 1
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
-    chance: 1
-    minimalDistance: 2
-    maximalDistance: 4
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1569415996061464, guid: 897a36749ef0b684d85bb99ee1848043, type: 2}
-    chance: 1
-    minimalDistance: 2
-    maximalDistance: 4
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
   - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
-    chance: 2
+    chance: 0.25
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
-    chance: 5
+  - prefab: {fileID: 1493591712694552, guid: 1f8aa074136882448866c18f9280ae1c, type: 2}
+    chance: 1
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1804277989348560, guid: 6d19594edd6add648a5c983b7862f6a6, type: 2}
-    chance: 0.35
+  - prefab: {fileID: 1679164877005704, guid: 941a23078e1e2ee4f930ebe5b8cd3737, type: 2}
+    chance: 1
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 0}
-    chance: 10
+    chance: 3
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}

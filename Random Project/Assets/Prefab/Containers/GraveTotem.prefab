@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceBase: -1600
   forceScale: -500
+  forceMax: 4500
   explosionRadius: 3
   removeDelay: 1.5
   mass: 1.5
@@ -326,7 +327,7 @@ MonoBehaviour:
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1903837467419714, guid: ab5f3ceb2799ed34f8b7ae91b09522c3, type: 2}
+  - prefab: {fileID: 1493591712694552, guid: 1f8aa074136882448866c18f9280ae1c, type: 2}
     chance: 22.5
     minimalDistance: 2
     maximalDistance: 4

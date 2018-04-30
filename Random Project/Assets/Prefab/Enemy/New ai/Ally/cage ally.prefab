@@ -310,6 +310,8 @@ GameObject:
   - component: {fileID: 114219027202721150}
   - component: {fileID: 114084334332242344}
   - component: {fileID: 114365816911183722}
+  - component: {fileID: 114576131362480282}
+  - component: {fileID: 114825500884114904}
   m_Layer: 0
   m_Name: cage ally
   m_TagString: rock
@@ -391,9 +393,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1935757045948808}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.2616997, y: 4.8830395, z: 0}
-  m_LocalScale: {x: 1.42, y: 1.23, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.35852, y: 1.67924, z: 0}
+  m_LocalScale: {x: 1.0518519, y: 0.82000005, z: 1}
   m_Children:
   - {fileID: 4663620257341002}
   - {fileID: 4924293918209080}
@@ -673,6 +675,12 @@ MonoBehaviour:
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
+  - prefab: {fileID: 1204624382866700, guid: d3ce2fe9f4e71f4419ddab27871e58c8, type: 2}
+    chance: 2
+    minimalDistance: 1
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114365816911183722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -686,11 +694,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceBase: -1600
   forceScale: -500
+  forceMax: 4500
   explosionRadius: 3
   removeDelay: 1.5
   mass: 1
   linearDamping: 0.1
   angularDamping: 0.1
+--- !u!114 &114576131362480282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1935757045948808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3db3dbb54a78b4d9c63366c14b75e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceModificator: 1
+  blocksVision: 1
+  type: obstacle
+  fraction: {fileID: 114825500884114904}
+  health: {fileID: 114815649811976632}
+  mind: {fileID: 0}
+  movement: {fileID: 0}
 --- !u!114 &114815649811976632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -708,6 +735,21 @@ MonoBehaviour:
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
+--- !u!114 &114825500884114904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1935757045948808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f966943b0e3d6bd40b07a6b0569998f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fractionName: dunnoBuilding
+  friendlyFractions:
+  - dunno
+  enemyFractions: []
 --- !u!212 &212007441081734844
 SpriteRenderer:
   m_ObjectHideFlags: 1
