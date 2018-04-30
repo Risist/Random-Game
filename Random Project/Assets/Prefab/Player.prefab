@@ -790,7 +790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1551857663448088
 GameObject:
   m_ObjectHideFlags: 1
@@ -2703,7 +2703,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1548675831968554}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -4135,7 +4135,7 @@ MonoBehaviour:
     cd: 0.75
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  displayName: slash
+  displayName: axe slash
   description: 
   triggerEvents:
   - axe slash
@@ -4194,9 +4194,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Health
-  actual: 125
-  max: 125
-  regeneration: 2
+  actual: 200
+  max: 200
+  regeneration: 2.25
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
 --- !u!114 &114061354262153132
@@ -4239,7 +4239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41996a4982e157643bd2ab1674d86833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0, y: -175}
+  force: {x: 0, y: -300}
   ignoreTrigger: 1
 --- !u!114 &114071869231799218
 MonoBehaviour:
@@ -4282,7 +4282,7 @@ MonoBehaviour:
     cd: 0.75
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  displayName: slash
+  displayName: axe push
   description: 
   triggerEvents:
   - axe push
@@ -4767,9 +4767,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Energy
-  actual: 100
-  max: 100
-  regeneration: 15
+  actual: 150
+  max: 150
+  regeneration: 17
 --- !u!114 &114403699061410602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4808,11 +4808,11 @@ MonoBehaviour:
   requiredSkills: []
   increaseCost:
     value: 0
-    velocityDamping: 0.9
+    velocityDamping: 0.995
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 0
-  cost: 35
+  increaseCostForce: 5
+  cost: 25
   cd:
     actualTime: 0
     cd: 0.5
@@ -4918,7 +4918,7 @@ MonoBehaviour:
     cd: 0.65
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  displayName: slash
+  displayName: axe charge
   description: 
   triggerEvents:
   - axe charge
@@ -5303,7 +5303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41996a4982e157643bd2ab1674d86833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0, y: 850}
+  force: {x: 0, y: 1250}
   ignoreTrigger: 1
 --- !u!114 &114687892731009294
 MonoBehaviour:
@@ -5528,11 +5528,11 @@ MonoBehaviour:
   requiredSkills: []
   increaseCost:
     value: 0
-    velocityDamping: 0.9
+    velocityDamping: 0.995
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 0
-  cost: 35
+  increaseCostForce: 10
+  cost: 25
   cd:
     actualTime: 0
     cd: 2
@@ -5658,7 +5658,7 @@ MonoBehaviour:
     cd: 0.5
   movement: {fileID: 114687892731009294}
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  displayName: slash
+  displayName: axe jump
   description: 
   triggerEvents:
   - axe jump
@@ -5743,13 +5743,13 @@ MonoBehaviour:
     lvl: 0
   slots:
   - keyCode: Fire1
-    skillObject: {fileID: 114694436802871232}
+    skillObject: {fileID: 114015074161376348}
   - keyCode: Fire2
-    skillObject: {fileID: 114663683530094856}
+    skillObject: {fileID: 114109161471209228}
   - keyCode: Fire3
-    skillObject: {fileID: 114165638163536218}
+    skillObject: {fileID: 114508735480481878}
   - keyCode: Movement
-    skillObject: {fileID: 114168460960537296}
+    skillObject: {fileID: 114969801619805556}
   unlockedSkills:
   - {fileID: 114593491323706472}
   - {fileID: 114380739332716436}

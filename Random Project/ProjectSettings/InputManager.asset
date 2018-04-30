@@ -188,7 +188,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 0
     altNegativeButton: 
-    altPositiveButton: joystick button 4
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -204,7 +204,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 1
     altNegativeButton: 
-    altPositiveButton: joystick button 5
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -220,7 +220,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 2
     altNegativeButton: 
-    altPositiveButton: joystick button 6
+    altPositiveButton: joystick button 5
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -284,7 +284,7 @@ InputManager:
     negativeButton: 
     positiveButton: escape
     altNegativeButton: 
-    altPositiveButton: joystick button 9
+    altPositiveButton: joystick button 7
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -323,7 +323,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 2
+    axis: 3
     joyNum: 0
   - serializedVersion: 3
     m_Name: Vertical2_pad
@@ -337,9 +337,9 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 0
-    invert: 0
+    invert: 1
     type: 2
-    axis: 3
+    axis: 4
     joyNum: 0
   - serializedVersion: 3
     m_Name: Movement_pad
@@ -348,12 +348,44 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 3
     altNegativeButton: 
-    altPositiveButton: joystick button 7
+    altPositiveButton: joystick button 4
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
     snap: 0
-    invert: 1
+    invert: 0
     type: 0
     axis: 3
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Fire1_pad
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 9
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Fire2_pad
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 8
     joyNum: 0

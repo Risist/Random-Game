@@ -1382,6 +1382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114918520945501400}
+  negation: 0
 --- !u!114 &114222511500683366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1482,6 +1483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114293521911639618}
+  negation: 0
 --- !u!114 &114293521911639618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1607,6 +1609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114918520945501400}
+  negation: 0
 --- !u!114 &114407325309786526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1679,6 +1682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114894126981060660}
+  negation: 0
 --- !u!114 &114444675661533246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1748,6 +1752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114894126981060660}
+  negation: 0
 --- !u!114 &114456192258821898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2028,6 +2033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114894126981060660}
+  negation: 0
 --- !u!114 &114607413262041682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2142,6 +2148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114894126981060660}
+  negation: 0
 --- !u!114 &114719793450430504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2373,11 +2380,10 @@ MonoBehaviour:
   fractionName: enemy
   friendlyFractions: []
   enemyFractions:
-  - enemy
+  - ally
   - dunno
   - animal
-  - dunnoBuilding
-  - ally
+  - Player
 --- !u!114 &114918520945501400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2409,6 +2415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114634515872074130}
+  negation: 0
 --- !u!114 &114935044323636220
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -21,8 +21,6 @@ public class AiPerception : MonoBehaviour {
 
     float scanTimeBase;
 
-    static float scanDifference;
-
 	public class MemoryItem
 	{
 		public Timer remainedTime;

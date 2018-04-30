@@ -35,6 +35,14 @@ public class ProgressionManager : MonoBehaviour {
         possibleFateNames[4] = "Earth";
         possibleFateNames[5] = "Wind";
 
+
+        /// pad key code transform
+        if (GetComponent<PlayerMovement>().pad)
+        {
+            for (int i = 0; i < slots.Length; ++i)
+                slots[i].keyCode += "_pad";
+        }
+
         /// initial binding
         for (int idx = 0; idx < slots.Length; idx++)
         {
@@ -45,7 +53,6 @@ public class ProgressionManager : MonoBehaviour {
                 assignmentPanel.skillButtons[idx].SetSkill(slots[idx].skillObject);
             }
         }
-
     }
 
 #region lvl
