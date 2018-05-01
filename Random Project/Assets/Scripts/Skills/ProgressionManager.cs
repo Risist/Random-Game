@@ -37,10 +37,11 @@ public class ProgressionManager : MonoBehaviour {
 
 
         /// pad key code transform
-        if (GetComponent<PlayerMovement>().pad)
+        var mov = GetComponent<PlayerMovement>();
+        if (mov.pad)
         {
             for (int i = 0; i < slots.Length; ++i)
-                slots[i].keyCode += "_pad";
+                slots[i].keyCode += "_pad" + mov.playerId;
         }
 
         /// initial binding

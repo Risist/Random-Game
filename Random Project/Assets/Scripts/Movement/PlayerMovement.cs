@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public string xControlAxisCode = "Horizontal2";
     public string yControlAxisCode = "Vertical2";
     public bool pad = false;
+    public int playerId = 1;
 
     bool atMove = false;
     bool blockMovement = false;
@@ -26,10 +27,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (pad)
         {
-            xAxisCode += "_pad";
-            yAxisCode += "_pad";
-            xControlAxisCode += "_pad";
-            yControlAxisCode += "_pad";
+            xAxisCode += "_pad" + playerId;
+            yAxisCode += "_pad" + playerId;
+            xControlAxisCode += "_pad" + playerId;
+            yControlAxisCode += "_pad" + playerId;
         }
     }
 
