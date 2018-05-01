@@ -72,7 +72,7 @@ public class CharPanelUIDisplayer : MonoBehaviour {
     // Function for instantiating skillSlot in skill book
     public SkillSlot InstantiateSkillSlot(WeaponBase skill)
     {
-        Debug.Log("Instantiating skilSlot for " + skill.name);
+        //Debug.Log("Instantiating skilSlot for " + skill.name);
         var sSlot = Instantiate(skillSlot) as SkillSlot;
         sSlot.Skill = skill;
         sSlot.gameObject.SetActive(true);

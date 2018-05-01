@@ -24,10 +24,10 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetButton("Cancel"))
-		{
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-		}
+		//if(Input.GetButton("Cancel"))
+		//{
+		//	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		//}
 
 		if(inactiveTimeCheck.isReadyRestart() && player)
 		{
