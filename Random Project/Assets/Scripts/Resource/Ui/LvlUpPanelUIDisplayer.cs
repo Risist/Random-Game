@@ -42,7 +42,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
         SetFateSlotsInteractive(false);
         acceptButton.interactable = false;
 
-        gameObject.SetActive(false);
+
 
     }
 
@@ -56,6 +56,8 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
 
         for (int i = 0; i < skillSelectionSlots.Length; i++)
             GenerateRandomSkillSlot(skillSelectionSlots[i]);
+
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -127,7 +129,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
             }
 
             // If selected slot was Fate slot
-            if (selectedToggle.GetComponentInParent<FateSelectionSlot>())
+            else if (selectedToggle.GetComponentInParent<FateSelectionSlot>())
             {
                 // Get references to FateSelectionSlot and Fate from selected toggle
                 FateSelectionSlot fateSlot = selectedToggle.GetComponentInParent<FateSelectionSlot>();
