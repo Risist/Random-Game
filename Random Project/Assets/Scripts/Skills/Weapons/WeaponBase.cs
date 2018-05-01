@@ -20,7 +20,7 @@ public class WeaponBase : MonoBehaviour
 		{
 			bool found = false;
 			foreach (var itOwned in manager.chosenFates)
-				if (itOwned.Name == itRequired.Name && itOwned.Lvl >= itRequired.Lvl)
+				if (itOwned.name == itRequired.name && itOwned.lvl >= itRequired.lvl)
 				{
 					found = true;
 					break;

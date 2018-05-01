@@ -10767,6 +10767,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114984379929334018, guid: d0414571b25e6d149ab429944d2dfc22,
+        type: 2}
+      propertyPath: slots.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4914286268484342, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -10799,11 +10804,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 47
       objectReference: {fileID: 0}
-    - target: {fileID: 114731959472981860, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: ui
-      value: 
-      objectReference: {fileID: 1950901756}
     - target: {fileID: 114984379929334018, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
       propertyPath: skillPanel
@@ -10814,35 +10814,30 @@ Prefab:
       propertyPath: assignmentPanel
       value: 
       objectReference: {fileID: 1437561662}
+    - target: {fileID: 114731959472981860, guid: d0414571b25e6d149ab429944d2dfc22,
+        type: 2}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1950901756}
     - target: {fileID: 114984379929334018, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
-      propertyPath: leftSkillPoints
-      value: 10
+      propertyPath: slots.Array.data[0].keyCode
+      value: Fire1
       objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
+    - target: {fileID: 114984379929334018, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
-      propertyPath: maxHpBonus
-      value: 25
+      propertyPath: slots.Array.data[1].keyCode
+      value: Fire2
       objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
+    - target: {fileID: 114984379929334018, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
-      propertyPath: regHpBonus
-      value: 2
+      propertyPath: slots.Array.data[2].keyCode
+      value: Fire3
       objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
+    - target: {fileID: 114984379929334018, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
-      propertyPath: maxEnergyBonus
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: regEnergyBonus
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: movementSpeedBonus
-      value: 5
+      propertyPath: slots.Array.data[3].keyCode
+      value: Movement
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
@@ -19497,7 +19492,7 @@ Prefab:
     - target: {fileID: 224780395519319632, guid: c46ef9ec7dd1253499d59d2a8c96664c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224392602612620590, guid: c46ef9ec7dd1253499d59d2a8c96664c,
         type: 2}

@@ -104,7 +104,7 @@ public class CharPanelUIDisplayer : MonoBehaviour {
         for (int idx = 0; idx < fateInfoPanels.Length; idx++)
         {
             //Debug.Log(fateInfoPanels[idx].Name.text);
-            if (fateInfoPanels[idx].Name.text == "Fate: " + fate.Name)
+            if (fateInfoPanels[idx].Name.text == "Fate: " + fate.name)
             {
                 UpgradeFateInfoPanel(fateInfoPanels[idx], fate);
                 return;
@@ -118,11 +118,11 @@ public class CharPanelUIDisplayer : MonoBehaviour {
     {
         panel.gameObject.SetActive(true);
         panel.IsOccupied = true;
-        panel.Name.text = "Fate: " + fate.Name;
-        panel.Level.text = "Level: " + fate.Lvl.ToString();
-        panel.Icon.overrideSprite = fate.Icon;
-        panel.Description.text = fate.Description;
-        panel.Description.text = fate.Description;
+        panel.Name.text = "Fate: " + fate.name;
+        panel.Level.text = "Level: " + fate.lvl.ToString();
+        panel.Icon.overrideSprite = fate.icon;
+        panel.Description.text = fate.description;
+        panel.Description.text = fate.description;
     }
 
     // Upgrade FateInfoPanel information, doesn't affect chosenFates fields 
@@ -134,8 +134,8 @@ public class CharPanelUIDisplayer : MonoBehaviour {
         // Find the matching fate from chosenFates
 
 
-        panel.Level.text = "Level: " + fate.Lvl.ToString();
-        panel.Description.text = fate.Description;
+        panel.Level.text = "Level: " + fate.lvl.ToString();
+        panel.Description.text = fate.description;
         
     }
 

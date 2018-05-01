@@ -16,7 +16,7 @@ public class FateUpgrader : MonoBehaviour {
 
 	public void OnLvlUpFate(ProgressionManager.Fate fate)
 	{
-		switch(fate.Name)
+		switch(fate.name)
 		{
 		case "Melee":
 			{
