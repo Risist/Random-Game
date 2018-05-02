@@ -14,7 +14,7 @@ public class FateUpgrader : MonoBehaviour {
 	public float movementSpeedBonus;
 	public float xpGainBonus;
 
-	void OnLvlUpFate(ProgressionManager.Fate fate)
+	public void OnLvlUpFate(ProgressionManager.Fate fate)
 	{
 		switch(fate.name)
 		{
