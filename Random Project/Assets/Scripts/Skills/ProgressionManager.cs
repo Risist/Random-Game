@@ -20,6 +20,13 @@ public class ProgressionManager : MonoBehaviour {
         //assignmentPanel = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>();
 
         possibleSkills = GetComponentsInChildren<WeaponBase>(true);
+
+        // set isUnlocked for initially unlocked skills
+        foreach (var skill in unlockedSkills)
+        {
+            skill.isUnlocked = true;
+        }
+
     }
 
 
@@ -378,6 +385,7 @@ public class ProgressionManager : MonoBehaviour {
 		foreach (var it in possibleSkills)
 			if (!it.isUnlocked)
 				skills.Add(it);
+
 		return skills[Random.Range(0,skills.Count)];
 	}
 

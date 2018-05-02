@@ -112,12 +112,11 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
                 // Instantiate a new SkillSlot with learned skill in Skill book in CharPanel 
                 charPanel.InstantiateSkillSlot(skill);
 
+                // Unlock skill for manager
+                manager.UnlockSkill(skill);
 
                 // Generate new random SkillSlot in LvlUpPanel
                 GenerateRandomSkillSlot(skillSlot);
-
-                // Unlock skill for manager
-                manager.UnlockSkill(skill);
             }
 
             // If selected slot was Fate slot
@@ -231,7 +230,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
 
     void GenerateRandomSkillSlot(SkillSelectionSlot slot)
     {
-        if (manager.unlockedSkills.Count == manager.possibleSkills.Length)
+        if (manager.unlockedSkills.Count == manager.possibleSkills.Length || manager.unlockedSkills.Count == manager.possibleSkills.Length - 1)
         {
             slot.gameObject.SetActive(false);
             return;

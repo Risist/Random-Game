@@ -10,6 +10,7 @@ public class MenuPanelUIDisplayer : MonoBehaviour {
     public static bool IsGamePaused = false;
     TogglePanel panel;
     public GameObject mainMenuUI;
+    public GameObject optionsMenuUI;
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class MenuPanelUIDisplayer : MonoBehaviour {
         }
         else
         {
-            if (mainMenuUI.activeSelf)
+            if (mainMenuUI.activeSelf || optionsMenuUI.activeSelf)
                 Pause();
             else
                 Resume();
