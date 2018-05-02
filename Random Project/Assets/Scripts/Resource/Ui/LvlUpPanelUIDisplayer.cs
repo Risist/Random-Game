@@ -26,12 +26,6 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
         acceptButton = gameObject.transform.Find("AcceptButton").GetComponent<Button>();
         toggleGroup = gameObject.transform.Find("SelectionBlock").GetComponent<ToggleGroup>();
 
-        //// get possible locked fates
-        //GameObject[] fates = GameObject.FindGameObjectsWithTag("FateSelectionSlot");
-        //fateSelectionSlots = new FateSelectionSlot[fates.Length];
-        //for (int i = 0; i < fates.Length; i++)
-        //    fateSelectionSlots[i] = fates[i].gameObject.GetComponent<FateSelectionSlot>();
-
         //// get possible locked skills
         //GameObject[] skills = GameObject.FindGameObjectsWithTag("SkillSelectionSlot");
         //skillSelectionSlots = new SkillSelectionSlot[skills.Length];
@@ -41,8 +35,6 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
         SetSkillSlotsInteractive(false);
         SetFateSlotsInteractive(false);
         acceptButton.interactable = false;
-
-
 
     }
 
@@ -69,8 +61,8 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
             for(int idx = 0; idx < fateSelectionSlots.Length; idx++)
             {
                 // If we have such skill in chosenFates and it is max level, set to false
-                if (manager.FindChosenFate(fateSelectionSlots[idx].fateName.text) != -1 && 
-                    manager.chosenFates[manager.FindChosenFate(fateSelectionSlots[idx].fateName.text)].lvl >= manager.maxFateLvl) 
+                if (manager.FindChosenFate(fateSelectionSlots[idx].fateName.text) != -1 &&
+                    manager.chosenFates[manager.FindChosenFate(fateSelectionSlots[idx].fateName.text)].lvl >= manager.maxFateLvl)
                 {
                     SetFateSlotInteractive(fateSelectionSlots[idx], false);
                     continue;
@@ -107,7 +99,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
             // Take selected slot 
             var selectedToggle = toggleGroup.ActiveToggles().First();
 
-            Debug.Log("OnSubmit: Submit button clicked. " + selectedToggle.name + " is selected");
+            //Debug.Log("OnSubmit: Submit button clicked. " + selectedToggle.name + " is selected");
             toggleGroup.SetAllTogglesOff();
 
             // If selected slot was Skill slot
@@ -124,7 +116,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
                 // Generate new random SkillSlot in LvlUpPanel
                 GenerateRandomSkillSlot(skillSlot);
 
-                // Unlock skill fro manager
+                // Unlock skill for manager
                 manager.UnlockSkill(skill);
             }
 
@@ -135,10 +127,12 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
                 FateSelectionSlot fateSlot = selectedToggle.GetComponentInParent<FateSelectionSlot>();
                 ProgressionManager.Fate selectedFate = manager.GetFateByName(fateSlot.fateName.text);
 
+                //Debug.Log("OnSubmit: selectedFate.name = " + selectedFate.name);
+
                 //If there is no such fate in chosen fates
                 if (manager.FindChosenFate(selectedFate) == -1)
                 {
-                    Debug.Log("OnSubmit: create new fateInfoPanel for " + selectedFate.name);
+                    //Debug.Log("OnSubmit: create new fateInfoPanel for " + selectedFate.name);
 
                     // Unlock a new fate
                     manager.UnlockFate(selectedFate);
@@ -146,23 +140,27 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
                     // Instantiate a new fateInfoPanel in charPanel
                     charPanel.InitializeFateInfoPanel(selectedFate);
 
+                    // Update UI for fate
+                    UpdateFateSlot(fateSlot, selectedFate);
+
                 }
                 // else upgrade the current fate in chosen fates
                 else
                 {
-                    Debug.Log("OnSubmit: update fateInfoPanel for " + selectedFate.name);
+                    //Debug.Log("OnSubmit: update fateInfoPanel for " + selectedFate.name);
+
+                    var sFate = manager.chosenFates[manager.FindChosenFate(selectedFate)]; 
 
                     // Upgrade existing fate
-                    manager.LvlUpFate(selectedFate);
+                    manager.LvlUpFate(sFate);
 
                     // Upgrade a FateInfoPanel in CharacterPanel
-                    charPanel.UpgradeFateInfoPanel(selectedFate);
+                    charPanel.UpdateFateInfoPanel(sFate);
+
+                    // Update UI for fate
+                    UpdateFateSlot(fateSlot, sFate);
 
                 }
-
-                // Update UI for fate
-                UpgradeFateSlot(fateSlot, selectedFate);
-
 
             }
 
@@ -193,19 +191,12 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
             slot.GetComponent<Toggle>().interactable = mode;
     }
 
-    // Set skill/fate selection slot interactibility on/off 
-    //void SetToggleInteractible(Toggle toggle, bool mode)
-    //{
-    //    toggle.interactable = mode;
-    //}
-
-
     // Generate rangom FateSelectionSlots by picking random unchosen fate from list and applying its properties to slot 
     void GenerateRandomFateSlot(FateSelectionSlot slot)
     {
         ProgressionManager.Fate fate = manager.GetRandomUnchosenFate();
         //slot.fate = fate;
-        Debug.Log("GenerateRandomFateSlot: got fate " + fate.name + " from unchosen fates");
+        //Debug.Log("GenerateRandomFateSlot: got fate " + fate.name + " from unchosen fates");
         slot.fateName.text = "Fate: " + fate.name;
         slot.level.text = "Level: " + fate.lvl.ToString();
         slot.icon.overrideSprite = fate.icon;
@@ -213,17 +204,18 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
     }
 
     // Upgrade FateSelectionSlot information, doesn't affect chosenFates fields 
-    void UpgradeFateSlot(FateSelectionSlot slot, ProgressionManager.Fate fate)
+    void UpdateFateSlot(FateSelectionSlot slot, ProgressionManager.Fate fate)
     {
-        if(slot.level.text != "Level: " + manager.maxFateLvl.ToString())
+        if (slot.level.text != "Level: " + manager.maxFateLvl.ToString())
         {
-            Debug.Log("UpgradeFateSlot: upgrade FateSelectionSlot " + slot.fateName);
-
-            // Find the matching fate from chosenFates
-            
 
             slot.level.text = "Level: " + (fate.lvl + 1).ToString();
-            slot.description.text = fate.description;
+            //slot.description.text = fate.description;
+        }
+        else
+        {
+            slot.level.text = "Level: MAX";
+            //slot.description.text = fate.description;
         }
 
     }
@@ -239,13 +231,23 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
 
     void GenerateRandomSkillSlot(SkillSelectionSlot slot)
     {
+        if (manager.unlockedSkills.Count == manager.possibleSkills.Length)
+        {
+            slot.gameObject.SetActive(false);
+            return;
+        }
+
         WeaponBase skill;
+
         do
         {
+
             skill = manager.GetRandomLockedSkill();
+            //Debug.Log("GenerateRandomSkillSlot: got random locked skill " + skill.name);
+            //Debug.Log("GenerateRandomSkillSlot: skill in selection slot = " + IsInSkillSelectionSlot(skill));
         } while (IsInSkillSelectionSlot(skill));
 
-        Debug.Log("Got " + skill.displayName.ToString() + " skill");
+        //Debug.Log("Got " + skill.displayName.ToString() + " skill");
         slot.skill = skill;
         slot.skillName.text = skill.displayName.ToString();
         //slot.level.text = "Level: " + skill.level.ToString();

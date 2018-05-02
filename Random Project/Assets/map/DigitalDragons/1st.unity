@@ -10901,11 +10901,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 47
       objectReference: {fileID: 0}
-    - target: {fileID: 114731959472981860, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: ui
-      value: 
-      objectReference: {fileID: 1950901756}
     - target: {fileID: 114984379929334018, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
       propertyPath: skillPanel
@@ -10916,35 +10911,15 @@ Prefab:
       propertyPath: assignmentPanel
       value: 
       objectReference: {fileID: 1437561662}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
+    - target: {fileID: 114731959472981860, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
-      propertyPath: maxHpBonus
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1950901756}
+    - target: {fileID: 114687892731009294, guid: d0414571b25e6d149ab429944d2dfc22,
         type: 2}
-      propertyPath: regHpBonus
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: maxEnergyBonus
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: regEnergyBonus
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: movementSpeedBonus
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114225524018685368, guid: d0414571b25e6d149ab429944d2dfc22,
-        type: 2}
-      propertyPath: xpGainBonus
-      value: 100
+      propertyPath: pad
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0414571b25e6d149ab429944d2dfc22, type: 2}
@@ -19997,6 +19972,34 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224780395519319632, guid: c46ef9ec7dd1253499d59d2a8c96664c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114832523207747256, guid: c46ef9ec7dd1253499d59d2a8c96664c,
+        type: 2}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709659085188650, guid: c46ef9ec7dd1253499d59d2a8c96664c,
+        type: 2}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709659085188650, guid: c46ef9ec7dd1253499d59d2a8c96664c,
+        type: 2}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718111550057556, guid: c46ef9ec7dd1253499d59d2a8c96664c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311347365663018, guid: c46ef9ec7dd1253499d59d2a8c96664c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c46ef9ec7dd1253499d59d2a8c96664c, type: 2}

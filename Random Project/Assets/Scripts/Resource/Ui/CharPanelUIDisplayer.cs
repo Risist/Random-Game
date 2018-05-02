@@ -95,11 +95,11 @@ public class CharPanelUIDisplayer : MonoBehaviour {
                 return;
             }
 
-        Debug.Log("All fate slots occupied!\n");
+        //Debug.Log("All fate slots occupied!\n");
 
     }
 
-    public void UpgradeFateInfoPanel(ProgressionManager.Fate fate)
+    public void UpdateFateInfoPanel(ProgressionManager.Fate fate)
     {
         for (int idx = 0; idx < fateInfoPanels.Length; idx++)
         {

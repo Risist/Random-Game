@@ -8,8 +8,13 @@ public class MenuPanelUIDisplayer : MonoBehaviour {
     // Variable for checking if game is paused
     [SerializeField]
     public static bool IsGamePaused = false;
-
+    TogglePanel panel;
     public GameObject mainMenuUI;
+
+    private void Awake()
+    {
+        panel = gameObject.GetComponent<TogglePanel>();    
+    }
 
     // Update is called once per frame
     void Update () {
@@ -17,9 +22,16 @@ public class MenuPanelUIDisplayer : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!IsGamePaused)
+            {
+                panel.Paneltoggle(mainMenuUI);
                 Pause();
+
+            }
             else
+            {
+                panel.Paneltoggle(mainMenuUI);
                 Resume();
+            }
         }
         else
         {
@@ -33,7 +45,7 @@ public class MenuPanelUIDisplayer : MonoBehaviour {
 
     void Resume()
     {
-        mainMenuUI.SetActive(false);
+        //mainMenuUI.SetActive(false);
 
         Time.timeScale = 1f;
         IsGamePaused = false;
@@ -41,7 +53,7 @@ public class MenuPanelUIDisplayer : MonoBehaviour {
 
     void Pause()
     {
-        mainMenuUI.SetActive(true);
+        //mainMenuUI.SetActive(true);
 
         Time.timeScale = 0f;
         IsGamePaused = true;

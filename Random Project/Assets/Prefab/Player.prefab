@@ -4488,12 +4488,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308d73d3cfdb03c42b8b9c858e2c792e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHpBonus: 0
-  regHpBonus: 0
-  maxEnergyBonus: 0
-  regEnergyBonus: 0
-  movementSpeedBonus: 0
-  xpGainBonus: 0
+  maxHpBonus: 10
+  regHpBonus: 10
+  maxEnergyBonus: 10
+  regEnergyBonus: 10
+  movementSpeedBonus: 10
+  xpGainBonus: 10
 --- !u!114 &114232303704594778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5743,42 +5743,50 @@ MonoBehaviour:
     icon: {fileID: 0}
     description: 
     isInSelectionSlot: 0
+    manager: {fileID: 0}
   - name: 
     lvl: 0
     icon: {fileID: 0}
     description: 
     isInSelectionSlot: 0
+    manager: {fileID: 0}
   possibleFates:
   - name: Melee
     lvl: 1
     icon: {fileID: 21300122, guid: b082019ee1a71064db73fe024edd794e, type: 3}
     description: Max health increase
     isInSelectionSlot: 0
+    manager: {fileID: 0}
   - name: Hunter
     lvl: 1
     icon: {fileID: 21300110, guid: b082019ee1a71064db73fe024edd794e, type: 3}
     description: Movement speed increase
     isInSelectionSlot: 0
+    manager: {fileID: 0}
   - name: Devil
     lvl: 1
     icon: {fileID: 21300100, guid: b082019ee1a71064db73fe024edd794e, type: 3}
     description: Max energy increase
     isInSelectionSlot: 0
+    manager: {fileID: 0}
   - name: Void
     lvl: 1
     icon: {fileID: 21300156, guid: b082019ee1a71064db73fe024edd794e, type: 3}
     description: Experience gain increase
     isInSelectionSlot: 0
+    manager: {fileID: 0}
   - name: Earth
     lvl: 1
     icon: {fileID: 21300102, guid: b082019ee1a71064db73fe024edd794e, type: 3}
     description: Energy regeneration increase
     isInSelectionSlot: 0
+    manager: {fileID: 0}
   - name: Wind
     lvl: 1
     icon: {fileID: 21300144, guid: b082019ee1a71064db73fe024edd794e, type: 3}
     description: Energy regeneration increase
     isInSelectionSlot: 0
+    manager: {fileID: 0}
   slots:
   - keyCode: Fire1
     skillObject: {fileID: 114537432067390530}
