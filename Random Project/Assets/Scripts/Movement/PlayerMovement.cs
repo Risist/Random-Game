@@ -14,12 +14,24 @@ public class PlayerMovement : MonoBehaviour
     public string xControlAxisCode = "Horizontal2";
     public string yControlAxisCode = "Vertical2";
     public bool pad = false;
+    public int playerId = 1;
+
+    bool atMove = false;
+    bool blockMovement = false;
 
     // Use this for initialization
     void Start()
     {
         if (body == null)
             body = GetComponent<Rigidbody2D>();
+
+        if (pad)
+        {
+            xAxisCode += "_pad" + playerId;
+            yAxisCode += "_pad" + playerId;
+            xControlAxisCode += "_pad" + playerId;
+            yControlAxisCode += "_pad" + playerId;
+        }
     }
 
     public void ApplyForce(Vector2 force)
@@ -55,11 +67,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector2 newInput = new Vector2(Input.GetAxis(xControlAxisCode), Input.GetAxis(yControlAxisCode));
 
-            if (newInput.sqrMagnitude > 0.1)
+            if (newInput.sqrMagnitude > 0.35)
             {
                 lastInput = newInput;
 
-                body.rotation = Vector2.Angle(Vector2.up, -lastInput) * (lastInput.x > 0 ? -1 : 1);
+                body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
             }
 
             return body.rotation;
@@ -83,11 +95,26 @@ public class PlayerMovement : MonoBehaviour
         if (!enabled)
             return;
 
-		if (rotateToDirection && !appliedExternalRotation)
-		{
-			body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
-		}
-		appliedExternalRotation = false;
+        if (rotateToDirection)
+        {
+            if (pad && !atMove)
+            {
+                Vector2 newInput = new Vector2(Input.GetAxis(xControlAxisCode), Input.GetAxis(yControlAxisCode));
+
+                if (newInput.sqrMagnitude > 0.35)
+                {
+                    lastInput = newInput;
+                }
+            }
+            else if (appliedExternalRotation)
+            {
+                appliedExternalRotation = false;
+                return;
+            }
+            body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
+        }
+        appliedExternalRotation = false;
+
 	}
 
 	// Update is called once per frame
@@ -96,10 +123,12 @@ public class PlayerMovement : MonoBehaviour
         if (!enabled)
             return;
 
-        Vector2 input = new Vector2(Input.GetAxisRaw(xAxisCode), Input.GetAxisRaw(yAxisCode)).normalized;
-        if ( (input.x != 0 || input.y != 0) && !appliedExternalRotation )
-            lastInput = input;
-
-		body.AddForce(input * movementSpeed * Time.fixedDeltaTime);
+        Vector2 input = new Vector2(Input.GetAxisRaw(xAxisCode), Input.GetAxisRaw(yAxisCode));
+        atMove = (input.x != 0 || input.y != 0) && !appliedExternalRotation;
+        if (atMove)
+        {
+            lastInput = input.normalized;
+            body.AddForce(input * movementSpeed * Time.fixedDeltaTime);
+        }
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour {
 
-	bool isCasting = false;
 	public Timer animationCd = new Timer(0);
 
 

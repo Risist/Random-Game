@@ -4,7 +4,7 @@ using System.Collections;
 public class RemoveAfterDelay : MonoBehaviour
 {
     public Timer timer;
-	float timeLeft;
+	//float timeLeft;
 
 	private void Start()
 	{

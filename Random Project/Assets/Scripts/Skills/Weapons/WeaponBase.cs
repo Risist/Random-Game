@@ -74,7 +74,7 @@ public class WeaponBase : MonoBehaviour
 	}
 	protected bool CastSkill()
 	{
-        if (Input.GetButton(buttonCode) && !EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost + increaseCost.GetVelocity()))
+        if (Input.GetAxis(buttonCode) > 0.1 && !EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost + increaseCost.GetVelocity()))
         {
             increaseCost.AddForce(increaseCostForce);
             cd.restart();

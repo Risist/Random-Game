@@ -8,6 +8,9 @@ public class DeathEventUi : MonoBehaviour {
 
 	void OnDeath(HealthController.DamageData data)
 	{
-		ui.SetActive(true);
+        if (ui)
+            ui.SetActive(true);
+        else
+            Debug.LogWarning("DeathEventUi: ui not set up");
 	}
 }

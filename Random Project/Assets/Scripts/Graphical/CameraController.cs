@@ -8,8 +8,10 @@ public class CameraController : MonoBehaviour
     public GameObject player;
     public GameObject player2;
     public float multiScaleFactor = 0.0f;
+    public float multiOldFactor = 1.0f;
+    public float multiScaleLerpFactor = 1.0f;
 
-	[Range(0.0f,10.0f)]
+    [Range(0.0f,10.0f)]
 	public float learpFactor = 10.0f;
     Vector3 initialOffsetPosition;
 	float initialOffsetRotation;
@@ -35,7 +37,11 @@ public class CameraController : MonoBehaviour
             if (player2)
             {
                 middlePos = (middlePos + player2.transform.position) * 0.5f;
-                offsetScale += middlePos.magnitude * multiScaleFactor;
+                offsetScale = Mathf.Lerp(Camera.main.orthographicSize, 
+                    Mathf.Clamp(initialOffsetScale * multiOldFactor + (player.transform.position - player2.transform.position).magnitude * multiScaleFactor,
+                                initialOffsetScale, float.PositiveInfinity) 
+                            + shakeScaleInfluence
+                        , multiScaleLerpFactor);
             }
 
 
@@ -69,7 +75,8 @@ public class CameraController : MonoBehaviour
 	Vector2 shakePositionInfluence;
 	public void shakePosition(Vector2 shakePower)
 	{
-		shakePositionInfluence += shakePower;
+        if(!player2)
+		    shakePositionInfluence += shakePower;
 	}
 
 	[Range(0.0f, 1.0f)]
@@ -77,7 +84,8 @@ public class CameraController : MonoBehaviour
 	float shakeRotationInfluence;
 	public void shakeRotation(float shakePower)
 	{
-		shakeRotationInfluence += shakePower;
+        if (!player2)
+            shakeRotationInfluence += shakePower;
 	}
 
 	[Range(0.0f, 1.0f)]
