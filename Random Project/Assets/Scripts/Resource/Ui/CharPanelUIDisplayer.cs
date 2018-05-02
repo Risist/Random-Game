@@ -89,7 +89,7 @@ public class CharPanelUIDisplayer : MonoBehaviour {
     public void InitializeFateInfoPanel(ProgressionManager.Fate fate)
     {
         for (int idx = 0; idx < fateInfoPanels.Length; idx++)
-            if (!fateInfoPanels[idx].IsOccupied)
+            if (!fateInfoPanels[idx].isOccupied)
             {
                 FillFateInfoPanel(fateInfoPanels[idx], fate);
                 return;
@@ -104,7 +104,7 @@ public class CharPanelUIDisplayer : MonoBehaviour {
         for (int idx = 0; idx < fateInfoPanels.Length; idx++)
         {
             //Debug.Log(fateInfoPanels[idx].Name.text);
-            if (fateInfoPanels[idx].Name.text == "Fate: " + fate.name)
+            if (fateInfoPanels[idx].fateName.text == "Fate: " + fate.name)
             {
                 UpgradeFateInfoPanel(fateInfoPanels[idx], fate);
                 return;
@@ -117,12 +117,12 @@ public class CharPanelUIDisplayer : MonoBehaviour {
     void FillFateInfoPanel(FateInfoPanel panel, ProgressionManager.Fate fate)
     {
         panel.gameObject.SetActive(true);
-        panel.IsOccupied = true;
-        panel.Name.text = "Fate: " + fate.name;
-        panel.Level.text = "Level: " + fate.lvl.ToString();
-        panel.Icon.overrideSprite = fate.icon;
-        panel.Description.text = fate.description;
-        panel.Description.text = fate.description;
+        panel.isOccupied = true;
+        panel.fateName.text = "Fate: " + fate.name;
+        panel.level.text = "Level: " + fate.lvl.ToString();
+        panel.icon.overrideSprite = fate.icon;
+        panel.description.text = fate.description;
+        panel.description.text = fate.description;
     }
 
     // Upgrade FateInfoPanel information, doesn't affect chosenFates fields 
@@ -134,8 +134,8 @@ public class CharPanelUIDisplayer : MonoBehaviour {
         // Find the matching fate from chosenFates
 
 
-        panel.Level.text = "Level: " + fate.lvl.ToString();
-        panel.Description.text = fate.description;
+        panel.level.text = "Level: " + fate.lvl.ToString();
+        panel.description.text = fate.description;
         
     }
 

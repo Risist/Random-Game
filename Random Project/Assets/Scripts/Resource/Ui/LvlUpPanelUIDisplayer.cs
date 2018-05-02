@@ -69,8 +69,8 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
             for(int idx = 0; idx < fateSelectionSlots.Length; idx++)
             {
                 // If we have such skill in chosenFates and it is max level, set to false
-                if (manager.FindChosenFate(fateSelectionSlots[idx].Name.text) != -1 && 
-                    manager.chosenFates[manager.FindChosenFate(fateSelectionSlots[idx].Name.text)].lvl >= manager.maxFateLvl) 
+                if (manager.FindChosenFate(fateSelectionSlots[idx].fateName.text) != -1 && 
+                    manager.chosenFates[manager.FindChosenFate(fateSelectionSlots[idx].fateName.text)].lvl >= manager.maxFateLvl) 
                 {
                     SetFateSlotInteractive(fateSelectionSlots[idx], false);
                     continue;
@@ -115,7 +115,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
             {
                 // Get references to SkillSelectionSlot and WeaponBase from selected toggle
                 SkillSelectionSlot skillSlot = selectedToggle.GetComponentInParent<SkillSelectionSlot>();
-                WeaponBase skill = selectedToggle.GetComponentInParent<SkillSelectionSlot>().Skill;
+                WeaponBase skill = selectedToggle.GetComponentInParent<SkillSelectionSlot>().skill;
 
                 // Instantiate a new SkillSlot with learned skill in Skill book in CharPanel 
                 charPanel.InstantiateSkillSlot(skill);
@@ -133,7 +133,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
             {
                 // Get references to FateSelectionSlot and Fate from selected toggle
                 FateSelectionSlot fateSlot = selectedToggle.GetComponentInParent<FateSelectionSlot>();
-                ProgressionManager.Fate selectedFate = manager.GetFateByName(fateSlot.Name.text);
+                ProgressionManager.Fate selectedFate = manager.GetFateByName(fateSlot.fateName.text);
 
                 //If there is no such fate in chosen fates
                 if (manager.FindChosenFate(selectedFate) == -1)
@@ -206,24 +206,24 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
         ProgressionManager.Fate fate = manager.GetRandomUnchosenFate();
         //slot.Fate = fate;
         //Debug.Log("GenerateRandomFateSlot: got fate " + fate.Name + " from unchosen fates");
-        slot.Name.text = "Fate: " + fate.name;
-        slot.Level.text = "Level: " + fate.lvl.ToString();
-        slot.Icon.overrideSprite = fate.icon;
-        slot.Description.text = fate.description;
+        slot.fateName.text = "Fate: " + fate.name;
+        slot.level.text = "Level: " + fate.lvl.ToString();
+        slot.icon.overrideSprite = fate.icon;
+        slot.description.text = fate.description;
     }
 
     // Upgrade FateSelectionSlot information, doesn't affect chosenFates fields 
     void UpgradeFateSlot(FateSelectionSlot slot, ProgressionManager.Fate fate)
     {
-        if(slot.Level.text != "Level: " + manager.maxFateLvl.ToString())
+        if(slot.level.text != "Level: " + manager.maxFateLvl.ToString())
         {
             //Debug.Log("UpgradeFateSlot: upgrade FateSelectionSlot " + slot.Name);
 
             // Find the matching fate from chosenFates
             
 
-            slot.Level.text = "Level: " + (fate.lvl + 1).ToString();
-            slot.Description.text = fate.description;
+            slot.level.text = "Level: " + (fate.lvl + 1).ToString();
+            slot.description.text = fate.description;
         }
 
     }
@@ -231,7 +231,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
     bool IsInSkillSelectionSlot(WeaponBase slot)
     {
         for (int idx = 0; idx < skillSelectionSlots.Length; idx++)
-            if (skillSelectionSlots[idx].Skill == slot)
+            if (skillSelectionSlots[idx].skill == slot)
                 return true;
 
         return false;
@@ -246,12 +246,12 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
         } while (IsInSkillSelectionSlot(skill));
 
         //Debug.Log("Got " + skill.displayName.ToString() + " skill");
-        slot.Skill = skill;
-        slot.Name.text = skill.displayName.ToString();
+        slot.skill = skill;
+        slot.skillName.text = skill.displayName.ToString();
         //slot.Level.text = "Level: " + skill.level.ToString();
-        slot.Icon.overrideSprite = skill.skillIcon;
-        slot.Cost.text = "En: " + skill.cost.ToString();
-        slot.Description.text = skill.description.ToString();
+        slot.icon.overrideSprite = skill.skillIcon;
+        slot.cost.text = "En: " + skill.cost.ToString();
+        slot.description.text = skill.description.ToString();
 
     }
 

@@ -6,33 +6,23 @@ using UnityEngine.UI;
 public class FateInfoPanel : MonoBehaviour
 {
 
-
-
     [SerializeField]
-    Text fateName;
-    public Text Name { get { return fateName; } set { fateName = value; } }
-
+    public Text fateName;
     [SerializeField]
-    Text level;
-    public Text Level { get { return level; } set { level = value; } }
-
+    public Text level;
     [SerializeField]
-    Text description;
-    public Text Description { get { return description; } set { description = value; } }
-
+    public Text description;
     [SerializeField]
-    Image icon;
-    public Image Icon { get { return icon; } set { icon = value; } }
-
-    bool isOccupied = false;
-    public bool IsOccupied { get { return isOccupied; } set { isOccupied = value; } }
+    public Image icon;
+    [SerializeField]
+    public bool isOccupied;
 
     private void Awake()
     {
-        Name = gameObject.GetComponentsInChildren<Text>(true)[0];
-        Level = gameObject.GetComponentsInChildren<Text>(true)[1];
-        Description = gameObject.GetComponentsInChildren<Text>(true)[2];
-        Icon = gameObject.GetComponentInChildren<Image>();
+        fateName = gameObject.GetComponentsInChildren<Text>(true)[0];
+        level = gameObject.GetComponentsInChildren<Text>(true)[1];
+        description = gameObject.GetComponentsInChildren<Text>(true)[2];
+        icon = gameObject.GetComponentInChildren<Image>();
     }
 }
 
