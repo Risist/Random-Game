@@ -18,14 +18,14 @@ public class ProgressionManager : MonoBehaviour {
     {
         skillPanel = GameObject.Find("SkillPanel").GetComponent<SkillPanel>();
         //assignmentPanel = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>();
- 
+
+        possibleSkills = GetComponentsInChildren<WeaponBase>(true);
     }
 
 
     private void Start()
 	{
-        possibleSkills = GetComponentsInChildren<WeaponBase>();
-
+        
 
         possibleFateNames = new string[6];
         possibleFateNames[0] = "Melee";
@@ -92,8 +92,10 @@ public class ProgressionManager : MonoBehaviour {
 	{
 		public string name;
 		public int lvl;
-		[System.NonSerialized]
-		public ProgressionManager manager;
+        public Sprite icon;
+        public string description;
+        [System.NonSerialized]
+        public bool isInSelectionSlot = false;
 	}
 	string[] possibleFateNames;
 	public string GetRandomFateName() { return possibleFateNames[Random.Range(0, possibleFateNames.Length)]; }
@@ -112,55 +114,189 @@ public class ProgressionManager : MonoBehaviour {
 	public bool IsFateUnlocked(string name) { return chosenFates[0].name == name || chosenFates[1].name == name; }
 
 	// unlocks a fate with specified name
-	public bool UnlockFate(string name)
-	{
-		if (chosenFates[0] == null || chosenFates[0].name == "" )
-		{
-			chosenFates[0].name = name;
-			chosenFates[0].lvl = 0;
-			chosenFates[0].manager = this;
+	//public bool UnlockFate(string name)
+	//{
+	//	if (chosenFates[0] == null || chosenFates[0].name == "" )
+	//	{
+	//		chosenFates[0].name = name;
+	//		chosenFates[0].lvl = 0;
+	//		chosenFates[0].manager = this;
 
-			LvlUpFate(0);
-			return true;
-		} else if(chosenFates[1] == null || chosenFates[1].name == "")
-		{
-			chosenFates[1].name = name;
-			chosenFates[1].lvl = 0;
-			chosenFates[1].manager = this;
+	//		LvlUpFate(0);
+	//		return true;
+	//	} else if(chosenFates[1] == null || chosenFates[1].name == "")
+	//	{
+	//		chosenFates[1].name = name;
+	//		chosenFates[1].lvl = 0;
+	//		chosenFates[1].manager = this;
 
-			LvlUpFate(1);
-			return true;
-		}
+	//		LvlUpFate(1);
+	//		return true;
+	//	}
 
-		return false;
-	}
+	//	return false;
+	//}
 
 	// lvl ups given fate. If fate has max lvl returns false instead; Returns false in case if fate is invalid or not choosen as a path or not having enough skillpoints
-	public bool LvlUpFate(int id) { return LvlUpFate(chosenFates[id]); }
-	public bool LvlUpFate(Fate fate)
-	{
-		if (fate == null || leftSkillPoints <= 1)
-			return false;
+	//public bool LvlUpFate(int id) { return LvlUpFate(chosenFates[id]); }
+	//public bool LvlUpFate(Fate fate)
+	//{
+	//	if (fate == null || leftSkillPoints <= 1)
+	//		return false;
 
-		--leftSkillPoints;
+	//	--leftSkillPoints;
 
-		if(fate.lvl < maxFateLvl)
-		{
-			++fate.lvl;
-			BroadcastMessage("OnLvlUpFate", fate);
-			return true;
-		}
-		return false;
-	}
+	//	if(fate.lvl < maxFateLvl)
+	//	{
+	//		++fate.lvl;
+	//		BroadcastMessage("OnLvlUpFate", fate);
+	//		return true;
+	//	}
+	//	return false;
+	//}
 
 	/// event receiver to avoid "unhandled event" error
 	void OnLvlUpFate(Fate fate){}
 
-#endregion Fate
+    [SerializeField]
+    List<Fate> possibleFates;
 
-#region Skills
-	/// for holding multiply skill slots data in compact way
-	[System.Serializable]
+    // Get random fate from all possible fates (chosen and not)
+    public Fate GetRandomFate()
+    {
+        return possibleFates[Random.Range(0, possibleFates.Count)];
+    }
+
+    // Get fate by it's name
+    public Fate GetFateByName(string name)
+    {
+        for (int idx = 0; idx < possibleFates.Count; idx++)
+        {
+            if (("Fate: " + possibleFates[idx].name) == name)
+            {
+                //Debug.Log("GetFateByName: found fate " + name + " at " + idx);
+                return possibleFates[idx];
+            }
+        }
+        //Debug.Log("GetFateByName: Fate with such name wasn't found");
+        return null;
+    }
+
+    // Get random fate from all unchosen fates
+    public Fate GetRandomUnchosenFate()
+    {
+        List<Fate> unchosenFates = new List<Fate>();
+        foreach (var it in possibleFates)
+            if (!((FindChosenFate(it) != -1) || it.isInSelectionSlot))
+            {
+                unchosenFates.Add(it);
+                //Debug.Log("GetRandomUnchosenFate: Added " + it.name);
+
+            }
+
+        int randomIdx = Random.Range(0, unchosenFates.Count);
+        possibleFates[randomIdx].isInSelectionSlot = true;
+
+        return unchosenFates[randomIdx];
+    }
+
+    public bool UnlockFate(string name) { return UnlockFate(GetFateByName(name)); }
+    public bool UnlockFate(Fate fate)
+    {
+        //Debug.Log("UnlockFate: fate = " + fate.name);
+        for (int idx = 0; idx < chosenFates.Length; idx++)
+            if (chosenFates[idx] == null || chosenFates[idx].name == "")
+            {
+                //Debug.Log("UnlockFate: Assigned fate " + fate.name + " to chosenFates[" + idx + "]");
+                chosenFates[idx].name = fate.name;
+                chosenFates[idx].lvl = fate.lvl;
+                chosenFates[idx].icon = fate.icon;
+                chosenFates[idx].description = fate.description;
+                chosenFates[idx].isInSelectionSlot = fate.isInSelectionSlot;
+                --leftSkillPoints;
+
+                // Call OnLvlUpFate method of component <FateUpgrade> to add fate bonus of upgraded fate
+                gameObject.GetComponent<FateUpgrader>().OnLvlUpFate(chosenFates[idx]);
+
+                return true;
+            }
+
+        //Debug.Log("UnlockFate: ERROR: No chosenFates slot selected!");
+        return false;
+    }
+
+    // Find fate in chosenFate and return index of slot
+    public int FindChosenFate(string name) { return FindChosenFate(GetFateByName(name)); }
+    public int FindChosenFate(Fate fate)
+    {
+        for (int idx = 0; idx < chosenFates.Length; idx++)
+        {
+            // Null values guard
+            if (chosenFates[idx] == null)
+                continue;
+
+            if (chosenFates[idx].name == fate.name)
+            {
+                //Debug.Log("FindChosenFate(fate): Found fate " + fate.name + " at chosenFates[" + idx + "]");
+                return idx;
+            }
+        }
+        //Debug.Log("FindChosenFate(fate): Did not found fate " + fate.name);
+        return -1;
+    }
+
+    public bool IsChosenFatesFull()
+    {
+        for (int idx = 0; idx < chosenFates.Length; idx++)
+        {
+            if (chosenFates[idx] == null)
+            {
+                //Debug.Log("IsChosenFatesFull: found empty slot in chosenFates[" + idx + "]");
+                return false;
+            }
+        }
+
+        //Debug.Log("IsChosenFatesFull: chosenFates array if full");
+        return true;
+    }
+
+    // UpgradeFate by increasing its level and adding fate bonus to Player component <FateUpgrade>
+    public bool LvlUpFate(string name) { return LvlUpFate(GetFateByName(name)); }
+    public bool LvlUpFate(Fate fate)
+    {
+        // Return false if fate is null
+        if (fate == null)
+            return false;
+
+        // Find index of chosen fate to upgrade
+        int idx = FindChosenFate(fate);
+
+        // If we found same fate in chosenFates, we have skillPoints and fate level is not max
+        if (idx != -1 && leftSkillPoints > 0 && chosenFates[idx].lvl < maxFateLvl)
+        {
+            --leftSkillPoints;
+            ++chosenFates[idx].lvl;
+
+            //BroadcastMessage("OnLvlUpFate", fate);
+
+            // Call OnLvlUpFate method of component <FateUpgrade> to add fate bonus of upgraded fate
+            gameObject.GetComponent<FateUpgrader>().OnLvlUpFate(chosenFates[idx]);
+
+            //Debug.Log("UpgradeFate: Upgraded fate " + chosenFates[idx].name + " at chosenFates[" + idx + "]");
+            return true;
+
+        }
+
+        return false;
+
+    }
+
+
+    #endregion Fate
+
+    #region Skills
+    /// for holding multiply skill slots data in compact way
+    [System.Serializable]
 	public class SkillSlot
 	{
 		public string keyCode;
@@ -171,7 +307,7 @@ public class ProgressionManager : MonoBehaviour {
 	/// list of currently unlocked skills. Maintained by this script with possibility to set up initial ones in inspector; 
 	public List<WeaponBase> unlockedSkills;
 	/// list of all possible skills. Seted up by the scriot with all the child obhects containing WeaponBase inherited sctipt;
-	//[System.NonSerialized]
+	[System.NonSerialized]
 	public WeaponBase[] possibleSkills;
 
 	/// returns whether given skill is unlocked
@@ -188,14 +324,15 @@ public class ProgressionManager : MonoBehaviour {
 	public bool UnlockSkill(int id) { return UnlockSkill(possibleSkills[id]); }
 	public bool UnlockSkill(WeaponBase weapon)
 	{
-		if (leftSkillPoints <=1 || IsUnlocked(weapon) || !weapon.MeetsRequirements())
-			// the skill is already unlocked
-			// or skill cant be unlocked yet
-			// or not enough skillPoints left
-			return false;
-
+        if (leftSkillPoints < 1 || IsUnlocked(weapon) || !weapon.MeetsRequirements())
+            // the skill is already unlocked
+            // or skill cant be unlocked yet
+            // or not enough skillPoints left
+            return false;
+      
 		unlockedSkills.Add(weapon);
-		weapon.isUnlocked = true;
+        --leftSkillPoints;
+        weapon.isUnlocked = true;
 		return true;
 	}
 
