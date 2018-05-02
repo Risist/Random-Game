@@ -171,7 +171,7 @@ public class ProgressionManager : MonoBehaviour {
 	/// list of currently unlocked skills. Maintained by this script with possibility to set up initial ones in inspector; 
 	public List<WeaponBase> unlockedSkills;
 	/// list of all possible skills. Seted up by the scriot with all the child obhects containing WeaponBase inherited sctipt;
-	[System.NonSerialized]
+	//[System.NonSerialized]
 	public WeaponBase[] possibleSkills;
 
 	/// returns whether given skill is unlocked

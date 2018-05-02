@@ -468,6 +468,38 @@ AnimationClip:
     path: Skill Spear Slash
     classID: 114
     script: {fileID: 11500000, guid: 92c6660becc221f4680ad56e22900d32, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: movementSpeed
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: rotateToDirection
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -540,6 +572,13 @@ AnimationClip:
       customType: 24
       isPPtrCurve: 0
     - serializedVersion: 2
+      path: 0
+      attribute: 733687755
+      script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
       path: 4180118146
       attribute: 304273561
       script: {fileID: 0}
@@ -572,6 +611,13 @@ AnimationClip:
       attribute: 304273561
       script: {fileID: 0}
       typeID: 212
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 0
+      attribute: 1273810675
+      script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
+      typeID: 114
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []
@@ -1618,6 +1664,38 @@ AnimationClip:
     path: Skill Spear Slash
     classID: 114
     script: {fileID: 11500000, guid: 92c6660becc221f4680ad56e22900d32, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: movementSpeed
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: rotateToDirection
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2

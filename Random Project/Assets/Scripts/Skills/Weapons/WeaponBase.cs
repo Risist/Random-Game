@@ -49,6 +49,7 @@ public class WeaponBase : MonoBehaviour
 	[System.NonSerialized]
 	public new AudioSource audio;
 	public PlayerMovement movement;
+    public WeaponCommonCd[] commonCd;
 
 #region Ui
     public Sprite skillIcon;
@@ -72,10 +73,22 @@ public class WeaponBase : MonoBehaviour
 		if (audio)
 			audio.Play();
 	}
+    protected bool isButtonPressed()
+    {
+        return Input.GetAxis(buttonCode) > 0.1 && !EventSystem.current.IsPointerOverGameObject();
+    }
 	protected bool CastSkill()
 	{
-        if (Input.GetAxis(buttonCode) > 0.1 && !EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost + increaseCost.GetVelocity()))
+        bool b = true;
+        foreach (var it in commonCd)
+            b = b && it.timer.isReady();
+
+        if ( b && Input.GetAxis(buttonCode) > 0.1 && !EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost + increaseCost.GetVelocity()) 
+            )
         {
+            foreach (var it in commonCd)
+                it.timer.restart();
+
             increaseCost.AddForce(increaseCostForce);
             cd.restart();
             return true;
