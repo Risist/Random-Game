@@ -55,6 +55,9 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        // Update UI skill points value
+        skillPoints.text = manager.leftSkillPoints.ToString();
+
         // If player has skillPoints 
         if (manager.leftSkillPoints > 0)
         {
@@ -163,8 +166,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
 
             }
 
-            // Update UI skill points value
-            skillPoints.text = manager.leftSkillPoints.ToString();
+
         }
     }
 
