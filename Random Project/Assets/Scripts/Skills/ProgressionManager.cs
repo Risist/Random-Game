@@ -18,14 +18,14 @@ public class ProgressionManager : MonoBehaviour {
     {
         skillPanel = GameObject.Find("SkillPanel").GetComponent<SkillPanel>();
         //assignmentPanel = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>();
+
         possibleSkills = GetComponentsInChildren<WeaponBase>(true);
     }
 
 
     private void Start()
 	{
-
-
+        
 
         possibleFateNames = new string[6];
         possibleFateNames[0] = "Melee";
@@ -94,9 +94,8 @@ public class ProgressionManager : MonoBehaviour {
 		public int lvl;
         public Sprite icon;
         public string description;
+        [System.NonSerialized]
         public bool isInSelectionSlot = false;
-        //[System.NonSerialized]
-		public ProgressionManager manager;
 	}
 	string[] possibleFateNames;
 	public string GetRandomFateName() { return possibleFateNames[Random.Range(0, possibleFateNames.Length)]; }
@@ -214,7 +213,6 @@ public class ProgressionManager : MonoBehaviour {
                 chosenFates[idx].icon = fate.icon;
                 chosenFates[idx].description = fate.description;
                 chosenFates[idx].isInSelectionSlot = fate.isInSelectionSlot;
-                chosenFates[idx].manager = this;
                 --leftSkillPoints;
 
                 // Call OnLvlUpFate method of component <FateUpgrade> to add fate bonus of upgraded fate
