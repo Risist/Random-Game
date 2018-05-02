@@ -6,7 +6,7 @@ public class DistanceActivate : MonoBehaviour {
 
 	public float activationDistance;
 	GameObject[] objs;
-	Transform player;
+	GameObject[] players;
 
 	Transform _transform;
 	// Use this for initialization
@@ -21,16 +21,18 @@ public class DistanceActivate : MonoBehaviour {
 			objs[i].SetActive(false);
 		}
 
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+		players = GameObject.FindGameObjectsWithTag("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if( player && ((Vector2)_transform.position - (Vector2)player.position).sqrMagnitude < activationDistance*activationDistance)
-		{
-			foreach (var it in objs)
-				it.SetActive(true);
-			Destroy(this);
-		}
+        foreach ( var player in players)
+		    if( player && ((Vector2)_transform.position - (Vector2)player.transform.position).sqrMagnitude < activationDistance*activationDistance)
+		    {
+			    foreach (var it in objs)
+				    it.SetActive(true);
+			    Destroy(this);
+                return;
+		    }
 	}
 }

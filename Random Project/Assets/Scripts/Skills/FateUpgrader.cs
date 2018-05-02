@@ -14,7 +14,14 @@ public class FateUpgrader : MonoBehaviour {
 	public float movementSpeedBonus;
 	public float xpGainBonus;
 
-	public void OnLvlUpFate(ProgressionManager.Fate fate)
+    ProgressionManager manager;
+
+    private void Start()
+    {
+        manager = GetComponent<ProgressionManager>();
+    }
+
+    public void OnLvlUpFate(ProgressionManager.Fate fate)
 	{
 		switch(fate.name)
 		{
@@ -45,7 +52,7 @@ public class FateUpgrader : MonoBehaviour {
 			}
 		case "Void":
 			{
-				fate.manager.requiredXpBase -= xpGainBonus;
+				manager.requiredXpBase -= xpGainBonus;
 				break;
 			}
 		}

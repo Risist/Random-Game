@@ -16,6 +16,44 @@ public class PlayerMovement : MonoBehaviour
     public bool pad = false;
     public int playerId = 1;
 
+    public void setPad(bool s)
+    {
+        if (pad == s)
+            return;
+
+        pad = s;
+
+        var progressionManager = GetComponent<ProgressionManager>();
+        if (s)
+        {
+            xAxisCode += "_pad" + playerId;
+            yAxisCode += "_pad" + playerId;
+            xControlAxisCode += "_pad" + playerId;
+            yControlAxisCode += "_pad" + playerId;
+
+            foreach(var it in progressionManager.slots)
+            {
+                it.keyCode = "_pad" + playerId;
+                it.skillObject.buttonCode = it.keyCode;
+            }
+        }
+        else
+        {
+            int length  = ("_pad" + playerId).Length;
+
+            xAxisCode = xAxisCode.Substring(0, xAxisCode.Length - length);
+            yAxisCode = yAxisCode.Substring(0, yAxisCode.Length - length);
+            xControlAxisCode = xControlAxisCode.Substring(0, xControlAxisCode.Length - length);
+            yControlAxisCode = yControlAxisCode.Substring(0, yControlAxisCode.Length - length);
+
+            foreach (var it in progressionManager.slots)
+            {
+                it.keyCode = it.keyCode.Substring(0, it.keyCode.Length - length);
+                it.skillObject.buttonCode = it.keyCode;
+            }
+        }
+    }
+
     bool atMove = false;
     bool blockMovement = false;
 

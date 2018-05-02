@@ -34,13 +34,10 @@ public class WeaponThrower : WeaponThrowerFreeze
             movement.ApplyRotationToMouse();
         }
 
-        if (shouldShoot)
+        if (shouldShoot && shootDelay.isReady())
         {
-            if (shootDelay.isReady())
-            {
-                Instantiate(prefab, _transform.position, _transform.rotation);
-                shouldShoot = false;
-            }
+            Instantiate(prefab, _transform.position, _transform.rotation);
+            shouldShoot = false;
         }
     }
 }

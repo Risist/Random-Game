@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponThrowerMany : WeaponBase
+public class WeaponThrowerMany : WeaponSkillAnimation
 {
-	public AnimationManager animManager;
-	public bool animateWhenReadyOnly = false;
 	[System.Serializable]
 	public class SpawnStruct
 	{
@@ -13,72 +11,46 @@ public class WeaponThrowerMany : WeaponBase
 		public Transform transform;
 	}
 	public SpawnStruct[] spawns;
-	public bool freezeRotation = false;
 	public Timer shootDelay = new Timer(0);
 	public Timer rotationApplyTime = new Timer(0);
 	float lastRotation;
-	bool ahouldShoot = false;
+	bool shouldShoot = false;
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (freezeRotation)
-		{
-			if (movement && !rotationApplyTime.isReady())
-				movement.ApplyExternalRotation(lastRotation);
+        float rot = lastRotation;
+        if(movement && isButtonPressed())
+            rot = movement.ApplyRotationToMouse();
 
-			if (Input.GetButton(buttonCode))
-			{
+        if (CastSkill())
+        {
+            PlayAnimation();
+            PlaySound();
 
-				if ((!animManager || animManager.CanCastAnimation()) && CastSkill())
-				{
-					if (movement)
-						lastRotation = movement.ApplyRotationToMouse();
+            lastRotation = rot;
 
-					if (animManager)
-						animManager.CastAnimation();
+            rotationApplyTime.restart();
+        
+            shootDelay.restart();
+            shouldShoot = true;
+        }
 
-					PlaySound();
 
-					ahouldShoot = true;
-					shootDelay.restart();
-					rotationApplyTime.restart();
-				}
 
-				if (animManager && !animateWhenReadyOnly)
-					animManager.CastAnimation();
-			}
-		}
-		else if (Input.GetButton(buttonCode))
-		{
-			if (movement)
-				movement.ApplyRotationToMouse();
-
-			if ((!animManager || animManager.CanCastAnimation()) && CastSkill())
-			{
-
-				if (animManager)
-					animManager.CastAnimation();
-
-				PlaySound();
-
-				ahouldShoot = true;
-				shootDelay.restart();
-			}
-
-			if (animManager && !animateWhenReadyOnly)
-				animManager.CastAnimation();
-		}
-
-	}
+    }
 
 	void LateUpdate()
 	{
-		if (ahouldShoot && shootDelay.isReady())
+        if (!rotationApplyTime.isReady())
+        {
+            movement.ApplyExternalRotation(lastRotation);
+        }
+        if (shouldShoot && shootDelay.isReady())
 		{
 			foreach (var it in spawns)
 				Instantiate(it.prefab, it.transform.position, it.transform.rotation);
-			ahouldShoot = false;
+			shouldShoot = false;
 		}
 	}
 }
