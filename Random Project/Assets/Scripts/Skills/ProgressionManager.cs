@@ -18,13 +18,13 @@ public class ProgressionManager : MonoBehaviour {
     {
         skillPanel = GameObject.Find("SkillPanel").GetComponent<SkillPanel>();
         //assignmentPanel = GameObject.Find("SkillAssignmentPanel").GetComponent<SkillPanel>();
- 
+        possibleSkills = GetComponentsInChildren<WeaponBase>(true);
     }
 
 
     private void Start()
 	{
-        //possibleSkills = GetComponentsInChildren<WeaponBase>();
+
 
 
         possibleFateNames = new string[6];
@@ -309,8 +309,7 @@ public class ProgressionManager : MonoBehaviour {
 	/// list of currently unlocked skills. Maintained by this script with possibility to set up initial ones in inspector; 
 	public List<WeaponBase> unlockedSkills;
 	/// list of all possible skills. Seted up by the scriot with all the child obhects containing WeaponBase inherited sctipt;
-	//[System.NonSerialized]
-    [SerializeField]
+	[System.NonSerialized]
 	public WeaponBase[] possibleSkills;
 
 	/// returns whether given skill is unlocked
