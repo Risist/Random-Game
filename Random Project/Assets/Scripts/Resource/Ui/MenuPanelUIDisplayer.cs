@@ -68,8 +68,9 @@ public class MenuPanelUIDisplayer : MonoBehaviour {
 
     public void ExitLevel()
     {
-        Debug.Log("Application quit");
-        Application.Quit();
+        //Debug.Log("Application quit");
+        //Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
         
 }
