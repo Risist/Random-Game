@@ -11,6 +11,7 @@ public class AttachOnCollision : MonoBehaviour
     public bool onExit = false;
     public bool _collision= true;
     public bool trigger = true;
+    public AiFraction fraction;
 
     public Timer attachCd = new Timer(0);
 
@@ -23,6 +24,10 @@ public class AttachOnCollision : MonoBehaviour
     {
         if (!onEnter || !trigger)
             return;
+        var otherFraction = collision.gameObject.GetComponent<AiFraction>();
+        if (fraction && otherFraction && fraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
+            return;
+
         var hp = collision.GetComponent<HealthController>();
         if (hp && hp.tag != ignoreTag && attachCd.isReadyRestart())
         {
@@ -40,6 +45,9 @@ public class AttachOnCollision : MonoBehaviour
     {
         if (!onExit || !trigger)
             return;
+        var otherFraction = collision.gameObject.GetComponent<AiFraction>();
+        if (fraction && otherFraction && fraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
+            return;
         var hp = collision.GetComponent<HealthController>();
         if (hp && hp.tag != ignoreTag && attachCd.isReadyRestart())
         {
@@ -56,6 +64,9 @@ public class AttachOnCollision : MonoBehaviour
     {
         if (!onEnter || !_collision)
             return;
+        var otherFraction = collision.gameObject.GetComponent<AiFraction>();
+        if (fraction && otherFraction && fraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
+            return;
         var hp = collision.gameObject.GetComponent<HealthController>();
         if (hp && hp.tag != ignoreTag && attachCd.isReadyRestart())
         {
@@ -71,6 +82,9 @@ public class AttachOnCollision : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (!onExit || !_collision)
+            return;
+        var otherFraction = collision.gameObject.GetComponent<AiFraction>();
+        if (fraction && otherFraction && fraction.GetAttitude(otherFraction.fractionName) == AiFraction.Attitude.friendly)
             return;
         var hp = collision.gameObject.GetComponent<HealthController>();
         if (hp && hp.tag != ignoreTag && attachCd.isReadyRestart())

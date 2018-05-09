@@ -419,8 +419,6 @@ GameObject:
   - component: {fileID: 114802349651627926}
   - component: {fileID: 114174688790425960}
   - component: {fileID: 114243686628484128}
-  - component: {fileID: 114372997210743100}
-  - component: {fileID: 114362188200201374}
   m_Layer: 0
   m_Name: Dunno Weak but stronger
   m_TagString: enemy
@@ -506,7 +504,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1803322173580698}
   m_LocalRotation: {x: -0, y: -0, z: -0.018606205, w: 0.9998269}
-  m_LocalPosition: {x: -2.77, y: 1.14, z: 0}
+  m_LocalPosition: {x: -60.850574, y: -20.04026, z: 0}
   m_LocalScale: {x: 0.5554861, y: 0.5000836, z: 1}
   m_Children:
   - {fileID: 4839494228635052}
@@ -1143,20 +1141,6 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   target: {fileID: 114704095322398276}
   negation: 0
---- !u!114 &114362188200201374
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1803322173580698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnList: {fileID: 114372997210743100}
-  nObjectsToSpawnMin: 1
-  nObjectsToSpawnMax: 2
 --- !u!114 &114363489486409706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1193,88 +1177,6 @@ MonoBehaviour:
   orderName: attention
   orderRadius: 15
   orderTime: 0.5
---- !u!114 &114372997210743100
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1803322173580698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnParent: {fileID: 0}
-  myParent: 0
-  randomRotation: 1
-  randomPosition: 1
-  objects:
-  - prefab: {fileID: 1209582206968842, guid: 0d6dbed63db566340abeb05f0ad92977, type: 2}
-    chance: 1
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1140986933664116, guid: b14db7c86f5b7cc439168eddf97cafda, type: 2}
-    chance: 1
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1467118502888008, guid: 0bc0617074bb8ea4a8be756ebf6a961d, type: 2}
-    chance: 1
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1779873258380016, guid: 85a54f939b472334d9cad8b19397559d, type: 2}
-    chance: 1
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1260065700623192, guid: 0418daa97fe76594d83eeee527f74418, type: 2}
-    chance: 1
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1186396213050456, guid: 17113746fd632b64ea48da4abb2bb234, type: 2}
-    chance: 1
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1233098333033488, guid: 4675920fe3bfdb343bc1c32e93ec3933, type: 2}
-    chance: 1
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
-    chance: 10
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 0}
-    chance: 85
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
-    chance: 15
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
-    chance: 15
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
 --- !u!114 &114385667152559446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1919,7 +1821,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300458, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.54901963, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6911765, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1963,7 +1865,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300108, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.54901963, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6911765, g: 0, b: 0, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -2007,7 +1909,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300486, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.54901963, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6911765, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2051,7 +1953,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300108, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.54901963, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6911765, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
@@ -2095,7 +1997,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300484, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.54901963, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6911765, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2139,7 +2041,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300484, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 0.54901963, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6911765, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

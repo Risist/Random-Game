@@ -253,6 +253,8 @@ GameObject:
   - component: {fileID: 114719793450430504}
   - component: {fileID: 114429847560836486}
   - component: {fileID: 114444675661533246}
+  - component: {fileID: 114123847108765398}
+  - component: {fileID: 114188165390015284}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -685,7 +687,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436502356920382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.538, y: -57.166435, z: 0}
+  m_LocalPosition: {x: -68.09779, y: -16.783329, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4500578023384452}
@@ -1279,6 +1281,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   animationCode: spearPush
+--- !u!114 &114123847108765398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436502356920382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114188165390015284}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 1
 --- !u!114 &114177495854026288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1308,6 +1324,64 @@ MonoBehaviour:
   distanceMin: 7.5
   distanceMax: 15
   inside: 1
+--- !u!114 &114188165390015284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436502356920382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
+  randomRotation: 1
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 0}
+    chance: 30
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
+    chance: 10
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
+    chance: 10
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1779873258380016, guid: 85a54f939b472334d9cad8b19397559d, type: 2}
+    chance: 0.25
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1140986933664116, guid: b14db7c86f5b7cc439168eddf97cafda, type: 2}
+    chance: 0.75
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 3
+  - prefab: {fileID: 1467118502888008, guid: 0bc0617074bb8ea4a8be756ebf6a961d, type: 2}
+    chance: 0.5
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 3
+  - prefab: {fileID: 1233098333033488, guid: 4675920fe3bfdb343bc1c32e93ec3933, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 3
 --- !u!114 &114192279625038966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2753,7 +2827,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300216, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6838235, g: 0.005028119, b: 0.005028119, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
