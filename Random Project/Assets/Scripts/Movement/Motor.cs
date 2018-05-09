@@ -19,9 +19,10 @@ public class Motor : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rigidbody.AddForce(
-            new Vector2(transform.up.x, transform.up.y)
-            * movementSpeed * Time.fixedDeltaTime
+        if(rigidbody)
+            rigidbody.AddForce(
+                new Vector2(transform.up.x, transform.up.y)
+                * movementSpeed * Time.fixedDeltaTime
         );
     }
 

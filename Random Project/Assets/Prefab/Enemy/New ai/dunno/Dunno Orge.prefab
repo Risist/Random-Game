@@ -369,6 +369,8 @@ GameObject:
   - component: {fileID: 114547702057887902}
   - component: {fileID: 114333451273158066}
   - component: {fileID: 114620068452080804}
+  - component: {fileID: 114634666024234712}
+  - component: {fileID: 114888163709202890}
   m_Layer: 0
   m_Name: Dunno Orge
   m_TagString: enemy
@@ -1524,6 +1526,88 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   target: {fileID: 114226800419311266}
   negation: 0
+--- !u!114 &114634666024234712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1842474939233700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
+  randomRotation: 1
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1209582206968842, guid: 0d6dbed63db566340abeb05f0ad92977, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1140986933664116, guid: b14db7c86f5b7cc439168eddf97cafda, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1467118502888008, guid: 0bc0617074bb8ea4a8be756ebf6a961d, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1779873258380016, guid: 85a54f939b472334d9cad8b19397559d, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1260065700623192, guid: 0418daa97fe76594d83eeee527f74418, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1186396213050456, guid: 17113746fd632b64ea48da4abb2bb234, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1233098333033488, guid: 4675920fe3bfdb343bc1c32e93ec3933, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
+    chance: 10
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 0}
+    chance: 5
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
+    chance: 15
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
+    chance: 15
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114663336497858896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1725,6 +1809,20 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   target: {fileID: 114027981956714856}
   negation: 0
+--- !u!114 &114888163709202890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1842474939233700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114634666024234712}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 2
 --- !u!114 &114897748494997598
 MonoBehaviour:
   m_ObjectHideFlags: 1

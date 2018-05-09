@@ -49,6 +49,8 @@ GameObject:
   - component: {fileID: 114301709501013552}
   - component: {fileID: 114610579902125178}
   - component: {fileID: 114780257980799228}
+  - component: {fileID: 114302260987180716}
+  - component: {fileID: 114354264053276428}
   m_Layer: 0
   m_Name: DunnoKnife
   m_TagString: enemy
@@ -1026,6 +1028,7 @@ MonoBehaviour:
   aim: {fileID: 114116958270038638}
   attitude: 0
   fractionName: dunno
+  raysOffset: 2
 --- !u!114 &114021259822828592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1245,6 +1248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114767835463294642}
+  negation: 0
 --- !u!114 &114266780518808154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1273,7 +1277,92 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
+  enter: 1
   perform: 0
+  exit: 0
+  location: {fileID: 0}
+--- !u!114 &114302260987180716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128905386631698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
+  randomRotation: 1
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1209582206968842, guid: 0d6dbed63db566340abeb05f0ad92977, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1140986933664116, guid: b14db7c86f5b7cc439168eddf97cafda, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1467118502888008, guid: 0bc0617074bb8ea4a8be756ebf6a961d, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1779873258380016, guid: 85a54f939b472334d9cad8b19397559d, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1260065700623192, guid: 0418daa97fe76594d83eeee527f74418, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1186396213050456, guid: 17113746fd632b64ea48da4abb2bb234, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1233098333033488, guid: 4675920fe3bfdb343bc1c32e93ec3933, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
+    chance: 10
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 0}
+    chance: 50
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
+    chance: 15
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
+    chance: 15
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114312761596714326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1304,6 +1393,20 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   minPerformanceTime: 0
   maxPerformanceTime: 0.5
+--- !u!114 &114354264053276428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128905386631698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114302260987180716}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 2
 --- !u!114 &114375890209635288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1462,6 +1565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114185887739003072}
+  negation: 0
 --- !u!114 &114584629799508388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1591,6 +1695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114767835463294642}
+  negation: 0
 --- !u!114 &114668696499861874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1629,6 +1734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114185887739003072}
+  negation: 0
 --- !u!114 &114745126730659412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1930,6 +2036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114767835463294642}
+  negation: 0
 --- !u!114 &114984974251001076
 MonoBehaviour:
   m_ObjectHideFlags: 1

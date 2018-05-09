@@ -107,6 +107,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1223952212621674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4863385026046674}
+  - component: {fileID: 114949134423627300}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1489537107588636
 GameObject:
   m_ObjectHideFlags: 1
@@ -324,7 +340,6 @@ GameObject:
   - component: {fileID: 95056340481264406}
   - component: {fileID: 61921144151587986}
   - component: {fileID: 114283865866118218}
-  - component: {fileID: 114993810062208302}
   - component: {fileID: 114483197312326038}
   - component: {fileID: 114330527758925394}
   - component: {fileID: 114570868658823862}
@@ -587,12 +602,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917084062792500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5375805, y: 0.45879173, z: 0.0221214}
+  m_LocalPosition: {x: -29.34, y: -8.22, z: 0.0221214}
   m_LocalScale: {x: 1.8125, y: 1, z: 1}
   m_Children:
   - {fileID: 4558591853466100}
   - {fileID: 4241285730390314}
   - {fileID: 4372008909999604}
+  - {fileID: 4863385026046674}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -647,6 +663,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4372008909999604}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4863385026046674
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1223952212621674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4644538893785090}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4876329159681714
 Transform:
@@ -727,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec80ac077645694fb13300222f44ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnList: {fileID: 114993810062208302}
+  spawnList: {fileID: 114949134423627300}
   animCode: open
   objectTag: Player
   nSpawnMin: 2
@@ -769,8 +798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  actual: 500
-  max: 500
+  actual: 1500
+  max: 1500
   regeneration: 0
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
@@ -805,17 +834,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceBase: -1600
   forceScale: -500
+  forceMax: 4500
   explosionRadius: 3
   removeDelay: 1.5
   mass: 1.5
   linearDamping: 0.1
   angularDamping: 0.1
---- !u!114 &114993810062208302
+--- !u!114 &114949134423627300
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1917084062792500}
+  m_GameObject: {fileID: 1223952212621674}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
@@ -826,58 +856,64 @@ MonoBehaviour:
   randomRotation: 1
   randomPosition: 1
   objects:
-  - prefab: {fileID: 1501809563420624, guid: a753b93c0abd74a449dd59dae746adf6, type: 2}
-    chance: 3
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1779476226724406, guid: 402d2edc08f4b9c4685f9aa4b64d7919, type: 2}
-    chance: 0.75
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1543755088603726, guid: 69576dcf8928c0943a42040d0c41bc0a, type: 2}
-    chance: 3
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1569415996061464, guid: 897a36749ef0b684d85bb99ee1848043, type: 2}
+  - prefab: {fileID: 1209582206968842, guid: 0d6dbed63db566340abeb05f0ad92977, type: 2}
     chance: 1
-    minimalDistance: 2
-    maximalDistance: 5
+    minimalDistance: 0
+    maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1225623095939970, guid: 1e47af22d6b7ff042b5731033a220345, type: 2}
-    chance: 5
-    minimalDistance: 2
-    maximalDistance: 5
+  - prefab: {fileID: 1140986933664116, guid: b14db7c86f5b7cc439168eddf97cafda, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1655366846844308, guid: 6465f8ad622c3e94a99f526f9dc7c271, type: 2}
-    chance: 5
-    minimalDistance: 2
-    maximalDistance: 5
+  - prefab: {fileID: 1467118502888008, guid: 0bc0617074bb8ea4a8be756ebf6a961d, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1779873258380016, guid: 85a54f939b472334d9cad8b19397559d, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1260065700623192, guid: 0418daa97fe76594d83eeee527f74418, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1186396213050456, guid: 17113746fd632b64ea48da4abb2bb234, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1233098333033488, guid: 4675920fe3bfdb343bc1c32e93ec3933, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
-    chance: 5
-    minimalDistance: 2
-    maximalDistance: 5
+    chance: 10
+    minimalDistance: 0
+    maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1825395744119852, guid: 8af856c9ff7a95e49ae4e33662d1bc9f, type: 2}
-    chance: 5
-    minimalDistance: 2
-    maximalDistance: 5
-    positionOffset: {x: 0, y: 0}
-    rotationOffset: 0
-  - prefab: {fileID: 1884669492228036, guid: d40b365ffbaf1ea49a7a3befa142ee4c, type: 2}
+  - prefab: {fileID: 0}
     chance: 3
-    minimalDistance: 2
-    maximalDistance: 5
+    minimalDistance: 0
+    maximalDistance: 3
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1901376354809422, guid: 3b189908bea6f614db7d9bbe19879978, type: 2}
+    chance: 1
+    minimalDistance: 0
+    maximalDistance: 3
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
 --- !u!212 &212001871976809040

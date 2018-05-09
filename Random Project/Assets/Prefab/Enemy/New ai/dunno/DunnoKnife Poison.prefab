@@ -245,6 +245,8 @@ GameObject:
   - component: {fileID: 114314240096288394}
   - component: {fileID: 114404822272134888}
   - component: {fileID: 114182139065039962}
+  - component: {fileID: 114082469585880570}
+  - component: {fileID: 114775072320023362}
   m_Layer: 0
   m_Name: DunnoKnife Poison
   m_TagString: enemy
@@ -1073,6 +1075,88 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   aim: {fileID: 114850293297250332}
   movementSpeed: 4500
+--- !u!114 &114082469585880570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1464968888052356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb90f5271d593f34283a0bbbecbc0e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParent: {fileID: 0}
+  myParent: 0
+  randomRotation: 1
+  randomPosition: 1
+  objects:
+  - prefab: {fileID: 1209582206968842, guid: 0d6dbed63db566340abeb05f0ad92977, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1140986933664116, guid: b14db7c86f5b7cc439168eddf97cafda, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1467118502888008, guid: 0bc0617074bb8ea4a8be756ebf6a961d, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1779873258380016, guid: 85a54f939b472334d9cad8b19397559d, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1260065700623192, guid: 0418daa97fe76594d83eeee527f74418, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1186396213050456, guid: 17113746fd632b64ea48da4abb2bb234, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1233098333033488, guid: 4675920fe3bfdb343bc1c32e93ec3933, type: 2}
+    chance: 1
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
+    chance: 10
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 0}
+    chance: 30
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
+    chance: 15
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
+    chance: 15
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
 --- !u!114 &114084048975479920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1100,6 +1184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114972725712791630}
+  negation: 0
 --- !u!114 &114141028801850640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1266,7 +1351,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
+  enter: 1
   perform: 0
+  exit: 0
+  location: {fileID: 0}
 --- !u!114 &114338753786815492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1333,6 +1421,7 @@ MonoBehaviour:
   aim: {fileID: 114808831032690848}
   attitude: 0
   fractionName: dunno
+  raysOffset: 2
 --- !u!114 &114398396699492042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1631,6 +1720,20 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   minPerformanceTime: 0.4
   maxPerformanceTime: 0.7
+--- !u!114 &114775072320023362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1464968888052356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abedcd0e83073a646ac63ca22bd9ca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnList: {fileID: 114082469585880570}
+  nObjectsToSpawnMin: 1
+  nObjectsToSpawnMax: 2
 --- !u!114 &114775670582353112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1810,6 +1913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114850293297250332}
+  negation: 0
 --- !u!114 &114886288330527924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1823,6 +1927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114850293297250332}
+  negation: 0
 --- !u!114 &114890361030205738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1836,6 +1941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114972725712791630}
+  negation: 0
 --- !u!114 &114893660350761628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1849,6 +1955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   target: {fileID: 114972725712791630}
+  negation: 0
 --- !u!114 &114901611510051002
 MonoBehaviour:
   m_ObjectHideFlags: 1
