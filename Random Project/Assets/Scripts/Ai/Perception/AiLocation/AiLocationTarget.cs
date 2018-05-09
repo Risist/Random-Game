@@ -35,14 +35,16 @@ public class AiLocationTarget : AiLocationBase {
 
 			target = null;
 
-			/// TODO how to efficiently iterate backwards in c#? Check it
-			foreach (var it in mind.myPerception.memory)
-				if (it.unit.fraction && it.unit.fraction.gameObject != mind.myFraction.gameObject)
-					if (CheckRequirements(it))
-					{
-						target = it.unit;
-						break;
-					}
+            /// TODO how to efficiently iterate backwards in c#? Check it
+            foreach (var it in mind.myPerception.memory)
+                if (it.unit.fraction && it.unit.fraction.gameObject != mind.myFraction.gameObject)
+                {
+                    if (CheckRequirements(it))
+                    {
+                        target = it.unit;
+                        break;
+                    }
+                }
 		}
 
 		return target;
@@ -50,15 +52,15 @@ public class AiLocationTarget : AiLocationBase {
 
 	bool CheckRequirements(AiPerception.MemoryItem it)
 	{
-		return (mind.myFraction.GetAttitude(it.unit.fraction.fractionName) == attitude || attitude == AiFraction.Attitude.none) && 
+		return (attitude == AiFraction.Attitude.none || mind.myFraction.GetAttitude(it.unit.fraction.fractionName) == attitude ) && 
 			it.lastDistance >= distanceMin && it.lastDistance <= distanceMax &&
-			(fractionName == "" || it.unit.fraction.name == fractionName)
+			(fractionName == "" || it.unit.fraction.fractionName.Equals(fractionName) )
 			;
 	}
 
 	public override bool IsValid()
 	{
-		return GetTarget() && base.IsValid();
+        return GetTarget() && base.IsValid();
 	}
 	public override Vector2 GetLocation()
 	{

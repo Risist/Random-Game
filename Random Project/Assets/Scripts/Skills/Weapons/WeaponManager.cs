@@ -32,6 +32,8 @@ public class WeaponManager : MonoBehaviour {
         for( int i = 0; i < weapons[id].skills.Length; ++i)
         {
             manager.BindToSlot(weapons[id].skills[i],manager.slots[i]);
+            manager.assignmentPanel.SetSkill(i, weapons[id].skills[i]);
+            manager.skillPanel.SetSkill(i, weapons[id].skills[i]);
         }
     }
 }

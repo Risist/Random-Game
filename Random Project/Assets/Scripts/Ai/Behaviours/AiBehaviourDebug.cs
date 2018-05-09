@@ -13,7 +13,7 @@ public class AiBehaviourDebug : AiBehaviourBase {
 
 	public override void EnterAction()
 	{
-        if (exit)
+        if (enter)
             Debug.Log("Enter " + ++nEnter);
 		base.EnterAction();
 	}

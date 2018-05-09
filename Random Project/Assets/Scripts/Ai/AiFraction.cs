@@ -21,15 +21,15 @@ public class AiFraction : MonoBehaviour
 
 	public Attitude GetAttitude(string fraction)
 	{
-		if (fraction == fractionName)
+		if (fraction.Equals(fractionName))
 			return Attitude.friendly;
 
 		foreach (var it in friendlyFractions)
-			if (it == fraction)
+			if (it.Equals(fraction))
 				return Attitude.friendly;
 
 		foreach (var it in enemyFractions)
-			if (it == fraction)
+			if (it.Equals(fraction))
 				return Attitude.enemy;
 
 		return Attitude.neutral;

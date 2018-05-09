@@ -16,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     public bool pad = false;
     public int playerId = 1;
 
+    public void setPad()
+    {
+        setPad(!pad);
+    }
     public void setPad(bool s)
     {
         if (pad == s)
