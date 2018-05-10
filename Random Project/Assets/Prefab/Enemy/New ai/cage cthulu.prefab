@@ -640,7 +640,13 @@ MonoBehaviour:
   randomPosition: 1
   objects:
   - prefab: {fileID: 1099687137909306, guid: 537d37e72e3595d458e011dd06f538f8, type: 2}
-    chance: 6
+    chance: 20
+    minimalDistance: 1
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1758126090186504, guid: 7d7ca9378242b3c4abafb27a6710afbe, type: 2}
+    chance: 0.5
     minimalDistance: 1
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}

@@ -37,8 +37,9 @@ public class PlayerMovement : MonoBehaviour
 
             foreach(var it in progressionManager.slots)
             {
-                it.keyCode = "_pad" + playerId;
-                it.skillObject.buttonCode = it.keyCode;
+                it.keyCode += "_pad" + playerId;
+                if(it.skillObject)
+                    it.skillObject.buttonCode = it.keyCode;
             }
         }
         else
@@ -53,7 +54,8 @@ public class PlayerMovement : MonoBehaviour
             foreach (var it in progressionManager.slots)
             {
                 it.keyCode = it.keyCode.Substring(0, it.keyCode.Length - length);
-                it.skillObject.buttonCode = it.keyCode;
+                if(it.skillObject)
+                    it.skillObject.buttonCode = it.keyCode;
             }
         }
     }
