@@ -242,7 +242,6 @@ GameObject:
   - component: {fileID: 114068036121918202}
   - component: {fileID: 114704373612562134}
   - component: {fileID: 114632508638576946}
-  - component: {fileID: 114314240096288394}
   - component: {fileID: 114404822272134888}
   - component: {fileID: 114182139065039962}
   - component: {fileID: 114082469585880570}
@@ -1133,8 +1132,8 @@ MonoBehaviour:
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
-  - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
-    chance: 10
+  - prefab: {fileID: 1070186079473448, guid: cfb9deb589c818e47a1e58f55f9bc406, type: 2}
+    chance: 5
     minimalDistance: 2
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
@@ -1146,7 +1145,31 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1526651894845042, guid: 30d6abb737f5008468336c4dd03be647, type: 2}
-    chance: 15
+    chance: 10
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1225623095939970, guid: 1e47af22d6b7ff042b5731033a220345, type: 2}
+    chance: 4
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1655366846844308, guid: 6465f8ad622c3e94a99f526f9dc7c271, type: 2}
+    chance: 5
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1884669492228036, guid: d40b365ffbaf1ea49a7a3befa142ee4c, type: 2}
+    chance: 4
+    minimalDistance: 2
+    maximalDistance: 5
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1825395744119852, guid: 8af856c9ff7a95e49ae4e33662d1bc9f, type: 2}
+    chance: 5
     minimalDistance: 2
     maximalDistance: 5
     positionOffset: {x: 0, y: 0}
@@ -1339,22 +1362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBehaviour: {fileID: 0}
   animationCode: castKnifePoison
---- !u!114 &114314240096288394
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1464968888052356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94b3dd8be8113ca4b9dfd579d5541a19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextBehaviour: {fileID: 0}
-  enter: 1
-  perform: 0
-  exit: 0
-  location: {fileID: 0}
 --- !u!114 &114338753786815492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1583,6 +1590,8 @@ MonoBehaviour:
   ignoreTag: enemy
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114704373612562134}
   instigator: {fileID: 0}
@@ -1777,8 +1786,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  actual: 150
-  max: 200
+  actual: 300
+  max: 400
   regeneration: 5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

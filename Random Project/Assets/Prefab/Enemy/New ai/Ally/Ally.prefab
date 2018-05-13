@@ -1800,8 +1800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Health
-  actual: 300
-  max: 350
+  actual: 600
+  max: 700
   regeneration: 5
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
@@ -2553,6 +2553,8 @@ MonoBehaviour:
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114175130329028332}
   instigator: {fileID: 0}

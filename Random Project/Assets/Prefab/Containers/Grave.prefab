@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnList: {fileID: 114726392909474584}
   nObjectsToSpawnMin: 0
-  nObjectsToSpawnMax: 4
+  nObjectsToSpawnMax: 2
 --- !u!114 &114316750519509814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,19 +278,19 @@ MonoBehaviour:
   randomPosition: 1
   objects:
   - prefab: {fileID: 1973122063620584, guid: c97b93321a0940a449bef6ef08cabce4, type: 2}
-    chance: 1
+    chance: 0
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1493591712694552, guid: 1f8aa074136882448866c18f9280ae1c, type: 2}
-    chance: 1
+    chance: 1.5
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
     rotationOffset: 0
   - prefab: {fileID: 1679164877005704, guid: 941a23078e1e2ee4f930ebe5b8cd3737, type: 2}
-    chance: 1
+    chance: 1.5
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}
@@ -303,6 +303,30 @@ MonoBehaviour:
     rotationOffset: 0
   - prefab: {fileID: 1260065700623192, guid: 0418daa97fe76594d83eeee527f74418, type: 2}
     chance: 0.15
+    minimalDistance: 2
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1825395744119852, guid: 8af856c9ff7a95e49ae4e33662d1bc9f, type: 2}
+    chance: 0.3
+    minimalDistance: 2
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1884669492228036, guid: d40b365ffbaf1ea49a7a3befa142ee4c, type: 2}
+    chance: 0.3
+    minimalDistance: 2
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1655366846844308, guid: 6465f8ad622c3e94a99f526f9dc7c271, type: 2}
+    chance: 0.3
+    minimalDistance: 2
+    maximalDistance: 4
+    positionOffset: {x: 0, y: 0}
+    rotationOffset: 0
+  - prefab: {fileID: 1225623095939970, guid: 1e47af22d6b7ff042b5731033a220345, type: 2}
+    chance: 0.3
     minimalDistance: 2
     maximalDistance: 4
     positionOffset: {x: 0, y: 0}

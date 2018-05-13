@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class MenuPanelUIDisplayer : MonoBehaviour {
 
     // Variable for checking if game is paused
@@ -14,7 +15,7 @@ public class MenuPanelUIDisplayer : MonoBehaviour {
 
     private void Awake()
     {
-        panel = gameObject.GetComponent<TogglePanel>();    
+        panel = gameObject.GetComponent<TogglePanel>();
     }
 
     // Update is called once per frame
@@ -41,7 +42,6 @@ public class MenuPanelUIDisplayer : MonoBehaviour {
             else
                 Resume();
         }
-
     }
 
     void Resume()

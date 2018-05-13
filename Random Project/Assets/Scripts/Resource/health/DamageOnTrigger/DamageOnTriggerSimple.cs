@@ -10,7 +10,9 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 
 	public bool removeOnEnter = false;
 	public bool removeOnExit = false;
-	public GameObject objToRemove;
+    public bool removeOnCollision = true;
+    public bool removeOnTrigger = true;
+    public GameObject objToRemove;
 	public AiFraction myFraction;
 	public GameObject instigator;
 
@@ -35,8 +37,12 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 		if ( healthController != null && other.gameObject.tag != ignoreTag)
 		{
 			healthController.DealDamage(damageEnter, instigator);
-			if (removeOnEnter)
-				Destroy(objToRemove);
+            if (removeOnEnter)
+            {
+                if( (other.isTrigger && removeOnTrigger) ||
+                    (!other.isTrigger && removeOnCollision))
+                    Destroy(objToRemove);
+            }
 		}
 	}
 
@@ -70,8 +76,12 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 		{
 			healthController.DealDamage(damageExit, instigator);
 			if (removeOnExit)
-				Destroy(objToRemove);
-		}
+            {
+                if ((other.isTrigger && removeOnTrigger) ||
+                    (!other.isTrigger && removeOnCollision))
+                    Destroy(objToRemove);
+            }
+        }
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -88,8 +98,12 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 		{
 			healthController.DealDamage(damageEnter, gameObject);
 			if (removeOnEnter)
-				Destroy(objToRemove);
-		}
+            {
+                if ((other.collider.isTrigger && removeOnTrigger) ||
+                    (!other.collider.isTrigger && removeOnCollision))
+                    Destroy(objToRemove);
+            }
+        }
 	}
 
 	void OnCollisionStay2D(Collision2D other)
@@ -122,7 +136,11 @@ public class DamageOnTriggerSimple : MonoBehaviour {
 		{
 			healthController.DealDamage(damageExit, gameObject);
 			if (removeOnExit)
-				Destroy(objToRemove);
-		}
+            {
+                if ((other.collider.isTrigger && removeOnTrigger) ||
+                    (!other.collider.isTrigger && removeOnCollision))
+                    Destroy(objToRemove);
+            }
+        }
 	}
 }

@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 4508297613795278}
   - component: {fileID: 95984508566863618}
   - component: {fileID: 114965641353247348}
+  - component: {fileID: 50994971605226224}
   m_Layer: 0
   m_Name: ExplosionMicroFire
   m_TagString: Untagged
@@ -341,6 +342,26 @@ Transform:
   m_Father: {fileID: 4508297613795278}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50994971605226224
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1692004721216658}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000000
+  m_LinearDrag: 1000000
+  m_AngularDrag: 1000000
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!95 &95984508566863618
 Animator:
   serializedVersion: 3

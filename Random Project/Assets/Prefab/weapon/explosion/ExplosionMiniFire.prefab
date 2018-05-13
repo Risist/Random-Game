@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4980834155205024}
   - component: {fileID: 95417100290591950}
   - component: {fileID: 114921673892720560}
+  - component: {fileID: 50518215196545204}
   m_Layer: 0
   m_Name: ExplosionMiniFire
   m_TagString: Untagged
@@ -341,6 +342,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50518215196545204
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215922936871496}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000000
+  m_LinearDrag: 1000000
+  m_AngularDrag: 1000000
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!95 &95417100290591950
 Animator:
   serializedVersion: 3

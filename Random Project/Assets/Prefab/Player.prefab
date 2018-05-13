@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 114526237121287428}
   - component: {fileID: 82928755898055732}
   m_Layer: 0
-  m_Name: Skill Axe Jump
+  m_Name: Skill crossbow jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -897,6 +897,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1475455815423130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4557976528251548}
+  - component: {fileID: 114628911071334038}
+  - component: {fileID: 114659383640609122}
+  - component: {fileID: 82676303906513472}
+  m_Layer: 0
+  m_Name: Skill Axe Jump
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1480194057609124
 GameObject:
   m_ObjectHideFlags: 1
@@ -2510,7 +2528,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4326895051417012
 Transform:
@@ -2654,7 +2672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4462458206877442
 Transform:
@@ -2762,7 +2780,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4552242393167970
 Transform:
@@ -2777,6 +2795,19 @@ Transform:
   m_Father: {fileID: 4207632634751998}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
+--- !u!4 &4557976528251548
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475455815423130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4914286268484342}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4572378717162828
 Transform:
   m_ObjectHideFlags: 1
@@ -3095,7 +3126,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4795786935270028
 Transform:
@@ -3241,7 +3272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4860453027653278
 Transform:
@@ -3280,7 +3311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4914286268484342}
-  m_RootOrder: 8
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4872763090135850
 Transform:
@@ -3378,7 +3409,7 @@ Transform:
   - {fileID: 4093280158281352}
   - {fileID: 4703347824201258}
   - {fileID: 4604064905726276}
-  - {fileID: 4867855433561842}
+  - {fileID: 4557976528251548}
   - {fileID: 4521634714338804}
   - {fileID: 4745985647160184}
   - {fileID: 4326895051417012}
@@ -3399,6 +3430,7 @@ Transform:
   - {fileID: 4227299404667448}
   - {fileID: 4475663799244458}
   - {fileID: 4207632634751998}
+  - {fileID: 4867855433561842}
   - {fileID: 4857806143603120}
   - {fileID: 4535374468764672}
   - {fileID: 4439287324293576}
@@ -4939,6 +4971,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &82676303906513472
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475455815423130}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b905d2abb393d474fbc2bfd942c14145, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1.15
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!82 &82762182627710052
 AudioSource:
   m_ObjectHideFlags: 1
@@ -5696,6 +5808,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 7.5
   cost: 30
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.5
@@ -5733,6 +5846,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 5
   cost: 10
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.7
@@ -5770,6 +5884,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 5
   cost: 15
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.75
@@ -5812,8 +5927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Health
-  actual: 150
-  max: 150
+  actual: 160
+  max: 160
   regeneration: 2
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
@@ -5835,8 +5950,9 @@ MonoBehaviour:
     velocityDamping: 0.9
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 0
+  increaseCostForce: 25
   cost: 20
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.3
@@ -5909,6 +6025,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 5.5
   cost: 10
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.75
@@ -5944,6 +6061,7 @@ MonoBehaviour:
   onExit: 0
   _collision: 1
   trigger: 1
+  fraction: {fileID: 114917657792791524}
   attachCd:
     actualTime: 0
     cd: 0.075
@@ -5987,6 +6105,8 @@ MonoBehaviour:
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -6004,12 +6124,14 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -22.5
+    damage: -17.5
   damageExit:
     damage: 0
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -6085,14 +6207,15 @@ MonoBehaviour:
   requiredSkills: []
   increaseCost:
     value: 0
-    velocityDamping: 0.99
+    velocityDamping: 0.995
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 3
+  increaseCostForce: 5
   cost: 20
+  minimalEnergy: 15
   cd:
     actualTime: 0
-    cd: 1.45
+    cd: 2.5
   movement: {fileID: 114687892731009294}
   commonCd: []
   skillIcon: {fileID: 21300396, guid: b082019ee1a71064db73fe024edd794e, type: 3}
@@ -6120,6 +6243,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 4
   cost: 10
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.5
@@ -6178,12 +6302,14 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -27.5
+    damage: -21.5
   damageExit:
     damage: 0
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -6255,7 +6381,7 @@ MonoBehaviour:
     - {fileID: 114551526533102384}
     - {fileID: 114723815321103842}
     - {fileID: 114508735480481878}
-    - {fileID: 114992277209005904}
+    - {fileID: 114628911071334038}
     pickupPrefab: {fileID: 1209582206968842, guid: 0d6dbed63db566340abeb05f0ad92977,
       type: 2}
   - name: Spear
@@ -6343,6 +6469,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 5
   cost: 20
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.45
@@ -6393,6 +6520,8 @@ MonoBehaviour:
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -6416,6 +6545,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 0
   cost: 40
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 1
@@ -6483,6 +6613,7 @@ MonoBehaviour:
   onExit: 0
   _collision: 1
   trigger: 1
+  fraction: {fileID: 114917657792791524}
   attachCd:
     actualTime: 0
     cd: 0.075
@@ -6506,6 +6637,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 5
   cost: 7.5
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.7
@@ -6573,6 +6705,8 @@ MonoBehaviour:
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -6596,6 +6730,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 10
   cost: 25
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.95
@@ -6638,9 +6773,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Energy
-  actual: 150
-  max: 150
-  regeneration: 14
+  actual: 100
+  max: 100
+  regeneration: 15
 --- !u!114 &114403699061410602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6655,12 +6790,14 @@ MonoBehaviour:
   damageEnter:
     damage: 0
   damageStay:
-    damage: -12.5
+    damage: -14
   damageExit:
     damage: 0
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -6678,12 +6815,13 @@ MonoBehaviour:
   requiredFates: []
   requiredSkills: []
   increaseCost:
-    value: 0
+    value: 5
     velocityDamping: 0.995
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 5
+  increaseCostForce: 4
   cost: 25
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.5
@@ -6692,8 +6830,8 @@ MonoBehaviour:
   skillIcon: {fileID: 21300462, guid: b082019ee1a71064db73fe024edd794e, type: 3}
   displayName: knife wave
   description: Throws a wave of knifes dealing damage to targets hit
-  triggerEvent: slash
-  animManager: {fileID: 0}
+  triggerEvent: crossbow shoot
+  animManager: {fileID: 95418995943184012}
   spawns:
   - prefab: {fileID: 1876976785215474, guid: 63d1884058aac2e4391571275f201d17, type: 2}
     transform: {fileID: 4290326134188446}
@@ -6731,6 +6869,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 5.5
   cost: 10
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.75
@@ -6776,11 +6915,12 @@ MonoBehaviour:
   requiredSkills: []
   increaseCost:
     value: 0
-    velocityDamping: 0.999
+    velocityDamping: 0.95
     forceDamping: 0
     inverseMass: 1
-  increaseCostForce: 20
+  increaseCostForce: 10
   cost: 75
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 1.5
@@ -6835,6 +6975,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 7.5
   cost: 20
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.65
@@ -6934,6 +7075,8 @@ MonoBehaviour:
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -6970,6 +7113,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 50
   cost: 100
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.75
@@ -7007,6 +7151,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 5.5
   cost: 10
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.75
@@ -7072,6 +7217,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 2.5
   cost: 7.5
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.2
@@ -7114,6 +7260,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 7.5
   cost: 10
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.65
@@ -7152,6 +7299,8 @@ MonoBehaviour:
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -7220,6 +7369,44 @@ MonoBehaviour:
   health: {fileID: 114054285537627552}
   mind: {fileID: 0}
   movement: {fileID: 0}
+--- !u!114 &114628911071334038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475455815423130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredFates: []
+  requiredSkills: []
+  increaseCost:
+    value: 0
+    velocityDamping: 0.99
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 4
+  cost: 15
+  minimalEnergy: 15
+  cd:
+    actualTime: 0
+    cd: 0.5
+  movement: {fileID: 114687892731009294}
+  commonCd: []
+  skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  displayName: axe jump
+  description: 
+  triggerEvents:
+  - axe jump
+  animManager: {fileID: 95418995943184012}
+  idleReset:
+    actualTime: 0
+    cd: 2
+  rotationApplytimer:
+    actualTime: 0
+    cd: 0.35
 --- !u!114 &114630484330908858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7238,6 +7425,7 @@ MonoBehaviour:
   onExit: 0
   _collision: 1
   trigger: 1
+  fraction: {fileID: 114917657792791524}
   attachCd:
     actualTime: 0
     cd: 0.075
@@ -7274,6 +7462,8 @@ MonoBehaviour:
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -7298,6 +7488,19 @@ MonoBehaviour:
   volumeBase: 0.25
   volumeDmgScale: 0.025
   volumeRandom: 0
+--- !u!114 &114659383640609122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475455815423130}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c6660becc221f4680ad56e22900d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 50204895844437464}
+  movementSpeed: 6000
 --- !u!114 &114663683530094856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7318,6 +7521,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 3
   cost: 20
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 1.35
@@ -7372,6 +7576,7 @@ MonoBehaviour:
   onExit: 0
   _collision: 1
   trigger: 1
+  fraction: {fileID: 114917657792791524}
   attachCd:
     actualTime: 0
     cd: 0.075
@@ -7415,6 +7620,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 2
   cost: 15
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.8
@@ -7445,6 +7651,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 2
   cost: 12
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 1
@@ -7482,6 +7689,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 5.5
   cost: 10
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.75
@@ -7556,6 +7764,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 0
   cost: 30
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.4
@@ -7661,6 +7870,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 0
   cost: 0
+  minimalEnergy: 25
   cd:
     actualTime: 0
     cd: 0.5
@@ -7711,6 +7921,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 2
   cost: 12
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.7
@@ -7748,6 +7959,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 10
   cost: 25
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 2
@@ -7845,6 +8057,8 @@ MonoBehaviour:
   ignoreTag: noTag
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114917657792791524}
   instigator: {fileID: 0}
@@ -7868,6 +8082,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 0
   cost: 20
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.7
@@ -7905,6 +8120,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 5
   cost: 10
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 2
@@ -7942,6 +8158,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 4
   cost: 15
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.5
@@ -7979,6 +8196,7 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 7.5
   cost: 22
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 1
@@ -8027,23 +8245,15 @@ MonoBehaviour:
   requiredXpBase: 1
   requiredXpScale: 2
   maxFateLvl: 5
-  chosenFates:
-  - name: dsadsaddasda
-    lvl: 0
-    icon: {fileID: 21300004, guid: 28b41fef228d6814f90e541deaf9f262, type: 3}
-    description: dadasd
-  - name: dasd
-    lvl: 0
-    icon: {fileID: 21300006, guid: 28b41fef228d6814f90e541deaf9f262, type: 3}
-    description: dasdasd
+  chosenFates: []
   possibleFates:
   - name: Fate of fates
     lvl: 0
     icon: {fileID: 21300000, guid: 28b41fef228d6814f90e541deaf9f262, type: 3}
     description: fsdfas
-  - name: Fate of fates
+  - name: Fate of fates 2
     lvl: 0
-    icon: {fileID: 21300000, guid: 28b41fef228d6814f90e541deaf9f262, type: 3}
+    icon: {fileID: 21300002, guid: 28b41fef228d6814f90e541deaf9f262, type: 3}
     description: fsdfas
   slots:
   - keyCode: Fire1
@@ -8108,16 +8318,17 @@ MonoBehaviour:
     inverseMass: 1
   increaseCostForce: 4
   cost: 15
+  minimalEnergy: 15
   cd:
     actualTime: 0
     cd: 0.5
   movement: {fileID: 114687892731009294}
   commonCd: []
   skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
-  displayName: axe jump
+  displayName: crossbow jump
   description: 
   triggerEvents:
-  - axe jump
+  - crossbow jump
   animManager: {fileID: 95418995943184012}
   idleReset:
     actualTime: 0

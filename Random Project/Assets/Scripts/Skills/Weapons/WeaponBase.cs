@@ -42,6 +42,7 @@ public class WeaponBase : MonoBehaviour
     public float increaseCostForce;
 	EnergyController resource;
 	public float cost;
+    public float minimalEnergy;
 
 	[System.NonSerialized]
 	public string buttonCode;
@@ -83,9 +84,11 @@ public class WeaponBase : MonoBehaviour
         foreach (var it in commonCd)
             b = b && it.timer.isReady();
 
-        if ( b && Input.GetAxis(buttonCode) > 0.1 && !EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.Spend(cost + increaseCost.GetVelocity()) 
+        if (b && Input.GetAxis(buttonCode) > 0.1 && !EventSystem.current.IsPointerOverGameObject() && cd.isReady() && resource.HasEnough(cost + increaseCost.GetVelocity() + minimalEnergy)
             )
         {
+            resource.Spend(cost + increaseCost.GetVelocity());
+
             foreach (var it in commonCd)
                 it.timer.restart();
 

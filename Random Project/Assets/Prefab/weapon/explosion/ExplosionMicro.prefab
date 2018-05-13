@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114756742502504628}
   - component: {fileID: 114442930876561986}
   - component: {fileID: 82138913730280066}
+  - component: {fileID: 50085492279612574}
   m_Layer: 0
   m_Name: ExplosionMicro
   m_TagString: Untagged
@@ -344,6 +345,26 @@ Transform:
   m_Father: {fileID: 4572122146346308}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 151.85901}
+--- !u!50 &50085492279612574
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411010839725274}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000000
+  m_LinearDrag: 1000000
+  m_AngularDrag: 1000000
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!82 &82138913730280066
 AudioSource:
   m_ObjectHideFlags: 1

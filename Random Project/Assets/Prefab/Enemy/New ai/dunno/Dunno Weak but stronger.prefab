@@ -1223,6 +1223,8 @@ MonoBehaviour:
   ignoreTag: enemy
   removeOnEnter: 0
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 1
   objToRemove: {fileID: 0}
   myFraction: {fileID: 114435280087249064}
   instigator: {fileID: 0}
@@ -1324,8 +1326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  actual: 150
-  max: 150
+  actual: 300
+  max: 300
   regeneration: 6
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}

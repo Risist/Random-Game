@@ -21,8 +21,6 @@ GameObject:
   - component: {fileID: 4341450192758172}
   - component: {fileID: 198448434413953428}
   - component: {fileID: 199398811172481020}
-  - component: {fileID: 58646862711829484}
-  - component: {fileID: 114784592253674406}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -94,7 +92,7 @@ GameObject:
   - component: {fileID: 114804014690227980}
   - component: {fileID: 114129753013272046}
   - component: {fileID: 114609255968855854}
-  - component: {fileID: 114364186764838318}
+  - component: {fileID: 114612239030976820}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -222,21 +220,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &58646862711829484
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1299272477237312}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.27}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!61 &61789895254056648
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -311,23 +294,6 @@ MonoBehaviour:
   changeRate: 2.5
   min: 0
   max: 1
---- !u!114 &114364186764838318
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1876976785215474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 389ab7ca87f33e14087a2a812da96bda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attachType: Fire
-  attachObject: {fileID: 1299272477237312}
-  activeTime:
-    actualTime: 0
-    cd: 5
-  triggerIdle: 0
 --- !u!114 &114609255968855854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,17 +306,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEnter:
-    damage: -80
+    damage: -125
   damageStay:
     damage: 0
   damageExit:
     damage: 0
-  ignoreTag: Player
+  ignoreTag: 
   removeOnEnter: 1
   removeOnExit: 0
+  removeOnCollision: 1
+  removeOnTrigger: 0
   objToRemove: {fileID: 0}
   myFraction: {fileID: 0}
   instigator: {fileID: 0}
+--- !u!114 &114612239030976820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1876976785215474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d0aa6eb71009e41818fffc6d4f46ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 
+  actual: 500
+  max: 500
+  regeneration: 50
+  removeAfterDeath: 1
+  objectToRemove: {fileID: 0}
 --- !u!114 &114776129292456222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,25 +354,6 @@ MonoBehaviour:
   changeRate: 2.5
   min: 0
   max: 1
---- !u!114 &114784592253674406
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1299272477237312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 476154cb1f6d3474fb88bf46dbeb8c77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 1796050300874844, guid: 2c2a358f9b0793b4ebf735f27e58822a, type: 2}
-  ignoreTag: noTag
-  attachType: Fire
-  onEnter: 1
-  onExit: 1
-  attachCd:
-    actualTime: 0
-    cd: 0.075
 --- !u!114 &114804014690227980
 MonoBehaviour:
   m_ObjectHideFlags: 1
