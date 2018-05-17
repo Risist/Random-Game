@@ -9,50 +9,52 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1357320427230886}
+  m_RootGameObject: {fileID: 1600740502975602}
   m_IsPrefabParent: 1
---- !u!1 &1357320427230886
+--- !u!1 &1600740502975602
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4854059164206910}
-  - component: {fileID: 82918414240228584}
+  - component: {fileID: 4405408078809810}
+  - component: {fileID: 114051511594087470}
+  - component: {fileID: 114578203737010902}
+  - component: {fileID: 82024337830074884}
   m_Layer: 0
-  m_Name: AudioPrefab
+  m_Name: Skill Axe Push
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4854059164206910
+  m_IsActive: 0
+--- !u!4 &4405408078809810
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1357320427230886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.393734, y: 0.69627327, z: 0}
+  m_GameObject: {fileID: 1600740502975602}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82918414240228584
+--- !u!82 &82024337830074884
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1357320427230886}
+  m_GameObject: {fileID: 1600740502975602}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0f3ec7c54c80da34a827a7d7cec968da, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b905d2abb393d474fbc2bfd942c14145, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.5
+  m_Pitch: 1.15
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -120,3 +122,54 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114051511594087470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1600740502975602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a61fbbe96465240b26db5b835f2a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredFates: []
+  requiredSkills: []
+  increaseCost:
+    value: 0
+    velocityDamping: 0.995
+    forceDamping: 0
+    inverseMass: 1
+  increaseCostForce: 5.5
+  cost: 10
+  minimalEnergy: 15
+  cd:
+    actualTime: 0
+    cd: 0.75
+  movement: {fileID: 0}
+  commonCd: []
+  skillIcon: {fileID: 21300266, guid: b082019ee1a71064db73fe024edd794e, type: 3}
+  displayName: axe push
+  description: 
+  triggerEvents:
+  - axe push
+  animManager: {fileID: 0}
+  idleReset:
+    actualTime: 0
+    cd: 2
+  rotationApplytimer:
+    actualTime: 0
+    cd: 0.35
+--- !u!114 &114578203737010902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1600740502975602}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c6660becc221f4680ad56e22900d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  movementSpeed: 5000

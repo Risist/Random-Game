@@ -789,6 +789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceBase: -1600
   forceScale: -500
+  forceMax: 4500
   explosionRadius: 3
   removeDelay: 1.5
   mass: 1.5
@@ -828,7 +829,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 58f3d631dde1b0d418f0e4c6bd28b528, type: 3}
   restartCd:
     actualTime: 0
-    cd: 0.5
+    cd: 2
   pitchBase: 1
   pitchDmgScale: -0.004
   pitchRandom: 0.1
