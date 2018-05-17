@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 114279330288755150}
   - component: {fileID: 114469236939295932}
   - component: {fileID: 114093803471030050}
+  - component: {fileID: 114396800931225402}
   m_Layer: 0
   m_Name: Dunno Night Slayer
   m_TagString: enemy
@@ -1053,6 +1054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 1
   forceBase: -1600
   forceScale: -500
   forceMax: 4500
@@ -1262,6 +1264,17 @@ MonoBehaviour:
   health: {fileID: 0}
   mind: {fileID: 114300661936648826}
   movement: {fileID: 114731223416950556}
+--- !u!114 &114396800931225402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493591712694552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bada5e5a31aa2842b1ee6872efa2e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114413308255492286
 MonoBehaviour:
   m_ObjectHideFlags: 1

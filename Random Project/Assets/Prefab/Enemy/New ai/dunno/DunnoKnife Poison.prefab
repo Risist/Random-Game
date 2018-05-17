@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 114182139065039962}
   - component: {fileID: 114082469585880570}
   - component: {fileID: 114775072320023362}
+  - component: {fileID: 114133485470413120}
   m_Layer: 0
   m_Name: DunnoKnife Poison
   m_TagString: enemy
@@ -1194,6 +1195,17 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   minCdTime: 0.25
   maxCdTime: 1.25
+--- !u!114 &114133485470413120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1464968888052356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bada5e5a31aa2842b1ee6872efa2e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114136082148012446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1766,6 +1778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 1
   forceBase: -1600
   forceScale: -500
   forceMax: 4500

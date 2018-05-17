@@ -15,9 +15,21 @@ public class WeaponThrowerMany : WeaponSkillAnimation
 	public Timer rotationApplyTime = new Timer(0);
 	float lastRotation;
 	bool shouldShoot = false;
+    public bool propagateFraction = true;
 
-	// Update is called once per frame
-	void Update()
+    AiPerceiveUnit _instigator;
+    AiFraction _fraction;
+
+    public new void Start()
+    {
+        base.Start();
+        _instigator = GetComponentInParent<AiPerceiveUnit>();
+        if(propagateFraction)
+            _fraction = GetComponentInParent<AiFraction>();
+    }
+
+    // Update is called once per frame
+    void Update()
 	{
         float rot = lastRotation;
         if(movement && isButtonPressed())
@@ -48,8 +60,15 @@ public class WeaponThrowerMany : WeaponSkillAnimation
         }
         if (shouldShoot && shootDelay.isReady())
 		{
-			foreach (var it in spawns)
-				Instantiate(it.prefab, it.transform.position, it.transform.rotation);
+            foreach (var it in spawns)
+            {
+                var objs = Instantiate(it.prefab, it.transform.position, it.transform.rotation).GetComponentsInChildren<DamageOnTriggerSimple>();
+                foreach (var itt in objs)
+                {
+                    itt.instigator = _instigator.gameObject;
+                    itt.myFraction = _fraction;
+                }
+            }
 			shouldShoot = false;
 		}
 	}
