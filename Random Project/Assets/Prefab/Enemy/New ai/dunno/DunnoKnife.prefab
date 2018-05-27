@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 114780257980799228}
   - component: {fileID: 114302260987180716}
   - component: {fileID: 114354264053276428}
+  - component: {fileID: 114967599521549914}
   m_Layer: 0
   m_Name: DunnoKnife
   m_TagString: enemy
@@ -1112,6 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 1
   forceBase: -1600
   forceScale: -500
   forceMax: 4500
@@ -2018,6 +2020,17 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   minCdTime: 0
   maxCdTime: 0.75
+--- !u!114 &114967599521549914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128905386631698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bada5e5a31aa2842b1ee6872efa2e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114968035682512026
 MonoBehaviour:
   m_ObjectHideFlags: 1

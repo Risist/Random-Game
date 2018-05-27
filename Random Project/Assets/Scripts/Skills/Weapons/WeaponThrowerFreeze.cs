@@ -14,6 +14,10 @@ public class WeaponThrowerFreeze : WeaponSkillAnimation
     public Timer shootDelay = new Timer(0);
     public Timer rotationApplyTime = new Timer(0);
     protected bool shouldShoot = false;
+    public bool propagateFraction = true;
+
+    protected AiPerceiveUnit _instigator;
+    protected AiFraction _fraction;
 
     protected Transform _transform;
     float rotation;
@@ -22,7 +26,12 @@ public class WeaponThrowerFreeze : WeaponSkillAnimation
         base.Start();
         _transform = transform;
         //rotationApplyTime.actualTime += 10000000000000000000;
-	}
+
+
+        _instigator = GetComponentInParent<AiPerceiveUnit>();
+        if(propagateFraction)
+            _fraction = GetComponentInParent<AiFraction>();
+    }
 	
 	void Update () {
 
@@ -54,7 +63,12 @@ public class WeaponThrowerFreeze : WeaponSkillAnimation
         {
             if (shootDelay.isReady())
             {
-                Instantiate(prefab, _transform.position, _transform.rotation);
+                var objs = Instantiate(prefab, _transform.position, _transform.rotation).GetComponentsInChildren<DamageOnTriggerSimple>();
+                foreach (var it in objs)
+                {
+                    it.instigator = _instigator.gameObject;
+                    it.myFraction = _fraction;
+                }
                 shouldShoot = false;
             }
             else

@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 114179793414313540}
   - component: {fileID: 114015111988118648}
   - component: {fileID: 114397899305941768}
+  - component: {fileID: 114582374851844226}
   m_Layer: 0
   m_Name: Dunno Weak Trap
   m_TagString: enemy
@@ -1369,6 +1370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 1
   forceBase: 1600
   forceScale: 500
   forceMax: 4500
@@ -1513,6 +1515,17 @@ MonoBehaviour:
   nextBehaviour: {fileID: 0}
   minPerformanceTime: 0.35
   maxPerformanceTime: 0.75
+--- !u!114 &114582374851844226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469573752027892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bada5e5a31aa2842b1ee6872efa2e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114590241071633588
 MonoBehaviour:
   m_ObjectHideFlags: 1

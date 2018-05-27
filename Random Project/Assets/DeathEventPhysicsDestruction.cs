@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DeathEventPhysicsDestruction : MonoBehaviour {
 
+    public bool active = true;
 	// explosion data
 	public float forceBase;
 	public float forceScale;
@@ -35,8 +36,11 @@ public class DeathEventPhysicsDestruction : MonoBehaviour {
 		body.AddForce(upliftForce);
 	}
 
-	void OnDeath(HealthController.DamageData data)
+	public void OnDeath(HealthController.DamageData data)
 	{
+        if (!active)
+            return;
+
 		Vector2 explosionPosition = transform.position;
 		if (data.causer)
 			explosionPosition = data.causer.transform.position;

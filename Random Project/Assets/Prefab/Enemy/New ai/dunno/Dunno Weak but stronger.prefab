@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 114802349651627926}
   - component: {fileID: 114174688790425960}
   - component: {fileID: 114243686628484128}
+  - component: {fileID: 114809812435640794}
   m_Layer: 0
   m_Name: Dunno Weak but stronger
   m_TagString: enemy
@@ -898,6 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 1
   forceBase: 1600
   forceScale: 500
   forceMax: 4500
@@ -1612,6 +1614,17 @@ MonoBehaviour:
   positionDamping: 0
   rotationDamping: 0
   addictionalRotation: 180
+--- !u!114 &114809812435640794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803322173580698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bada5e5a31aa2842b1ee6872efa2e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114814949710490708
 MonoBehaviour:
   m_ObjectHideFlags: 1

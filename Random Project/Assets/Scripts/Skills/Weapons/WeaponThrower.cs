@@ -36,7 +36,12 @@ public class WeaponThrower : WeaponThrowerFreeze
 
         if (shouldShoot && shootDelay.isReady())
         {
-            Instantiate(prefab, _transform.position, _transform.rotation);
+            var objs = Instantiate(prefab, _transform.position, _transform.rotation).GetComponentsInChildren<DamageOnTriggerSimple>();
+            foreach(var it in objs)
+            {
+                it.instigator = _instigator.gameObject;
+                it.myFraction = _fraction;
+            }
             shouldShoot = false;
         }
     }

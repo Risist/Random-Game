@@ -113,7 +113,7 @@ public class AiPerception : MonoBehaviour {
 			}
 	}
 
-	void insertToMemory(AiPerceiveUnit unit, float distance)
+	public void insertToMemory(AiPerceiveUnit unit, float distance)
 	{
 		bool bFound = false;
 		foreach (var itMemory in memory)
