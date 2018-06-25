@@ -19,7 +19,7 @@ public class AiAllowRay : AiBehaviourBase {
 	static RaycastHit2D[] hits = new RaycastHit2D[20];
 	public override bool CanEnter()
 	{
-		/*Vector2 direction = (Vector2)myMind.transform.position - aim.GetLocation();
+		Vector2 direction = (Vector2)myMind.transform.position - aim.GetLocation();
         Vector2 prepDir = new Vector2(-direction.y, direction.x).normalized;
         int n = Physics2D.RaycastNonAlloc((Vector2)myMind.transform.position + prepDir* raysOffset, direction.normalized, hits, direction.magnitude);
 		for(int i = 0; i < n; ++i)
@@ -46,7 +46,7 @@ public class AiAllowRay : AiBehaviourBase {
             {
                 return false;
             }
-        }*/
+        }
         return true;
 	}
 }

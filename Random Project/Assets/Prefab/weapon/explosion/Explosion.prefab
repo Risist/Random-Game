@@ -102,7 +102,6 @@ GameObject:
   - component: {fileID: 95815424648840816}
   - component: {fileID: 114562253356262968}
   - component: {fileID: 114967666348799010}
-  - component: {fileID: 114668405589522122}
   - component: {fileID: 114087661541775410}
   - component: {fileID: 82499253919881434}
   - component: {fileID: 50656902941133424}
@@ -503,21 +502,6 @@ MonoBehaviour:
   regeneration: -100
   removeAfterDeath: 1
   objectToRemove: {fileID: 0}
---- !u!114 &114668405589522122
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1414992316005840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 1
-  dmg:
-    damage: -25
-  ignoreTag: noTag
 --- !u!114 &114967666348799010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -529,9 +513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bc1f1f55faffb44b0606c8d90ad8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2.5
+  radius: 3
   dmg:
-    damage: -50
+    damage: -60
   ignoreTag: noTag
 --- !u!212 &212058584919370934
 SpriteRenderer:

@@ -26,6 +26,7 @@ public class Timer
         actualTime = 0;
     }
     // actual time of timmer; when the timmer was last restarted
+    [System.NonSerialized]
     public float actualTime = 0;
     // how much time have to be elapsed from last reset to be ready
     public float cd = 1;

@@ -27,14 +27,22 @@ public class HealthController : ResourceController
 	{
 		if (removeAfterDeath && !objectToRemove)
 			objectToRemove = gameObject;
+        if(regeneration == 0)
+            enabled = false;
 	}
 
 	protected new void Update()
 	{
-		base.Update();
-		if (!IsAlive())
-			BroadcastMessage("OnDeath", new DamageData(new SimpleDamage(regeneration), gameObject));
-	}
+        //base.Update();
+        //Gain(regeneration * Time.deltaTime);
+
+        actual = actual + regeneration * Time.deltaTime;
+        if (actual > max)
+            actual = max;
+
+        //if (!IsAlive())
+        //BroadcastMessage("OnDeath", new DamageData(new SimpleDamage(regeneration), gameObject));
+    }
 
 	/// struct for broadcasting messages
 	public struct DamageData

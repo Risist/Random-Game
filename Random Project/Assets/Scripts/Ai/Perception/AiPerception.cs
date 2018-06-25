@@ -47,39 +47,84 @@ public class AiPerception : MonoBehaviour {
         }
 	}
 
-	/// <summary>
-	/// performs prception search over an environment where agents cant see through objects
-	/// and adds perceived objects to the memory / refreshes memory
-	/// </summary>
-	void PerformSearchNonTransparent()
+
+
+    /// <summary>
+    /// performs prception search over an environment where agents cant see through objects
+    /// and adds perceived objects to the memory / refreshes memory
+    /// </summary>
+    void PerformSearchNonTransparent()
 	{
-		float angleOffset = coneRadius / nRays;
+        float angleOffset = coneRadius / nRays;
 
-		for (int i = 0; i < nRays; ++i)
-		{
-			var rays = Physics2D.RaycastAll(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up, searchDistance);
-			Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up * searchDistance, Color.green, 0.25f);
+        for (int i = 0; i < nRays; ++i)
+        {
+            var rays = Physics2D.RaycastAll(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up, searchDistance);
+            Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up * searchDistance, Color.green, 0.25f);
 
-			var rayList = new List<RaycastHit2D>(rays);
-			rayList.Sort(delegate (RaycastHit2D item1, RaycastHit2D item2) { return item1.distance.CompareTo(item2.distance); } );
+            var rayList = new List<RaycastHit2D>(rays);
+            rayList.Sort(delegate (RaycastHit2D item1, RaycastHit2D item2) { return item1.distance.CompareTo(item2.distance); });
 
-			foreach (var it in rayList)
-			{
-				var unit = it.collider.GetComponent<AiPerceiveUnit>();
-				if (unit && unit.gameObject != gameObject)
-				{
-					if(unit.distanceModificator*searchDistance > it.distance)
-						insertToMemory(unit, it.distance);
+            foreach (var it in rayList)
+            {
+                var unit = it.collider.GetComponent<AiPerceiveUnit>();
+                if (unit && unit.gameObject != gameObject)
+                {
+                    if (unit.distanceModificator * searchDistance > it.distance)
+                        insertToMemory(unit, it.distance);
 
-					if (unit.blocksVision)
-						break;
-				}
-			}
-			///
-		}
-		///
-		memory.Sort(delegate (MemoryItem item1, MemoryItem item2) { return item1.lastDistance.CompareTo(item2.lastDistance); });
-	}
+                    if (unit.blocksVision)
+                        break;
+                }
+            }
+            ///
+        }
+        ///
+        memory.Sort(delegate (MemoryItem item1, MemoryItem item2) { return item1.lastDistance.CompareTo(item2.lastDistance); });
+    }
+
+    void PerformSearchNonTransparent2()
+    {
+        float angleOffset = coneRadius / nRays;
+
+        for (int i = 0; i < nRays; ++i)
+        {
+
+            Vector2 dir = Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up;
+            var hit = Physics2D.Raycast(transform.position,dir, searchDistance);
+
+            Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up * searchDistance, Color.green, 0.25f);
+
+            float distanceStack = 5.0f;
+
+            int n = 20;
+
+            while(hit)
+            {
+                var unit = hit.collider.GetComponent<AiPerceiveUnit>();
+                if (unit && unit.gameObject != gameObject)
+                {
+                    if (unit.distanceModificator * (searchDistance - distanceStack) > hit.distance)
+                        insertToMemory(unit, hit.distance);
+
+                    if (unit.blocksVision)
+                        break;
+                }
+
+                
+                distanceStack += hit.distance;
+                hit = Physics2D.Raycast((Vector2)transform.position + dir*distanceStack, dir, searchDistance - distanceStack);
+                if (--n <= 0)
+                {
+                    Debug.LogError("endless loop - AiPerception::PerformSearch2 = " + hit.distance + ", " + distanceStack + ", " + hit.collider.gameObject);
+                    break;
+                }
+            }
+
+        }
+
+        memory.Sort(delegate (MemoryItem item1, MemoryItem item2) { return item1.lastDistance.CompareTo(item2.lastDistance); });
+    }
 
 	void PerformSearch()
 	{

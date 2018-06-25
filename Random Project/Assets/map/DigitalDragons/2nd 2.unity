@@ -20821,7 +20821,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reverse: 0
   reverseTimer:
-    actualTime: 0
     cd: 1
   changeRate: 1
   min: 0
@@ -36397,7 +36396,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reverse: 0
   reverseTimer:
-    actualTime: 0
     cd: 1
   changeRate: 1
   min: 0
@@ -44572,7 +44570,7 @@ Prefab:
     - target: {fileID: 224780395519319632, guid: c46ef9ec7dd1253499d59d2a8c96664c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1505205889154350, guid: c46ef9ec7dd1253499d59d2a8c96664c, type: 2}
       propertyPath: m_IsActive
@@ -46153,11 +46151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94acb4d06d032ab4d9139b9464600a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  removeCd:
-    actualTime: 0
-    cd: 0.25
-  fractionName: dunno
-  agentsIsideArmy: []
 --- !u!58 &1456659415
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -50092,11 +50085,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a5e448e9d67d24f8de643a964502b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   particleBlood: {fileID: 1781194742}
-  inactiveDistanceFromPlayer: 50
-  inactiveTimeCheck:
-    actualTime: 0
-    cd: 1
+  addictionalPerspectiveFactor: 0
+  addictionalPerspectiveAlphaFactor: 0
 --- !u!1001 &1588007023
 Prefab:
   m_ObjectHideFlags: 0
@@ -55021,7 +55013,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reverse: 0
   reverseTimer:
-    actualTime: 0
     cd: 1
   changeRate: 1
   min: 0

@@ -64,7 +64,4 @@ public class AiUnitMind : MonoBehaviour
 	[System.NonSerialized]
 	public AiPerception myPerception;
 #endregion Perception
-
-	// reference to my current army
-	public AiArmy myArmy;
 }

@@ -44,7 +44,7 @@ public class WeaponBase : MonoBehaviour
 	public float cost;
     public float minimalEnergy;
 
-	[System.NonSerialized]
+	//[System.NonSerialized]
 	public string buttonCode;
 	public Timer cd = new Timer(0.5f);
 	[System.NonSerialized]

@@ -63,11 +63,14 @@ public class WeaponThrowerFreeze : WeaponSkillAnimation
         {
             if (shootDelay.isReady())
             {
-                var objs = Instantiate(prefab, _transform.position, _transform.rotation).GetComponentsInChildren<DamageOnTriggerSimple>();
-                foreach (var it in objs)
+                if (prefab)
                 {
-                    it.instigator = _instigator.gameObject;
-                    it.myFraction = _fraction;
+                    var objs = Instantiate(prefab, _transform.position, _transform.rotation).GetComponentsInChildren<DamageOnTriggerSimple>();
+                    foreach (var it in objs)
+                    {
+                        it.instigator = _instigator.gameObject;
+                        it.myFraction = _fraction;
+                    }
                 }
                 shouldShoot = false;
             }

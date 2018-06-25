@@ -147,6 +147,7 @@ MonoBehaviour:
   distanceModificator: 1
   blocksVision: 1
   type: container
+  dangerFractor: 0
   fraction: {fileID: 0}
   health: {fileID: 114150237430692132, guid: 18385ab5175f7ce489973cb05a59962c, type: 2}
   mind: {fileID: 0}
@@ -162,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 1
   forceBase: -1600
   forceScale: -500
   forceMax: 4500
@@ -219,7 +221,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 58f3d631dde1b0d418f0e4c6bd28b528, type: 3}
   restartCd:
-    actualTime: 0
     cd: 0.5
   pitchBase: 1
   pitchDmgScale: -0.004
@@ -259,7 +260,6 @@ MonoBehaviour:
   cdMin: 15
   cdMax: 45
   timer:
-    actualTime: 0
     cd: 1
 --- !u!114 &114726392909474584
 MonoBehaviour:

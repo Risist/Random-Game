@@ -9,6 +9,8 @@ public class PushOnCollision : MonoBehaviour {
 
 	private void OnTriggerStay2D(Collider2D collision)
 	{
+        if (!gameObject.activeInHierarchy)
+            return;
 		if (ignoreTrigger && collision.isTrigger)
 			return;
 

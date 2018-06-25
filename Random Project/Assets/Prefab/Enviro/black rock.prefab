@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccbfacab6ca02d4c9a2a8311b1e4501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 1
   forceBase: -1600
   forceScale: -500
   forceMax: 4500
@@ -427,6 +428,7 @@ MonoBehaviour:
   distanceModificator: 1
   blocksVision: 1
   type: obstacle
+  dangerFractor: 0
   fraction: {fileID: 0}
   health: {fileID: 114159058085203006}
   mind: {fileID: 0}
