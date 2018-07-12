@@ -30,11 +30,12 @@ public class AiBehaviourMoveTo : AiBehaviourBase
 
 		float sqMag = inf.sqrMagnitude;
 		inf.Normalize();
-		if (sqMag > stopDistance * stopDistance)
+        if (sqMag > stopDistance * stopDistance)
 			movement.ApplyInfluencePosition( inf * movementSpeed );
 
 		movement.ApplyInfluenceRotation(inf * rotationSpeed);
 
 		return true;
 	}
+
 }

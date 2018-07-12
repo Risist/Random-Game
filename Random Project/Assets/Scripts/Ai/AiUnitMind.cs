@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class AiUnitMind : MonoBehaviour
 {
-
+    /// minimal utility required to consider behaviour to choice
 	public float utilityThreshold = 0.0f;
+    /// how long the target is remembered
+    public float memoryTime = 5.0f;
 
-	void Start()
+    void Start()
 	{
 		conditions = GetComponents<AiConditionBase>();
 
@@ -20,7 +22,20 @@ public class AiUnitMind : MonoBehaviour
 
 	void Update()
 	{
-		if (!currentBehaviour || currentBehaviour.PerformAction())
+        foreach (var it in conditions)
+            if (it.behaviour.forceToExecute())
+            {
+                // choose new action
+                if (currentBehaviour)
+                    currentBehaviour.ExitAction();
+
+                currentBehaviour = it.behaviour;
+                currentBehaviour.EnterAction();
+
+                return;
+            }
+
+        if (!currentBehaviour || currentBehaviour.PerformAction())
 		{
 			// choose new action
 			if(currentBehaviour)
@@ -29,10 +44,11 @@ public class AiUnitMind : MonoBehaviour
 			currentBehaviour = selectNewBehaviour();
 
 			if (currentBehaviour )
-				currentBehaviour.EnterAction();
-			
+				currentBehaviour.EnterAction();	
 		}
-	}
+
+        
+    }
 
 
 
@@ -64,4 +80,41 @@ public class AiUnitMind : MonoBehaviour
 	[System.NonSerialized]
 	public AiPerception myPerception;
 #endregion Perception
+
+
+
+#region Memory
+    [System.Serializable]
+    public class MemoryItem
+    {
+        public Timer remainedTime;
+        public AiPerceiveUnit unit;
+        public Vector2 lastPosition;
+        public float lastDistance;
+    }
+    [System.NonSerialized]
+    public List<MemoryItem> memory = new List<MemoryItem>();
+
+    public void insertToMemory(AiPerceiveUnit unit, float distance)
+	{
+		bool bFound = false;
+		foreach (var itMemory in memory)
+			if (itMemory.unit == unit)
+			{
+				itMemory.remainedTime.restart();
+				itMemory.lastDistance = distance;
+				bFound = true;
+				break;
+			}
+		if (!bFound)
+		{
+			var memoryItem = new MemoryItem();
+			memoryItem.unit = unit;
+			memoryItem.remainedTime = new Timer(memoryTime);
+			memoryItem.lastDistance = distance;
+
+			memory.Add(memoryItem);
+		}
+	}
+#endregion Memory
 }

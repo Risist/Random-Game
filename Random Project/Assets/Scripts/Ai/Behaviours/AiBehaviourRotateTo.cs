@@ -7,6 +7,7 @@ public class AiBehaviourRotateTo : AiBehaviourBase {
 	public AiLocationBase aim;
 	public bool update = true;
 	public float rotationSpeed;
+    public bool monopoliseRotation = false;
 	AiMovement movement;
 
 	protected new void Start()
@@ -18,6 +19,8 @@ public class AiBehaviourRotateTo : AiBehaviourBase {
 	{
 		if (update)
 		{
+            if (monopoliseRotation)
+                movement.ApplyInfluenceRotation(-movement.GetInfluenceRotation());
 			movement.ApplyInfluencePointRotation(aim.GetLocation(), rotationSpeed);
 		}
 		return true;
@@ -27,8 +30,10 @@ public class AiBehaviourRotateTo : AiBehaviourBase {
 	{
 		base.EnterAction();
 		if (!update)
-		{
-			movement.SetRotationPoint(aim.GetLocation());
+        {
+            if (monopoliseRotation)
+                movement.ApplyInfluenceRotation(-movement.GetInfluenceRotation());
+            movement.SetRotationPoint(aim.GetLocation());
 		}
 	}
 

@@ -6,7 +6,7 @@ using System.Linq;
 
 public class LvlUpPanelUIDisplayer : MonoBehaviour
 {
-    ProgressionManager manager;
+    /*ProgressionManager manager;
     public FateSelectionSlot[] fateSelectionSlots;
     public SkillSelectionSlot[] skillSelectionSlots;
     public CharPanelUIDisplayer charPanel;
@@ -256,7 +256,7 @@ public class LvlUpPanelUIDisplayer : MonoBehaviour
         slot.cost.text = "En: " + skill.cost.ToString();
         slot.description.text = skill.description.ToString();
 
-    }
+    }*/
 
 
 

@@ -39,9 +39,8 @@ public class HealthController : ResourceController
         actual = actual + regeneration * Time.deltaTime;
         if (actual > max)
             actual = max;
-
-        //if (!IsAlive())
-        //BroadcastMessage("OnDeath", new DamageData(new SimpleDamage(regeneration), gameObject));
+        else if (!IsAlive())
+            BroadcastMessage("OnDeath", new DamageData(new SimpleDamage(regeneration), gameObject));
     }
 
 	/// struct for broadcasting messages

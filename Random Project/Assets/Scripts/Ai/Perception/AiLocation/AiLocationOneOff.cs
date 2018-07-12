@@ -6,15 +6,11 @@ public class AiLocationOneOff : AiLocationBase {
 
 	public AiLocationBase[] targetList;
 
-	AiLocationBase currentLocation = null;
-
-
 	public override AiPerceiveUnit GetTarget()
 	{
 		foreach (var it in targetList)
 			if(it.IsValid())
 		{
-			currentLocation = it;
 			return it.GetTarget();
 		}
 		return null;
@@ -24,7 +20,6 @@ public class AiLocationOneOff : AiLocationBase {
 		foreach (var it in targetList)
 			if (it.IsValid())
 			{
-				currentLocation = it;
 				return it.GetTargetObject();
 			}
 		return null;
@@ -34,7 +29,6 @@ public class AiLocationOneOff : AiLocationBase {
 		foreach (var it in targetList)
 			if (it.IsValid())
 			{
-				currentLocation = it;
 				return it.GetLocation();
 			}
 		return Vector2.zero;

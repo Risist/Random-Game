@@ -18,22 +18,16 @@ public abstract class AiBehaviourBase : MonoBehaviour
 
 #region Virtual
 	/// Called every frame after selecting the behaviour to be executed.
-	/// <returns> has the action ended performance? </returns>
-	public virtual bool PerformAction() { return true; }
+	/// <returns> has the action ended it's performance? </returns>
+	public virtual bool PerformAction()     { return true; }
 
 	/// Called upon selecting the behaviour. All state initialisation code goes here
-	public virtual void ExitAction()
-	{
-	}
+	public virtual void ExitAction()        {   }
 	/// Called upon selecting the behaviour. All state initialisation code goes here
-	public virtual void EnterAction()
-	{
-	}
+	public virtual void EnterAction()       {   }
 
-	public virtual bool CanEnter()
-	{
-		return true;
-	}
+	public virtual bool CanEnter()          { return true; }
+    public virtual bool forceToExecute()    { return false;  }
 #endregion Virtual
 
 }

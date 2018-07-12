@@ -603,8 +603,14 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.6666667
+        time: 0.31666666
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      - serializedVersion: 2
+        time: 0.5
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -612,9 +618,9 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
+    path: modelCharacter/scythe/edge
+    classID: 61
+    script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -643,50 +649,22 @@ AnimationClip:
       - serializedVersion: 2
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.6666667
-        value: 3600
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: movementSpeed
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.31666666
+        time: 0.6666667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
-      - serializedVersion: 2
-        time: 0.5
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
-    path: modelCharacter/scythe/edge
-    classID: 61
-    script: {fileID: 0}
+    attribute: moveToDirection
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -752,11 +730,11 @@ AnimationClip:
       customType: 24
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 1559641426
       attribute: 3305885265
-      script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
-      typeID: 114
-      customType: 24
+      script: {fileID: 0}
+      typeID: 61
+      customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 0
@@ -767,16 +745,9 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 0
-      attribute: 1273810675
+      attribute: 2876440947
       script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
       typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1559641426
-      attribute: 3305885265
-      script: {fileID: 0}
-      typeID: 61
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
@@ -2175,8 +2146,14 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.6666667
+        time: 0.31666666
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      - serializedVersion: 2
+        time: 0.5
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -2184,9 +2161,9 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
+    path: modelCharacter/scythe/edge
+    classID: 61
+    script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2215,50 +2192,22 @@ AnimationClip:
       - serializedVersion: 2
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.6666667
-        value: 3600
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: movementSpeed
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.31666666
+        time: 0.6666667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
-      - serializedVersion: 2
-        time: 0.5
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
-    path: modelCharacter/scythe/edge
-    classID: 61
-    script: {fileID: 0}
+    attribute: moveToDirection
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: ea45d487bf4434044a374f554f0bc226, type: 3}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2

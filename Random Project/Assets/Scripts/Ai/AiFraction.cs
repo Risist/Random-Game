@@ -5,6 +5,7 @@ using UnityEngine;
 /*
  * Class for representing relations between agents
  * TODO move to ScriptableObject instead of MonoBehaviour
+ * TODO ints instead of strings
  */
 public class AiFraction : MonoBehaviour
 {

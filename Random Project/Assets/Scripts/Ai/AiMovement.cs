@@ -21,8 +21,17 @@ public class AiMovement : MonoBehaviour
 
 	Vector2 influenceRotation;
 	Vector2 influencePosition;
+    public Vector2 GetInfluencePosition()
+    {
+        return influencePosition;
+    }
+    public Vector2 GetInfluenceRotation()
+    {
+        return influenceRotation;
+    }
 
-	Rigidbody2D body;
+
+    Rigidbody2D body;
 
 	public void Start()
 	{
@@ -44,6 +53,7 @@ public class AiMovement : MonoBehaviour
 		else body.AddForce(influencePosition * Time.fixedDeltaTime);
 
 		float difference = Vector2.Dot(-transform.right, influenceRotation);
+        Debug.Log(difference);
 
 		if (influenceRotation.sqrMagnitude < maximalRotationSpeed * maximalRotationSpeed){
 			if (Vector2.Dot(transform.up, influenceRotation) < 0)

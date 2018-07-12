@@ -6,8 +6,8 @@ using UnityEngine.UI;
 [System.Serializable]
 public class FateSelectionSlot : MonoBehaviour
 {
-    [SerializeField]
-    public ProgressionManager.Fate fate;
+    //[SerializeField]
+    //public ProgressionManager.Fate fate;
     [SerializeField]
     public Text fateName;
     [SerializeField]

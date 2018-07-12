@@ -9,6 +9,7 @@ using UnityEngine;
 public class AiPerception : MonoBehaviour {
 
     public static float scanTimeDiff = 0.25f;
+    public float addictionalRotation = 0.0f;
     public Timer timerPerformSearch = new Timer();
 	/// how far the field of view goes
 	public float searchDistance = 5.0f;
@@ -59,8 +60,8 @@ public class AiPerception : MonoBehaviour {
 
         for (int i = 0; i < nRays; ++i)
         {
-            var rays = Physics2D.RaycastAll(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up, searchDistance);
-            Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up * searchDistance, Color.green, 0.25f);
+            var rays = Physics2D.RaycastAll(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i + addictionalRotation) * transform.up, searchDistance);
+            Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i + addictionalRotation) * transform.up * searchDistance, Color.green, 0.25f);
 
             var rayList = new List<RaycastHit2D>(rays);
             rayList.Sort(delegate (RaycastHit2D item1, RaycastHit2D item2) { return item1.distance.CompareTo(item2.distance); });
@@ -90,10 +91,10 @@ public class AiPerception : MonoBehaviour {
         for (int i = 0; i < nRays; ++i)
         {
 
-            Vector2 dir = Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up;
+            Vector2 dir = Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i + addictionalRotation) * transform.up;
             var hit = Physics2D.Raycast(transform.position,dir, searchDistance);
 
-            Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up * searchDistance, Color.green, 0.25f);
+            Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i + addictionalRotation) * transform.up * searchDistance, Color.green, 0.25f);
 
             float distanceStack = 5.0f;
 
@@ -132,8 +133,8 @@ public class AiPerception : MonoBehaviour {
 
 		for (int i = 0; i < nRays; ++i)
 		{
-			var rays = Physics2D.RaycastAll(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up, searchDistance);
-			Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i) * transform.up * searchDistance, Color.green, 0.25f);
+			var rays = Physics2D.RaycastAll(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i + addictionalRotation) * transform.up, searchDistance);
+			Debug.DrawRay(transform.position, Quaternion.Euler(0, 0, -coneRadius * 0.5f + angleOffset * i + addictionalRotation) * transform.up * searchDistance, Color.green, 0.25f);
 
 			foreach (var it in rays)
 			{

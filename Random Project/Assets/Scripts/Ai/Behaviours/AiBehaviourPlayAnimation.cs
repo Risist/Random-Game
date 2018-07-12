@@ -5,7 +5,7 @@ using UnityEngine;
 public class AiBehaviourPlayAnimation : AiBehaviourBase {
 
 
-	bool b;
+	protected bool b;
 	protected new void Start()
 	{
 		base.Start();

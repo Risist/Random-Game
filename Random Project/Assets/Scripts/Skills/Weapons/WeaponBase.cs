@@ -6,37 +6,6 @@ using UnityEngine.UI;
 
 public class WeaponBase : MonoBehaviour
 {
-	[System.NonSerialized]
-	public bool isUnlocked = false;
-
-#region Requirements
-	public ProgressionManager.Fate[] requiredFates;
-	public WeaponBase[] requiredSkills;
-
-	public bool MeetsRequirements()
-	{
-		var manager = GetComponentInParent<ProgressionManager>();
-		foreach (var itRequired in requiredFates)
-		{
-			bool found = false;
-			foreach (var itOwned in manager.chosenFates)
-				if (itOwned.name == itRequired.name && itOwned.lvl >= itRequired.lvl)
-				{
-					found = true;
-					break;
-				}
-
-			if (!found)
-				return false;
-		}
-
-		foreach (var itRequired in requiredSkills)
-			if (!itRequired.isUnlocked)
-				return false;
-		
-		return true;
-	}
-    #endregion Requirements
 
     public NewtonianResource increaseCost;
     public float increaseCostForce;

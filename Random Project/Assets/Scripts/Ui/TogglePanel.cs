@@ -11,12 +11,10 @@ public class TogglePanel: MonoBehaviour
 
     public Image lvlUpImage;
     public ProgressionManager progressionManager;
-    Color lvlUpColor;
 
     private void Start()
     {
         openedPanel = null;
-        lvlUpColor = lvlUpImage.color;
     }
 
     private void Update()

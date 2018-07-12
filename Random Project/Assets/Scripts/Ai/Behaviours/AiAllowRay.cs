@@ -8,12 +8,10 @@ public class AiAllowRay : AiBehaviourBase {
 	public AiFraction.Attitude attitude = AiFraction.Attitude.none;
 	public string fractionName = "noFraction";
     public float raysOffset = 2.0f;
-
-	Transform _transform;
+    
 	private new void Start()
 	{
-		base.Start();
-		_transform = transform;
+		base.Start();   
 	}
 
 	static RaycastHit2D[] hits = new RaycastHit2D[20];

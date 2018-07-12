@@ -1,20 +1,40 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-
-[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+
     public float movementSpeed = 1.0f;
     public Rigidbody2D body;
-	public bool rotateToDirection = true;
+
+    /// axes
+    /// /
+    /// movement axes
     public string xAxisCode = "Horizontal";
     public string yAxisCode = "Vertical";
-
+    /// rotation axis (revelant to pad only)
     public string xControlAxisCode = "Horizontal2";
     public string yControlAxisCode = "Vertical2";
+
+    /// is the player controlled by pad?
     public bool pad = false;
+    /// player pad Id
     public int playerId = 1;
+
+    bool atMove = false;
+    public bool rotateExternalToDirection = true;
+    public bool rotateToDirection = true;
+    public bool moveToDirection = true;
+
+    /// used to determine direction to which the character should be rotated to 
+    Vector2 lastInput;
+    /// if external rotation were applied we should not change rotation to direction of move
+    bool appliedExternalRotation;
+
+    public RideCthuluController rideController;
+    [Range(0.0f, 1.0f)]
+    public float rideFactor;
 
     public void setPad()
     {
@@ -35,16 +55,16 @@ public class PlayerMovement : MonoBehaviour
             xControlAxisCode += "_pad" + playerId;
             yControlAxisCode += "_pad" + playerId;
 
-            foreach(var it in progressionManager.slots)
+            foreach (var it in progressionManager.slots)
             {
                 it.keyCode += "_pad" + playerId;
-                if(it.skillObject)
+                if (it.skillObject)
                     it.skillObject.buttonCode = it.keyCode;
             }
         }
         else
         {
-            int length  = ("_pad" + playerId).Length;
+            int length = ("_pad" + playerId).Length;
 
             xAxisCode = xAxisCode.Substring(0, xAxisCode.Length - length);
             yAxisCode = yAxisCode.Substring(0, yAxisCode.Length - length);
@@ -54,16 +74,16 @@ public class PlayerMovement : MonoBehaviour
             foreach (var it in progressionManager.slots)
             {
                 it.keyCode = it.keyCode.Substring(0, it.keyCode.Length - length);
-                if(it.skillObject)
+                if (it.skillObject)
                     it.skillObject.buttonCode = it.keyCode;
             }
         }
     }
 
-    bool atMove = false;
-    bool blockMovement = false;
 
-    // Use this for initialization
+    
+
+
     void Start()
     {
         if (body == null)
@@ -80,33 +100,42 @@ public class PlayerMovement : MonoBehaviour
 
     public void ApplyForce(Vector2 force)
     {
-        body.AddForce(force);
+        if (body && moveToDirection)
+            body.AddForce(force);
     }
     public void ApplyForceToMouse(float force)
     {
-        Vector2 v = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - body.position;
-        body.AddForce(v.normalized * force*Time.fixedDeltaTime);
+        if (body && moveToDirection)
+        {
+            Vector2 v = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - body.position;
+            body.AddForce(v.normalized * force * Time.fixedDeltaTime);
+        }
     }
     public float ApplyExternalRotation(Vector2 newInput)
-	{
-		appliedExternalRotation = true;
-		lastInput = newInput;
+    {
+        appliedExternalRotation = true;
+        lastInput = newInput;
 
-		var rotation = body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
-		transform.rotation = Quaternion.Euler(0, 0, body.rotation);
+        var rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
 
-		return rotation;
-	}
-	public float ApplyExternalRotation(float newRotation)
-	{
-		appliedExternalRotation = true;
-		lastInput = ( transform.rotation = Quaternion.Euler(0, 0, newRotation) ) * Vector2.up;
-        
-		return body.rotation = newRotation;
-	}
+        if (rotateExternalToDirection)
+            transform.rotation = Quaternion.Euler(0, 0, rotation);
 
-	public float ApplyRotationToMouse()
-	{
+        return rotation;
+    }
+    public float ApplyExternalRotation(float newRotation)
+    {
+        appliedExternalRotation = true;
+
+        if (rotateExternalToDirection)
+            lastInput = (transform.rotation = Quaternion.Euler(0, 0, newRotation)) * Vector2.up;
+        else
+            lastInput = Quaternion.Euler(0, 0, newRotation) * Vector2.up;
+
+        return body.rotation = newRotation;
+    }
+    public float ApplyRotationToMouse()
+    {
         if (pad)
         {
             Vector2 newInput = new Vector2(Input.GetAxis(xControlAxisCode), Input.GetAxis(yControlAxisCode));
@@ -114,8 +143,10 @@ public class PlayerMovement : MonoBehaviour
             if (newInput.sqrMagnitude > 0.35)
             {
                 lastInput = newInput;
+                appliedExternalRotation = true;
 
-                body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
+                if (rotateExternalToDirection)
+                    body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
             }
 
             return body.rotation;
@@ -123,22 +154,26 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             Vector2 newInput = Camera.main.ScreenToWorldPoint(Input.mousePosition) - gameObject.transform.position;
-            
+
             lastInput = newInput;
             appliedExternalRotation = true;
-            return body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
+
+            var rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
+            if (rotateExternalToDirection)
+                body.rotation = rotation;
+            return rotation;
         }
-       
+
     }
 
-	bool appliedExternalRotation;
-    Vector2 lastInput;
+    public bool wereExternalRotationApplied() { return appliedExternalRotation; }
 
-	private void LateUpdate()
-	{
+    private void LateUpdate()
+    {
         if (!enabled)
             return;
 
+        /// rotate toDirection stuff
         if (rotateToDirection)
         {
             if (pad && !atMove)
@@ -146,33 +181,35 @@ public class PlayerMovement : MonoBehaviour
                 Vector2 newInput = new Vector2(Input.GetAxis(xControlAxisCode), Input.GetAxis(yControlAxisCode));
 
                 if (newInput.sqrMagnitude > 0.35)
-                {
                     lastInput = newInput;
-                }
             }
-            else if (appliedExternalRotation)
-            {
-                appliedExternalRotation = false;
-                return;
-            }
-            body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
+            else if (!appliedExternalRotation)
+                body.rotation = Vector2.Angle(Vector2.up, lastInput) * (lastInput.x > 0 ? -1 : 1);
         }
         appliedExternalRotation = false;
+    }
 
-	}
-
-	// Update is called once per frame
-	void FixedUpdate()
+    // Update is called once per frame
+    void FixedUpdate()
     {
         if (!enabled)
             return;
 
         Vector2 input = new Vector2(Input.GetAxisRaw(xAxisCode), Input.GetAxisRaw(yAxisCode));
         atMove = (input.x != 0 || input.y != 0) && !appliedExternalRotation;
+
         if (atMove)
         {
             lastInput = input.normalized;
-            body.AddForce(input * movementSpeed * Time.fixedDeltaTime);
+            if (moveToDirection)
+                body.AddForce(input * movementSpeed * Time.fixedDeltaTime);
+
+            if (rideController)
+            {
+                Debug.Log(lastInput);
+                rideController.selectTargetOffset(lastInput*1000, rideFactor);
+            }
         }
     }
 }
+    

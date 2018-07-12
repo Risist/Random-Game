@@ -4097,7 +4097,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658865134507860}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9999332, w: 0.011563835}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -35.956, y: -17.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8487,7 +8487,6 @@ MonoBehaviour:
   distanceModificator: 1
   blocksVision: 0
   type: unit
-  dangerFractor: 0
   fraction: {fileID: 114917657792791524}
   health: {fileID: 114054285537627552}
   mind: {fileID: 0}
@@ -8724,13 +8723,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3600
   body: {fileID: 50204895844437464}
-  rotateToDirection: 1
   xAxisCode: Horizontal
   yAxisCode: Vertical
   xControlAxisCode: Horizontal2
   yControlAxisCode: Vertical2
   pad: 0
   playerId: 1
+  rotateToDirection: 1
+  moveToDirection: 1
+  rideController: {fileID: 0}
+  rideFactor: 0
 --- !u!114 &114688119765697058
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -17,7 +17,11 @@ public class AiLocationTransform : AiLocationBase{
 	{
 		return base.GetLocation() + (Vector2)aim.position;
 	}
-	public override bool IsValid()
+    public override GameObject GetTargetObject()
+    {
+        return aim.gameObject;
+    }
+    public override bool IsValid()
 	{
 		return aim && base.IsValid();
 	}

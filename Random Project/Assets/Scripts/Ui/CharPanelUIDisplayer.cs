@@ -7,7 +7,7 @@ public class CharPanelUIDisplayer : MonoBehaviour {
 
 
 
-    ProgressionManager manager;
+    /*ProgressionManager manager;
     EnergyController energyController;
     HealthController healthController;
     Text levelText;
@@ -137,6 +137,6 @@ public class CharPanelUIDisplayer : MonoBehaviour {
         panel.level.text = "Level: " + fate.lvl.ToString();
         panel.description.text = fate.description;
         
-    }
+    }*/
 
 }
